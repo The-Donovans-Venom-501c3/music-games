@@ -1,0 +1,17 @@
+@import '../variables';
+
+header{
+    display: flex;
+    align-items: center;
+    height: $nav-height;
+    width: 100%;
+    padding-left: 1.5vw;
+    background-color: $orange-50;
+    position: fixed;
+    top: 0;
+
+    img{
+        width: 15vw;
+    }
+
+}
