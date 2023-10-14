@@ -5,6 +5,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Contributing](#contributing)
 
 ## Getting Started
 
