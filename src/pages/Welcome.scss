@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   margin: 4em auto;
-  padding: 3em 0;
+  padding: 3em 6em;
   gap: 5em;
   width: 87vw;
   border-radius: 24px;
@@ -20,6 +20,108 @@
 
     span {
       color: $orange-500;
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    .intro {
+      padding: 1em;
+      padding-bottom: 0;
+
+      .bubble {
+        .chat {
+          background-color: $ornage-200;
+          border-radius: 25px;
+          padding: 1.5em 1.75em;
+          max-width: 90%;
+
+          p {
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            color: $black;
+            
+          }
+
+          p + p {
+            margin-top: 1rem;
+            font-weight: 600;
+          }
+        }
+
+        img {
+          width: 3rem;
+          margin-top: -1px;
+          margin-left: 56%;
+        }
+      }
+
+      .cat {
+        width: 55%;
+        margin-top: -3rem;
+      }
+    }
+
+    .levels {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 0 2.25em;
+        height: 30%;
+        border-radius: 16px;
+        
+
+        p {
+          font-size: 2em;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px;
+          color: $grey-700;
+        }
+
+        img {
+          width: 15%;
+        }
+      }
+
+      .easy{
+        background-color: $green-100;
+        border: 2px solid $green-300;
+        border-bottom: 8px solid $green-300;
+
+        &:hover{
+          background-color: $green-100-hover;
+        }
+      }
+
+      .medium{
+        background-color: $yellow-100;
+        border: 2px solid $yellow-300;
+        border-bottom: 8px solid $yellow-300;
+
+        &:hover{
+          background-color: $yellow-100-hover;
+        }
+      } 
+
+      .hard{
+        background-color: $grey-100;
+        cursor: default;
+        // border: 2px solid $green-300;
+        // border-bottom: 8px solid $green-300;
+      }
     }
   }
 }
