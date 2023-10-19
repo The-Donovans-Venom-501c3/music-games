@@ -42,7 +42,7 @@ Before you begin, ensure you have met the following requirements:
 To start the development server and run the app locally, use the following command:
 
 ```bash
-npm start
+npm run dev
 ```
 
 The app will be accessible at http://localhost:3000 in your web browser.
