@@ -13,7 +13,7 @@
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js: [Download & Install Node.js](https://nodejs.org/en/download)
+- Node.js: [Download & Install Node.js](https://nodejs.org/en/download) (make sure it's node version 18)
 
 ### Installation
 
@@ -54,7 +54,7 @@ The app will be accessible at http://localhost:3000 in your web browser.
    ```bash
     git checkout -b your-branch-name
     ```
-    Branch name should always be about the feature you've implemented. Example: imporve-
+    Branch name should always be the feature you've implemented. Example: user-authentication
    
 2. Make your changes, commit them, and push them to your forked repository:
 
@@ -64,7 +64,7 @@ The app will be accessible at http://localhost:3000 in your web browser.
     git push origin your-branch-name
     ```
 
-3. Create a Pull Request (PR) from your forked repository to the original repository. Provide a descriptive title and a summary of all of your changes.
+3. Create a Pull Request (PR) from your forked repository to the _develop_ branch in the original repository. Provide a descriptive title and a summary of all of your changes.
 
 We will review your PR as soon as possible. Thank you for contributing!
 
