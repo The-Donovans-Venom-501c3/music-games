@@ -1,4 +1,4 @@
-import logo from '../assets/SVGs/Logo.svg'
+import logo from '../../assets/SVGs/Logo.svg'
 import './Navbar.scss'
 
 export default function Navbar() {
