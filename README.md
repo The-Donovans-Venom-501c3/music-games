@@ -64,7 +64,7 @@ The app will be accessible at http://localhost:3000 in your web browser.
     git push origin your-branch-name
     ```
 
-3. Create a Pull Request (PR) from your forked repository to the _develop_ branch in the original repository. Provide a descriptive title and a summary of all of your changes.
+3. Create a Pull Request (PR) from your forked repository to the **develop** branch in the original repository. Provide a descriptive title and a summary of all of your changes.
 
 We will review your PR as soon as possible. Thank you for contributing!
 
