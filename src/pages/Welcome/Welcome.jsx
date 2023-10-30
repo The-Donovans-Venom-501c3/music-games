@@ -1,11 +1,6 @@
 import './Welcome.scss'
-import cat from '../assets/SVGs/Cat_Intro.svg'
-// import tickIcon from '../assets/SVGs/Icon_Tick.svg'
-import tickIcon2 from '../assets/SVGs/Icon_Tick2.svg'
-import goldLock from '../assets/SVGs/Icon_GoldLock.svg'
-import grayLock from '../assets/SVGs/Icon_GrayLock.svg'
-import polygon from '../assets/SVGs/Polygon_ChatBubble.svg'
-
+import cat from '../../assets/SVGs/Welcome_Character.svg'
+import polygon from '../../assets/SVGs/Welcome_Polygon.svg'
 
 export default function Welcome() {
   return (
@@ -24,12 +19,11 @@ export default function Welcome() {
         </div>
         <div className="levels">
             <button className='easy'><p>Easy</p>
-            <img src={tickIcon2}/>
             </button>
             <button className='medium'><p>Medium</p>
-            <img src={goldLock}/></button>
+            </button>
             <button className='hard'><p>Hard</p>
-            <img src={grayLock}/></button>
+            </button>
         </div>
       </main>
     </div>

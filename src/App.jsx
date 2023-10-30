@@ -1,10 +1,7 @@
-import './App.scss'
-import Navbar from './components/Navbar'
-import Loading from './pages/Loading'
-import Welcome from './pages/Welcome'
-
-
-
+import './assets/scss/App.scss'
+import Navbar from './components/Navbar/Navbar'
+import Loading from './pages/Quiz/Loading/Loading'
+import Welcome from './pages/Welcome/Welcome'
 
 function App() {
 
