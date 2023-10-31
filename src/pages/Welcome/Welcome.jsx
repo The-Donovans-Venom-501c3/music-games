@@ -1,6 +1,6 @@
 import './Welcome.scss'
-import cat from '../../assets/SVGs/Welcome_Character.svg'
-import polygon from '../../assets/SVGs/Welcome_Polygon.svg'
+import cat from '../../assets/svg/Welcome_Character.svg'
+import polygon from '../../assets/svg/Welcome_Polygon.svg'
 
 export default function Welcome() {
   return (

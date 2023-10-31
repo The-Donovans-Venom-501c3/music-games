@@ -1,6 +1,6 @@
 import React from 'react'
 import './Loading.scss'
-import character from '../../../assets/SVGs/Loading_Character.svg'
+import character from '../../../assets/svg/Loading_Character.svg'
 
 export default function Loading() {
   return (
