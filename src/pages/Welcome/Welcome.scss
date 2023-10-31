@@ -44,10 +44,10 @@
             font-style: normal;
             font-weight: 400;
             color: $black;
-            
+
           }
 
-          p + p {
+          p+p {
             margin-top: 1rem;
             font-weight: 600;
           }
@@ -81,7 +81,7 @@
         padding: 0 2.25em;
         height: 30%;
         border-radius: 16px;
-        
+
 
         p {
           font-size: 2em;
@@ -96,35 +96,39 @@
         }
       }
 
-      .easy{
+      .easy {
         background-color: $green-100;
         border: 2px solid $green-300;
         border-bottom: 8px solid $green-300;
 
-        &:hover{
+        &:hover {
           background-color: $green-100-hover;
         }
       }
 
-      .medium{
+      .medium {
         background-color: $yellow-100;
         border: 2px solid $yellow-300;
         border-bottom: 8px solid $yellow-300;
 
-        &:hover{
+        &:hover {
           background-color: $yellow-100-hover;
         }
-      } 
+      }
 
-      .hard{
+      .hard {
         background-color: $grey-100;
         border: 2px solid $grey-300;
         border-bottom: 8px solid $grey-300;
 
-        &:hover{
+        &:hover {
           background-color: $grey-100-hover;
         }
       }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
   }
 }
