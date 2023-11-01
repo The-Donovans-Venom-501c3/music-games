@@ -78,3 +78,51 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .loading h1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: $black;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .loading p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+  }
+
+  .loading span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .loading h1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: $black;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .loading p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+  }
+
+  .loading span {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+  }
+}
