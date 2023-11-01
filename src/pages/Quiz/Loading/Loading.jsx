@@ -7,7 +7,7 @@ export default function Loading() {
     <div className='loading'>
       <img src={character} />
       <section>
-        <h1>Gett Ready for Awesomeness!</h1>
+        <h1>Get Ready for Awesomeness!</h1>
         <p>For each mission, you will be shown a music note.</p>
         <p>Choose one correct answer from options given.</p>
       </section>
