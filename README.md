@@ -7,7 +7,7 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Getting Started
+## Getting Started 
 
 ### Prerequisites
 
@@ -17,19 +17,23 @@ Before you begin, ensure you have met the following requirements:
 
 ### Installation
 
-1. Fork the repository by clicking the "Fork" button in the top right corner of this page. This creates a copy of the repository in your GitHub account.
-
-2. Clone your forked repository:
+1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/The-Donovans-Venom-501c3/music-games.git
     ```
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 
     ```bash
-    cd your-repo
+    cd music-games
     ```
+    
+3. Pull the latest changes from the **develop** branch.
+   ```bash
+   git checkout develop
+   git pull origin develop
+   ```
 
 4. Install the required dependencies:
 
@@ -56,7 +60,7 @@ The app will be accessible at http://localhost:3000 in your web browser.
     ```
     Branch name should always be the feature you've implemented. Example: user-authentication
    
-2. Make your changes, commit them, and push them to your forked repository:
+2. Make your changes, commit them, and push them to your branch:
 
     ```bash
     git add .
@@ -64,7 +68,7 @@ The app will be accessible at http://localhost:3000 in your web browser.
     git push origin your-branch-name
     ```
 
-3. Create a Pull Request (PR) from your forked repository to the **develop** branch in the original repository. Provide a descriptive title and a summary of all of your changes.
+3. Create a Pull Request (PR) from your branch to the **develop** branch. Provide a descriptive title and a summary of all of your changes.
 
 We will review your PR as soon as possible. Thank you for contributing!
 
