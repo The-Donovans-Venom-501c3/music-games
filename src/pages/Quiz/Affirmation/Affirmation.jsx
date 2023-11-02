@@ -3,8 +3,11 @@ import './Affirmation.scss'
 import successCharacter from '../../../assets/svg/Affirmation_Success_Character.svg'
 import failCharacter from '../../../assets/svg/Affirmation_Fail_Character.svg'
 import Button from '../../../components/Button/Button'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 export default function Affirmation(props) {
+  const [isDisable, setIsDisable] = useState(false)
   let sentence = ''
   let buttonText = ''
   let bgColor = ''
@@ -28,18 +31,29 @@ export default function Affirmation(props) {
     console.log('error')
   }
 
+  const handleContinue = () => {
+    setIsDisable(true)
+  }
+
+  useEffect(() => {
+    setIsDisable(props.disable)
+  }, [props.disable])
 
   return (
-    <div className='container'>
-      <div className='overlay'></div>
-      <div className='background-rectangle' style={{ backgroundColor: bgColor }}></div>
-      <div className='affirmation-container'>
-        < img src={pic} />
-        <section className='tip'>{sentence}</section>
+    <div>
+      {isDisable
+        ? null :
+        <div className='container'>
+          <div className='overlay'></div>
+          <div className='background-rectangle' style={{ backgroundColor: bgColor }}></div>
+          <div className='affirmation-container'>
+            < img src={pic} />
+            <section className='tip'>{sentence}</section>
 
-        <Button text={buttonText} />
-      </div>
+            <Button text={buttonText} onClick={handleContinue} />
+          </div>
+        </div>
+      }
     </div>
-
   )
 }

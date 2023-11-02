@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import Affirmation from './Affirmation/Affirmation'
 
 const RESUlT = {
@@ -8,9 +9,10 @@ const RESUlT = {
 }
 
 export default function Quiz() {
+  // const [isShow, setIsShow] = useState(false)
   return (
     <div>
-      <Affirmation status={RESUlT.SUCCESS} />
+      <Affirmation status={RESUlT.SUCCESS}/>
     </div>
   )
 }
