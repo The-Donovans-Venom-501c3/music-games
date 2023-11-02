@@ -10,7 +10,7 @@ const RESUlT = {
 export default function Quiz() {
   return (
     <div>
-      <Affirmation status={RESUlT.TRYAGAIN} />
+      <Affirmation status={RESUlT.SUCCESS} />
     </div>
   )
 }
