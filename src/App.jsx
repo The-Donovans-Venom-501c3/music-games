@@ -5,7 +5,7 @@ import "./assets/scss/App.scss";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import Quiz from "./pages/Quiz/Quiz";
+import QuizScreen from './pages/Quiz/QuizScreen/QuizScreen'
 import GameFinished from "./pages/Game Finished/GameFinished";
 import Welcome from "./pages/Welcome/Welcome";
 
@@ -18,12 +18,13 @@ function App() {
       {appState === "home" ? (
         <Home />
       ) : appState === "welcome" ? (
-        <Welcome />
+        <Welcome/>
       ) : appState === "quiz" ? (
-        <Quiz />
+        <QuizScreen/>
       ) : (
         <GameFinished />
-      )}
+      ) 
+      }
     </>
   );
 }

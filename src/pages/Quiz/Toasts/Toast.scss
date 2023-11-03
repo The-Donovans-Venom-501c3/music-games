@@ -1,0 +1,49 @@
+@import '../../../assets/scss/variables';
+
+.toast{
+    display: flex;
+    width: 30%;
+    padding: 2.5%;
+    background-color: white;
+    border-radius: 32px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .pause {
+        display: flex;
+        justify-content: center;
+        width: 15%;
+        height: 55px;
+        padding: 2%;
+        border-radius: 50%;
+        background-color: $yellow-400;
+        border: 1px solid $yellow-500;
+    }
+    .start{
+        display: flex;
+        justify-content: center;
+        width: 15%;
+        height: 55px;
+        padding: 2%;
+        border-radius: 50%;
+        background-color: $pale-green;
+        border: 1px solid $green-500;
+    }
+    .textDialog{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >:nth-child(1){
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 44px;
+            word-wrap: break-word;
+        }
+        >:nth-child(2){
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 28px;
+            word-wrap: break-word
+        }
+    }
+}
