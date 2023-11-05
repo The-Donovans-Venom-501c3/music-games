@@ -5,7 +5,7 @@ import character from "../../assets/svg/Score_Character.svg";
 export default function ScoreDialog() {
   return (
     <div className="wrapper">
-      <div className="content score-card centralized">
+      <div className="content score-dialog centralized">
         <img src={character } alt="cat" className="cat" />
         <p className="centralized"><strong> Thank you for finishing this game.</strong>
           <span className="message">{"Let's keep practicing!"}</span>

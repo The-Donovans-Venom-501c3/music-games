@@ -1,101 +1,152 @@
 @import "../../assets/scss/variables";
 
-.wrapper{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: $black;
-    width: 100%;
-    height: 100%;
-    
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $black;
+  width: 100%;
+  height: 100%;
 }
 
-.centralized{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
+.centralized {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 //Content Dialog
-.content{
-   width: 62em;
-   height: 40em;
-   background-color: $white;
-   opacity: 1;
-   border-radius: 48px;
-   padding: 48px 0;
-   z-index:1;
-   gap:36px;
+.content {
+  width: 62em;
+  height: 40em;
+  background-color: $white;
+  opacity: 1;
+  border-radius: 48px;
+  padding: 48px 0;
+  z-index: 1;
+  gap: 36px;
 }
 //Play Again Dialog
-.play-again{
-    height: 54em;
+.play-again {
+  height: 54em;
 
-    .quote{
-        text-align: center;
-        font-size: 28px;
-        width:60%;
-        gap:12px
-    }
+  .quote {
+    text-align: center;
+    font-size: 28px;
+    width: 60%;
+    gap: 12px;
+  }
 }
 //Score Dialog
-.score-dialog{
-    height: 50em;
-    p{
-        font-size: 40px;
-        gap:12px;
-        span{
-            font-size: 32px;
-        }
-        strong{
-            font-weight: 500;
-        }
+.score-dialog {
+  height: 50em;
+  p {
+    font-size: 40px;
+    gap: 12px;
+    span {
+      font-size: 32px;
     }
-    .score-section{
-        width:70%;
-        gap:12px;
-        .score{
-            font-size: 40px;
-            font-weight: 500;
-        }
-        .score-message{
-            font-size: 28px;
-
-        }
+    strong {
+      font-weight: 500;
     }
+  }
+  .score-section {
+    width: 70%;
+    gap: 12px;
+    .score {
+      font-size: 40px;
+      font-weight: 500;
+    }
+    .score-message {
+      font-size: 28px;
+    }
+  }
 }
 // StreakDialog
-{
-    
-}
 
-.message{
-    font-size: 32px;
+.streak-dialog {
+  height: 46.125em;
+  .image{
+    width: 7.5em;
+    height: 7.5em;
+  }
+
+  .streak-days{
+    font-size:32px;
+  }
+
+  .streak-content {
+    height: 21em;
+    width: 30em;
+    gap: 32px;
+    padding: 32px 0;
+    border: 2px solid $grey-300;
+    border-radius: 24px;
+    p {
+      width: 75%;
+      font-size: 20px;
+      text-align: center;
+    }
+    .streak {
+      height: 4.75em;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      img {
+        padding-top: 6px;
+      }
+      .not-filled {
+        padding-bottom: 6px;
+      }
+
+      span {
+        display: flex;
+        flex-direction: column;
+        width: 2.5em;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+    hr {
+      border: 1px solid $grey-300;
+      width: 20em;
+    }
+  }
+  .button-container{
+    width: 30em;
+
+    button{
+    width: 100%;
+    }
+  }
+  
+}
+.message {
+  font-size: 32px;
 }
 
 //Buttons
 
-.button-container{
-    gap:16px;
+.button-container {
+  gap: 16px;
 }
-.primary,.secondary{
-    width:30em;
-    height:3.625em;
-    border-radius: 12px;
-    font-size: 20px;
-
-
+.primary,
+.secondary {
+  width: 30em;
+  height: 3.625em;
+  border-radius: 12px;
+  font-size: 20px;
 }
-.primary{
-color:$white;
-background-color: $purple-800;
-border: 2px solid $purple-900;
-border-bottom: 8px solid $purple-900;
+.primary {
+  color: $white;
+  background-color: $purple-800;
+  border: 2px solid $purple-900;
+  border-bottom: 8px solid $purple-900;
 }
-.secondary{
-
-    border: 2px solid #DDDADA;
-    border-bottom: 8px solid #DDDADA;
+.secondary {
+  border: 2px solid #dddada;
+  border-bottom: 8px solid #dddada;
 }

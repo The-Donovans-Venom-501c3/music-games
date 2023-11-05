@@ -7,15 +7,15 @@ import grey_circle from "../../assets/svg/Grey_Circle.svg";
 export default function StreakDialog() {
   return (
     <div className="wrapper">
-      <div className="content centralized">
+      <div className="content  streak-dialog centralized">
         <img src={strike} alt="music-symbol" className="" />
-        <p>
+        <p className="streak-days">
           Congrats! You got <strong>1 Day</strong> Streak
         </p>
         <div className="streak-content centralized">
-          <section className="streak">
+          <div className="streak centralized">
             <span>
-              1 <img src={streak} className="filled" alt="streak symbol" />{" "}
+              1<img src={streak} className="filled" alt="streak symbol" />{" "}
             </span>
             <span>
               2 <img src={grey_circle} className="not-filled" alt="not filled hole" />{" "}
@@ -35,7 +35,7 @@ export default function StreakDialog() {
             <span>
               7 <img src={grey_circle} className="not-filled" alt="not filled hole" />{" "}
             </span>
-          </section>
+          </div>
           <hr />
           <p>
             Successfully complete a game every day to grow your streak. Skipping
