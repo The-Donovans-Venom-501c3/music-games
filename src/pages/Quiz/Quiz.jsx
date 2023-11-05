@@ -1,9 +1,35 @@
-import React from 'react'
+import { useAtomValue } from "jotai";
+import { loadingStateAtom, quizStateAtom } from "../../store/atoms";
+
+import Loading from "./Loading/Loading";
+import Affirmation from './Affirmation/Affirmation'
+import Overlay from './Overlay/Overlay'
+import Popup from './Popup/Popup'
 
 export default function Quiz() {
+  const loadingState = useAtomValue(loadingStateAtom);
+  const quizState = useAtomValue(quizStateAtom);
+
+  
+// const RESUlT = {
+//   SUCCESS: "success",
+//   TRYAGAIN: "tryAgain",
+//   FAIL: "fail"
+// }
+
+  // const [isShow, setIsShow] = useState(false)
+  // <Affirmation status={RESUlT.SUCCESS}/>
+
+  if (loadingState === 'loading'){
+    return <Loading />
+  }
+
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      {quizState === 'affirmation' && <Affirmation/>}
+      {quizState === 'overlay' && <Overlay/>}
+      {quizState === 'popup' && <Popup/>} 
+      {/* Put Quiz screen code here */}
+    </>
+  );
 }
