@@ -10,16 +10,6 @@ export default function Quiz() {
   const loadingState = useAtomValue(loadingStateAtom);
   const quizState = useAtomValue(quizStateAtom);
 
-  
-// const RESUlT = {
-//   SUCCESS: "success",
-//   TRYAGAIN: "tryAgain",
-//   FAIL: "fail"
-// }
-
-  // const [isShow, setIsShow] = useState(false)
-  // <Affirmation status={RESUlT.SUCCESS}/>
-
   if (loadingState === 'loading'){
     return <Loading />
   }
