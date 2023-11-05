@@ -29,6 +29,16 @@
    z-index:1;
    gap:36px;
 }
+.play-again{
+    height: 54em;
+
+    .quote{
+        text-align: center;
+        font-size: 28px;
+        width:60%;
+        gap:12px
+    }
+}
 
 .message{
     font-size: 32px;
