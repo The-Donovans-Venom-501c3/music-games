@@ -18,7 +18,7 @@
     justify-content: center;
     align-items:center ;
 }
-//Content card
+//Content Dialog
 .content{
    width: 62em;
    height: 40em;
@@ -29,6 +29,7 @@
    z-index:1;
    gap:36px;
 }
+//Play Again Dialog
 .play-again{
     height: 54em;
 
@@ -39,7 +40,8 @@
         gap:12px
     }
 }
-.score-card{
+//Score Dialog
+.score-dialog{
     height: 50em;
     p{
         font-size: 40px;
@@ -63,6 +65,10 @@
 
         }
     }
+}
+// StreakDialog
+{
+    
 }
 
 .message{

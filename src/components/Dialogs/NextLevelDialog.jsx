@@ -1,9 +1,9 @@
 import React from "react";
-import "./Cards.scss";
+import "./Dialogs.scss";
 
 import padlock from "../../assets/svg/NextLevel_Unlocked.svg"
 
-export default function NextLevelCard() {
+export default function NextLevelDialog() {
   return (
     <div className="wrapper">
       <div className="content centralized">

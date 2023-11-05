@@ -1,16 +1,18 @@
 import React from 'react'
 import './GameFinished.scss'
 
-import NextLevelCard from '../../components/Cards/NextLevelCard'
-import PlayAgainCard from '../../components/Cards/PlayAgainCard'
-import ScoreCard from '../../components/Cards/ScoreCard'
+import NextLevelDialog from '../../components/Dialogs/NextLevelDialog'
+import PlayAgainDialog from '../../components/Dialogs/PlayAgainDialog'
+import ScoreDialog from '../../components/Dialogs/ScoreDialog'
+import StreakDialog from '../../components/Dialogs/StreakDialog'
 
 export default function GameFinished() {
   return (
     <div>
-      {/* <NextLevelCard /> */}
-      {/* <PlayAgainCard /> */}
-      <ScoreCard />
+      {/* <NextLevelDialog /> */}
+      {/* <PlayAgainDialog /> */}
+      {/* <ScoreDialog /> */}
+      <StreakDialog />
     </div>
   )
 }

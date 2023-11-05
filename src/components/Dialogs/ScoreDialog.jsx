@@ -1,8 +1,8 @@
 import React from "react";
-import "./Cards.scss";
+import "./Dialogs.scss";
 import character from "../../assets/svg/Score_Character.svg";
 
-export default function ScoreCard() {
+export default function ScoreDialog() {
   return (
     <div className="wrapper">
       <div className="content score-card centralized">

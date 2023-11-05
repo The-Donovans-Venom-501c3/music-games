@@ -1,8 +1,8 @@
 import React from "react";
-import "./Cards.scss";
+import "./Dialogs.scss";
 import character from "../../assets/svg/PlayAgain_Character.svg";
 
-export default function PlayAgainCard() {
+export default function PlayAgainDialog() {
   return (
     <div className="wrapper">
       <div className="content play-again centralized">
