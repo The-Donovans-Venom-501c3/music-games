@@ -39,6 +39,31 @@
         gap:12px
     }
 }
+.score-card{
+    height: 50em;
+    p{
+        font-size: 40px;
+        gap:12px;
+        span{
+            font-size: 32px;
+        }
+        strong{
+            font-weight: 500;
+        }
+    }
+    .score-section{
+        width:70%;
+        gap:12px;
+        .score{
+            font-size: 40px;
+            font-weight: 500;
+        }
+        .score-message{
+            font-size: 28px;
+
+        }
+    }
+}
 
 .message{
     font-size: 32px;
