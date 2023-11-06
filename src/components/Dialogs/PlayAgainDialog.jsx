@@ -6,7 +6,7 @@ export default function PlayAgainDialog() {
   return (
     <div className="wrapper">
       <div className="content play-again centralized">
-        <img src={character} alt="Character" className="" />
+        <img src={character} alt="Character" className="character" />
         <div className="quote centralized">
           <p >
             “Musicians <strong>don’t retire</strong> they stop when there’s no

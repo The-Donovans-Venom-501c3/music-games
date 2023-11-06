@@ -9,10 +9,10 @@ import StreakDialog from '../../components/Dialogs/StreakDialog'
 export default function GameFinished() {
   return (
     <div>
-      {/* <NextLevelDialog /> */}
+      <NextLevelDialog />
       {/* <PlayAgainDialog /> */}
       {/* <ScoreDialog /> */}
-      <StreakDialog />
+      {/* <StreakDialog /> */}
     </div>
   )
 }

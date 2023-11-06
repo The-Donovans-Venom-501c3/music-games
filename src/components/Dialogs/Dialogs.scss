@@ -150,3 +150,79 @@
   border: 2px solid #dddada;
   border-bottom: 8px solid #dddada;
 }
+
+@media(min-width: 993px )  and (max-width: 1200px) {
+.content{
+    width:62em;
+    height: 37em;
+
+    
+}
+.primary,.secondary{
+        height: 3.625em;
+}
+.next-level{
+   gap:28px;
+   height: 39em;
+}
+.play-again{
+    gap:28px;
+    .character{
+        width: 11.25em;
+        height: 10em;
+    }
+    .quote {
+        text-align: center;
+        font-size: 22px;
+        width: 90%;
+        gap: 4px;
+      }
+    
+}
+.score-dialog{
+    .cat{
+        width: 14em;
+        height: 9.4em;
+    }
+    p {
+        font-size: 32px;
+        gap: 12px;
+        span {
+          font-size: 20px;
+        }
+        strong {
+          font-weight: 500;
+        }
+      }
+      .score-section {
+        width: 55%;
+        text-align:center;
+        .score {
+          font-size: 32px;
+          font-weight: 500;
+        }
+        .score-message {
+          font-size: 20px;
+        }
+      }
+}
+.streak-dialog{
+    gap:28px;
+    .streak-content{
+        height: 13.25em;
+        width: 46em;
+        gap:16px;
+        p{
+            width: 100%;    
+        }
+       
+    }
+}
+
+}
+
+
+@media (min-width: 768px )  and (max-width: 992px) {
+
+
+}
