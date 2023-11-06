@@ -10,3 +10,10 @@ Possible Quiz states:
 3) overlay
 4) popup
 */
+export const affirmationAtom = atom('');
+/*
+Possible Affirmation states:
+1) success
+2) fail
+3) tryAgain
+*/
