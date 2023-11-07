@@ -7,7 +7,7 @@
   margin: 4em auto;
   padding: 3em 6em;
   gap: 5em;
-  width: 87vw;
+  width: 70vw;
   border-radius: 24px;
   background-color: $white;
 
@@ -126,5 +126,99 @@
         }
       }
     }
+
+    @media (max-width: 1250px) {
+      .intro{
+        .bubble{
+          .chat {
+            padding: 1.2em 1.5em;
+            max-width: 90%;
+  
+            p {
+              font-size: 0.8rem;
+              font-style: normal;
+              font-weight: 400;
+              color: $black;
+              
+            }
+          }
+        }
+      }
+      .levels{
+        button {
+          width: 70%;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      .levels{
+        button {
+          width: 60%;
+
+          p{
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro{
+        .bubble{
+          .chat {
+            padding: 1em;
+            max-width: 90%;
+  
+            p {
+              font-size: 0.6rem;
+              font-style: normal;
+              font-weight: 400;
+              color: $black;
+              
+            }
+          }
+        }
+      }
+
+      .levels{
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p{
+            font-size: 0.8em;
+            line-height: 50px;
+            padding: 1.5 0em;
+          }
+        }
+      }
+    }
   }
+    @media (max-width: 1250px) {
+      h1 {
+        font-family: $tertiary-font;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+    }
+
+    @media (max-width: 992px) {
+      h1 {
+        font-family: $tertiary-font;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+
+    @media (max-width: 775px) {
+      width: 90vw;
+
+      h1 {
+        font-family: $tertiary-font;
+        font-size: 1.0rem;
+        font-weight: 400;
+      }
+    }
 }
