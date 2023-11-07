@@ -13,7 +13,7 @@ export default function Quiz() {
   if (loadingState === 'loading'){
     return <Loading />
   }
-  console.log("1223")
+
   return (
     <>
       {quizState === 'affirmation' && <Affirmation/>}
