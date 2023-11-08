@@ -1,10 +1,13 @@
 @import './variables';
 
-*, ::before, ::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
-body{
+body {
+    height: 100vh;
     margin: 0;
     padding-top: $nav-height;
     font-family: $primary-font;
@@ -15,25 +18,30 @@ body{
     background-position: center $nav-height;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-p{
+p {
     margin: 0;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-button{
+button {
     border: none;
     cursor: pointer;
     background-color: transparent;
