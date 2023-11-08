@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dialogs.scss";
-import character from "../../assets/svg/PlayAgain_Character.svg";
+import character from "../../../assets/svg/PlayAgain_Character.svg";
 
 export default function PlayAgainDialog() {
   return (
@@ -9,7 +9,7 @@ export default function PlayAgainDialog() {
         <img src={character} alt="Character" className="character" />
         <div className="quote centralized">
           <p >
-            “Musicians <strong>don’t retire</strong> they stop when there’s no
+            “Musicians <strong>don't retire</strong> they stop when there's no
             more music in them.”
           </p>
           <span>- Louis Armstrong</span>
