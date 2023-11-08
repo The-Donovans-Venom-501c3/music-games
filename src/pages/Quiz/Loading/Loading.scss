@@ -4,7 +4,7 @@
 .loadingContainer {
   position: fixed;
   display: flex;
-  height: 100vh;
+  height: calc(100vh - $nav-height);
   width: 100vw;
   align-items: center;
 }

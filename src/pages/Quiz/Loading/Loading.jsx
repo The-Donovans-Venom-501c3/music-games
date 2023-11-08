@@ -3,6 +3,7 @@ import './Loading.scss'
 import character from '../../../assets/svg/Loading_Character.svg'
 export default function Loading() {
   return (
+    <div className='loadingContainer'>
     <div className='loading'>
       <img src={character} />
       <section>
@@ -18,6 +19,7 @@ export default function Loading() {
           </div>
         </div>
       </section>
+    </div>
     </div>
   )
 }
