@@ -34,20 +34,33 @@ export default function Affirmation() {
   }
 
   return (
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+     
+      <style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans:wght@100&display=swap');
+</style>
+
+    </head>
+
+    <body>
     <div className='container'>
       <div className='overlay'></div>
       < img src={pic} className="beater" />
       <div className='background-rectangle' style={{ backgroundColor: bgColor }}>
-        
 
         <section className='tip'>{sentence}</section>
 
         <button className="ButtonResponse" id="ButtonResponse">{buttonText}</button>
-
       </div>
       {/* <div className='affirmation-container'>
         
         </div> */}
     </div>
+    </body>
+    </html>
+    
+    
   )
 }
