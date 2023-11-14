@@ -22,3 +22,7 @@ Possible Affirmation states:
 2) fail
 3) tryAgain
 */
+export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
+export const livesAtom = atom(3); // starts from 3, decrements till 0
+export const questionAtom = atom(1); // goes till the last question
+export const scoreAtom = atom(0); // min = 0, max = no. of questions
