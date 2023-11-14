@@ -4,10 +4,12 @@ import { affirmationAtom } from "../../../store/atoms";
 import successCharacter from '../../../assets/svg/Affirmation_Success_Character.svg'
 import failCharacter from '../../../assets/svg/Affirmation_Fail_Character.svg'
 import "./Affirmation.scss";
+import { useState } from 'react';
 
 
 export default function Affirmation() {
   const affirmation = useAtomValue(affirmationAtom)
+  const [disable, setDisable] = useState(false)
   let sentence = ''
   let buttonText = ''
   let bgColor = ''
@@ -34,33 +36,37 @@ export default function Affirmation() {
   }
 
   return (
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-     
-      <style>
-  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans:wght@100&display=swap');
-</style>
+    disable ?
+      <div /> :
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
 
-    </head>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans:wght@100&display=swap');
+          </style>
 
-    <body>
-    <div className='container'>
-      <div className='overlay'></div>
-      < img src={pic} className="beater" />
-      <div className='background-rectangle' style={{ backgroundColor: bgColor }}>
+        </head>
 
-        <section className='tip'>{sentence}</section>
+        <body>
+          <div className='container'>
+            <div className='overlay'></div>
+            < img src={pic} className="beater" />
+            <div className='background-rectangle' style={{ backgroundColor: bgColor }}>
 
-        <button className="ButtonResponse" id="ButtonResponse">{buttonText}</button>
-      </div>
-      {/* <div className='affirmation-container'>
+              {buttonText === "TRY AGAIN" ?
+                <section className='tip-try-again'>{sentence}</section> :
+                <section className='tip'>{sentence}</section>}
+
+              <button className="ButtonResponse" id="ButtonResponse" onClick={() => { setDisable(true) }}>{buttonText}</button>
+            </div>
+            {/* <div className='affirmation-container'>
         
         </div> */}
-    </div>
-    </body>
-    </html>
-    
-    
+          </div>
+        </body>
+      </html>
+
+
   )
 }
