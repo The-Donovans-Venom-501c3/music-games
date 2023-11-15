@@ -12,7 +12,7 @@ export default function Quiz() {
   const quizState = useAtomValue(quizStateAtom);
 
   if (loadingState === 'loading'){
-    return <Loading />
+    return  <Loading />
   }
 
   return (
@@ -20,8 +20,7 @@ export default function Quiz() {
       {quizState === 'affirmation' && <Affirmation/>}
       {quizState === 'overlay' && <Overlay/>}
       {quizState === 'popup' && <Popup/>} 
-      {quizState === 'quizScreen' && <QuizScreen/>}
-      {/* Put Quiz screen code here */}
+      <QuizScreen/>
     </>
   );
 }

@@ -7,10 +7,6 @@ import restart from '../../../assets/svg/Restart.svg'
 import GameFeatures from '../../../components/GameFeatures/GameFeatures'
 import QuizSection from '../../../components/QuizSection/QuizSection'
 
-const props = {
-    start:'start',
-    pause:'pause'
-}
 const QuizScreen = () => {
 
     return(
@@ -42,7 +38,6 @@ const QuizScreen = () => {
                     </div>
                     
                 </div>
-
         </div>
     );
 }

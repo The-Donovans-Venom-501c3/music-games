@@ -2,8 +2,9 @@ import { useState ,useEffect} from 'react';
 import './Popup.scss'
 import start from '../../../assets/svg/Start.svg'
 import pause from '../../../assets/svg/Pause.svg'
-export default function Popup(props) {
+export default function Popup() {
   const [isDisable, setIsDisable] = useState(false);
+  const [defaultValue, setDefaultValue] = useState('start');
 
   const data = {
     start: {
@@ -18,22 +19,18 @@ export default function Popup(props) {
     }
   }
 
-  useEffect(() => {
-    setIsDisable(props.disable)
-  }, [props.disable])
-
   return (
     <div>
       { 
       isDisable ? null : 
       <div className='toast'>
-            <div className={data[props.type].state}><img src={data[props.type].pic}/></div>
+            <div className={data[defaultValue].state}><img src={data[defaultValue].pic}/></div>
             <div className='textDialog'>
-                <span>Game is {data[props.type].state}</span>
-                <span>{data[props.type].sentence}</span>
+                <span>Game is {data[defaultValue].state}</span>
+                <span>{data[defaultValue].sentence}</span>
             </div>
       </div>
-      }
+      } 
     </div>
   )
 }

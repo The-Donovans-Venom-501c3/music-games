@@ -2,8 +2,10 @@ import './Overlay.scss'
 import cryingCat from '../../../assets/svg/cryingCat.svg'
 import BrokenCat from '../../../assets/svg/BrokenCat.svg'
 import { useState, useEffect } from 'react'
-export default function Overlay(props) {
+
+export default function Overlay() {
   const [isDisable, setIsDisable] = useState(false);
+  const [defaultValue, setDefaultValue] = useState('lives');
 
   const component = { 
     lives: {
@@ -28,22 +30,20 @@ export default function Overlay(props) {
   function close() {
     setIsDisable(true)
   }
-  useEffect(() => {
-    setIsDisable(props.disable)
-  }, [props.disable])
+
   return (
     <div>
       { 
       isDisable ? null : 
       <div className='dialog'>
-               <div className='cat'><img src={component[props.state].cat}/></div>
+               <div className='cat'><img src={component[defaultValue].cat}/></div>
                <div className='textDialog'>
-                   <span>{component[props.state].question}</span>
-                   <span id='text'>{component[props.state].sentence}</span>
+                   <span>{component[defaultValue].question}</span>
+                   <span id='text'>{component[defaultValue].sentence}</span>
                </div>
                <div className='btnDialog'>
-                   <button id='btn-white' onClick={close}>{component[props.state].white_btn_txt}</button>
-                  <button id={component[props.state].id_btn} onClick={close}>{component[props.state].colour_btn_txt}</button>
+                   <button id='btn-white' onClick={close}>{component[defaultValue].white_btn_txt}</button>
+                  <button id={component[defaultValue].id_btn} onClick={close}>{component[defaultValue].colour_btn_txt}</button>
                </div>
       </div>
       }

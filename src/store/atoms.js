@@ -1,8 +1,9 @@
 import { atom } from 'jotai'
 
 export const appStateAtom = atom("welcome");
-export const loadingStateAtom = atom("loading");
-export const quizStateAtom = atom("quiz");
+// export const loadingStateAtom = atom("loading");
+export const loadingStateAtom = atom("quiz");
+export const quizStateAtom = atom("overlay");
 /*
 Possible Quiz states:
 1) quiz

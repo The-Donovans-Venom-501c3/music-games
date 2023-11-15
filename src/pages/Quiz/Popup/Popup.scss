@@ -8,6 +8,10 @@
     border-radius: 32px;
     flex-direction: row;
     justify-content: space-around;
+    position: absolute;
+    top:35%;
+    left: 35%;
+    z-index: 3;
 
     .pause {
         display: flex;
