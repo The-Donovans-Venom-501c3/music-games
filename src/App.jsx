@@ -18,8 +18,7 @@ function App() {
       {appState === "home" ? (
         <Home />
       ) : appState === "welcome" ? (
-        // <Welcome />
-        <Quiz />
+        <Welcome />
       ) : appState === "quiz" ? (
         <Quiz />
       ) : (
