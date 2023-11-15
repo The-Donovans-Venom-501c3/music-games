@@ -1,224 +1,207 @@
 @import "../../assets/scss/variables";
 
-.welcome {
+.container {
+  width: 100vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4em auto;
-  padding: 3em 6em;
-  gap: 5em;
-  width: 70vw;
-  border-radius: 24px;
-  background-color: $white;
+  justify-content: center;
 
-  h1 {
-    font-family: $tertiary-font;
-    font-size: 2.2rem;
-    font-weight: 500;
-    letter-spacing: -1px;
-    color: $black;
-
-    span {
-      color: $orange-500;
-    }
-  }
-
-  main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-
-    .intro {
-      padding: 1em;
-      padding-bottom: 0;
-
-      .bubble {
-        .chat {
-          background-color: $orange-200;
-          border-radius: 25px;
-          padding: 1.5em 1.75em;
-          max-width: 90%;
-
-          p {
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 400;
-            color: $black;
-            
-          }
-
-          p + p {
-            margin-top: 1rem;
-            font-weight: 600;
-          }
-        }
-
-        img {
-          width: 3rem;
-          margin-top: -1px;
-          margin-left: 56%;
-        }
-      }
-
-      .cat {
-        width: 55%;
-        margin-top: -3rem;
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em auto;
+    padding: 3em 6em;
+    gap: 5em;
+    width: 87vw;
+    border-radius: 24px;
+    background-color: $white;
+  
+    h1 {
+      font-family: $tertiary-font;
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -1px;
+      color: $black;
+  
+      span {
+        color: $orange-500;
       }
     }
-
-    .levels {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-
-      button {
+  
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+  
+      .intro {
+        padding: 1em;
+        padding-bottom: 0;
+  
+        .bubble {
+          .chat {
+            background-color: $orange-200;
+            border-radius: 25px;
+            padding: 1.5em 1.75em;
+            max-width: 90%;
+  
+            p {
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 400;
+              color: $black;
+              
+            }
+  
+            p + p {
+              margin-top: 1rem;
+              font-weight: 600;
+            }
+  
+            // @media(max-width: 992px) {
+            //   p{
+            //     font-size: 0.8rem;
+            //   }
+            // }
+  
+            // @media(max-width: 768px) {
+            //   p{
+            //     font-size: 0.6rem;
+            //   }
+            // }
+  
+          }
+  
+          img {
+            width: 3rem;
+            margin-top: -1px;
+            margin-left: 56%;
+          }
+        }
+  
+        .cat {
+          width: 45%;
+          margin-top: -3rem;
+          
+          // @media(max-width: 992px) {
+          //   width: 38%;
+          // }
+  
+          // @media(max-width: 768px) {
+          //   width: 35%;
+          // }
+  
+        }
+      }
+  
+      .levels {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        width: 90%;
-        padding: 0 2.25em;
-        height: 30%;
-        border-radius: 16px;
-        
-
-        p {
-          font-size: 2em;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 36px;
-          color: $grey-700;
-        }
-
-        img {
-          width: 15%;
-        }
-      }
-
-      .easy{
-        background-color: $green-100;
-        border: 2px solid $green-300;
-        border-bottom: 8px solid $green-300;
-
-        &:hover{
-          background-color: $green-100-hover;
-        }
-      }
-
-      .medium{
-        background-color: $yellow-100;
-        border: 2px solid $yellow-300;
-        border-bottom: 8px solid $yellow-300;
-
-        &:hover{
-          background-color: $yellow-100-hover;
-        }
-      } 
-
-      .hard{
-        background-color: $grey-100;
-        border: 2px solid $grey-300;
-        border-bottom: 8px solid $grey-300;
-
-        &:hover{
-          background-color: $grey-100-hover;
-        }
-      }
-    }
-
-    @media (max-width: 1250px) {
-      .intro{
-        .bubble{
-          .chat {
-            padding: 1.2em 1.5em;
-            max-width: 90%;
+        justify-content: space-between;
+        width: 100%;
   
-            p {
-              font-size: 0.8rem;
-              font-style: normal;
-              font-weight: 400;
-              color: $black;
-              
-            }
-          }
-        }
-      }
-      .levels{
-        button {
-          width: 70%;
-        }
-      }
-    }
-
-    @media (max-width: 992px) {
-      .levels{
-        button {
-          width: 60%;
-
-          p{
-            font-size: 1.2em;
-          }
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      .intro{
-        .bubble{
-          .chat {
-            padding: 1em;
-            max-width: 90%;
-  
-            p {
-              font-size: 0.6rem;
-              font-style: normal;
-              font-weight: 400;
-              color: $black;
-              
-            }
-          }
-        }
-      }
-
-      .levels{
         button {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-
-          p{
-            font-size: 0.8em;
-            line-height: 50px;
-            padding: 1.5 0em;
+          width: 90%;
+          padding: 0 2.25em;
+          height: 30%;
+          border-radius: 16px;
+          
+  
+          p {
+            font-size: 2em;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            color: $grey-700;
+          }
+  
+          img {
+            width: 15%;
+          }
+  
+          @media(max-width: 992px) {
+            height: 28%;
+  
+            p {
+              font-size: 1.6em;
+            }
+          }
+  
+          // @media(max-width: 768px) {
+          //   height: 20%;
+  
+          //   p {
+          //     font-size: 1em;
+          //   }
+          // }
+  
+        }
+  
+        .easy{
+          background-color: $green-100;
+          border: 2px solid $green-300;
+          border-bottom: 8px solid $green-300;
+  
+          &:hover{
+            background-color: $green-100-hover;
+          }
+        }
+  
+        .medium{
+          background-color: $yellow-100;
+          border: 2px solid $yellow-300;
+          border-bottom: 8px solid $yellow-300;
+  
+          &:hover{
+            background-color: $yellow-100-hover;
+          }
+        } 
+  
+        .hard{
+          background-color: $grey-100;
+          border: 2px solid $grey-300;
+          border-bottom: 8px solid $grey-300;
+  
+          &:hover{
+            background-color: $grey-100-hover;
           }
         }
       }
     }
+  
+    // @media(max-height: 900px) {
+    //   height: 70vh;
+      
+    //   h1{
+    //     font-size: 1.8rem;
+    //   }
+    // }
+  
+    @media(max-width: 1200px) {
+      h1{
+        font-size: 1.8rem;
+      }
+    }
+  
+    @media(max-width: 992px) {
+      h1{
+        font-size: 1.4rem;
+      }
+    }
+  
+    // @media(max-width: 768px) {
+    //   h1{
+    //     font-size: 1.2rem;
+    //   }
+    // }
+  
+  
   }
-    @media (max-width: 1250px) {
-      h1 {
-        font-family: $tertiary-font;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-    }
-
-    @media (max-width: 992px) {
-      h1 {
-        font-family: $tertiary-font;
-        font-size: 1.2rem;
-        font-weight: 400;
-      }
-    }
-
-    @media (max-width: 775px) {
-      width: 90vw;
-
-      h1 {
-        font-family: $tertiary-font;
-        font-size: 1.0rem;
-        font-weight: 400;
-      }
-    }
 }
+
