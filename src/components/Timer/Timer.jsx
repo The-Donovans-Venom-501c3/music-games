@@ -5,6 +5,7 @@ import "./Timer.scss";
 export default function Timer() {
   const [timerOn, setTimerOn] = useState(true);
 
+
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
@@ -18,6 +19,10 @@ export default function Timer() {
     }
     return () => clearInterval(interval);
   }, [timerOn]);
+
+  const resetTimer = () => {
+    setSeconds(0)
+  }
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
