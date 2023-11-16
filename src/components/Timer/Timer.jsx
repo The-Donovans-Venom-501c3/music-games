@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
 
-import "./Timer.scss"
+import "./Timer.scss";
 
 export default function Timer() {
-  const [isStarted, setIsStarted] = useState(true);
+  const [timerOn, setTimerOn] = useState(true);
+
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    if (isStarted) {
-      const intervalId = setInterval(() => {
+    let interval;
+    if (timerOn) {
+      interval = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds + 1);
       }, 1000);
-
-      return () => clearInterval(intervalId);
-    }else {
-        setIsStarted(false);
+    } else {
+     clearInterval(interval);
     }
-  }, [isStarted]);
+    return () => clearInterval(interval);
+  }, [timerOn]);
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -27,7 +28,7 @@ export default function Timer() {
   };
   return (
     <div className="timer">
-      <span>{isStarted ? formatTime(seconds) : "00:00"}</span>
+      <span>{formatTime(seconds)}</span>
     </div>
   );
 }

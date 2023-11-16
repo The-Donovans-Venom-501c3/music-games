@@ -5,6 +5,7 @@ import Loading from "./Loading/Loading";
 import Affirmation from './Affirmation/Affirmation'
 import Overlay from './Overlay/Overlay'
 import Popup from './Popup/Popup'
+import Timer from "../../components/Timer/Timer";
 
 export default function Quiz() {
   const loadingState = useAtomValue(loadingStateAtom);
@@ -19,6 +20,7 @@ export default function Quiz() {
       {quizState === 'affirmation' && <Affirmation/>}
       {quizState === 'overlay' && <Overlay/>}
       {quizState === 'popup' && <Popup/>} 
+      {quizState === 'timer' && <Timer/>}
       {/* Put Quiz screen code here */}
     </>
   );

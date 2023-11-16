@@ -1,7 +1,7 @@
 import './Welcome.scss'
 import cat from '../../assets/svg/Welcome_Character.svg'
 import polygon from '../../assets/svg/Welcome_Polygon.svg'
-import Timer from '../../components/Timer/Timer'
+
 
 export default function Welcome() {
   return (
@@ -10,7 +10,6 @@ export default function Welcome() {
       <main>
         <div className="intro">
             <div className="bubble">
-            <Timer />
               <div className="chat">
                 
                 <p>Hey Superstars! Get ready for musical fun. Identify the note on the staff and move to the next level, with less than three mistakes. Learn note basics and become a pro!</p>
