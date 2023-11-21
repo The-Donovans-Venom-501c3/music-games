@@ -13,9 +13,10 @@ body {
     font-family: $primary-font;
     background-image: url('/Background.svg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center $nav-height;
+    background-attachment:cover;
+    background-size: 100% 100%; // when we will animate it we have to make it 225% 225%
+    background-position: center;
+    height: $page-height;
 }
 
 h1,
