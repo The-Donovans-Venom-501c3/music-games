@@ -2,6 +2,7 @@ import './Welcome.scss'
 import cat from '../../assets/svg/Welcome_Character.svg'
 import polygon from '../../assets/svg/Welcome_Polygon.svg'
 
+
 export default function Welcome() {
   return (
     <div className='welcome'>
@@ -10,6 +11,7 @@ export default function Welcome() {
         <div className="intro">
             <div className="bubble">
               <div className="chat">
+                
                 <p>Hey Superstars! Get ready for musical fun. Identify the note on the staff and move to the next level, with less than three mistakes. Learn note basics and become a pro!</p>
                 <p>Choose the level you want to play!</p>
               </div>
