@@ -1,3 +1,5 @@
+@import '../../../assets/scss/variables';
+
 @media (min-width: 1113px) {
   
 
@@ -47,7 +49,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-weight: 600;
     font-size: 0.95rem;
     width: 17%;
@@ -95,7 +97,7 @@
  
     background-color: white;
     font-family: 'Caveat', cursive;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-size: 1rem;
     text-align: left;
     width: 28%;
@@ -117,7 +119,7 @@
 .tip {
   background-color: white;
   font-family: 'Caveat', cursive;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $primary-font;
   font-size: 1.125rem;
   width: 28%;
   height: 36%;
@@ -180,7 +182,7 @@
     align-items: center;
     background-color: white;
     font-family: 'Caveat', cursive;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-weight: 600;
     font-size: 0.95rem;
     width: 17%;
@@ -216,7 +218,7 @@
 .tip {
     background-color: white;
     font-family: 'Caveat', cursive;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-size: 1rem;
     width: 28%;
     height: 36%;
@@ -235,7 +237,7 @@
 .tip-try-again {
   background-color: white;
   font-family: 'Caveat', cursive;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $primary-font;
   font-size: 0.8rem;
   width: 28%;
   height: 36%;
@@ -306,7 +308,7 @@
       align-items: center;
       background-color: white;
       font-family: 'Caveat', cursive;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: $primary-font;
       font-weight: 600;
       font-size: 0.95rem;
       width: 17%;
@@ -342,7 +344,7 @@
   .tip {
       background-color: white;
       font-family: 'Caveat', cursive;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: $primary-font;
       font-size: 1rem;
       width: 28%;
       height: 36%;
@@ -361,7 +363,7 @@
   .tip-try-again {
     background-color: white;
     font-family: 'Caveat', cursive;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-size: 0.9rem;
     width: 28%;
     height: 36%;
@@ -436,7 +438,7 @@
       align-items: center;
       background-color: white;
       font-family: 'Caveat', cursive;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: $primary-font;
       font-weight: 600;
       font-size: 0.95rem;
       width: 17%;
@@ -472,7 +474,7 @@
   .tip-try-again {
     background-color: white;
     font-family: 'Caveat', cursive;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
     font-size: 0.5rem;
     width: 28%;
     height: 36%;
@@ -493,7 +495,7 @@
   .tip {
       background-color: white;
       font-family: 'Caveat', cursive;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: $primary-font;
       font-size: 0.8rem;
       width: 28%;
       height: 36%;
