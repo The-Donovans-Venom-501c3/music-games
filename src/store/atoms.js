@@ -1,12 +1,40 @@
 import { atom } from 'jotai'
 
+export const gameStateAtom = atom('note');
+/*
+Possible Game states:
+1) Initial State: none
+2) note : Note Identification Game
+3) key : Key Signature Identification Game
+4) chord : Chord Identification Game
+5) scale : Scale Identification Game
+*/
+
 export const appStateAtom = atom("welcome");
+/*
+Possible App states:
+1) home : Home Page
+2) welcome : Welcome Page
+3) quiz : Quiz Page
+4) game-finished : Game Finished State
+*/
+
+export const levelStateAtom = atom('');
+/*
+Possible Level states:
+1) Initial State: none
+2) easy : Easy level
+3) medium : Medium level
+4) hard : Hard Level
+*/
+
 export const loadingStateAtom = atom("loading");
 /*
 Possible Loading states:
 1) loading
 2) quiz
 */
+
 export const quizStateAtom = atom("quiz");
 /*
 Possible Quiz states:
@@ -15,6 +43,7 @@ Possible Quiz states:
 3) overlay
 4) popup
 */
+
 export const affirmationAtom = atom('');
 /*
 Possible Affirmation states:
@@ -22,7 +51,11 @@ Possible Affirmation states:
 2) fail
 3) tryAgain
 */
+
 export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
+
 export const livesAtom = atom(3); // starts from 3, decrements till 0
+
 export const questionAtom = atom(1); // goes till the last question
+
 export const scoreAtom = atom(0); // min = 0, max = no. of questions

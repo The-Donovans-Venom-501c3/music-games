@@ -1,17 +1,641 @@
 {
-    "questions": [
-      {
-        "question": 1,
-        "correctAnswer": "C"
-      },
-      {
-        "question": 2,
-        "correctAnswer": "D"
-      },
-      {
-        "question": 3,
-        "correctAnswer": "E"
-      }
-    ]
-  }
+  "musicGames": [
+    {
+      "name": "Note Identification",
+      "levels": [
+        {
+          "name": "Easy",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Medium",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Hard",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Key Signature Identification",
+      "levels": [
+        {
+          "name": "Easy",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Medium",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Hard",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chord Identification",
+      "levels": [
+        {
+          "name": "Easy",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Medium",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Hard",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scale Identification",
+      "levels": [
+        {
+          "name": "Easy",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Medium",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        },
+        {
+          "name": "Hard",
+          "questions": [
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            },
+            {
+              "questionImage": "",
+              "correctOption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
   
