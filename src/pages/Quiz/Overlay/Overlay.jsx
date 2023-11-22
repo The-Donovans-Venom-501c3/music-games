@@ -43,7 +43,7 @@ export default function Overlay() {
                </div>
                <div className='btnDialog'>
                    <button id='btn-white' onClick={close}>{component[defaultValue].white_btn_txt}</button>
-                  <button id={component[defaultValue].id_btn} onClick={close}>{component[defaultValue].colour_btn_txt}</button>
+                  <button className='overlay-btn' id={component[defaultValue].id_btn} onClick={close}>{component[defaultValue].colour_btn_txt}</button>
                </div>
       </div>
       }
