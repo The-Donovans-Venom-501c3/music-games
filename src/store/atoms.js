@@ -19,7 +19,7 @@ Possible App states:
 4) game-finished : Game Finished State
 */
 
-export const levelStateAtom = atom('');
+export const levelStateAtom = atom('easy');
 /*
 Possible Level states:
 1) Initial State: none
