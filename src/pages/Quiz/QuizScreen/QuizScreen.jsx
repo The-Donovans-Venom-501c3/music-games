@@ -8,7 +8,6 @@ import GameFeatures from '../../../components/GameFeatures/GameFeatures'
 import QuizSection from '../../../components/QuizSection/QuizSection'
 
 const QuizScreen = () => {
-
     return(
         <div className='QuizScreenContainer'>
             

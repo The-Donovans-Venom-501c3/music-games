@@ -1,16 +1,32 @@
 import './GameFeatures.scss'
 import musicnote from '../../assets/svg/MusicNote.svg'
-import { useAtomValue, useSetAtom } from 'jotai';
-import { volumeAtom } from '../../store/atoms';  
+import { useRef, useState } from 'react';
 const GameFeatures = () =>{
-    const volume = useAtomValue(volumeAtom)
-    const setVolume = useSetAtom(volumeAtom)
+    const [play, setPlay] = useState(false);
+    const audioRef = useRef(null);
+    const MAX = 20;
+
+    function toggleAudio() {
+        if (play) {
+            audioRef.current?.pause();
+          setPlay(false);
+        } else {
+          audioRef.current?.play();
+          setPlay(true);
+        }
+      }
+
+    function handleVolume(e) {
+        const { value } = e.target;
+        const volume = Number(value) / MAX;
+        audioRef.current.volume = volume;
+    } 
 
     return(
         <div className='gameFeatureContainer'>
             <div className='gameLives'>
                 <div>
-                    <span>Timer</span>
+                    <span>Timer</span>  
                     <span id='timer'>00:00</span>
                 </div>
                 <div>
@@ -30,17 +46,27 @@ const GameFeatures = () =>{
                 <div>
                     <span>Music</span>
                     <div id='music'>
-                        <div id="musicBtn"></div>
-                        <div value="off">OFF</div>
+                            <div id="musicBtn">
+                                <button 
+                                    onClick={toggleAudio}
+                                    type="button">
+                                </button>
+                            </div>
+                            {!play ? (
+                                <div value="off">OFF</div>
+                                ) : (
+                                <div value="off">ON</div>
+                            )}
                     </div>
                 </div>
                 <div>
                     <span>Volume</span>
                     <div id='volume'>
-                        <input className="slider" type="range" min="0" max="100" step="10" value={volume} onChange={(e)=>setVolume(e.target.value)}/>
+                        <input className="slider" type="range" min="0" max={MAX} onChange={(e) => handleVolume(e)}/>
                     </div>
                 </div>
-            </div >
+            </div>
+            <audio ref={audioRef} loop src={"/discord-notification.mp3"} />
         </div>
     );
 }
