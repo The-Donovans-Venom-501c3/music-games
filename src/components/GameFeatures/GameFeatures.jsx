@@ -1,6 +1,11 @@
 import './GameFeatures.scss'
 import musicnote from '../../assets/svg/MusicNote.svg'
+import { useAtomValue, useSetAtom } from 'jotai';
+import { volumeAtom } from '../../store/atoms';  
 const GameFeatures = () =>{
+    const volume = useAtomValue(volumeAtom)
+    const setVolume = useSetAtom(volumeAtom)
+
     return(
         <div className='gameFeatureContainer'>
             <div className='gameLives'>
@@ -32,7 +37,7 @@ const GameFeatures = () =>{
                 <div>
                     <span>Volume</span>
                     <div id='volume'>
-                          <input type="range" className="slider" min="1" max="100" value="1"/>
+                        <input className="slider" type="range" min="0" max="100" step="10" value={volume} onChange={(e)=>setVolume(e.target.value)}/>
                     </div>
                 </div>
             </div >

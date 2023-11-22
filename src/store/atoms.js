@@ -59,3 +59,5 @@ export const livesAtom = atom(3); // starts from 3, decrements till 0
 export const questionAtom = atom(1); // goes till the last question
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
+
+export const volumeAtom = atom(0)
