@@ -3,6 +3,7 @@ import cat from "../../assets/svg/Welcome_Character.svg";
 import polygon from "../../assets/svg/Welcome_Polygon.svg";
 import { gameStateAtom, levelStateAtom } from "../../store/atoms";
 import { useAtomValue, useSetAtom } from "jotai";
+import { MusicToggle } from "../../components/GameFeatures/Music/MusicToggle";
 
 export default function Welcome() {
   const game = useAtomValue(gameStateAtom);

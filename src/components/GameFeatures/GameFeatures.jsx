@@ -1,6 +1,11 @@
 import './GameFeatures.scss'
 import musicnote from '../../assets/svg/MusicNote.svg'
+import { MusicToggle } from './Music/MusicToggle';
 const GameFeatures = () =>{
+
+    
+
+
     return(
         <div className='gameFeatureContainer'>
             <div className='gameLives'>
@@ -25,8 +30,7 @@ const GameFeatures = () =>{
                 <div>
                     <span>Music</span>
                     <div id='music'>
-                        <div id="musicBtn"></div>
-                        <div value="off">OFF</div>
+                        <MusicToggle />
                     </div>
                 </div>
                 <div>

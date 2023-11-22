@@ -1,0 +1,26 @@
+@import "../../../assets/scss/variables";
+
+.music {
+  width: 7em;
+  display: flex;
+  flex-direction: row;
+  gap:18px;
+  align-items: center;
+  height: auto;
+  padding: 2%;
+  font-size: 22px;
+  border: 3px solid $grey-500;
+  border-radius: 8px;
+  color: $grey-500;
+  transition: 1s;
+  > :nth-child(2) {
+    border: none;
+  }
+}
+.on{
+    background-color: $pale-green;
+    color: $white;
+    border-color: $green-500;
+    justify-content: flex-end;
+    
+}
