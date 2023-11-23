@@ -1,6 +1,6 @@
 import React from "react";
 import { useAtomValue, useSetAtom, useAtom } from "jotai";
-import { affirmationAtom, appStateAtom, questionAtom, quizStateAtom, scoreAtom, totalQuestionsAtom } from "../../../store/atoms";
+import { affirmationAtom, appStateAtom, livesAtom, overlayAtom, questionAtom, quizStateAtom, scoreAtom, totalQuestionsAtom } from "../../../store/atoms";
 import successCharacter from "../../../assets/svg/Affirmation_Success_Character.svg";
 import failCharacter from "../../../assets/svg/Affirmation_Fail_Character.svg";
 import "./Affirmation.scss";
@@ -36,12 +36,21 @@ export default function Affirmation() {
   const totalQuestions = useAtomValue(totalQuestionsAtom);
   const setAppState = useSetAtom(appStateAtom);
   const setScore = useSetAtom(scoreAtom);
+  const [lives, setLives] = useAtom(livesAtom);
+  const setOverlay = useSetAtom(overlayAtom);
 
   const handleResponseBtn = () => {
     if(affirmation == 'success' || affirmation == 'fail'){
       if (affirmation === 'success') {
         setScore((prev) => prev + 1);
-      } 
+      } else {
+        setLives(lives - 1);
+        if(lives == 1){
+          setOverlay('lives');
+          setQuizState('overlay');
+          return;
+        } 
+      }
       if(questionNum === totalQuestions){
         setAppState('game-finished');
       } else {

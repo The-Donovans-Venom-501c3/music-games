@@ -52,7 +52,14 @@ Possible Affirmation states:
 3) tryAgain
 */
 
-export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
+export const overlayAtom = atom('');
+/*
+Possible Overlay states:
+1) lives : Lives Over overlay
+2) exit : Exit Game overlay
+*/
+
+// export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
 
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 

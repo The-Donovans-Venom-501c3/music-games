@@ -1,18 +1,20 @@
 import "./GameFeatures.scss";
 import musicnote from "../../assets/svg/MusicNote.svg";
+import Timer from './Timer';
 import { useAtomValue } from "jotai";
-import { scoreAtom } from '../../store/atoms'
+import { livesAtom, scoreAtom } from "../../store/atoms";
 
 const GameFeatures = () => {
-
-    const score = useAtomValue(scoreAtom);
+  const score = useAtomValue(scoreAtom);
+  const lives = useAtomValue(livesAtom);
 
   return (
     <div className="gameFeatureContainer">
       <div className="gameLives">
         <div>
           <span>Timer</span>
-          <span id="timer">00:00</span>
+          {/* <span id="timer">00:00</span> */}
+          <Timer />
         </div>
         <div>
           <span>Score</span>
@@ -21,9 +23,9 @@ const GameFeatures = () => {
         <div>
           <span>Lives</span>
           <span id="lives">
-            <img src={musicnote} />
-            <img src={musicnote} />
-            <img src={musicnote} />
+            {Array.from({ length: lives }, (_, index) => (
+              <img key={index} src={musicnote} />
+            ))}
           </span>
         </div>
       </div>
