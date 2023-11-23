@@ -32,19 +32,24 @@ export default function Overlay() {
   }
 
   return (
-    <div>
+    <div >
       { 
       isDisable ? null : 
       <div className='dialog'>
-               <div className='cat'><img src={component[defaultValue].cat}/></div>
-               <div className='textDialog'>
-                   <span>{component[defaultValue].question}</span>
-                   <span id='text'>{component[defaultValue].sentence}</span>
-               </div>
-               <div className='btnDialog'>
-                   <button id='btn-white' onClick={close}>{component[defaultValue].white_btn_txt}</button>
-                  <button className='overlay-btn' id={component[defaultValue].id_btn} onClick={close}>{component[defaultValue].colour_btn_txt}</button>
-               </div>
+        <div className=' dialogBlackContainer'></div>
+        <div className=' dialogContainer'>
+        <div className='cat'><img src={component[defaultValue].cat}/></div>
+                <div className='textDialog'>
+                    <span>{component[defaultValue].question}</span>
+                    <span id='text'>{component[defaultValue].sentence}</span>
+                </div>
+                <div className='btnDialog'>
+                    <button id='btn-white' onClick={close}>{component[defaultValue].white_btn_txt}</button>
+                    <button className='overlay-btn' id={component[defaultValue].id_btn} onClick={close}>{component[defaultValue].colour_btn_txt}</button>
+                </div>
+        </div>
+                
+        
       </div>
       }
     </div>

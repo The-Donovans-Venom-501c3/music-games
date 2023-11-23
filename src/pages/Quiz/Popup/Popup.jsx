@@ -24,11 +24,15 @@ export default function Popup() {
       { 
       isDisable ? null : 
       <div className='toast'>
-            <div className={data[defaultValue].state}><img src={data[defaultValue].pic}/></div>
+        <div className='toastBlackContainer'></div>
+        <div className='toastContainer'>
+        <div className={data[defaultValue].state}><img src={data[defaultValue].pic}/></div>
             <div className='textDialog'>
                 <span>Game is {data[defaultValue].state}</span>
                 <span>{data[defaultValue].sentence}</span>
             </div>
+        </div>
+            
       </div>
       } 
     </div>

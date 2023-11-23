@@ -19,6 +19,8 @@
     -webkit-transform: scale(1);
     transform: scale(1);
     bottom: 5rem;
+    position:absolute;
+    
     }
     to{
     -moz-transform: scale(3);
@@ -27,8 +29,10 @@
     -ms-transform: scale(3);
     -webkit-transform: scale(3);
     transform: scale(6);
-    bottom: -65.5%;
-    }
+    bottom: -64%;
+    // position: fixed;
+    // display: none;
+}
 }
 @keyframes backgroundZoom {
     from{
@@ -38,6 +42,14 @@
         background-size: 225% 225%;
     }
     
+}
+@keyframes fixedBackGround {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 @keyframes cat {
     from{
@@ -69,10 +81,18 @@
 @keyframes comedown {
     
     from { 
-        margin-bottom:150%;
+        margin-top:-150%;
     }
     to { 
-        margin-bottom: 4%;
+        margin-top: -8%;
+    }
+}
+@keyframes BG {
+    from{
+        background-size: 100% 100%;
+    }
+    to{
+        background-size: 240% 225%;
     }
 }
 button:active {
@@ -90,30 +110,42 @@ button:active {
     height:calc($page-height - $nav-height);
     z-index: 1;
     overflow: hidden;
-
+    overflow: hidden;
+    background-image: url(../../../../public/Background.svg);
+    background-repeat: no-repeat;
+    background-attachment:cover;
+    background-size: 100% 100%; // when we will animate it we have to make it 225% 225%
+    background-position: center;
+    animation-name:BG;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
     .GameScreen{
         display: flex;
-        margin-bottom: 150%;
+        margin-top: -150%;
+        justify-content: center;
+        align-items: center;
         z-index: 2;
         flex-direction: column;
-        width: 75%;
-        height: 73%;
-        bottom: $page-height;
+        justify-content: center;
+        position: absolute;
+        width: 80vw;
+        height: 92vh;
         animation-name:comedown;
-        animation-duration: 1s;
-        animation-delay: 2.5s;
+        animation-duration: 2s;
+        animation-delay: 4s;
         animation-fill-mode: forwards;
         animation-direction: linear;
-        
+        position: center;
         .gameMain{
             display: flex;
             align-items: flex-end;
             flex-direction: row;
             flex-basis: 89.99%;
-            width: 100%;
-            height: 100%;
+            width: 70vw;
             background-color: white;
-
             .left{
                 width: 100%;
                 height: 100%;
@@ -159,7 +191,7 @@ button:active {
                 border-radius: 10px;
                 box-shadow: 0px 5px 0px 0px $orange-600;
                 text-align: center;
-                font-size: 20px;
+                font-size: 1vw;
                 font-weight: 500;
                 word-wrap: break-word;
                 cursor: pointer;
@@ -221,17 +253,44 @@ button:active {
         position: absolute;
         align-items: center;
         justify-content: center;
-        animation-name: fallen, zoomIn;
-        animation-duration: 1s, 1s;
-        animation-delay: 0s, 1s;
+        opacity: 1;
+        animation-name: fallen, zoomIn, fixedBackGround;
+        animation-duration: 1s, 1s,0.1s;
+        animation-delay: 0s, 1s,5s;
         width: 15%; 
         margin: auto;
         padding-bottom: 0.5rem; 
-        animation-timing-function: ease, ease;
-        animation-fill-mode: forwards, forwards;
+        animation-timing-function: ease, ease, ease;
+        animation-fill-mode: forwards, forwards,forwards;
+        animation-direction: normal, normal, reverse;
         
     }
+    .quizScreenBGContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-position: center;
+        background-image: url(../../../assets/svg/MusicStandaBG.svg);
+        width: 90vw;
+        height: 100vh;
+        background-size: 100vw 100vh;
+        opacity: 0;
+        animation-name:fixedBackGround;
+        animation-duration: 0.1s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-direction: linear;
+    }
     
+}
+@media (min-width: 900px) {
+    
+    .setting{
+        .btnSetting{
+            font-size: 15px;
+        }
+    }
 }
 
 
