@@ -4,8 +4,8 @@ import noteQuestionGraph from "../../assets/svg/NoteQuestionGraph.svg";
 import sharp from "../../assets/svg/SharpSymbol.svg";
 import bimol from "../../assets/svg/BimolSymbol.svg";
 import { useMemo, useState } from 'react';
-import { useAtom, useAtomValue, useSetAtom } from "jotai";
-import { affirmationAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom } from "../../store/atoms";
+import { useAtomValue, useSetAtom } from "jotai";
+import { affirmationAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
 import { getQuestions } from '../../utils/questions'
 
 
@@ -29,10 +29,16 @@ const QuizSection = () => {
 
   const game = useAtomValue(gameStateAtom);
   const level = useAtomValue(levelStateAtom);
-  const [questionNum, setQuestionNum] = useAtom(questionAtom);
+  const questionNum = useAtomValue(questionAtom);
 
   const questions = useMemo(() => getQuestions(game, level), []);
   const currQuestion = questions[questionNum - 1];
+
+  const setTotalQuestions = useSetAtom(totalQuestionsAtom);
+  const totalQuestions = useMemo(() => {
+    return questions.length;
+  }, [questions]);
+  setTotalQuestions(totalQuestions);
 
   const setQuizState = useSetAtom(quizStateAtom);
   const setAffirmation = useSetAtom(affirmationAtom);
@@ -57,7 +63,7 @@ const QuizSection = () => {
         <img src={questionmark} />
         <span>{questionNum}</span>
         <span>of</span>
-        <span>{questions.length}</span>
+        <span>{totalQuestions}</span>
       </div>
       <div className="noteQuestionnGraph">
         <img src={currQuestion.questionImage} />
