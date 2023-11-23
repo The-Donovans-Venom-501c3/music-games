@@ -59,7 +59,14 @@ Possible Overlay states:
 2) exit : Exit Game overlay
 */
 
-// export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
+export const popupAtom = atom('');
+/*
+Possible Overlay states:
+1) play : Game resumes
+2) pause : Game Paused
+*/
+
+export const timerAtom = atom(true);  // true when time is running, false when not
 
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 
