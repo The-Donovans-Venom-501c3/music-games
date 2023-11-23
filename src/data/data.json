@@ -5,9 +5,10 @@
       "levels": [
         {
           "level": "Easy",
+          "numberOfQuestions": {"easy": 8},
           "questions": [
             {
-              "questionImage": "https://imgur.com/0EYWE9b.jpg",
+              "questionImage": "https://i.imgur.com/dfiExnl.jpg",
               "correctOption": "C"
             },
             {
@@ -62,6 +63,7 @@
         },
         {
           "level": "Medium",
+          "numberOfQuestions": {"easy": 3, "medium":7},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/ZfDPpN5.jpg",
@@ -119,6 +121,7 @@
         },
         {
           "level": "Hard",
+          "numberOfQuestions": {"easy": 3, "medium":3, "hard":10},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/bK80ABh.jpg",
@@ -181,6 +184,7 @@
       "levels": [
         {
           "level": "Easy",
+          "numberOfQuestions": {"easy": 5},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/8SiphoH.jpg",
@@ -210,6 +214,7 @@
         },
         {
           "level": "Medium",
+          "numberOfQuestions": {"easy": 4, "medium":4},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/BOA4C1H.jpg",
@@ -231,6 +236,7 @@
         },
         {
           "level": "Hard",
+          "numberOfQuestions": {"easy": 2, "medium": 4, "hard": 4},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/BUkWXda.jpg",
@@ -257,6 +263,7 @@
       "levels": [
         {
           "level": "Easy",
+          "numberOfQuestions": {"easy": 8},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/bC8V2eh.jpg",
@@ -314,6 +321,7 @@
         },
         {
           "level": "Medium",
+          "numberOfQuestions": {"easy": 3, "medium": 7},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/Ab0sJpi.jpg",
@@ -375,6 +383,7 @@
         },
         {
           "level": "Hard",
+          "numberOfQuestions": {"easy": 3, "medium": 3, "hard": 10},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/DiLiSRr.jpg",
@@ -446,6 +455,7 @@
     },
     {
       "name": "Scale Identification",
+      "numberOfQuestions": {"easy": 8},
       "levels": [
         {
           "level": "Easy",
@@ -506,6 +516,7 @@
         },
         {
           "level": "Medium",
+          "numberOfQuestions": {"easy": 3, "medium": 7},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/khp4Hsq.jpg",
@@ -567,6 +578,7 @@
         },
         {
           "level": "Hard",
+          "numberOfQuestions": {"easy": 3, "medium": 3, "hard": 10},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/82ricMz.jpg",

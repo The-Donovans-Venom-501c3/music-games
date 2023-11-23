@@ -1,57 +1,89 @@
-import './QuizSection.scss'
-import questionmark from '../../assets/svg/QuestionMark.svg'
-import noteQuestionGraph from '../../assets/svg/NoteQuestionGraph.svg'
-import sharp from '../../assets/svg/SharpSymbol.svg'
-import bimol from '../../assets/svg/BimolSymbol.svg'
-const QuizSection = () =>{
-    const symbols = ['',
-    {
-        name:'sharp',
-        img: sharp,
-    },
-    {
-        name:'bimol',
-        img: bimol,
+import "./QuizSection.scss";
+import questionmark from "../../assets/svg/QuestionMark.svg";
+import noteQuestionGraph from "../../assets/svg/NoteQuestionGraph.svg";
+import sharp from "../../assets/svg/SharpSymbol.svg";
+import bimol from "../../assets/svg/BimolSymbol.svg";
+import { useMemo, useState } from 'react';
+import { useAtomValue, useSetAtom } from "jotai";
+import { affirmationAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
+import { getQuestions } from '../../utils/questions'
+
+
+const notes = ["C", "D", "E", "F", "G", "A", "B"];
+
+const symbols = [
+  {
+    name: ""
+  },
+  {
+    name: "#",
+    img: sharp,
+  },
+  {
+    name: "♭",
+    img: bimol,
+  },
+];
+
+const QuizSection = () => {
+
+  const game = useAtomValue(gameStateAtom);
+  const level = useAtomValue(levelStateAtom);
+  const questionNum = useAtomValue(questionAtom);
+
+  const questions = useMemo(() => getQuestions(game, level), []);
+  const currQuestion = questions[questionNum - 1];
+
+  const setTotalQuestions = useSetAtom(totalQuestionsAtom);
+  const totalQuestions = useMemo(() => {
+    return questions.length;
+  }, [questions]);
+  setTotalQuestions(totalQuestions);
+
+  const setQuizState = useSetAtom(quizStateAtom);
+  const setAffirmation = useSetAtom(affirmationAtom);
+  const [attempts, setAttempts] = useState(1);
+
+  const handleOptionClick = (option) => {
+    if(option === currQuestion.correctOption){
+      setAffirmation('success');
+    } else if (attempts) {
+      setAffirmation('tryAgain');
+      setAttempts(attempts - 1);
+    } else{
+      setAffirmation('fail');
+      setAttempts(1);
     }
-    ];
-    const notes = ['C','D','E','F','G','A','B'];
-    return(
-        <div className='quizSection'>
-            <div className='quizNumber'>
-                <img src={questionmark}/>
-                <span>1</span>
-                <span>of</span>
-                <span>2</span>
-            </div>
-            <div className='noteQuestionnGraph'>
-                <img src={noteQuestionGraph}/>
-            </div>
-            <div className='questionText'>
-                <p>What note is shown?</p>
-            </div>
-            <div className='answerBtnFram'>
-                {
-                    symbols.map((symbol, index)=>(
-                        notes.map((note)=>{
-                            if(index == 0){
-                                return (
-                                <div>
-                                    <span>{note}</span>
-                                </div>
-                                );
-                            }else{
-                                return(
-                                <div>
-                                    <span>{note}</span>
-                                    <img src={symbol.img}/>
-                                </div>
-                                );
-                            }
-                        })
-                    ))
-                }
-            </div>
-        </div>
-    );
-}
-export default QuizSection
+    setQuizState('affirmation');
+  };
+
+  return (
+    <div className="quizSection">
+      <div className="quizNumber">
+        <img src={questionmark} />
+        <span>{questionNum}</span>
+        <span>of</span>
+        <span>{totalQuestions}</span>
+      </div>
+      <div className="noteQuestionnGraph">
+        <img src={currQuestion.questionImage} />
+      </div>
+      <div className="questionText">
+        <p>What note is shown?</p>
+      </div>
+      <div className="answerBtnFram">
+        {symbols.map((symbol, index) =>
+          notes.map((note, idx) => (
+            <button key={idx} onClick={() => handleOptionClick(note + symbol.name)}>
+              <span>{note}</span>
+              {index != 0 ? (
+                <img src={symbol.img} />
+              ) : null}
+            </button>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
+export default QuizSection;
