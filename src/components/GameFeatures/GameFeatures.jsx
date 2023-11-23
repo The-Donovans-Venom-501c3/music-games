@@ -1,7 +1,7 @@
 import "./GameFeatures.scss";
 import musicnote from "../../assets/svg/MusicNote.svg";
-import { MusicToggle } from "./Music/MusicToggle";
-import Timer from './Timer';
+// import { MusicToggle } from "./Music/MusicToggle";
+import Timer from "./Timer/Timer";
 import { useAtomValue } from "jotai";
 import { livesAtom, scoreAtom } from "../../store/atoms";
 
@@ -30,14 +30,14 @@ const GameFeatures = () => {
         </div>
       </div>
       <div className="gameSetting">
-          <MusicToggle />
-//         <div>
-//           <span>Music</span>
-//           <div id="music">
-//             <div id="musicBtn"></div>
-//             <div value="off">OFF</div>
-//           </div>
-//         </div>
+        {/* <MusicToggle /> */}
+        <div>
+           <span>Music</span>
+           <div id="music">
+             <div id="musicBtn"></div>
+             <div value="off">OFF</div>
+           </div>
+         </div>
         <div>
           <span>Volume</span>
           <div id="volume">

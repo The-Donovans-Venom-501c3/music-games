@@ -1,12 +1,18 @@
 import "./Welcome.scss";
 import cat from "../../assets/svg/Welcome_Character.svg";
 import polygon from "../../assets/svg/Welcome_Polygon.svg";
-import { gameStateAtom, levelStateAtom } from "../../store/atoms";
+import { appStateAtom, gameStateAtom, levelStateAtom } from "../../store/atoms";
 import { useAtomValue, useSetAtom } from "jotai";
 
 export default function Welcome() {
   const game = useAtomValue(gameStateAtom);
   const setLevel = useSetAtom(levelStateAtom);
+  const setAppState = useSetAtom(appStateAtom);
+
+  const handleLevelClick = (level) => {
+    setLevel(level);
+    setAppState('quiz');
+  };
 
   let gameHeading = "";
   let gameText = "";
@@ -39,13 +45,13 @@ export default function Welcome() {
           <img src={cat} className="cat" alt="Crescendo" />
         </div>
         <div className="levels">
-          <button className="easy" onClick={() => setLevel("easy")}>
+          <button className="easy" onClick={() => handleLevelClick("easy")}>
             <p>Easy</p>
           </button>
-          <button className="medium" onClick={() => setLevel("medium")}>
+          <button className="medium" onClick={() => handleLevelClick("medium")}>
             <p>Medium</p>
           </button>
-          <button className="hard" onClick={() => setLevel("hard")}>
+          <button className="hard" onClick={() => handleLevelClick("hard")}>
             <p>Hard</p>
           </button>
         </div>

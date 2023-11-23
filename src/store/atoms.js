@@ -10,7 +10,7 @@ Possible Game states:
 5) scale : Scale Identification Game
 */
 
-export const appStateAtom = atom("welcome");
+export const appStateAtom = atom("quiz");
 /*
 Possible App states:
 1) home : Home Page
@@ -28,7 +28,7 @@ Possible Level states:
 4) hard : Hard Level
 */
 
-export const loadingStateAtom = atom("loading");
+export const loadingStateAtom = atom("quiz");
 /*
 Possible Loading states:
 1) loading
