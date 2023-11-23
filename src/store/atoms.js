@@ -19,7 +19,7 @@ Possible App states:
 4) game-finished : Game Finished State
 */
 
-export const levelStateAtom = atom('');
+export const levelStateAtom = atom('easy');
 /*
 Possible Level states:
 1) Initial State: none
@@ -52,10 +52,19 @@ Possible Affirmation states:
 3) tryAgain
 */
 
-export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
+export const overlayAtom = atom('');
+/*
+Possible Overlay states:
+1) lives : Lives Over overlay
+2) exit : Exit Game overlay
+*/
+
+// export const timerAtom = atom(0);  // starts from 0 and keeps incrementing
 
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 
 export const questionAtom = atom(1); // goes till the last question
+
+export const totalQuestionsAtom = atom(0); // total number of questions
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
