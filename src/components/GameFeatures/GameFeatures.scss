@@ -64,31 +64,6 @@
                 justify-content: center;
                 flex-direction: row;
             }
-
-            #music {
-                width: 45%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 2%;
-                font-size: 22px;
-                div{
-                    border: 2px solid $grey-500;
-                    width: 90%;
-                    height: 35px;
-                    color:$grey-500;
-                }
-                >:nth-child(1){
-                    margin-bottom: 20px;
-                    border-radius: 10px;
-                    background-color: $grey-100;
-                    border: 1px solid $grey-300;
-                    box-shadow: 0px 5px 0px 0px $grey-300;
-                }
-                >:nth-child(2){
-                    border:none;
-                }
-              }
               
             #volume{
                 width: 45%;

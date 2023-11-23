@@ -9,15 +9,12 @@ export function MusicToggle() {
 
   const toggleMusic = () => {
     setMusicOn(!musicOn);
-
-    console.log("oi")
   };
   return (
     <div>
       <span>Music</span>
-
-      {musicOn ? (
-        <div className="music">
+    
+        <div id="music" className= {musicOn ? "on" : "" }>
           <button
             onClick={() => {
               toggleMusic()
@@ -25,21 +22,8 @@ export function MusicToggle() {
           >
             <img src={dot} alt="play music toggle" />
           </button>
-          <div className="off">OFF</div>
+          <span>{musicOn? "ON" : "OFF"}</span>
         </div>
-      ) : (
-        <div className="music on">
-          {" "}
-          <div>ON</div>{" "}
-          <button
-            onClick={() => {
-              toggleMusic()
-            }}
-          >
-            <img src={dot} alt="play music toggle" />
-          </button>{" "}
-        </div>
-      )}
     </div>
   );
 }
