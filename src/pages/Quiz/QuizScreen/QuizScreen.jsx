@@ -15,6 +15,7 @@ const QuizScreen = () => {
             <div className='musicStand'>
                 <img id='music' src={music} width='100%' height='100%'/>
             </div>
+            
             <div className='quizScreenBGContainer'>
 
             <div className='GameScreen'>
@@ -37,6 +38,7 @@ const QuizScreen = () => {
             </div>
 
             </div>
+
             <div className='catConatiner'>
                 <img id='cat' src={cat} />
             </div>
