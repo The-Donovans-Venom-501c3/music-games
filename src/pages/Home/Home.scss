@@ -1,0 +1,46 @@
+@import "../../assets/scss/variables";
+
+.homeContainer {
+    height: calc(100vh - $nav-height);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer {
+    position: relative;
+    top: 235px;
+}
+
+
+
+h1 {
+    font-family: Be Vietnam Pro;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 68px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    display: inline;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.orange {
+    color: #F6AD69;
+}
+
+p {
+    //styleName: Headline XXS/Regular;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
