@@ -1,18 +1,20 @@
 import "./Popup.scss";
 import start from "../../../assets/svg/Start.svg";
 import pause from "../../../assets/svg/Pause.svg";
-import { useAtom, useAtomValue, useSetAtom } from "jotai";
-import { popupAtom, quizStateAtom } from "../../../store/atoms";
+import { useAtomValue, useSetAtom } from "jotai";
+import { quizStateAtom, timerOnAtom } from "../../../store/atoms";
 import { useEffect } from "react";
 
 const popupData = {
-  pause: {
-    state: "start",
+  play: {
+    class: "start",
+    state: "resumed",
     sentence: "Enjoy and have fun!",
     pic: start,
   },
-  play: {
-    state: "pause",
+  pause: {
+    class: "pause",
+    state: "paused",
     sentence: "Click the Play button to resume the game",
     pic: pause,
   },
@@ -21,21 +23,22 @@ const popupData = {
 export default function Popup() {
 
   const setQuizState = useSetAtom(quizStateAtom);
-  const popup = useAtomValue(popupAtom);
+  const timerOn = useAtomValue(timerOnAtom);
+  let popup = timerOn ? "play" : "pause";
 
   useEffect(() => {
-    if(popup === 'pause'){
+    if(timerOn){
       const timeout = setTimeout(() => {
         setQuizState('quiz'); 
       }, 1500);
   
       return () => clearTimeout(timeout);  
     }
-  }, [popup])
+  }, [timerOn])
 
   return (
     <div className="toast">
-      <div className={popupData[popup].state}>
+      <div className={popupData[popup].class}>
         <img src={popupData[popup].pic} />
       </div>
       <div className="textDialog">

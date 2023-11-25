@@ -455,10 +455,10 @@
     },
     {
       "name": "Scale Identification",
-      "numberOfQuestions": {"easy": 8},
       "levels": [
         {
           "level": "Easy",
+          "numberOfQuestions": {"easy": 8},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/o0GZOef.jpg",
