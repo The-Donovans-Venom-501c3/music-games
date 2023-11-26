@@ -1,31 +1,37 @@
-import './GameFeatures.scss'
+import "./GameFeatures.scss";
+// import { MusicToggle } from "./Music/MusicToggle";
 import musicnote from '../../assets/svg/MusicNote.svg'
 import Switch from '@mui/material/Switch';
 import Slider from '@mui/material/Slider';
 import React, { useState } from 'react'
+import Timer from "./Timer/Timer";
+import { useAtomValue } from "jotai";
+import { livesAtom, scoreAtom } from "../../store/atoms";
 
-const GameFeatures = () =>{
-    
-    return(
-        <div className='gameFeatureContainer'>
-            <div className='gameLives'>
-                <div>
-                    <span>Timer</span>
-                    <span id='timer'>00:00</span>
-                </div>
-                <div>
-                    <span>Score</span>
-                    <span id='score'>0</span>
-                </div>
-                <div>
-                    <span>Lives</span>
-                    <span id='lives'>
-                        <img src={musicnote}/>
-                        <img src={musicnote}/>
-                        <img src={musicnote}/>
-                    </span>
-                </div>
-            </div>
+const GameFeatures = () => {
+  const score = useAtomValue(scoreAtom);
+  const lives = useAtomValue(livesAtom);
+
+  return (
+    <div className="gameFeatureContainer">
+      <div className="gameLives">
+        <div>
+          <span>Timer</span>
+          <Timer />
+        </div>
+        <div>
+          <span>Score</span>
+          <span id="score">{score}</span>
+        </div>
+        <div>
+          <span>Lives</span>
+          <span id="lives">
+            {Array.from({ length: lives }, (_, index) => (
+              <img key={index} src={musicnote} />
+            ))}
+          </span>
+        </div>
+      </div>
             <div className='gameSetting'>
                 <div>
                     <span>Music</span>
@@ -84,6 +90,6 @@ const GameFeatures = () =>{
                 </div>
             </div >
         </div>
-    );
-}
+  );
+};
 export default GameFeatures;

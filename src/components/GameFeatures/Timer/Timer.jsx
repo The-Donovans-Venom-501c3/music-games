@@ -1,11 +1,9 @@
+import { useAtomValue } from "jotai";
 import { useState, useEffect } from "react";
-
-import "./Timer.scss";
+import { timerOnAtom } from "../../../store/atoms";
 
 export default function Timer() {
-  const [timerOn, setTimerOn] = useState(true);
-
-
+  const timerOn = useAtomValue(timerOnAtom);
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
@@ -15,14 +13,14 @@ export default function Timer() {
         setSeconds((prevSeconds) => prevSeconds + 1);
       }, 1000);
     } else {
-     clearInterval(interval);
+      clearInterval(interval);
     }
     return () => clearInterval(interval);
   }, [timerOn]);
 
   const resetTimer = () => {
-    setSeconds(0)
-  }
+    setSeconds(0);
+  };
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -31,9 +29,6 @@ export default function Timer() {
       remainingSeconds < 10 ? "0" : ""
     }${remainingSeconds}`;
   };
-  return (
-    <div className="timer">
-      <span>{formatTime(seconds)}</span>
-    </div>
-  );
+
+  return <span id="timer">{formatTime(seconds)}</span>;
 }
