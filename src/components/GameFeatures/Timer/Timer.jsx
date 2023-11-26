@@ -1,7 +1,9 @@
+import { useAtomValue } from "jotai";
 import { useState, useEffect } from "react";
+import { timerOnAtom } from "../../../store/atoms";
 
 export default function Timer() {
-  const [timerOn, setTimerOn] = useState(true);
+  const timerOn = useAtomValue(timerOnAtom);
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {

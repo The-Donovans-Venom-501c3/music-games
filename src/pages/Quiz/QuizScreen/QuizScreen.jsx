@@ -3,19 +3,31 @@ import music from "../../../assets/svg/Music_stand.svg";
 import cat from "../../../assets/svg/Cat.svg";
 import x from "../../../assets/svg/X.svg";
 import pause from "../../../assets/svg/Pause.svg";
+import play from '../../../assets/svg/Icon_Play.svg';
 import restart from "../../../assets/svg/Restart.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
-import { useSetAtom } from "jotai";
-import { overlayAtom, quizStateAtom } from "../../../store/atoms";
+import { useAtom, useSetAtom } from "jotai";
+import { appStateAtom, overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
 
 const QuizScreen = () => {
   const setQuizState = useSetAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
+  const [timerOn, setTimerOn] = useAtom(timerOnAtom);
+  const setAppState = useSetAtom(appStateAtom);
 
   const handleExit = () => {
     setOverlay("exit");
     setQuizState("overlay");
+  };
+
+  const handlePause = () => {
+    setTimerOn(!timerOn);
+    setQuizState('popup');
+  };
+
+  const handleRestart = () => {
+    setAppState('home');
   };
 
   return (
@@ -30,13 +42,13 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="setting">
-          <button className="btnSetting btnRestart">
+          <button className="btnSetting btnRestart" onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>
           </button>
-          <button className="btnSetting btnPause">
-            <img src={pause} />
-            <span>PAUSE</span>
+          <button className="btnSetting btnPause" onClick={handlePause}>
+            <img src={timerOn ? pause : play} />
+            <span>{timerOn ? "PAUSE" : "PLAY"}</span>
           </button>
           <button className="btnSetting btnexit" onClick={handleExit}>
             <img src={x} alt="x" />

@@ -1,29 +1,11 @@
 import "./QuizSection.scss";
 import questionmark from "../../assets/svg/QuestionMark.svg";
-import noteQuestionGraph from "../../assets/svg/NoteQuestionGraph.svg";
-import sharp from "../../assets/svg/SharpSymbol.svg";
-import bimol from "../../assets/svg/BimolSymbol.svg";
+import Options from './Options/Options';
 import { useMemo, useState } from 'react';
 import { useAtomValue, useSetAtom } from "jotai";
-import { affirmationAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
+import { affirmationAtom, correctOptionAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
 import { getQuestions } from '../../utils/questions'
 
-
-const notes = ["C", "D", "E", "F", "G", "A", "B"];
-
-const symbols = [
-  {
-    name: ""
-  },
-  {
-    name: "#",
-    img: sharp,
-  },
-  {
-    name: "♭",
-    img: bimol,
-  },
-];
 
 const QuizSection = () => {
 
@@ -39,6 +21,9 @@ const QuizSection = () => {
     return questions.length;
   }, [questions]);
   setTotalQuestions(totalQuestions);
+
+  const setCorrectOption = useSetAtom(correctOptionAtom);
+  setCorrectOption(currQuestion.correctOption);
 
   const setQuizState = useSetAtom(quizStateAtom);
   const setAffirmation = useSetAtom(affirmationAtom);
@@ -70,18 +55,7 @@ const QuizSection = () => {
       </div>
       <div className="questionText">
         <p>What note is shown?</p>
-      </div>
-      <div className="answerBtnFram">
-        {symbols.map((symbol, index) =>
-          notes.map((note, idx) => (
-            <button key={idx} onClick={() => handleOptionClick(note + symbol.name)}>
-              <span>{note}</span>
-              {index != 0 ? (
-                <img src={symbol.img} />
-              ) : null}
-            </button>
-          ))
-        )}
+        <Options handleOptionClick = {handleOptionClick}/>
       </div>
     </div>
   );

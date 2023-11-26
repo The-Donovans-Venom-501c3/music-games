@@ -1,6 +1,6 @@
 import React from "react";
 import { useAtomValue, useSetAtom, useAtom } from "jotai";
-import { affirmationAtom, appStateAtom, livesAtom, overlayAtom, questionAtom, quizStateAtom, scoreAtom, totalQuestionsAtom } from "../../../store/atoms";
+import { affirmationAtom, appStateAtom, correctOptionAtom, livesAtom, overlayAtom, questionAtom, quizStateAtom, scoreAtom, totalQuestionsAtom } from "../../../store/atoms";
 import successCharacter from "../../../assets/svg/Affirmation_Success_Character.svg";
 import failCharacter from "../../../assets/svg/Affirmation_Fail_Character.svg";
 import "./Affirmation.scss";
@@ -38,6 +38,7 @@ export default function Affirmation() {
   const setScore = useSetAtom(scoreAtom);
   const [lives, setLives] = useAtom(livesAtom);
   const setOverlay = useSetAtom(overlayAtom);
+  const correctOption = useAtomValue(correctOptionAtom);
 
   const handleResponseBtn = () => {
     if(affirmation == 'success' || affirmation == 'fail'){
@@ -70,11 +71,11 @@ export default function Affirmation() {
         className="background-rectangle"
         style={{ backgroundColor: bgColor }}
       >
-        {buttonText === "TRY AGAIN" ? (
+        {affirmation === "tryAgain" ? (
           <section className="tip-try-again">{sentence}</section>
-        ) : (
+        ) : affirmation === "success" ? (
           <section className="tip">{sentence}</section>
-        )}
+        ) : <section className="tip">{sentence}<span>{correctOption}</span></section>}
 
         <button
           className="ButtonResponse"
