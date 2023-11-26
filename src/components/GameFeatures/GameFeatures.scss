@@ -127,20 +127,6 @@
                 justify-content: center;
                 flex-direction: row;
             }
-            #music {
-                width: 7.5vw;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                // padding: 2%;
-                font-size: 22px;
-                div{
-                    border: 2px solid $grey-500;
-                    width: 100%;
-                    height: 35px;
-                    color:$grey-500;
-                }
-              }
             #volume{
                 width: 45%;
             }
