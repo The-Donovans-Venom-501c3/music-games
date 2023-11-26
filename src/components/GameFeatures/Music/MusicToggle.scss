@@ -14,10 +14,8 @@
   transition: 1s;
   span {
     border: none !important;
-    top: -4px;
     padding-top: 2px;
     padding-right: 6px;
-    padding-left: 6px;
     width: 41px;
   }
   button {
@@ -36,7 +34,7 @@
   flex-direction: row-reverse !important;
   span {
     color: $white;
-    padding-left: 20px;
+    padding-left: 10px;
     text-align: center;
   }
 }
@@ -52,6 +50,7 @@
       text-align: center;
       height: 100%;
       padding-top: 6px;
+      padding-left: 6px;
       font-size: 500;
     }
 
