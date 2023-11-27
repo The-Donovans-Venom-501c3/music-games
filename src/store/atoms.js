@@ -70,3 +70,10 @@ export const questionAtom = atom(1); // goes till the last question
 export const totalQuestionsAtom = atom(0); // total number of questions
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
+
+export const gameFinishedAtom = atom('score');
+/*
+Possible Game Finished states:
+1) score : Score Dialog
+2) end-game : Play Again Dialog
+*/
