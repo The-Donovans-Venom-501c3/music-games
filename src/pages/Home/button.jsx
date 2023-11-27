@@ -9,7 +9,7 @@ const Button = (props) => {
             <div className="Button-Layout">
 
                 <div className='Img-Layout'>
-                    <img src={props.icon} />
+                    <img src={props.icon} id = "button-icon" />
                 </div>
 
                 <div className="Text-Layout">
