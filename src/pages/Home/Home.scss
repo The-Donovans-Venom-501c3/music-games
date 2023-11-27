@@ -1,19 +1,24 @@
 @import '../../assets/scss/variables';
 
+// body{
+//     background-color: #1C1A1A;
+//     background-image: none;
+// }
+
 
 .homeContainer{
+    background-color:#1C1A1A;
+    height: 150vh;
+
+    margin:0;
+    padding: 0;
     display: flex;
-    height: calc(100vh - $nav-height);
-    // width: 100vw;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    
 }
 
 
-
 .contentContainer{
+    
     flex:1 100px;
     justify-content: space-around;
     position: relative;
@@ -72,9 +77,6 @@ p {
     grid-template-rows: auto auto auto auto;
     gap:15px;
 }
-
-
-
 
 .Button-Layout{
     display: flex;

@@ -8,7 +8,6 @@ import yellowGuy from '../../assets/svg/yellowGuy.svg'
 
 export default function Home() {
   return (<div className='homeContainer'>
-
     <div className='contentContainer'>
         <div>
           <img src={yellowGuy} alt="little yelow creature" id = "yellowGuy"/>
