@@ -70,3 +70,5 @@ export const questionAtom = atom(1); // goes till the last question
 export const totalQuestionsAtom = atom(0); // total number of questions
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
+
+export const musicStateAtom = atom(false); // true when music is playing, false when not
