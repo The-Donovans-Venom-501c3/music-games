@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.scss';
 
 
 
 const Button = (props) => {
-    return <div className="Button-Position" >
-        <button className="HomeButton">
+    const [icon, setIcon] = useState(props.icon);
+    const [bgColor, setbgColor] = useState('#FFFFFF');
+    const [borderColor, setBorderColor] = useState('#DDDADA')
+    return <div className="Button-Position">
+        <button className="HomeButton"
+            onMouseOver={() => {
+                setIcon(props.hoverIcon)
+                setbgColor(props.hoverColor)
+                setBorderColor(props.hoverBorderColor)
+            }}
+            onMouseOut={() => {
+                setIcon(props.icon)
+                setbgColor('#FFFFFF')
+                setBorderColor('#DDDADA')
+            }
+            }
+            style={{
+                backgroundColor: bgColor,
+                border: `3px solid ${borderColor}`,
+                WebkitBoxShadow: `2px 4px 1px ${borderColor}`,
+                MozBoxShadow: `2px 4px 1px ${borderColor}`,
+                boxShadow: `2px 4px 1px ${borderColor}`
+            }}
+        >
             <div className="Button-Layout">
 
                 <div className='Img-Layout'>
-                    <img src={props.icon} id = "button-icon" />
+                    <img src={icon}
+                        id="button-icon"
+                    />
                 </div>
 
                 <div className="Text-Layout">
