@@ -12,14 +12,14 @@ export default function Options({ handleOptionClick }) {
 
   return (
     <>
-      {game == "chord" ? (
-        <ChordOptions handleOptionClick={handleOptionClick}/>
+      {game == "major-minor" ? (
+        <ChordOptions handleOptionClick={handleOptionClick} />
       ) : game == "key" ? (
-        <KeyOptions handleOptionClick={handleOptionClick}/>
+        <KeyOptions handleOptionClick={handleOptionClick} />
       ) : game == "note" ? (
-        <NoteOptions handleOptionClick={handleOptionClick} level={level}/>
+        <NoteOptions handleOptionClick={handleOptionClick} level={level} />
       ) : (
-        <ScaleOptions handleOptionClick={handleOptionClick} level={level}/>
+        <ScaleOptions handleOptionClick={handleOptionClick} level={level} />
       )}
     </>
   );
