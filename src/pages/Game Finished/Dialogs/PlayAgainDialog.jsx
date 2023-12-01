@@ -15,7 +15,7 @@ export default function PlayAgainDialog() {
           <span>- Louis Armstrong</span>
         </div>
         <div className="button-container centralized">
-          <button className="primary"> NEXT LEVEL </button>
+          <button className="primary"> PLAY AGAIN </button>
           <button className="secondary"> SEE OTHER GAMES </button>
           <button className="secondary"> SEE MY LESSONS </button>
         </div>
