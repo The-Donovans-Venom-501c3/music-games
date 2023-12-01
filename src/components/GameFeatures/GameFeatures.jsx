@@ -58,33 +58,7 @@ const GameFeatures = () => {
                 <div>
                     <span>Music</span>
                     <div id='music'>
-                        <Switch color='success'
-                        sx={{ 
-                            '& .MuiSwitch-thumb':{
-                                borderRadius:'5px',
-                                height:'5vh',
-                                backgroundColor:'$grey-100',
-                                border:'2px solid $grey-500',
-                                width:'3.5vw',
-                                transform: 'translateX(0px)',
-                                boxShadow:'0px 5px 0px 0px #BFBABB',
-
-                            },
-                            '& .MuiSwitch-track':{
-                                borderRadius:'5px',
-                                width:'25vw'
-                            },
-                            '.css-1xvpzln-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked':{
-                                '-webkit-transform': 'translateX(3.5vw)',
-                                '-moz-transform': 'translateX(3.5vw)',
-                               ' -ms-transform': 'translateX(3.5vw)',
-                                transform: "translateX(3.5vw)",
-                                color:'#F0EEEE'
-                            },
-                            width:'8vw',
-                            height:'8.5vh',
-                            
-                        }}
+                        <Switch color='success' className="switch"
                         checked={musicOn}
                         onChange={handleChangeSwitch}
                         />

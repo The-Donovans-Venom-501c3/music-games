@@ -35,35 +35,40 @@ const QuizScreen = () => {
       <div className="musicStand">
         <img id="music" src={music} width="100%" height="100%" />
       </div>
+    
+      <div className="quizScreenBGContainer">
+        <div className="GameScreen">
+            <div className="setting">
+            <button className="btnSetting btnRestart" onClick={handleRestart}>
+                <img src={restart} />
+                <span>RESTART</span>
+            </button>
+            <button className="btnSetting btnPause" onClick={handlePause}>
+                <img src={timerOn ? pause : play} />
+                <span>{timerOn ? "PAUSE" : "PLAY"}</span>
+            </button>
+            <button className="btnSetting btnexit" onClick={handleExit}>
+                <img src={x} alt="x" />
+            </button>
+            </div>
+            <div className="gameMain">
+            <div className="left">
+                <GameFeatures />
+                <div className="line"></div>
+            </div>
+            <div className="right">
+                <QuizSection />
+            </div>
+            </div>
+        </div>
+        
+      </div>
 
       <div className="catConatiner">
         <img id="cat" src={cat} />
       </div>
 
-      <div className="GameScreen">
-        <div className="setting">
-          <button className="btnSetting btnRestart" onClick={handleRestart}>
-            <img src={restart} />
-            <span>RESTART</span>
-          </button>
-          <button className="btnSetting btnPause" onClick={handlePause}>
-            <img src={timerOn ? pause : play} />
-            <span>{timerOn ? "PAUSE" : "PLAY"}</span>
-          </button>
-          <button className="btnSetting btnexit" onClick={handleExit}>
-            <img src={x} alt="x" />
-          </button>
-        </div>
-        <div className="gameMain">
-          <div className="left">
-            <GameFeatures />
-            <div className="line"></div>
-          </div>
-          <div className="right">
-            <QuizSection />
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };
