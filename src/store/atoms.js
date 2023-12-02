@@ -60,6 +60,7 @@ Possible Overlay states:
 1) lives : Lives Over overlay
 2) exit : Exit Game overlay
 */
+export const countDownOnAtom = atom(true); // true when time is running, false when not
 
 export const timerOnAtom = atom(true);  // true when time is running, false when not
 
