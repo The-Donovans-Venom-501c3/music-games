@@ -9,8 +9,18 @@ import HoverChordIdentification from '../../assets/svg/HoverChordIdentification.
 import VirtualPiano from '../../assets/svg/HomeVirtualPiano.svg';
 import HoverVirtualPiano from '../../assets/svg/HoverVirtualPiano.svg';
 import yellowGuy from '../../assets/svg/yellowGuy.svg'
+import { useSetAtom } from 'jotai';
+import { appStateAtom, gameStateAtom } from '../../store/atoms';
 
 export default function Home() {
+  
+  const setAppState = useSetAtom(appStateAtom);
+  const setGameState = useSetAtom(gameStateAtom);
+  const handleClick = (game) => {
+    setGameState(game);
+    setAppState('welcome');
+  };
+
   return (<div className='homeContainer'>
     <div className='contentContainer'>
       <div>
@@ -35,31 +45,34 @@ export default function Home() {
         icon={ScaleIdentification}
         hoverIcon={HoverScaleIdentification}
         title='Scale identification'
-        tips='Identify the scale' 
+        tips='Identify the Scale on the staff' 
         hoverColor="#D8BCFD"
-        hoverBorderColor="#C986FA"/>
+        hoverBorderColor="#C986FA"
+        onClick={() => handleClick('scale')}/>
       <Button
         icon={IntervalIdentification}
         hoverIcon={HoverIntervalIdentification}
-        title='Interval identification'
-        tips='Identify the Interval on the staff'
+        title='Key Signature identification'
+        tips='Identify the Key Signature on the staff'
         hoverColor="#F6AD69" 
-        hoverBorderColor="#E98427"/>
+        hoverBorderColor="#E98427"
+        onClick={() => handleClick('key')}/>
       <Button
         icon={ChordIdentification}
         hoverIcon={HoverChordIdentification}
-        title='Chrod identificaiton'
-        tips='Identify the chord'
+        title='Major-Minor identificaiton'
+        tips='Identify the Major/Minor on the staff'
         hoverColor="#F8D867" 
-        hoverBorderColor="#E9BB18"/>
+        hoverBorderColor="#E9BB18"
+        onClick={() => handleClick('major-minor')}/>
       <Button
         icon={VirtualPiano}
         hoverIcon={HoverVirtualPiano}
-        title='Virtual piano'
-        tips='Lorem ipsum dolor sit ammet' 
+        title='Note identificaiton'
+        tips='Identify the Note on the staff' 
         hoverColor="#75C973"
-        hoverBorderColor="#519750
-"/>
+        hoverBorderColor="#519750"
+        onClick={() => handleClick('note')}/>
     </div>
   </div>
 

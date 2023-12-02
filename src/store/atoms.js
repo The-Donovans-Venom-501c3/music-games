@@ -1,15 +1,5 @@
 import { atom } from 'jotai'
 
-export const gameStateAtom = atom('note');
-/*
-Possible Game states:
-1) Initial State: none
-2) note : Note Identification Game
-3) key : Key Signature Identification Game
-4) chord : Chord Identification Game
-5) scale : Scale Identification Game
-*/
-
 export const appStateAtom = atom("home");
 /*
 Possible App states:
@@ -17,6 +7,16 @@ Possible App states:
 2) welcome : Welcome Page
 3) quiz : Quiz Page
 4) game-finished : Game Finished State
+*/
+
+export const gameStateAtom = atom('');
+/*
+Possible Game states:
+1) Initial State: none
+2) note : Note Identification Game
+3) key : Key Signature Identification Game
+4) chord : Chord Identification Game
+5) scale : Scale Identification Game
 */
 
 export const levelStateAtom = atom('easy');

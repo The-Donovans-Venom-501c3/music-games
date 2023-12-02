@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Home.scss';
 
-
-
 const Button = (props) => {
+
     const [icon, setIcon] = useState(props.icon);
     const [bgColor, setbgColor] = useState('#FFFFFF');
     const [borderColor, setBorderColor] = useState('#DDDADA')
     return <div className="Button-Position">
         <button className="HomeButton"
+            onClick={props.onClick}
             onMouseOver={() => {
                 setIcon(props.hoverIcon)
                 setbgColor(props.hoverColor)
