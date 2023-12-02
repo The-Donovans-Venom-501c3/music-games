@@ -17,6 +17,8 @@ export default function ScaleOptions({ handleOptionClick, level }) {
     const handleChordClick = (chord) => {
         if (selectedNote) {
             handleOptionClick(selectedNote + " " + chord);
+
+            setSelectedNote("");
         }
     };
 
