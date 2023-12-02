@@ -1,5 +1,14 @@
 @import "../../../assets/scss/variables";
 
+//contain the loading element
+.loadingContainer {
+  position: fixed;
+  display: flex;
+  height: calc(100vh - $nav-height);
+  width: 100vw;
+  align-items: center;
+}
+
 .loading {
   margin: 2rem auto;
   background-color: $white;
@@ -76,5 +85,56 @@
   100% {
     box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
+  }
+}
+
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .loading h1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: $black;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .loading p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+  }
+
+  .loading span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+//small laptop
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .loading h1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: $black;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .loading p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+  }
+
+  .loading span {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
   }
 }

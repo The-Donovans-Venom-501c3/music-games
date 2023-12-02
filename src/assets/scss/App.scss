@@ -1,39 +1,48 @@
 @import './variables';
 
-*, ::before, ::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
-body{
+body {
+    height: 100vh;
     margin: 0;
     padding-top: $nav-height;
     font-family: $primary-font;
     background-image: url('/Background.svg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center $nav-height;
+    background-attachment:cover;
+    background-size: 100% 100%; // when we will animate it we have to make it 225% 225%
+    background-position: center;
+    height: $page-height;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-p{
+p {
     margin: 0;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-button{
+button {
     border: none;
     cursor: pointer;
     background-color: transparent;
