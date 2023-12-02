@@ -9,12 +9,15 @@ import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
 import { appStateAtom, overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
+import QuizContext from "../QuizContext";
+import { useEffect,useContext } from "react";
 
 const QuizScreen = () => {
   const setQuizState = useSetAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
   const setAppState = useSetAtom(appStateAtom);
+  const { affirmationOpen, setAffirmationOpen } = useContext(QuizContext);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -29,6 +32,14 @@ const QuizScreen = () => {
   const handleRestart = () => {
     setAppState('home');
   };
+
+  useEffect(()=>{
+    if(affirmationOpen){
+      setTimerOn(false);
+    }else{
+      setTimerOn(true);
+    }
+  },[affirmationOpen])
 
   return (
     <div className="QuizScreenContainer">
