@@ -1,22 +1,22 @@
 import { atom } from 'jotai'
 
-export const gameStateAtom = atom('major-minor');
-/*
-Possible Game states:
-1) Initial State: none
-2) note : Note Identification Game
-3) key : Key Signature Identification Game
-4) major-minor : major-minor Identification Game
-5) scale : Scale Identification Game
-*/
-
-export const appStateAtom = atom("welcome");
+export const appStateAtom = atom("home");
 /*
 Possible App states:
 1) home : Home Page
 2) welcome : Welcome Page
 3) quiz : Quiz Page
 4) game-finished : Game Finished State
+*/
+
+export const gameStateAtom = atom('');
+/*
+Possible Game states:
+1) Initial State: none
+2) note : Note Identification Game
+3) key : Key Signature Identification Game
+4) chord : Chord Identification Game
+5) scale : Scale Identification Game
 */
 
 export const levelStateAtom = atom('');
