@@ -1,12 +1,12 @@
 import { atom } from 'jotai'
 
-export const gameStateAtom = atom('note');
+export const gameStateAtom = atom('major-minor');
 /*
 Possible Game states:
 1) Initial State: none
 2) note : Note Identification Game
 3) key : Key Signature Identification Game
-4) chord : Chord Identification Game
+4) major-minor : major-minor Identification Game
 5) scale : Scale Identification Game
 */
 
