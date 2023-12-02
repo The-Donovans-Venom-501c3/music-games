@@ -1,6 +1,6 @@
 @import "../../assets/scss/variables";
 
-.quizSection{
+.quizSection {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,7 +9,8 @@
     background-color: white;
     width: 80%;
     height: 90%;
-    .quizNumber{
+
+    .quizNumber {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -17,21 +18,28 @@
         font-weight: 400;
         border-bottom: 1px solid black;
         font-size: 22px;
-        img{
+
+        img {
             width: 20%;
             height: 80%;
         }
     }
-    .noteQuestionnGraph{
+
+    .noteQuestionnGraph {
         width: 100%;
         height: 30%;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
     }
 
-    .questionText{
+    p {
+        color: black;
+    }
+
+    .questionText {
         text-align: center;
         font-size: 22px;
     }
