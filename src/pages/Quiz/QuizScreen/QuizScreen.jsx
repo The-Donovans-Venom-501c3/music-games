@@ -7,17 +7,14 @@ import play from '../../../assets/svg/Icon_Play.svg';
 import restart from "../../../assets/svg/Restart.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
-import { useSetAtom } from "jotai";
-import { overlayAtom, popupAtom, quizStateAtom, timerAtom } from "../../../store/atoms";
-import { useState } from "react";
+import { useAtom, useSetAtom } from "jotai";
+import { appStateAtom, overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
 
 const QuizScreen = () => {
   const setQuizState = useSetAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
-  const setPopup = useSetAtom(popupAtom);
-
-  const [isPaused, setIsPaused] = useState(false);
-  const setTimer = useSetAtom(timerAtom);
+  const [timerOn, setTimerOn] = useAtom(timerOnAtom);
+  const setAppState = useSetAtom(appStateAtom);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -25,15 +22,12 @@ const QuizScreen = () => {
   };
 
   const handlePause = () => {
-    if(isPaused){
-      setPopup('pause');
-      setTimer(true);
-    } else{
-      setPopup('play');
-      setTimer(false);
-    }
-    setIsPaused(!isPaused);
+    setTimerOn(!timerOn);
     setQuizState('popup');
+  };
+
+  const handleRestart = () => {
+    setAppState('home');
   };
 
   return (
@@ -48,13 +42,13 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="setting">
-          <button className="btnSetting btnRestart">
+          <button className="btnSetting btnRestart" onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>
           </button>
           <button className="btnSetting btnPause" onClick={handlePause}>
-            <img src={!isPaused ? pause : play} />
-            <span>{!isPaused ? "PAUSE" : "PLAY"}</span>
+            <img src={timerOn ? pause : play} />
+            <span>{timerOn ? "PAUSE" : "PLAY"}</span>
           </button>
           <button className="btnSetting btnexit" onClick={handleExit}>
             <img src={x} alt="x" />

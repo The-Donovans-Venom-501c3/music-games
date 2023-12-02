@@ -19,7 +19,7 @@ Possible Game states:
 5) scale : Scale Identification Game
 */
 
-export const levelStateAtom = atom('easy');
+export const levelStateAtom = atom('');
 /*
 Possible Level states:
 1) Initial State: none
@@ -28,7 +28,7 @@ Possible Level states:
 4) hard : Hard Level
 */
 
-export const loadingStateAtom = atom("quiz");
+export const loadingStateAtom = atom("loading");
 /*
 Possible Loading states:
 1) loading
@@ -52,6 +52,8 @@ Possible Affirmation states:
 3) tryAgain
 */
 
+export const correctOptionAtom = atom(''); // contains correct option for a question
+
 export const overlayAtom = atom('');
 /*
 Possible Overlay states:
@@ -59,14 +61,7 @@ Possible Overlay states:
 2) exit : Exit Game overlay
 */
 
-export const popupAtom = atom('');
-/*
-Possible Overlay states:
-1) play : Game resumes
-2) pause : Game Paused
-*/
-
-export const timerAtom = atom(true);  // true when time is running, false when not
+export const timerOnAtom = atom(true);  // true when time is running, false when not
 
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 
@@ -75,3 +70,12 @@ export const questionAtom = atom(1); // goes till the last question
 export const totalQuestionsAtom = atom(0); // total number of questions
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
+
+export const musicStateAtom = atom(false); // true when music is playing, false when not
+
+export const gameFinishedAtom = atom('score');
+/*
+Possible Game Finished states:
+1) score : Score Dialog
+2) end-game : Play Again Dialog
+*/
