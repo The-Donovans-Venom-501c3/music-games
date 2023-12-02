@@ -63,6 +63,8 @@ Possible Overlay states:
 
 export const timerOnAtom = atom(true);  // true when time is running, false when not
 
+export const resetTimerAtom = atom(true);
+
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 
 export const questionAtom = atom(1); // goes till the last question
