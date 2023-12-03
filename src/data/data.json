@@ -184,7 +184,7 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 10},
+          "numberOfQuestions": {"easy": 6},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/8SiphoH.jpg",
@@ -214,7 +214,7 @@
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 5, "medium":15},
+          "numberOfQuestions": {"easy": 6, "medium":4},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/BOA4C1H.jpg",
@@ -236,7 +236,7 @@
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 5, "medium": 10, "hard": 15},
+          "numberOfQuestions": {"easy": 6, "medium": 4, "hard": 4},
           "questions": [
             {
               "questionImage": "https://i.imgur.com/BUkWXda.jpg",
