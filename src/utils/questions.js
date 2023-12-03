@@ -3,14 +3,15 @@ import data from '../data/data.json';
 const gameIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
 const levelIdx = { 'easy': 0, 'medium': 1, 'hard': 2 };
 
-function getRandomQuestions(questions, number) {
+function getRandomQuestions(questions, length) {
+
   // Shuffle the questions using the Fisher-Yates algorithm
-  for (let i = questions.length - 1; i > 0; i--) {
+  for (let i = length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [questions[i], questions[j]] = [questions[j], questions[i]];
   }
 
-  return questions.slice(0, number);
+  return questions.slice(0, length);
 }
 
 export function getQuestions(game, level) {
