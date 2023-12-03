@@ -38,8 +38,8 @@ export default function Overlay() {
   };
 
   const handleButton2 = () => {
-    if(overlayState == 'lives'){
-      
+    if(overlayState === 'lives'){
+      window.location.href = 'https://thedonovanspianoroom.com/bookshelf/';
     } else {
       setAppState('home');
     }
