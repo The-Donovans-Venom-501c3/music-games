@@ -3,7 +3,7 @@ import questionmark from "../../assets/svg/QuestionMark.svg";
 import Options from './Options/Options';
 import { useMemo, useState } from 'react';
 import { useAtomValue, useSetAtom } from "jotai";
-import { affirmationAtom, correctOptionAtom, gameStateAtom, levelStateAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
+import { affirmationAtom, correctOptionAtom, gameStateAtom, levelStateAtom, livesAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
 import { getQuestions } from '../../utils/questions'
 
 
@@ -27,17 +27,15 @@ const QuizSection = () => {
 
   const setQuizState = useSetAtom(quizStateAtom);
   const setAffirmation = useSetAtom(affirmationAtom);
-  const [attempts, setAttempts] = useState(1);
+  const lives = useAtomValue(livesAtom);
 
   const handleOptionClick = (option) => {
     if(option === currQuestion.correctOption){
       setAffirmation('success');
-    } else if (attempts) {
+    } else if (lives) {
       setAffirmation('tryAgain');
-      setAttempts(attempts - 1);
     } else{
       setAffirmation('fail');
-      setAttempts(1);
     }
     setQuizState('affirmation');
   };

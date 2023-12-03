@@ -1,7 +1,7 @@
 import data from '../data/data.json';
 
-const gameIdx = {'note':0, 'key':1, 'chord':2, 'scale':3};
-const levelIdx = {'easy':0, 'medium':1, 'hard':2};
+const gameIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
+const levelIdx = { 'easy': 0, 'medium': 1, 'hard': 2 };
 
 function getRandomQuestions(questions, length) {
 
@@ -15,15 +15,15 @@ function getRandomQuestions(questions, length) {
 }
 
 export function getQuestions(game, level) {
-    const gameData = data.musicGames[gameIdx[game]].levels
-    const numOfQuestionsPerLevel = gameData[levelIdx[level]].numberOfQuestions;
-    const questions = [];
+  const gameData = data.musicGames[gameIdx[game]].levels
+  const numOfQuestionsPerLevel = gameData[levelIdx[level]].numberOfQuestions;
+  const questions = [];
 
-    for (const [level, numQuestions] of Object.entries(numOfQuestionsPerLevel)) {
-      questions.push(...getRandomQuestions(gameData[levelIdx[level]].questions, numQuestions));
-    }
+  for (const [level, numQuestions] of Object.entries(numOfQuestionsPerLevel)) {
+    questions.push(...getRandomQuestions(gameData[levelIdx[level]].questions, numQuestions));
+  }
 
-    return getRandomQuestions(questions, questions.length);
+  return getRandomQuestions(questions, questions.length);
 }
 
 

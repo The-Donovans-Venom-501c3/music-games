@@ -1,6 +1,15 @@
 import { atom } from 'jotai'
 
-export const gameStateAtom = atom('note');
+export const appStateAtom = atom("home");
+/*
+Possible App states:
+1) home : Home Page
+2) welcome : Welcome Page
+3) quiz : Quiz Page
+4) game-finished : Game Finished State
+*/
+
+export const gameStateAtom = atom('');
 /*
 Possible Game states:
 1) Initial State: none
@@ -8,15 +17,6 @@ Possible Game states:
 3) key : Key Signature Identification Game
 4) chord : Chord Identification Game
 5) scale : Scale Identification Game
-*/
-
-export const appStateAtom = atom("welcome");
-/*
-Possible App states:
-1) home : Home Page
-2) welcome : Welcome Page
-3) quiz : Quiz Page
-4) game-finished : Game Finished State
 */
 
 export const levelStateAtom = atom('');
@@ -63,11 +63,15 @@ Possible Overlay states:
 
 export const timerOnAtom = atom(true);  // true when time is running, false when not
 
+export const resetTimerAtom = atom(true);
+
 export const livesAtom = atom(3); // starts from 3, decrements till 0
 
 export const questionAtom = atom(1); // goes till the last question
 
 export const totalQuestionsAtom = atom(0); // total number of questions
+
+export const countDownOnAtom = atom(true) // true when countdown is running, false when not
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
 
