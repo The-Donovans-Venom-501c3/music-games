@@ -64,6 +64,9 @@ const QuizScreen = () => {
         
       </div>
 
+      <div className="paperStand"></div>
+      <div className="musicSlinder"></div>
+
       <div className="catConatiner">
         <img id="cat" src={cat} />
       </div>

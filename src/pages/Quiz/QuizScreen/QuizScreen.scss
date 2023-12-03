@@ -53,6 +53,7 @@ button:active {
     font-family: $primary-font;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
     width: 100%;
     height:calc($page-height - $nav-height);
@@ -64,12 +65,14 @@ button:active {
     background-attachment:cover;
     background-size: 100% 100%;
     background-position: center;
+    background-repeat: no-repeat;
     animation-name:BG;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-direction: normal;
+    perspective: 1000px;
     .GameScreen{
         display: flex;
         margin-top: -150%;
@@ -80,19 +83,21 @@ button:active {
         justify-content: center;
         position: absolute;
         width: 80vw;
-        height: 101vh;
+        height: 85vh;
         animation-name:comedown;
         animation-duration: 2s;
         animation-delay: 5s;
         animation-fill-mode: forwards;
         animation-direction: linear;
         position: center;
+
         .gameMain{
             display: flex;
             align-items: flex-end;
             flex-direction: row;
-            flex-basis: 89.99%;
-            width: 78vw;
+            // flex-basis: 89.99%;
+            width: 75vw;
+            height: 85vh;
             background-color: white;
             .left{
                 width: 100%;
@@ -185,7 +190,7 @@ button:active {
             width: 6%;
             height: 3%;
             position: absolute;
-            left: 19%;
+            left: 19vw;
             z-index: 4;
             animation-name:cat, catMove;
             animation-duration: 1s,1.5s;
@@ -218,35 +223,53 @@ button:active {
         align-items: center;
         position: relative;
         background-position: center;
-        background-image: url(../../../assets/svg/MusicStandaBG.svg);
-        width: 120vw;
-        height: 110vh;
-        background-size: 100% 100%;
+        // background-image: url(../../../assets/svg/MusicStandaBG.svg);
+        width: 82%;
+        height: 72%;
+        border-radius: 20px 20px 10px 10px ;
+        background-color: $grey-700;
+        background-size: 120vw 110vh;
         opacity: 0;
         animation-name:fixedBackGround;
         animation-duration: 0.1s;
         animation-delay: 5s;
         animation-fill-mode: forwards;
         animation-direction: linear;
+        margin-top: 10%;
+    }
+    .paperStand{
+        width: 90%;
+        height: 25%;
+        border-radius: 1px 1px 50px 50px;
+        transform: rotateX(115deg) translateZ(13vh);
+        background-color: $grey-900;
+    }
+    .musicSlinder{
+        position: absolute;
+        top: 60%;
+        width: 5%;
+        height: 500px;
+        background-color: $grey-900;
+        z-index: -1;
     }
 }
 @media screen {
 @keyframes catMove {
     0% { 
         transform: rotate(-5deg) scale(7);
-        bottom: 20vw;  // lest up
+        bottom: 21.5vw;  // lest up
     }
     25% { 
         transform: rotate(-5deg) scale(7);
-        bottom: 21vw; // left bottom down
+        bottom: 20.5vw; // left bottom down
     }
     50% { 
         transform: rotate(10deg) scale(7);
-        bottom: 17.5vw;  // right bottom down
+        bottom: 19vw;  // right bottom down
     }
     100% { 
         transform: rotate(10deg) scale(7);
-        bottom: 20vw;  // right up
+        bottom: 21.5vw;  // right up
     }
 }
 @keyframes BG {
@@ -270,7 +293,7 @@ button:active {
         margin-top:-150%;
     }
     to { 
-        margin-top: -8%;
+        margin-top: -2%;
     }
 }
 @keyframes zoomIn {
@@ -295,192 +318,192 @@ button:active {
 }
 }
 }
-@media (min-width:1360px) and (max-width:1460px) and (min-height:1024px){
-    @keyframes catMove {
-        0% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 18vw;  // lest up
-        }
-        25% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 19vw; // left bottom down
-        }
-        50% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 15.5vw;  // right bottom down
-        }
-        100% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 18vw;  // right up
-        }
-    }
-    @keyframes comedown {
+// @media (min-width:1360px) and (max-width:1460px) and (min-height:1024px){
+//     @keyframes catMove {
+//         0% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 18vw;  // lest up
+//         }
+//         25% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 19vw; // left bottom down
+//         }
+//         50% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 15.5vw;  // right bottom down
+//         }
+//         100% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 18vw;  // right up
+//         }
+//     }
+//     @keyframes comedown {
     
-        from { 
-            margin-top:-200%;
-        }
-        to { 
-            margin-top: -8.5%;
-        }
-    }
-    @keyframes zoomIn {
-        from{
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        bottom: 5rem;
-        position:absolute;
+//         from { 
+//             margin-top:-200%;
+//         }
+//         to { 
+//             margin-top: -8.5%;
+//         }
+//     }
+//     @keyframes zoomIn {
+//         from{
+//         -moz-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         -o-transform: scale(1);
+//         -ms-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//         bottom: 5rem;
+//         position:absolute;
         
-        }
-        to{
-        -moz-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        -o-transform: scale(6.6);
-        -ms-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        transform: scale(6.6);
-        bottom: -45.5%;
-    }
-    }
-    .quizScreenBGContainer{
-        width: 100vw;
-        background-size: 120vw 110vh;
-        margin-top: 40vw;
-        .GameScreen{
-            width: 88vw;
-            height: 66vh;
-            .gameMain{
-                width: 85vw;
-            }
-        }
-    }  
-}
-@media (min-width:1180px) and (max-width:1360px) and (min-height:820px){
-    @keyframes catMove {
-        0% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 18vw;  // lest up
-        }
-        25% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 19vw; // left bottom down
-        }
-        50% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 15.5vw;  // right bottom down
-        }
-        100% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 18vw;  // right up
-        }
-    }
-    @keyframes comedown {
-        from { 
-            margin-top:-250%;
-        }
-        to { 
-            margin-top: -8.5%;
-        }
-    }
-    @keyframes zoomIn {
-        from{
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        bottom: 5rem;
-        position:absolute;
-        }
-        to{
-        -moz-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        -o-transform: scale(6.6);
-        -ms-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        transform: scale(6.6);
-        bottom: -45.5%;
-    }
-    }
+//         }
+//         to{
+//         -moz-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         -o-transform: scale(6.6);
+//         -ms-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         transform: scale(6.6);
+//         bottom: -45.5%;
+//     }
+//     }
+//     .quizScreenBGContainer{
+//         width: 100vw;
+//         background-size: 120vw 110vh;
+//         margin-top: 40vw;
+//         .GameScreen{
+//             width: 88vw;
+//             height: 66vh;
+//             .gameMain{
+//                 width: 85vw;
+//             }
+//         }
+//     }  
+// }
+// @media (min-width:1180px) and (max-width:1360px) and (min-height:820px){
+//     @keyframes catMove {
+//         0% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 18vw;  // lest up
+//         }
+//         25% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 19vw; // left bottom down
+//         }
+//         50% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 15.5vw;  // right bottom down
+//         }
+//         100% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 18vw;  // right up
+//         }
+//     }
+//     @keyframes comedown {
+//         from { 
+//             margin-top:-250%;
+//         }
+//         to { 
+//             margin-top: -8.5%;
+//         }
+//     }
+//     @keyframes zoomIn {
+//         from{
+//         -moz-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         -o-transform: scale(1);
+//         -ms-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//         bottom: 5rem;
+//         position:absolute;
+//         }
+//         to{
+//         -moz-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         -o-transform: scale(6.6);
+//         -ms-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         transform: scale(6.6);
+//         bottom: -45.5%;
+//     }
+//     }
     
-    .quizScreenBGContainer{
-        margin-top: 32vw;
-        .GameScreen{
-            width: 90vw; 
-            height: 71vh;  
-            .gameMain{
-                width: 85vw; 
-            }
-        }
-    }  
-}
-@media (min-width:1024px) and (max-width: 1180px) and (min-height:768px){
-    @keyframes catMove {
-        0% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 18vw;  // lest up
-        }
-        25% { 
-            transform: rotate(-5deg) scale(5);
-            bottom: 19vw; // left bottom down
-        }
-        50% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 15.5vw;  // right bottom down
-        }
-        100% { 
-            transform: rotate(10deg) scale(5);
-            bottom: 18vw;  // right up
-        }
-    }
-    @keyframes comedown {
-        from { 
-            margin-top:-250%;
-        }
-        to { 
-            margin-top: -8.5%;
-        }
-    }
-    @keyframes zoomIn {
-        from{
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        bottom: 5rem;
-        position:absolute;
-        }
-        to{
-        -moz-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        -o-transform: scale(6.6);
-        -ms-transform: scale(6.6);
-        -webkit-transform: scale(6.6);
-        transform: scale(6.6);
-        bottom: -45.5%;
-    }
-    }
-    .QuizScreenContainer{
-        background-size: 300% 300%;
-    }
-    .quizScreenBGContainer{
-        margin-top: 40vw;
-        .GameScreen{
-            width: 90vw;
-            height: 66vh;
-            background-size: 100vw 110vh;
-            .gameMain{
-                width: 85vw;
-            }
-        }
-    }
-}
+//     .quizScreenBGContainer{
+//         margin-top: 32vw;
+//         .GameScreen{
+//             width: 90vw; 
+//             height: 71vh;  
+//             .gameMain{
+//                 width: 85vw; 
+//             }
+//         }
+//     }  
+// }
+// @media (min-width:1024px) and (max-width: 1180px) and (min-height:768px){
+//     @keyframes catMove {
+//         0% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 18vw;  // lest up
+//         }
+//         25% { 
+//             transform: rotate(-5deg) scale(5);
+//             bottom: 19vw; // left bottom down
+//         }
+//         50% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 15.5vw;  // right bottom down
+//         }
+//         100% { 
+//             transform: rotate(10deg) scale(5);
+//             bottom: 18vw;  // right up
+//         }
+//     }
+//     @keyframes comedown {
+//         from { 
+//             margin-top:-250%;
+//         }
+//         to { 
+//             margin-top: -8.5%;
+//         }
+//     }
+//     @keyframes zoomIn {
+//         from{
+//         -moz-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         -o-transform: scale(1);
+//         -ms-transform: scale(1);
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//         bottom: 5rem;
+//         position:absolute;
+//         }
+//         to{
+//         -moz-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         -o-transform: scale(6.6);
+//         -ms-transform: scale(6.6);
+//         -webkit-transform: scale(6.6);
+//         transform: scale(6.6);
+//         bottom: -45.5%;
+//     }
+//     }
+//     .QuizScreenContainer{
+//         background-size: 300% 300%;
+//     }
+//     .quizScreenBGContainer{
+//         margin-top: 40vw;
+//         .GameScreen{
+//             width: 90vw;
+//             height: 66vh;
+//             background-size: 100vw 110vh;
+//             .gameMain{
+//                 width: 85vw;
+//             }
+//         }
+//     }
+// }
 
 
 
