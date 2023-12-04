@@ -5,174 +5,174 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 8},
+          "numberOfQuestions": {"easy": 10},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/dfiExnl.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-1.svg",
               "correctOption": "C"
             },
             {
-              "questionImage": "https://imgur.com/eAFoeGk.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-2.svg",
               "correctOption": "D"
             },
             {
-              "questionImage": "https://imgur.com/Xakkw5m.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-3.svg",
               "correctOption": "E"
             },
             {
-              "questionImage": "https://imgur.com/1caCzdF.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-4.svg",
               "correctOption": "F"
             },
             {
-              "questionImage": "https://imgur.com/W5meVi6.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-5.svg",
               "correctOption": "G"
             },
             {
-              "questionImage": "https://i.imgur.com/qfBDpuv.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-6.svg",
               "correctOption": "A"
             },
             {
-              "questionImage": "https://i.imgur.com/qIWpscM.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-7.svg",
               "correctOption": "B"
             },
             {
-              "questionImage": "https://i.imgur.com/SRYxFhb.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-8.svg",
               "correctOption": "C"
             },
             {
-              "questionImage": "https://i.imgur.com/KhlqxOP.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-9.svg",
               "correctOption": "D"
             },
             {
-              "questionImage": "https://i.imgur.com/yeJoyQ0.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-10.svg",
               "correctOption": "E"
             },
             {
-              "questionImage": "https://i.imgur.com/kx5ayQc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-11.svg",
               "correctOption": "F"
             },
             {
-              "questionImage": "https://i.imgur.com/WBWKuFy.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-12.svg",
               "correctOption": "G"
             },
             {
-              "questionImage": "https://i.imgur.com/6FGwXh4.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Easy/NoteIdentification-Easy-13.svg",
               "correctOption": "A"
             }
           ]
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 3, "medium":7},
+          "numberOfQuestions": {"easy": 5, "medium":15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/ZfDPpN5.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-1.svg",
               "correctOption": "C#"
             },
             {
-              "questionImage": "https://i.imgur.com/9GML4bM.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-2.svg",
               "correctOption": "D#"
             },
             {
-              "questionImage": "https://i.imgur.com/gaXl2O8.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-3.svg",
               "correctOption": "E#"
             },
             {
-              "questionImage": "https://i.imgur.com/gJ0qIO8.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-4.svg",
               "correctOption": "F#"
             },
             {
-              "questionImage": "https://i.imgur.com/ZOSBwJK.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-5.svg",
               "correctOption": "G#"
             },
             {
-              "questionImage": "https://i.imgur.com/D2hzIru.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-6.svg",
               "correctOption": "A#"
             },
             {
-              "questionImage": "https://i.imgur.com/2TX4vU7.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-7.svg",
               "correctOption": "B#"
             },
             {
-              "questionImage": "https://i.imgur.com/WCSLPKc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-8.svg",
               "correctOption": "C#"
             },
             {
-              "questionImage": "https://i.imgur.com/f1aL2CM.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-9.svg",
               "correctOption": "D#"
             },
             {
-              "questionImage": "https://i.imgur.com/1GgB9Ew.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-10.svg",
               "correctOption": "E#"
             },
             {
-              "questionImage": "https://i.imgur.com/70ljpgN.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-11.svg",
               "correctOption": "F#"
             },
             {
-              "questionImage": "https://i.imgur.com/WreJSS3.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-12.svg",
               "correctOption": "G#"
             },
             {
-              "questionImage": "https://i.imgur.com/aP5kcdc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Medium/NoteIdentification-Medium-13.svg",
               "correctOption": "A#"
             }
           ]
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 3, "medium":3, "hard":10},
+          "numberOfQuestions": {"easy": 5, "medium":10, "hard":15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/bK80ABh.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-1.svg",
               "correctOption": "C♭"
             },
             {
-              "questionImage": "https://i.imgur.com/JSzMGTc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-2.svg",
               "correctOption": "D♭"
             },
             {
-              "questionImage": "https://i.imgur.com/bU9DXDY.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-3.svg",
               "correctOption": "E♭"
             },
             {
-              "questionImage": "https://i.imgur.com/KxXfGSa.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-4.svg",
               "correctOption": "F♭"
             },
             {
-              "questionImage": "https://i.imgur.com/kXbDnaG.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-5.svg",
               "correctOption": "G♭"
             },
             {
-              "questionImage": "https://i.imgur.com/iUYvDwG.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-6.svg",
               "correctOption": "A♭"
             },
             {
-              "questionImage": "https://i.imgur.com/YP3x20E.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-7.svg",
               "correctOption": "B♭"
             },
             {
-              "questionImage": "https://i.imgur.com/416t18f.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-8.svg",
               "correctOption": "C♭"
             },
             {
-              "questionImage": "https://i.imgur.com/aWygt9B.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-9.svg",
               "correctOption": "D♭"
             },
             {
-              "questionImage": "https://i.imgur.com/w9IlM1f.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-10.svg",
               "correctOption": "E♭"
             },
             {
-              "questionImage": "https://i.imgur.com/fxPxYu2.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-11.svg",
               "correctOption": "F♭"
             },
             {
-              "questionImage": "https://i.imgur.com/8QdUqIc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-12.svg",
               "correctOption": "G♭"
             },
             {
-              "questionImage": "https://i.imgur.com/NMXR6Vk.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Note%20Identification/Hard/NoteIdentification-Hard-13.svg",
               "correctOption": "A♭"
             }
           ]
@@ -184,269 +184,269 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 5},
+          "numberOfQuestions": {"easy": 6},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/8SiphoH.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-1.svg",
               "correctOption": "G"
             },
             {
-              "questionImage": "https://i.imgur.com/PBR9R9n.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-2.svg",
               "correctOption": "D"
             },
             {
-              "questionImage": "https://i.imgur.com/rnOAzdB.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-3.svg",
               "correctOption": "A"
             },
             {
-              "questionImage": "https://i.imgur.com/vDHMcpQ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-4.svg",
               "correctOption": "F"
             },
             {
-              "questionImage": "https://i.imgur.com/GWBQ2vV.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-5.svg",
               "correctOption": "B♭"
             },
             {
-              "questionImage": "https://i.imgur.com/0sUK3TL.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-6.svg",
               "correctOption": "E♭"
             }
           ]
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 4, "medium":4},
+          "numberOfQuestions": {"easy": 6, "medium":4},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/BOA4C1H.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Medium/KeySignature-Question-Medium-1.svg",
               "correctOption": "E"
             },
             {
-              "questionImage": "https://i.imgur.com/mMmU5CX.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Medium/KeySignature-Question-Medium-2.svg",
               "correctOption": "B"
             },
             {
-              "questionImage": "https://i.imgur.com/5JO2kLz.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Medium/KeySignature-Question-Medium-3.svg",
               "correctOption": "A♭"
             },
             {
-              "questionImage": "https://i.imgur.com/zX5Um3E.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Medium/KeySignature-Question-Medium-4.svg",
               "correctOption": "D♭"
             }
           ]
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 2, "medium": 4, "hard": 4},
+          "numberOfQuestions": {"easy": 6, "medium": 4, "hard": 4},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/BUkWXda.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Hard/KeySignature-Question-Hard-1.svg",
               "correctOption": "F#"
             },
             {
-              "questionImage": "https://i.imgur.com/yJbYqzn.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Hard/KeySignature-Question-Hard-2.svg",
               "correctOption": "C#"
             },
             {
-              "questionImage": "https://i.imgur.com/4Q7UM2H.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Hard/KeySignature-Question-Hard-3.svg",
               "correctOption": "G♭"
             },
             {
-              "questionImage": "https://i.imgur.com/IVLvNNk.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Hard/KeySignature-Question-Hard-4.svg",
               "correctOption": "C♭"
             }
-          ]
+          ] 
         }
       ]
     },
     {
-      "name": "Chord Identification",
+      "name": "major-minor Identification",
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 8},
+          "numberOfQuestions": {"easy": 10},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/bC8V2eh.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-1.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/Qvc9V8W.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-2.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/DzFdiZu.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-3.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/tylVcb9.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-4.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/cBjhDYM.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-5.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/lPKxAs6.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-6.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/On4Duv9.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-7.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/6cj3uuF.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-8.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/X0OBZVS.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-9.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/dBQdOpw.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-10.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/QdiQs51.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-11.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/RKiLMTc.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-12.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/Zo0A8cQ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Easy/MajorMinor-Question-Easy-13.svg",
               "correctOption": "Natural"
             }
           ]
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 3, "medium": 7},
+          "numberOfQuestions": {"easy": 5, "medium": 15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/Ab0sJpi.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-1.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/x9qwrME.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-2.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/vEr3cQF.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-3.svg",
               "correctOption": "B Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/Lz2HxmE.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-4.svg",
               "correctOption": "B Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/S8oZc3Q.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-5.svg",
               "correctOption": "F# Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/86WR1xF.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-6.svg",
               "correctOption": "F# Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/VSh7Jjz.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-7.svg",
               "correctOption": "C# Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/DgIOSDm.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-8.svg",
               "correctOption": "Major"
             },
             {
-              "questionImage": "https://i.imgur.com/VJj38hV.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-9.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/RNPOKqw.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-10.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/nUGZpMW.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-11.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/NHqhTIJ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-12.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/KjvkOy6.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-13.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/t8N45Np.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-14.svg",
               "correctOption": "Natural"
             }
           ]
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 3, "medium": 3, "hard": 10},
+          "numberOfQuestions": {"easy": 5, "medium": 10, "hard": 15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/DiLiSRr.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-1.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/8QyfRzp.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-2.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/B0XvfsX.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-3.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/nx0fzxh.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-4.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/LCqKHTr.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-5.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/SDCTMUU.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-6.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/TNlUTT4.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-7.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/T5Hmkau.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-8.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/rlQtSzU.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-9.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/MlEdBkx.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-10.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/TNlUTT4.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-11.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/laXOR4A.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-12.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/r26KL2C.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-13.svg",
               "correctOption": "Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/oTCLOMX.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-14.svg",
               "correctOption": "Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/eizaAvU.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-15.svg",
               "correctOption": "Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/P4gcut0.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Hard/MajorMinor-Question-Hard-16.svg",
               "correctOption": "Major"
             }
           ]
@@ -458,190 +458,190 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 8},
+          "numberOfQuestions": {"easy": 10},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/o0GZOef.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-1.svg",
               "correctOption": "C Major"
             },
             {
-              "questionImage": "https://i.imgur.com/BMteFWh.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-2.svg",
               "correctOption": "F Major"
             },
             {
-              "questionImage": "https://i.imgur.com/yIjQxOG.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-3.svg",
               "correctOption": "G Major"
             },
             {
-              "questionImage": "https://i.imgur.com/LC5cEJo.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-4.svg",
               "correctOption": "A Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/tYVAmcL.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-5.svg",
               "correctOption": "A Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/PguYgeT.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-6.svg",
               "correctOption": "D Major"
             },
             {
-              "questionImage": "https://i.imgur.com/LzLLKQM.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-7.svg",
               "correctOption": "A Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/DwBDFww.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-8.svg",
               "correctOption": "E Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/CE6SexC.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-9.svg",
               "correctOption": "E Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/g51MxvJ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-10.svg",
               "correctOption": "B Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/EU5Xvcy.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-11.svg",
               "correctOption": "D Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/V1m42HR.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-12.svg",
               "correctOption": "D Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/LJmkv10.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Easy/ScaleIdentification-Question-Easy-13.svg",
               "correctOption": "G Natural"
             }
           ]
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 3, "medium": 7},
+          "numberOfQuestions": {"easy": 5, "medium": 15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/khp4Hsq.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-1.svg",
               "correctOption": "A Major"
             },
             {
-              "questionImage": "https://i.imgur.com/rDZBSzJ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-2.svg",
               "correctOption": "E Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/yt9nBmI.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-3.svg",
               "correctOption": "B Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/ob8dEYe.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-4.svg",
               "correctOption": "B Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/h4MXNun.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-5.svg",
               "correctOption": "F# Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/OToCphf.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-6.svg",
               "correctOption": "F# Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/ttXnD5A.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-7.svg",
               "correctOption": "C# Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/5LNlhvo.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-8.svg",
               "correctOption": "E Major"
             },
             {
-              "questionImage": "https://i.imgur.com/U31bCEu.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-9.svg",
               "correctOption": "D Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/iGBLXtG.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-10.svg",
               "correctOption": "G Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/GYJABet.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-11.svg",
               "correctOption": "G Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/AYaagaa.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-12.svg",
               "correctOption": "C Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/qfx8Y3I.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-13.svg",
               "correctOption": "C Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/P2M8kUJ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Medium/ScaleIdentification-Question-Medium-14.svg",
               "correctOption": "F Natural"
             }
           ]
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 3, "medium": 3, "hard": 10},
+          "numberOfQuestions": {"easy": 5, "medium": 10, "hard": 15},
           "questions": [
             {
-              "questionImage": "https://i.imgur.com/82ricMz.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-1.svg",
               "correctOption": "F# Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/bEkvKR7.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-2.svg",
               "correctOption": "C# Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/zSAEdFr.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-3.svg",
               "correctOption": "C# Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/xOyUdVs.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-4.svg",
               "correctOption": "G# Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/lnGjAmX.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-5.svg",
               "correctOption": "G# Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/IjQLxrY.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-6.svg",
               "correctOption": "G# Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/nFNJS1Z.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-7.svg",
               "correctOption": "C Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/DxIOXwE.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-8.svg",
               "correctOption": "F Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/z9PLeA2.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-9.svg",
               "correctOption": "F Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/mrjvEWQ.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-10.svg",
               "correctOption": "B♭ Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/3ZCeEMC.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-11.svg",
               "correctOption": "B♭ Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/nBmm0r0.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-12.svg",
               "correctOption": "B♭ Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/sz9m9XK.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-13.svg",
               "correctOption": "E♭ Natural"
             },
             {
-              "questionImage": "https://i.imgur.com/CwTsDuw.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-14.svg",
               "correctOption": "E♭ Harmonic"
             },
             {
-              "questionImage": "https://i.imgur.com/SRhaatN.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-15.svg",
               "correctOption": "E♭ Melodic"
             },
             {
-              "questionImage": "https://i.imgur.com/XCtTno6.jpg",
+              "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Scale%20Identification/Hard/ScaleIdentification-Question-Hard-16.svg",
               "correctOption": "B Major"
             }
           ]
@@ -650,4 +650,3 @@
     }
   ]
 }
-  
