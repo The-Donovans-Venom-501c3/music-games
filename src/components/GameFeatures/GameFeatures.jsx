@@ -1,13 +1,12 @@
 import "./GameFeatures.scss";
 // import { MusicToggle } from "./Music/MusicToggle";
-import musicnote from '../../assets/svg/MusicNote.svg'
-import Switch from '@mui/material/Switch';
+import musicnote from '../../assets/svg/MusicNote.svg';
+import dot from '../../assets/svg/Dot.svg';
 import Slider from '@mui/material/Slider';
 import Timer from "./Timer/Timer";
 import { useRef } from "react";
 import { useAtomValue, useAtom } from "jotai";
 import { livesAtom, scoreAtom, musicStateAtom, levelStateAtom } from "../../store/atoms";
-import { FormControlLabel } from "@mui/material";
 
 const GameFeatures = () => {
   const score = useAtomValue(scoreAtom);
@@ -20,8 +19,8 @@ const GameFeatures = () => {
 
   let src = level === 'easy' ? '/easy.mp3' : level === 'medium' ? '/medium.mp3' : 'hard.mp3';
 
-  const handleChangeSwitch = (event) => {
-    setMusicOn(event.target.checked);
+  const handleChangeSwitch = () => {
+    setMusicOn(!musicOn);
     if (musicOn) {
       audioRef.current?.pause();
     } else {
@@ -59,7 +58,12 @@ const GameFeatures = () => {
         <div>
           <span>Music</span>
           <div id='music'>
-            <FormControlLabel
+            <button onClick={handleChangeSwitch}
+            >
+              <img src={dot} width={72} height={50} alt="Music toogle"/>
+            </button>
+            <span>{musicOn ? 'ON' : 'OFF'}</span>
+            {/* <FormControlLabel
               label={musicOn ? 'ON' : 'OFF'}
               sx={{
                 '.MuiFormControlLabel-label': {
@@ -71,7 +75,7 @@ const GameFeatures = () => {
               control={
                 <Switch color='success'
                   sx={{
-                    '& .MuiSwitch-thumb': {
+                    '& .MuiSwitch-thumb': { 
                       borderRadius: '5px',
                       height: '5vh',
                       backgroundColor: '$grey-100',
@@ -100,7 +104,7 @@ const GameFeatures = () => {
                   onChange={handleChangeSwitch}
                 />
               }
-            />
+            /> */}
 
           </div>
         </div>
