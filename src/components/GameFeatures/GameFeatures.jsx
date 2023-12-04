@@ -22,7 +22,7 @@ const GameFeatures = () => {
 
   const handleChangeSwitch = (event) => {
     setMusicOn(event.target.checked);
-    if(musicOn){
+    if (musicOn) {
       audioRef.current?.pause();
     } else {
       audioRef.current?.play();
@@ -55,74 +55,81 @@ const GameFeatures = () => {
           </span>
         </div>
       </div>
-            <div className='gameSetting'>
-                <div>
-                    <span>Music</span>
-                    <div id='music'>
-                        <FormControlLabel
-                          control={
-                            <Switch color='success'
-                            sx={{ 
-                                '& .MuiSwitch-thumb':{
-                                    borderRadius:'5px',
-                                    height:'5vh',
-                                    backgroundColor:'$grey-100',
-                                    border:'2px solid $grey-500',
-                                    width:'3.5vw',
-                                    transform: 'translateX(0px)',
-                                    boxShadow:'0px 5px 0px 0px #BFBABB',
-    
-                                },
-                                '& .MuiSwitch-track':{
-                                    borderRadius:'5px',
-                                    width:'25vw'
-                                },
-                                '.css-1xvpzln-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked':{
-                                    '-webkit-transform': 'translateX(3.5vw)',
-                                    '-moz-transform': 'translateX(3.5vw)',
-                                   ' -ms-transform': 'translateX(3.5vw)',
-                                    transform: "translateX(3.5vw)",
-                                    color:'#F0EEEE'
-                                },
-                                width:'7vw',
-                                height:'8.5vh',
-                                
-                            }}
-                            checked={musicOn}
-                            onChange={handleChangeSwitch}
-                            />
-                          }
-                          label={musicOn ? 'ON' : 'OFF'}                        
-                        />
+      <div className='gameSetting'>
+        <div>
+          <span>Music</span>
+          <div id='music'>
+            <FormControlLabel
+              label={musicOn ? 'ON' : 'OFF'}
+              sx={{
+                '.MuiFormControlLabel-label': {
+                  color: '#817676',
+                  fontSize: '20px',
+                  lineHeight: '30px',
+                },
+              }}
+              control={
+                <Switch color='success'
+                  sx={{
+                    '& .MuiSwitch-thumb': {
+                      borderRadius: '5px',
+                      height: '5vh',
+                      backgroundColor: '$grey-100',
+                      border: '2px solid $grey-500',
+                      width: '3.5vw',
+                      transform: 'translateX(0px)',
+                      boxShadow: '0px 5px 0px 0px #BFBABB',
 
-                    </div>
-                </div>
-                <div>
-                    <span>Volume</span>
-                    <div id='volume'>
-                        <Slider
-                        defaultValue={30}
-                        onChange={(e) => handleChangeVolume(e)}                        
-                        valueLabelDisplay="auto"
-                        sx={{
-                            width: "7vw",
-                            '.css-eg0mwd-MuiSlider-thumb':{
-                                color:'#F0EEEE',
-                            },
-                            '& .css-2bajgq-MuiSlider-root':{
-                                color:'#F0EEEE',
-                            },
-                            '.css-1gv0vcd-MuiSlider-track':{
-                                color:'#BFBABB',
-                                height:'1vh',
-                            }
-                        }}
-                        />
-                    </div>
-                </div>
-            </div>
-            <audio ref={audioRef} loop src={src} />
+                    },
+                    '& .MuiSwitch-track': {
+                      borderRadius: '5px',
+                      width: '25vw'
+                    },
+                    '.css-1xvpzln-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked': {
+                      '-webkit-transform': 'translateX(3.5vw)',
+                      '-moz-transform': 'translateX(3.5vw)',
+                      ' -ms-transform': 'translateX(3.5vw)',
+                      transform: "translateX(3.5vw)",
+                      color: '#F0EEEE'
+                    },
+                    width: '7vw',
+                    height: '8.5vh',
+
+                  }}
+                  checked={musicOn}
+                  onChange={handleChangeSwitch}
+                />
+              }
+            />
+
+          </div>
         </div>
+        <div>
+          <span>Volume</span>
+          <div id='volume'>
+            <Slider
+              defaultValue={30}
+              onChange={(e) => handleChangeVolume(e)}
+              valueLabelDisplay="auto"
+              sx={{
+                width: "7vw",
+                '.css-eg0mwd-MuiSlider-thumb': {
+                  color: '#F0EEEE',
+                },
+                '& .css-2bajgq-MuiSlider-root': {
+                  color: '#F0EEEE',
+                },
+                '.css-1gv0vcd-MuiSlider-track': {
+                  color: '#BFBABB',
+                  height: '1vh',
+                }
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      <audio ref={audioRef} loop src={src} />
+    </div>
   );
 };
 export default GameFeatures;
