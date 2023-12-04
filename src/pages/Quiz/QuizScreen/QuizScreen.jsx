@@ -9,15 +9,13 @@ import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
 import { appStateAtom, overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
-import QuizContext from "../QuizContext";
-import { useEffect,useContext } from "react";
+import { useEffect } from "react";
 
 const QuizScreen = () => {
-  const setQuizState = useSetAtom(quizStateAtom);
+  const [quizState, setQuizState] = useAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
   const setAppState = useSetAtom(appStateAtom);
-  const { affirmationOpen, setAffirmationOpen } = useContext(QuizContext);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -33,13 +31,20 @@ const QuizScreen = () => {
     setAppState('home');
   };
 
-  useEffect(()=>{
-    if(affirmationOpen){
-      setTimerOn(false);
-    }else{
-      setTimerOn(true);
+  useEffect(() => {
+    if (quizState !== 'popup' && quizState !== 'overlay') {
+      if (quizState === 'affirmation') {
+        setTimerOn(false);
+      } else {
+        setTimerOn(true);
+      }
     }
-  },[affirmationOpen])
+
+  }, [quizState])
+
+  useEffect(()=>{
+
+  })
 
   return (
     <div className="QuizScreenContainer">
