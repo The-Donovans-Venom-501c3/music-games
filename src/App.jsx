@@ -1,31 +1,33 @@
-import { useAtomValue } from "jotai";
-import { appStateAtom } from "./store/atoms";
+import { useAtomValue } from 'jotai';
+import { appStateAtom } from './store/atoms';
 
-import "./assets/scss/App.scss";
+import './assets/scss/App.scss';
 
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Quiz from "./pages/Quiz/Quiz";
-import GameFinished from "./pages/Game Finished/GameFinished";
-import Welcome from "./pages/Welcome/Welcome";
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import Quiz from './pages/Quiz/Quiz';
+import GameFinished from './pages/Game Finished/GameFinished';
+import Welcome from './pages/Welcome/Welcome';
+import Rules from './pages/Rules/Rules';
 
 function App() {
-  const appState = useAtomValue(appStateAtom);
+    const appState = useAtomValue(appStateAtom);
 
-  return (
-    <>
-      <Navbar />
-      {appState === "home" ? (
-        <Home />
-      ) : appState === "welcome" ? (
-        <Welcome />
-      ) : appState === "quiz" ? (
-        <Quiz />
-      ) : (
-        <GameFinished />
-      )}
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            {appState === 'home' ? (
+                <Home />
+            ) : appState === 'welcome' ? (
+                <Welcome />
+            ) : appState === 'quiz' ? (
+                <Quiz />
+            ) : (
+                <GameFinished />
+            )}
+            <Rules />
+        </>
+    );
 }
 
 export default App;
