@@ -37,7 +37,7 @@ const rulesData = {
             "For the medium and Hard Levels, you'll have less time to answer questions. For MEDIUM you'll have 10 seconds to answer your questions, for HARD, you have only 5 seconds to answer! ",
         ],
     },
-    major_minor: {
+    'major-minor': {
         Introduction:
             'Hey Superstars! Get ready for musical fun. Identify the whether the scale on the staff is Major, natural, harmonic, or melodic minor to move to the next level, with fewer than three mistakes. Learn Scale quality and become a pro!',
 
