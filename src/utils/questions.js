@@ -4,13 +4,13 @@ const gameIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
 const levelIdx = { 'easy': 0, 'medium': 1, 'hard': 2 };
 
 function getRandomQuestions(questions, number) {
-  // Shuffle the questions using the Fisher-Yates algorithm
-  for (let i = questions.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [questions[i], questions[j]] = [questions[j], questions[i]];
+  let ques = []; 
+  for (let i = number; i > 0; i--) {
+    const j = Math.floor((Math.random()*questions.length));
+    console.log(`the random number is ${j}`);
+    ques.push(questions[j]);
   }
-
-  return questions.slice(0, number);
+  return ques;
 }
 
 export function getQuestions(game, level) {
@@ -22,7 +22,7 @@ export function getQuestions(game, level) {
     questions.push(...getRandomQuestions(gameData[levelIdx[level]].questions, numQuestions));
   }
 
-  return getRandomQuestions(questions, questions.length);
+  return getRandomQuestions(questions , questions.length);
 }
 
 

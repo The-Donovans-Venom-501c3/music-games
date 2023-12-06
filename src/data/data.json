@@ -6,7 +6,7 @@
         {
           "level": "Easy",
           "numberOfQuestions": {
-            "easy": 8
+            "easy": 10
           },
           "questions": [
             {
@@ -66,8 +66,8 @@
         {
           "level": "Medium",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 7
+            "easy": 5,
+            "medium": 15
           },
           "questions": [
             {
@@ -127,9 +127,9 @@
         {
           "level": "Hard",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 3,
-            "hard": 10
+            "easy": 5,
+            "medium": 10,
+            "hard": 15
           },
           "questions": [
             {
@@ -194,7 +194,7 @@
         {
           "level": "Easy",
           "numberOfQuestions": {
-            "easy": 5
+            "easy": 10
           },
           "questions": [
             {
@@ -226,8 +226,8 @@
         {
           "level": "Medium",
           "numberOfQuestions": {
-            "easy": 4,
-            "medium": 4
+            "easy": 5,
+            "medium": 15
           },
           "questions": [
             {
@@ -251,9 +251,9 @@
         {
           "level": "Hard",
           "numberOfQuestions": {
-            "easy": 2,
-            "medium": 4,
-            "hard": 4
+            "easy": 5,
+            "medium": 10,
+            "hard": 15
           },
           "questions": [
             {
@@ -282,7 +282,7 @@
         {
           "level": "Easy",
           "numberOfQuestions": {
-            "easy": 8
+            "easy": 10
           },
           "questions": [
             {
@@ -342,8 +342,8 @@
         {
           "level": "Medium",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 7
+            "easy": 5,
+            "medium": 15
           },
           "questions": [
             {
@@ -407,9 +407,9 @@
         {
           "level": "Hard",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 3,
-            "hard": 10
+            "easy": 5,
+            "medium": 10,
+            "hard": 15
           },
           "questions": [
             {
@@ -486,7 +486,7 @@
         {
           "level": "Easy",
           "numberOfQuestions": {
-            "easy": 8
+            "easy": 10
           },
           "questions": [
             {
@@ -546,8 +546,8 @@
         {
           "level": "Medium",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 7
+            "easy": 5,
+            "medium": 15
           },
           "questions": [
             {
@@ -611,9 +611,9 @@
         {
           "level": "Hard",
           "numberOfQuestions": {
-            "easy": 3,
-            "medium": 3,
-            "hard": 10
+            "easy": 5,
+            "medium": 10,
+            "hard": 15
           },
           "questions": [
             {
