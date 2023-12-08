@@ -15,7 +15,7 @@ Possible Game states:
 1) Initial State: none
 2) note : Note Identification Game
 3) key : Key Signature Identification Game
-4) chord : Chord Identification Game
+4) major-minor : Major-Minor Identification Game
 5) scale : Scale Identification Game
 */
 
