@@ -184,7 +184,9 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": {"easy": 6},
+          "numberOfQuestions": {
+            "easy": 10
+          },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Easy/KeySignature-Question-Easy-1.svg",
@@ -214,7 +216,10 @@
         },
         {
           "level": "Medium",
-          "numberOfQuestions": {"easy": 6, "medium":4},
+          "numberOfQuestions": {
+            "easy": 5,
+            "medium": 15
+          },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Medium/KeySignature-Question-Medium-1.svg",
@@ -236,7 +241,11 @@
         },
         {
           "level": "Hard",
-          "numberOfQuestions": {"easy": 6, "medium": 4, "hard": 4},
+          "numberOfQuestions": {
+            "easy": 5,
+            "medium": 10,
+            "hard": 15
+          },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Key%20Signature%20Identification/Hard/KeySignature-Question-Hard-1.svg",
@@ -259,7 +268,7 @@
       ]
     },
     {
-      "name": "major-minor Identification",
+      "name": "Major-Minor Identification",
       "levels": [
         {
           "level": "Easy",
@@ -333,23 +342,23 @@
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-3.svg",
-              "correctOption": "B Harmonic"
+              "correctOption": "Harmonic"
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-4.svg",
-              "correctOption": "B Melodic"
+              "correctOption": "Melodic"
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-5.svg",
-              "correctOption": "F# Natural"
+              "correctOption": "Natural"
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-6.svg",
-              "correctOption": "F# Harmonic"
+              "correctOption": "Harmonic"
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-7.svg",
-              "correctOption": "C# Natural"
+              "correctOption": "Natural"
             },
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Major%20Minor%20Identification/Medium/MajorMinor-Question-Medium-8.svg",

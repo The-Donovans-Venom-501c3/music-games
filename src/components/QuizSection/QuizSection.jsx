@@ -30,15 +30,20 @@ const QuizSection = () => {
   const lives = useAtomValue(livesAtom);
 
   const handleOptionClick = (option) => {
-    if(option === currQuestion.correctOption){
+    if (option === currQuestion.correctOption) {
       setAffirmation('success');
     } else if (lives > 1) {
       setAffirmation('tryAgain');
-    } else{
+    } else {
       setAffirmation('fail');
     }
     setQuizState('affirmation');
   };
+
+  const displayTextIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
+  const displayTextArr = ['What note is shown?', 'What key signature is shown?', 'What  major/minor is shown?', 'What scale is shown?'];
+
+  const displayText = displayTextArr[displayTextIdx[game]];
 
   return (
     <div className="quizSection">
@@ -52,8 +57,8 @@ const QuizSection = () => {
         <img src={currQuestion.questionImage} />
       </div>
       <div className="questionText">
-        <p>What note is shown?</p>
-        <Options handleOptionClick = {handleOptionClick}/>
+        <p>{displayText}</p>
+        <Options handleOptionClick={handleOptionClick} />
       </div>
     </div>
   );
