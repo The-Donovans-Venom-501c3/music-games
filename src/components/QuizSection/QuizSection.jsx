@@ -32,7 +32,7 @@ const QuizSection = () => {
   const handleOptionClick = (option) => {
     if(option === currQuestion.correctOption){
       setAffirmation('success');
-    } else if (lives) {
+    } else if (lives > 1) {
       setAffirmation('tryAgain');
     } else{
       setAffirmation('fail');
