@@ -9,6 +9,9 @@ import HoverChordIdentification from "../../assets/svg/HoverChordIdentification.
 import VirtualPiano from "../../assets/svg/HomeVirtualPiano.svg";
 import HoverVirtualPiano from "../../assets/svg/HoverVirtualPiano.svg";
 import yellowGuy from "../../assets/svg/yellowGuy.svg";
+import light from "../../assets/svg/HomePageLight.svg";
+import bubbles from "../../assets/svg/HomePageBubble.svg";
+
 import { useSetAtom } from "jotai";
 import { appStateAtom, gameStateAtom } from "../../store/atoms";
 
@@ -21,10 +24,16 @@ export default function Home() {
   };
 
   return (
+    <div className = "background-set">
+      <img src={light} alt="homePageLight" id="light-background"/>
+      <img src={bubbles} alt="HomePageBubble" id="homePageBubble"/>
     <div className="homeContainer">
       <div className="contentContainer">
         <div>
+        
           <img src={yellowGuy} alt="little yelow creature" id="yellowGuy" />
+          
+          
         </div>
         <div className="text">
           <h1 className="white">Let's take </h1>
@@ -39,7 +48,9 @@ export default function Home() {
             <br></br>
             <br></br>Choose a game you want to play!
           </p>
+   
         </div>
+       
       </div>
       <div className="buttonContainer">
         <Button
@@ -79,6 +90,8 @@ export default function Home() {
           onClick={() => handleClick("scale")}
         />
       </div>
+      </div>
+     
     </div>
   );
 }
