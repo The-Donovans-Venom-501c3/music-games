@@ -1,5 +1,4 @@
 import "./GameFeatures.scss";
-// import { MusicToggle } from "./Music/MusicToggle";
 import musicnote from '../../assets/svg/MusicNote.svg';
 import dot from '../../assets/svg/Dot.svg';
 import Slider from '@mui/material/Slider';
@@ -57,7 +56,7 @@ const GameFeatures = () => {
       <div className='gameSetting'>
         <div>
           <span>Music</span>
-          <div id='music'>
+          <div id='music' className= {musicOn ? "on" : "" }>
             <button onClick={handleChangeSwitch}
             >
               <img src={dot} width={72} height={50} alt="Music toogle"/>

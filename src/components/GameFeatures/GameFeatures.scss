@@ -153,6 +153,17 @@
                     margin-left:10px;
                   }
               }
+              .on{
+                background-color: $pale-green;
+                color: $white;
+                border-color: $green-500;
+                flex-direction: row-reverse !important;
+                span {
+                    
+                    padding-right:20px;
+                  }
+                
+                }
             #volume{
                 width: 7.5vw;
             }
