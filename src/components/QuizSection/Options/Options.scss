@@ -55,3 +55,20 @@
         height: 55px;    
     }
 }
+
+@media (min-width:768px) and (max-width: 1024px){
+  .small-btn-wrapper{
+    .small-btn {
+      height: 48px;
+    }
+    .option-blank {
+      height: 48px;
+    }
+  }
+  .large-btn-wrapper{
+    height: 48px;
+    .large-btn{
+      height: 48px;    
+  }
+  }
+}

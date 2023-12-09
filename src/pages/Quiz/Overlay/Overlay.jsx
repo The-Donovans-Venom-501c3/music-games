@@ -47,25 +47,27 @@ export default function Overlay() {
 
   return (
       <div className="dialog">
-        <div className="cat">
-          <img src={overlay[overlayState].cat} />
-        </div>
-        <div className="textDialog">
-          <span>{overlay[overlayState].question}</span>
-          <span id="text">{overlay[overlayState].sentence}</span>
-        </div>
-        <div className="btnDialog">
-          <button id="btn-white" onClick={handleButton1}>
-            {overlay[overlayState].white_btn_txt}
-          </button>
-          <button
-            className="overlay-btn"
-            id={overlay[overlayState].id_btn}
-            onClick={handleButton2}
-          >
-            {overlay[overlayState].colour_btn_txt}
-          </button>
-        </div>
+        <div className=' dialogContainer'>
+            <div className="cat">
+              <img src={overlay[overlayState].cat} />
+            </div>
+            <div className="textDialog">
+              <span>{overlay[overlayState].question}</span>
+              <span id="text">{overlay[overlayState].sentence}</span>
+            </div>
+            <div className="btnDialog">
+              <button id="btn-white" onClick={handleButton1}>
+                {overlay[overlayState].white_btn_txt}
+              </button>
+              <button
+                className="overlay-btn"
+                id={overlay[overlayState].id_btn}
+                onClick={handleButton2}
+              >
+                {overlay[overlayState].colour_btn_txt}
+              </button>
+            </div>
+          </div>
       </div>
   );
 }
