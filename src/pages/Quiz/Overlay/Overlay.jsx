@@ -2,7 +2,7 @@ import "./Overlay.scss";
 import cryingCat from "../../../assets/svg/cryingCat.svg";
 import BrokenCat from "../../../assets/svg/BrokenCat.svg";
 import { useAtomValue, useSetAtom } from "jotai";
-import { appStateAtom, overlayAtom, quizStateAtom } from "../../../store/atoms";
+import { appStateAtom, overlayAtom, quizStateAtom, scoreAtom, livesAtom, questionAtom } from "../../../store/atoms";
 
 const overlay = {
   exit: {
@@ -28,9 +28,12 @@ export default function Overlay() {
   const overlayState = useAtomValue(overlayAtom);
   const setAppState = useSetAtom(appStateAtom);
   const setQuizState = useSetAtom(quizStateAtom);
+  const setScoreAtom = useSetAtom(scoreAtom);
+  const setLivesAtom = useSetAtom(livesAtom);
+  const setQuestion = useSetAtom(questionAtom);
 
   const handleButton1 = () => {
-    if(overlayState == 'lives'){
+    if (overlayState == 'lives') {
       setAppState('home');
     } else {
       setQuizState('quiz');
@@ -38,34 +41,38 @@ export default function Overlay() {
   };
 
   const handleButton2 = () => {
-    if(overlayState === 'lives'){
+    if (overlayState === 'lives') {
       window.location.href = 'https://thedonovanspianoroom.com/bookshelf/';
     } else {
       setAppState('home');
+      setQuizState('quiz');
+      setScoreAtom(0);
+      setLivesAtom(3);
+      setQuestion(1);
     }
   };
 
   return (
-      <div className="dialog">
-        <div className="cat">
-          <img src={overlay[overlayState].cat} />
-        </div>
-        <div className="textDialog">
-          <span>{overlay[overlayState].question}</span>
-          <span id="text">{overlay[overlayState].sentence}</span>
-        </div>
-        <div className="btnDialog">
-          <button id="btn-white" onClick={handleButton1}>
-            {overlay[overlayState].white_btn_txt}
-          </button>
-          <button
-            className="overlay-btn"
-            id={overlay[overlayState].id_btn}
-            onClick={handleButton2}
-          >
-            {overlay[overlayState].colour_btn_txt}
-          </button>
-        </div>
+    <div className="dialog">
+      <div className="cat">
+        <img src={overlay[overlayState].cat} />
       </div>
+      <div className="textDialog">
+        <span>{overlay[overlayState].question}</span>
+        <span id="text">{overlay[overlayState].sentence}</span>
+      </div>
+      <div className="btnDialog">
+        <button id="btn-white" onClick={handleButton1}>
+          {overlay[overlayState].white_btn_txt}
+        </button>
+        <button
+          className="overlay-btn"
+          id={overlay[overlayState].id_btn}
+          onClick={handleButton2}
+        >
+          {overlay[overlayState].colour_btn_txt}
+        </button>
+      </div>
+    </div>
   );
 }
