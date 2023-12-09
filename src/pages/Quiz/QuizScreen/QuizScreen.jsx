@@ -31,6 +31,8 @@ const QuizScreen = () => {
   const setResetTimer = useSetAtom(resetTimerAtom);
 
   const handleRestart = () => {
+    setOverlay("restart");
+    setQuizState("overlay");
     setScoreAtom(0);
     setLivesAtom(3);
     setQuestion(1);

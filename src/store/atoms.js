@@ -59,6 +59,7 @@ export const overlayAtom = atom('');
 Possible Overlay states:
 1) lives : Lives Over overlay
 2) exit : Exit Game overlay
+2) restart: Restart Game overlay
 */
 
 export const timerOnAtom = atom(true);  // true when time is running, false when not

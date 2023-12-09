@@ -1,6 +1,7 @@
 import "./Overlay.scss";
 import cryingCat from "../../../assets/svg/cryingCat.svg";
 import BrokenCat from "../../../assets/svg/BrokenCat.svg";
+import sadCat from "../../../assets/svg/sadCat.svg"
 import { useAtomValue, useSetAtom } from "jotai";
 import { appStateAtom, overlayAtom, quizStateAtom } from "../../../store/atoms";
 
@@ -21,6 +22,14 @@ const overlay = {
     white_btn_txt: "SEE OTHER GAMES",
     colour_btn_txt: "REVIEW LESSONS",
   },
+  restart: {
+    cat:sadCat,
+    question: "Are you sure you want to restart?",
+    sentence: "Restarting the game before you finish will reset your progress.",
+    id_btn: "btn-orange",
+    white_btn_txt: "KEEP PLAYING",
+    colour_btn_txt: "RESTART",
+  }
 };
 
 export default function Overlay() {
@@ -47,25 +56,27 @@ export default function Overlay() {
 
   return (
       <div className="dialog">
-        <div className="cat">
-          <img src={overlay[overlayState].cat} />
-        </div>
-        <div className="textDialog">
-          <span>{overlay[overlayState].question}</span>
-          <span id="text">{overlay[overlayState].sentence}</span>
-        </div>
-        <div className="btnDialog">
-          <button id="btn-white" onClick={handleButton1}>
-            {overlay[overlayState].white_btn_txt}
-          </button>
-          <button
-            className="overlay-btn"
-            id={overlay[overlayState].id_btn}
-            onClick={handleButton2}
-          >
-            {overlay[overlayState].colour_btn_txt}
-          </button>
-        </div>
+        <div className=' dialogContainer'>
+            <div className="cat">
+              <img src={overlay[overlayState].cat} />
+            </div>
+            <div className="textDialog">
+              <span>{overlay[overlayState].question}</span>
+              <span id="text">{overlay[overlayState].sentence}</span>
+            </div>
+            <div className="btnDialog">
+              <button id="btn-white" onClick={handleButton1}>
+                {overlay[overlayState].white_btn_txt}
+              </button>
+              <button
+                className="overlay-btn"
+                id={overlay[overlayState].id_btn}
+                onClick={handleButton2}
+              >
+                {overlay[overlayState].colour_btn_txt}
+              </button>
+            </div>
+          </div>
       </div>
   );
 }
