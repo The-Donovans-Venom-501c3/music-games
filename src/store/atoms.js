@@ -42,6 +42,7 @@ Possible Quiz states:
 2) affirmation
 3) overlay
 4) popup
+5) rules
 */
 
 export const affirmationAtom = atom('');
@@ -82,11 +83,4 @@ export const gameFinishedAtom = atom('score');
 Possible Game Finished states:
 1) score : Score Dialog
 2) end-game : Play Again Dialog
-*/
-
-export const modalAtom = atom(false);
-/*
-Possible modal states:
-1) false
-2) true
 */

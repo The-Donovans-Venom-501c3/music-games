@@ -1,6 +1,6 @@
-@import '../../assets/scss/variables';
+@import '../../../../assets/scss/variables';
 
-.overlay {
+.rules-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,6 +27,26 @@
     .rules-title {
         font-size: 32px;
     }
+}
+
+.rules-title {
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+
+.rules-section {
+    margin-bottom: 1rem;
+}
+
+.rules-header {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.rules-paragraph {
+    font-size: 16px;
+    color: $black;
+    margin-bottom: 1rem;
 }
 
 .btn-exit {

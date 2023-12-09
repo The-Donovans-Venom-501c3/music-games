@@ -8,7 +8,6 @@ import Home from './pages/Home/Home';
 import Quiz from './pages/Quiz/Quiz';
 import GameFinished from './pages/Game Finished/GameFinished';
 import Welcome from './pages/Welcome/Welcome';
-import Rules from './pages/Rules/Rules';
 
 function App() {
     const appState = useAtomValue(appStateAtom);
@@ -25,7 +24,6 @@ function App() {
             ) : (
                 <GameFinished />
             )}
-            <Rules />
         </>
     );
 }

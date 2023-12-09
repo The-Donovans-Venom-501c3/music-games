@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './RulesModal.scss';
-import x from '../../../assets/svg/X.svg';
+import x from '../../../../assets/svg/X.svg';
 import { useSetAtom, useAtomValue } from 'jotai';
-import { modalAtom, gameStateAtom, timerOnAtom } from '../../../store/atoms';
+import {
+    quizStateAtom,
+    gameStateAtom,
+    timerOnAtom,
+} from '../../../../store/atoms';
 
 const rulesData = {
     note: {
@@ -61,7 +63,7 @@ const rulesData = {
 const RulesModal = () => {
     const game = useAtomValue(gameStateAtom);
     const setTimerOn = useSetAtom(timerOnAtom);
-    const setModalOpen = useSetAtom(modalAtom);
+    const setModalOpen = useSetAtom(quizStateAtom);
 
     const ruleTitle = game.charAt(0).toUpperCase() + game.slice(1);
 
@@ -76,12 +78,12 @@ const RulesModal = () => {
     );
     const handleCloseModal = () => {
         setTimerOn(true);
-        setModalOpen(false);
+        setModalOpen('quiz');
     };
 
-    return ReactDOM.createPortal(
-        <>
-            <div className='overlay'></div>
+    return (
+        <div>
+            <div className='rules-overlay'></div>
             <div className='rules-container'>
                 <button className='btn-exit' onClick={handleCloseModal}>
                     <img src={x} alt='Close Icon' className='x-icon' />
@@ -101,8 +103,7 @@ const RulesModal = () => {
                     {renderExplanation}
                 </section>
             </div>
-        </>,
-        document.querySelector('.modal-container')
+        </div>
     );
 };
 

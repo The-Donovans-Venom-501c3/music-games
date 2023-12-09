@@ -17,11 +17,10 @@ import {
     resetTimerAtom,
     scoreAtom,
     timerOnAtom,
-    modalAtom,
 } from '../../../store/atoms';
 
 const QuizScreen = () => {
-    const setModal = useSetAtom(modalAtom);
+    // const setModal = useSetAtom(modalAtom);
     const setQuizState = useSetAtom(quizStateAtom);
     const setOverlay = useSetAtom(overlayAtom);
     const [timerOn, setTimerOn] = useAtom(timerOnAtom);
@@ -50,7 +49,7 @@ const QuizScreen = () => {
 
     const handleRuleModal = () => {
         setTimerOn(false);
-        setModal(true);
+        setQuizState('rules');
     };
 
     return (
