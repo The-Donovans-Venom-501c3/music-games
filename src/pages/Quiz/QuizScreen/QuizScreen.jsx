@@ -9,18 +9,20 @@ import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
+import { useEffect } from "react";
 import {
-  livesAtom,
+  appStateAtom,
   overlayAtom,
-  questionAtom,
   quizStateAtom,
+  timerOnAtom,
+  livesAtom,
+  questionAtom,
   resetTimerAtom,
   scoreAtom,
-  timerOnAtom,
 } from "../../../store/atoms";
 
 const QuizScreen = () => {
-  const setQuizState = useSetAtom(quizStateAtom);
+  const [quizState, setQuizState] = useAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
 
@@ -43,6 +45,14 @@ const QuizScreen = () => {
     setTimerOn(false);
     setQuizState("rules");
   };
+
+  useEffect(() => {
+    if (quizState !== "quiz") {
+      setTimerOn(false);
+    } else {
+      setTimerOn(true);
+    }
+  }, [quizState]);
 
   return (
     <div className="QuizScreenContainer">
