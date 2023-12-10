@@ -8,7 +8,7 @@ import restart from "../../../assets/svg/Restart.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { livesAtom, overlayAtom, questionAtom, quizStateAtom, resetTimerAtom, scoreAtom, timerOnAtom } from "../../../store/atoms";
+import { overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
 
 const QuizScreen = () => {
   const setQuizState = useSetAtom(quizStateAtom);
@@ -25,18 +25,9 @@ const QuizScreen = () => {
     setQuizState('popup');
   };
 
-  const setScoreAtom = useSetAtom(scoreAtom);
-  const setLivesAtom = useSetAtom(livesAtom);
-  const setQuestion = useSetAtom(questionAtom);
-  const setResetTimer = useSetAtom(resetTimerAtom);
-
   const handleRestart = () => {
     setOverlay("restart");
     setQuizState("overlay");
-    setScoreAtom(0);
-    setLivesAtom(3);
-    setQuestion(1);
-    setResetTimer((prev) => !prev);
   };
 
   return (

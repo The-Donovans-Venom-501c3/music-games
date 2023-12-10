@@ -3,7 +3,7 @@ import cryingCat from "../../../assets/svg/cryingCat.svg";
 import BrokenCat from "../../../assets/svg/BrokenCat.svg";
 import sadCat from "../../../assets/svg/sadCat.svg"
 import { useAtomValue, useSetAtom } from "jotai";
-import { appStateAtom, overlayAtom, quizStateAtom } from "../../../store/atoms";
+import { appStateAtom, overlayAtom, quizStateAtom, scoreAtom, livesAtom, questionAtom, resetTimerAtom } from "../../../store/atoms";
 
 const overlay = {
   exit: {
@@ -46,11 +46,21 @@ export default function Overlay() {
     }
   };
 
+  const setScoreAtom = useSetAtom(scoreAtom);
+  const setLivesAtom = useSetAtom(livesAtom);
+  const setQuestion = useSetAtom(questionAtom);
+  const setResetTimer = useSetAtom(resetTimerAtom);
+
   const handleButton2 = () => {
     if(overlayState === 'lives'){
       window.location.href = 'https://thedonovanspianoroom.com/bookshelf/';
-    } else {
+    } else if(overlayState === 'exit'){
       setAppState('home');
+    } else{
+      setScoreAtom(0);
+      setLivesAtom(3);
+      setQuestion(1);
+      setResetTimer((prev) => !prev);  
     }
   };
 
