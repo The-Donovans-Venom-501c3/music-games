@@ -32,17 +32,14 @@ const QuizScreen = () => {
   };
 
   useEffect(() => {
-    if (quizState !== 'popup' && quizState !== 'overlay') {
-      if (quizState === 'affirmation') {
-        setTimerOn(false);
-      } else {
-        setTimerOn(true);
-      }
+    if (quizState !== 'quiz') {
+      setTimerOn(false);
+    } else {
+      setTimerOn(true);
     }
-
   }, [quizState])
 
-  useEffect(()=>{
+  useEffect(() => {
 
   })
 
