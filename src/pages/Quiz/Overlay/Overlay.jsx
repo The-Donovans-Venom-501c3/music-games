@@ -2,7 +2,7 @@ import "./Overlay.scss";
 import cryingCat from "../../../assets/svg/cryingCat.svg";
 import BrokenCat from "../../../assets/svg/BrokenCat.svg";
 import { useAtomValue, useSetAtom } from "jotai";
-import { appStateAtom, overlayAtom, quizStateAtom, scoreAtom, livesAtom, questionAtom } from "../../../store/atoms";
+import { appStateAtom, overlayAtom, quizStateAtom } from "../../../store/atoms";
 
 const overlay = {
   exit: {
@@ -24,31 +24,23 @@ const overlay = {
 };
 
 export default function Overlay() {
-
   const overlayState = useAtomValue(overlayAtom);
   const setAppState = useSetAtom(appStateAtom);
   const setQuizState = useSetAtom(quizStateAtom);
-  const setScoreAtom = useSetAtom(scoreAtom);
-  const setLivesAtom = useSetAtom(livesAtom);
-  const setQuestion = useSetAtom(questionAtom);
 
   const handleButton1 = () => {
-    if (overlayState == 'lives') {
-      setAppState('home');
+    if (overlayState == "lives") {
+      setAppState("home");
     } else {
-      setQuizState('quiz');
+      setQuizState("quiz");
     }
   };
 
   const handleButton2 = () => {
-    if (overlayState === 'lives') {
-      window.location.href = 'https://thedonovanspianoroom.com/bookshelf/';
+    if (overlayState === "lives") {
+      window.location.href = "https://thedonovanspianoroom.com/bookshelf/";
     } else {
-      setAppState('home');
-      setQuizState('quiz');
-      setScoreAtom(0);
-      setLivesAtom(3);
-      setQuestion(1);
+      setAppState("home");
     }
   };
 
