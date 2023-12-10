@@ -1,13 +1,13 @@
-import './Rules.scss';
-import RulesModal from './RulesModal/RulesModal';
-import { useAtomValue } from 'jotai';
-import { quizStateAtom } from '../../../store/atoms';
+import "./Rules.scss";
+import RulesModal from "./RulesModal/RulesModal";
+import { useAtomValue } from "jotai";
+import { quizStateAtom } from "../../../store/atoms";
 
 const Rules = () => {
-    const gameState = useAtomValue(quizStateAtom);
-    console.log('quiz State: ', gameState);
+  const quizState = useAtomValue(quizStateAtom);
+//   console.log("quiz State: ", quizState);
 
-    return <div>{gameState === 'rules' && <RulesModal />}</div>;
+  return <div>{quizState === "rules" && <RulesModal />}</div>;
 };
 
 export default Rules;
