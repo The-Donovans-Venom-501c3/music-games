@@ -1,6 +1,16 @@
 import React from "react";
 import { useAtomValue, useSetAtom, useAtom } from "jotai";
-import { affirmationAtom, appStateAtom, correctOptionAtom, livesAtom, overlayAtom, questionAtom, quizStateAtom, scoreAtom, totalQuestionsAtom } from "../../../store/atoms";
+import {
+  affirmationAtom,
+  appStateAtom,
+  correctOptionAtom,
+  livesAtom,
+  overlayAtom,
+  questionAtom,
+  quizStateAtom,
+  scoreAtom,
+  totalQuestionsAtom,
+} from "../../../store/atoms";
 import successCharacter from "../../../assets/svg/Affirmation_Success_Character.svg";
 import failCharacter from "../../../assets/svg/Affirmation_Fail_Character.svg";
 import "./Affirmation.scss";
@@ -29,7 +39,8 @@ const affirmationData = {
 
 export default function Affirmation() {
   const affirmation = useAtomValue(affirmationAtom);
-  const { sentence, buttonText, bgColor, pic } = affirmationData[affirmation] || {};
+  const { sentence, buttonText, bgColor, pic } =
+    affirmationData[affirmation] || {};
 
   const [questionNum, setQuestionNum] = useAtom(questionAtom);
   const setQuizState = useSetAtom(quizStateAtom);
@@ -41,25 +52,40 @@ export default function Affirmation() {
   const correctOption = useAtomValue(correctOptionAtom);
 
   const handleResponseBtn = () => {
-    if(affirmation == 'success' || affirmation == 'fail'){
-      if (affirmation === 'success') {
-        setScore((prev) => prev + 1);
-      } else {
-        setLives(lives - 1);
-        if(lives == 1){
-          setOverlay('lives');
-          setQuizState('overlay');
-          return;
-        } 
-      }
-      if(questionNum === totalQuestions){
-        setAppState('game-finished');
+    // if(affirmation == 'success' || affirmation == 'fail'){
+    //   if (affirmation === 'success') {
+    //     setScore((prev) => prev + 1);
+    //   } else {
+    //     setLives(lives - 1);
+    //     if(lives == 1){
+    //       setOverlay('lives');
+    //       setQuizState('overlay');
+    //       return;
+    //     }
+    //   }
+    //   if(questionNum === totalQuestions){
+    //     setAppState('game-finished');
+    //   } else {
+    //     setQuestionNum(questionNum + 1);
+    //     setQuizState('quiz');
+    //   }
+    // } else{
+    //     setQuizState('quiz');
+    // }
+    if (affirmation == "success") {
+      setScore((prev) => prev + 1);
+      if (questionNum === totalQuestions) {
+        setAppState("game-finished");
       } else {
         setQuestionNum(questionNum + 1);
-        setQuizState('quiz');
+        setQuizState("quiz");
       }
-    } else{
-        setQuizState('quiz');
+    } else if (affirmation == "fail") {
+      setOverlay("lives");
+      setQuizState("overlay");
+    } else {
+      setLives(lives - 1);
+      setQuizState("quiz");
     }
   };
 
@@ -75,7 +101,12 @@ export default function Affirmation() {
           <section className="tip-try-again">{sentence}</section>
         ) : affirmation === "success" ? (
           <section className="tip">{sentence}</section>
-        ) : <section className="tip">{sentence}<span>{correctOption}</span></section>}
+        ) : (
+          <section className="tip">
+            {sentence}
+            <span>{correctOption}</span>
+          </section>
+        )}
 
         <button
           className="ButtonResponse"

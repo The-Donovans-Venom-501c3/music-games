@@ -10,7 +10,7 @@ export default function Loading() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoadingState('quiz'); 
-    }, 3000);
+    }, 5800);
 
     return () => clearTimeout(timeout);
   }, [])

@@ -5,22 +5,26 @@ import x from "../../../assets/svg/X.svg";
 import pause from "../../../assets/svg/Pause.svg";
 import play from "../../../assets/svg/Icon_Play.svg";
 import restart from "../../../assets/svg/Restart.svg";
+import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
+import { useEffect } from "react";
 import {
   appStateAtom,
   overlayAtom,
   quizStateAtom,
   timerOnAtom,
+  livesAtom,
+  questionAtom,
+  resetTimerAtom,
+  scoreAtom,
 } from "../../../store/atoms";
-import { useEffect } from "react";
 
 const QuizScreen = () => {
   const [quizState, setQuizState] = useAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
-  const setAppState = useSetAtom(appStateAtom);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -33,7 +37,13 @@ const QuizScreen = () => {
   };
 
   const handleRestart = () => {
-    setAppState("home");
+    setOverlay("restart");
+    setQuizState("overlay");
+  };
+
+  const handleRuleModal = () => {
+    setTimerOn(false);
+    setQuizState("rules");
   };
 
   useEffect(() => {
@@ -56,6 +66,10 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="setting">
+          <button className="btnIcon" onClick={handleRuleModal}>
+            <img className="icon-questionMark" src={questionMark} />
+          </button>
+
           <button className="btnSetting btnRestart" onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>
