@@ -3,15 +3,26 @@ import music from "../../../assets/svg/Music_stand.svg";
 import cat from "../../../assets/svg/Cat.svg";
 import x from "../../../assets/svg/X.svg";
 import pause from "../../../assets/svg/Pause.svg";
-import play from '../../../assets/svg/Icon_Play.svg';
+import play from "../../../assets/svg/Icon_Play.svg";
 import restart from "../../../assets/svg/Restart.svg";
+import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { livesAtom, overlayAtom, questionAtom, quizStateAtom, resetTimerAtom, scoreAtom, timerOnAtom } from "../../../store/atoms";
+import { useEffect } from "react";
+import {
+  appStateAtom,
+  overlayAtom,
+  quizStateAtom,
+  timerOnAtom,
+  livesAtom,
+  questionAtom,
+  resetTimerAtom,
+  scoreAtom,
+} from "../../../store/atoms";
 
 const QuizScreen = () => {
-  const setQuizState = useSetAtom(quizStateAtom);
+  const [quizState, setQuizState] = useAtom(quizStateAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
 
@@ -22,20 +33,26 @@ const QuizScreen = () => {
 
   const handlePause = () => {
     setTimerOn(!timerOn);
-    setQuizState('popup');
+    setQuizState("popup");
   };
-
-  const setScoreAtom = useSetAtom(scoreAtom);
-  const setLivesAtom = useSetAtom(livesAtom);
-  const setQuestion = useSetAtom(questionAtom);
-  const setResetTimer = useSetAtom(resetTimerAtom);
 
   const handleRestart = () => {
-    setScoreAtom(0);
-    setLivesAtom(3);
-    setQuestion(1);
-    setResetTimer((prev) => !prev);
+    setOverlay("restart");
+    setQuizState("overlay");
   };
+
+  const handleRuleModal = () => {
+    setTimerOn(false);
+    setQuizState("rules");
+  };
+
+  useEffect(() => {
+    if (quizState !== "quiz") {
+      setTimerOn(false);
+    } else {
+      setTimerOn(true);
+    }
+  }, [quizState]);
 
   return (
     <div className="QuizScreenContainer">
@@ -49,6 +66,10 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="setting">
+          <button className="btnIcon" onClick={handleRuleModal}>
+            <img className="icon-questionMark" src={questionMark} />
+          </button>
+
           <button className="btnSetting btnRestart" onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>
