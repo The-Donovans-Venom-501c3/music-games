@@ -3,12 +3,17 @@ import music from "../../../assets/svg/Music_stand.svg";
 import cat from "../../../assets/svg/Cat.svg";
 import x from "../../../assets/svg/X.svg";
 import pause from "../../../assets/svg/Pause.svg";
-import play from '../../../assets/svg/Icon_Play.svg';
+import play from "../../../assets/svg/Icon_Play.svg";
 import restart from "../../../assets/svg/Restart.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { appStateAtom, overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
+import {
+  appStateAtom,
+  overlayAtom,
+  quizStateAtom,
+  timerOnAtom,
+} from "../../../store/atoms";
 import { useEffect } from "react";
 
 const QuizScreen = () => {
@@ -24,24 +29,20 @@ const QuizScreen = () => {
 
   const handlePause = () => {
     setTimerOn(!timerOn);
-    setQuizState('popup');
+    setQuizState("popup");
   };
 
   const handleRestart = () => {
-    setAppState('home');
+    setAppState("home");
   };
 
   useEffect(() => {
-    if (quizState !== 'quiz') {
+    if (quizState !== "quiz") {
       setTimerOn(false);
     } else {
       setTimerOn(true);
     }
-  }, [quizState])
-
-  useEffect(() => {
-
-  })
+  }, [quizState]);
 
   return (
     <div className="QuizScreenContainer">

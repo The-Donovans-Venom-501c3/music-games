@@ -11,19 +11,16 @@ export default function Quiz() {
   const loadingState = useAtomValue(loadingStateAtom);
   const quizState = useAtomValue(quizStateAtom);
 
-
-  if (loadingState === 'loading') {
-    return <Loading />
+  if (loadingState === 'loading'){
+    return  <Loading />
   }
 
-
   return (
-    <div>
-      {quizState === 'affirmation' && <Affirmation />}
-      {quizState === 'overlay' && <Overlay />}
-      {quizState === 'popup' && <Popup />}
-      <QuizScreen />
-    </div>
-
+    <>
+      {quizState === 'affirmation' && <Affirmation/>}
+      {quizState === 'overlay' && <Overlay/>}
+      {quizState === 'popup' && <Popup/>} 
+      <QuizScreen/>
+    </>
   );
 }
