@@ -1,8 +1,9 @@
 import "./Overlay.scss";
 import cryingCat from "../../../assets/svg/cryingCat.svg";
 import BrokenCat from "../../../assets/svg/BrokenCat.svg";
+import sadCat from "../../../assets/svg/sadCat.svg"
 import { useAtomValue, useSetAtom } from "jotai";
-import { appStateAtom, overlayAtom, quizStateAtom } from "../../../store/atoms";
+import { appStateAtom, overlayAtom, quizStateAtom, scoreAtom, livesAtom, questionAtom, resetTimerAtom } from "../../../store/atoms";
 
 const overlay = {
   exit: {
@@ -21,32 +22,50 @@ const overlay = {
     white_btn_txt: "SEE OTHER GAMES",
     colour_btn_txt: "REVIEW LESSONS",
   },
+  restart: {
+    cat:sadCat,
+    question: "Are you sure you want to restart?",
+    sentence: "Restarting the game before you finish will reset your progress.",
+    id_btn: "btn-orange",
+    white_btn_txt: "KEEP PLAYING",
+    colour_btn_txt: "RESTART",
+  }
 };
 
 export default function Overlay() {
-
   const overlayState = useAtomValue(overlayAtom);
   const setAppState = useSetAtom(appStateAtom);
   const setQuizState = useSetAtom(quizStateAtom);
 
   const handleButton1 = () => {
-    if(overlayState == 'lives'){
-      setAppState('home');
+    if (overlayState == "lives") {
+      setAppState("home");
     } else {
-      setQuizState('quiz');
+      setQuizState("quiz");
     }
   };
 
+  const setScoreAtom = useSetAtom(scoreAtom);
+  const setLivesAtom = useSetAtom(livesAtom);
+  const setQuestion = useSetAtom(questionAtom);
+  const setResetTimer = useSetAtom(resetTimerAtom);
+
   const handleButton2 = () => {
-    if(overlayState == 'lives'){
-      
-    } else {
+    if(overlayState === 'lives'){
+      window.location.href = 'https://thedonovanspianoroom.com/bookshelf/';
+    } else if(overlayState === 'exit'){
       setAppState('home');
+    } else{
+      setScoreAtom(0);
+      setLivesAtom(3);
+      setQuestion(1);
+      setResetTimer((prev) => !prev);  
     }
   };
 
   return (
-      <div className="dialog">
+    <div className="dialog">
+      <div className=" dialogContainer">
         <div className="cat">
           <img src={overlay[overlayState].cat} />
         </div>
@@ -67,5 +86,6 @@ export default function Overlay() {
           </button>
         </div>
       </div>
+    </div>
   );
 }

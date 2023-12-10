@@ -34,16 +34,9 @@ const QuizScreen = () => {
     setQuizState("popup");
   };
 
-  const setScoreAtom = useSetAtom(scoreAtom);
-  const setLivesAtom = useSetAtom(livesAtom);
-  const setQuestion = useSetAtom(questionAtom);
-  const setResetTimer = useSetAtom(resetTimerAtom);
-
   const handleRestart = () => {
-    setScoreAtom(0);
-    setLivesAtom(3);
-    setQuestion(1);
-    setResetTimer((prev) => !prev);
+    setOverlay("restart");
+    setQuizState("overlay");
   };
 
   const handleRuleModal = () => {

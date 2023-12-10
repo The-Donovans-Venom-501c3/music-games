@@ -38,13 +38,15 @@ export default function Popup() {
 
   return (
     <div className="toast">
-      <div className={popupData[popup].class}>
-        <img src={popupData[popup].pic} />
-      </div>
-      <div className="textDialog">
-        <span>Game is {popupData[popup].state}</span>
-        <span>{popupData[popup].sentence}</span>
-      </div>
+    <div className='toastContainer'>
+        <div className={popupData[popup].class}>
+          <img src={popupData[popup].pic} />
+        </div>
+        <div className="textDialog">
+          <span>Game is {popupData[popup].state}</span>
+          <span>{popupData[popup].sentence}</span>
+        </div>
     </div>
+  </div>
   );
 }
