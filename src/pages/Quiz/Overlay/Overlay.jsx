@@ -33,16 +33,15 @@ const overlay = {
 };
 
 export default function Overlay() {
-
   const overlayState = useAtomValue(overlayAtom);
   const setAppState = useSetAtom(appStateAtom);
   const setQuizState = useSetAtom(quizStateAtom);
 
   const handleButton1 = () => {
-    if(overlayState == 'lives'){
-      setAppState('home');
+    if (overlayState == "lives") {
+      setAppState("home");
     } else {
-      setQuizState('quiz');
+      setQuizState("quiz");
     }
   };
 
@@ -65,28 +64,28 @@ export default function Overlay() {
   };
 
   return (
-      <div className="dialog">
-        <div className=' dialogContainer'>
-            <div className="cat">
-              <img src={overlay[overlayState].cat} />
-            </div>
-            <div className="textDialog">
-              <span>{overlay[overlayState].question}</span>
-              <span id="text">{overlay[overlayState].sentence}</span>
-            </div>
-            <div className="btnDialog">
-              <button id="btn-white" onClick={handleButton1}>
-                {overlay[overlayState].white_btn_txt}
-              </button>
-              <button
-                className="overlay-btn"
-                id={overlay[overlayState].id_btn}
-                onClick={handleButton2}
-              >
-                {overlay[overlayState].colour_btn_txt}
-              </button>
-            </div>
-          </div>
+    <div className="dialog">
+      <div className=" dialogContainer">
+        <div className="cat">
+          <img src={overlay[overlayState].cat} />
+        </div>
+        <div className="textDialog">
+          <span>{overlay[overlayState].question}</span>
+          <span id="text">{overlay[overlayState].sentence}</span>
+        </div>
+        <div className="btnDialog">
+          <button id="btn-white" onClick={handleButton1}>
+            {overlay[overlayState].white_btn_txt}
+          </button>
+          <button
+            className="overlay-btn"
+            id={overlay[overlayState].id_btn}
+            onClick={handleButton2}
+          >
+            {overlay[overlayState].colour_btn_txt}
+          </button>
+        </div>
       </div>
+    </div>
   );
 }

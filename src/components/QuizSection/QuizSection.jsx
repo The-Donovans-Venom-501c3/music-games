@@ -2,8 +2,8 @@ import "./QuizSection.scss";
 import questionmark from "../../assets/svg/QuestionMark.svg";
 import Options from './Options/Options';
 import { useMemo, useState } from 'react';
-import { useAtomValue, useSetAtom } from "jotai";
-import { affirmationAtom, correctOptionAtom, gameStateAtom, levelStateAtom, livesAtom, questionAtom, quizStateAtom, totalQuestionsAtom } from "../../store/atoms";
+import { useAtomValue, useSetAtom, useAtom } from "jotai";
+import { affirmationAtom, correctOptionAtom, gameStateAtom, levelStateAtom, livesAtom, questionAtom, quizStateAtom, totalQuestionsAtom, scoreAtom, appStateAtom } from "../../store/atoms";
 import { getQuestions } from '../../utils/questions'
 
 
@@ -11,7 +11,7 @@ const QuizSection = () => {
 
   const game = useAtomValue(gameStateAtom);
   const level = useAtomValue(levelStateAtom);
-  const questionNum = useAtomValue(questionAtom);
+  const [questionNum, setQuestionNum] = useAtom(questionAtom);
 
   const questions = useMemo(() => getQuestions(game, level), []);
   const currQuestion = questions[questionNum - 1];
@@ -27,17 +27,32 @@ const QuizSection = () => {
 
   const setQuizState = useSetAtom(quizStateAtom);
   const setAffirmation = useSetAtom(affirmationAtom);
+  const setScore = useSetAtom(scoreAtom);
+  const setAppState = useSetAtom(appStateAtom);
+
   const lives = useAtomValue(livesAtom);
 
   const handleOptionClick = (option) => {
     if (option === currQuestion.correctOption) {
-      setAffirmation('success');
+      if (level !== 'hard') {
+        setAffirmation('success');
+        setQuizState('affirmation');
+      }
+      else {
+        setScore((prev) => prev + 1);
+        if (questionNum === totalQuestions) {
+          setAppState("game-finished");
+        } else {
+          setQuestionNum(questionNum + 1);
+        }
+      }
     } else if (lives > 1) {
       setAffirmation('tryAgain');
+      setQuizState('affirmation');
     } else {
       setAffirmation('fail');
+      setQuizState('affirmation');
     }
-    setQuizState('affirmation');
   };
 
   const displayTextIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
