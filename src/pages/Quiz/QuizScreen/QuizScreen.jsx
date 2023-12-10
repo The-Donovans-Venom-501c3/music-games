@@ -3,12 +3,21 @@ import music from "../../../assets/svg/Music_stand.svg";
 import cat from "../../../assets/svg/Cat.svg";
 import x from "../../../assets/svg/X.svg";
 import pause from "../../../assets/svg/Pause.svg";
-import play from '../../../assets/svg/Icon_Play.svg';
+import play from "../../../assets/svg/Icon_Play.svg";
 import restart from "../../../assets/svg/Restart.svg";
+import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { overlayAtom, quizStateAtom, timerOnAtom } from "../../../store/atoms";
+import {
+  livesAtom,
+  overlayAtom,
+  questionAtom,
+  quizStateAtom,
+  resetTimerAtom,
+  scoreAtom,
+  timerOnAtom,
+} from "../../../store/atoms";
 
 const QuizScreen = () => {
   const setQuizState = useSetAtom(quizStateAtom);
@@ -22,12 +31,17 @@ const QuizScreen = () => {
 
   const handlePause = () => {
     setTimerOn(!timerOn);
-    setQuizState('popup');
+    setQuizState("popup");
   };
 
   const handleRestart = () => {
     setOverlay("restart");
     setQuizState("overlay");
+  };
+
+  const handleRuleModal = () => {
+    setTimerOn(false);
+    setQuizState("rules");
   };
 
   return (
@@ -42,6 +56,10 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="setting">
+          <button className="btnIcon" onClick={handleRuleModal}>
+            <img className="icon-questionMark" src={questionMark} />
+          </button>
+
           <button className="btnSetting btnRestart" onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>

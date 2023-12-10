@@ -1,77 +1,74 @@
 @import "../../../assets/scss/variables";
 
-@keyframes fallen{
-    from{
+@keyframes fallen {
+    from {
         bottom: $page-height;
         transform: scale(1);
     }
-    to{
+    to {
         bottom: 5rem;
         transform: scale(1);
     }
 }
 @keyframes zoomIn {
-    from{
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    bottom: 5rem;
+    from {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        bottom: 5rem;
     }
-    to{
-    -moz-transform: scale(3);
-    -webkit-transform: scale(3);
-    -o-transform: scale(3);
-    -ms-transform: scale(3);
-    -webkit-transform: scale(3);
-    transform: scale(6);
-    bottom: -65.5%;
+    to {
+        -moz-transform: scale(3);
+        -webkit-transform: scale(3);
+        -o-transform: scale(3);
+        -ms-transform: scale(3);
+        -webkit-transform: scale(3);
+        transform: scale(6);
+        bottom: -65.5%;
     }
 }
 @keyframes backgroundZoom {
-    from{
+    from {
         background-size: 100% 100%;
     }
     to {
         background-size: 225% 225%;
     }
-    
 }
 @keyframes cat {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
-    
 }
 @keyframes catMove {
-    0% { 
+    0% {
         transform: rotate(-5deg) scale(7);
-        bottom: 28%;  // lest up
+        bottom: 28%; // lest up
     }
-    25% { 
+    25% {
         transform: rotate(-5deg) scale(7);
         bottom: 29%; // left bottom down
     }
-    50% { 
+    50% {
         transform: rotate(10deg) scale(7);
-        bottom: 25.5%;  // right bottom down
+        bottom: 25.5%; // right bottom down
     }
-    100% { 
+    100% {
         transform: rotate(10deg) scale(7);
-        bottom: 28%;  // right up
+        bottom: 28%; // right up
     }
 }
 @keyframes comedown {
-    
-    from { 
-        margin-bottom:150%;
+    from {
+        margin-bottom: 150%;
     }
-    to { 
+    to {
         margin-bottom: 4%;
     }
 }
@@ -79,19 +76,19 @@ button:active {
     background-color: $orange-500;
     box-shadow: 0px 1px 0px 0px $orange-600;
     transform: translateY(4px);
-  }
-.QuizScreenContainer{
+}
+.QuizScreenContainer {
     display: flex;
     font-family: $primary-font;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    height:calc($page-height - $nav-height);
+    height: calc($page-height - $nav-height);
     z-index: 1;
     overflow: hidden;
 
-    .GameScreen{
+    .GameScreen {
         display: flex;
         margin-bottom: 150%;
         z-index: 2;
@@ -99,13 +96,13 @@ button:active {
         width: 75%;
         height: 73%;
         bottom: $page-height;
-        animation-name:comedown;
+        animation-name: comedown;
         animation-duration: 1s;
         animation-delay: 2.5s;
         animation-fill-mode: forwards;
         animation-direction: linear;
-        
-        .gameMain{
+
+        .gameMain {
             display: flex;
             align-items: flex-end;
             flex-direction: row;
@@ -114,7 +111,7 @@ button:active {
             height: 100%;
             background-color: white;
 
-            .left{
+            .left {
                 width: 100%;
                 height: 100%;
                 flex-basis: 33.33%;
@@ -122,17 +119,16 @@ button:active {
                 justify-content: center;
                 position: relative;
                 padding-top: 5%;
-                .line{
+                .line {
                     width: 1%;
                     height: 80%;
                     position: absolute;
                     right: 0px;
-                    background-image: url('../../../assets/SVGs/VirticalLine.svg');
+                    background-image: url("../../../assets/SVGs/VirticalLine.svg");
                     background-size: 100% 100%;
-                    
                 }
             }
-            .right{
+            .right {
                 width: 100%;
                 height: 100%;
                 flex-basis: 66.66%;
@@ -140,17 +136,30 @@ button:active {
             }
         }
 
-        .setting{
+        .setting {
             display: flex;
             flex-direction: row;
-            justify-content:flex-end;
+            justify-content: flex-end;
             gap: 5%;
             width: 40%;
             margin-left: auto;
             flex-basis: 11.11%;
             z-index: 3;
-            
-            .btnSetting{
+
+            .btnIcon {
+                background-color: #ffff;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 5rem;
+                box-shadow: 0px 3px 0px 0px #a4a4a4;
+            }
+
+            .icon-questionMark {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .btnSetting {
                 background-color: $orange-500;
                 width: 30%;
                 height: 60%;
@@ -164,20 +173,20 @@ button:active {
                 word-wrap: break-word;
                 cursor: pointer;
             }
-            .btnPause , .btnRestart {
+            .btnPause,
+            .btnRestart {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                
-                img{
+
+                img {
                     width: 20%;
-                    height:75%;
+                    height: 75%;
                     background-size: 100%;
                 }
-                
             }
-            .btnexit{
+            .btnexit {
                 background-color: $Cream-700;
                 width: 10%;
                 height: 60%;
@@ -187,36 +196,34 @@ button:active {
                 display: grid;
                 padding: 2.5%;
 
-                img{
+                img {
                     width: 100%;
                     height: 100%;
                 }
             }
-        
         }
-        
     }
-    .catConatiner{
+    .catConatiner {
         display: flex;
         align-items: center;
         justify-content: center;
-        #cat{
+        #cat {
             opacity: 0;
             width: 6%;
             height: 3%;
             position: absolute;
             left: 19%;
             z-index: 4;
-            animation-name:cat, catMove;
-            animation-duration: 1s,1.5s;
-            animation-delay: 2s,2s;
+            animation-name: cat, catMove;
+            animation-duration: 1s, 1.5s;
+            animation-delay: 2s, 2s;
             animation-fill-mode: forwards, forwards;
-            animation-direction:normal,alternate-reverse;
-            animation-iteration-count: 1 ,infinite;
+            animation-direction: normal, alternate-reverse;
+            animation-iteration-count: 1, infinite;
             animation-timing-function: linear, ease-in-out;
         }
     }
-    .musicStand{
+    .musicStand {
         display: flex;
         position: absolute;
         align-items: center;
@@ -224,17 +231,10 @@ button:active {
         animation-name: fallen, zoomIn;
         animation-duration: 1s, 1s;
         animation-delay: 0s, 1s;
-        width: 15%; 
+        width: 15%;
         margin: auto;
-        padding-bottom: 0.5rem; 
+        padding-bottom: 0.5rem;
         animation-timing-function: ease, ease;
         animation-fill-mode: forwards, forwards;
-        
     }
-    
 }
-
-
-
-
-
