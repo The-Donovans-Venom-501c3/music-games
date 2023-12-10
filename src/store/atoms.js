@@ -61,7 +61,12 @@ Possible Overlay states:
 2) exit : Exit Game overlay
 2) restart: Restart Game overlay
 */
-
+export const popupAtom = atom('');
+/*
+possible popup
+1) play: for start playing popup
+2) pause : for pausing the game
+*/
 export const timerOnAtom = atom(true);  // true when time is running, false when not
 
 export const resetTimerAtom = atom(true);
