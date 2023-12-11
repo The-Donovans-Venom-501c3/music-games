@@ -5,13 +5,10 @@
 @media (min-width: 1300px) {
   .background-set {
     background-color: $black;
-    background-size: cover;
-    background-position: center bottom;
-    position: fixed;
-    height: 100vh;
+    position: relative;
+    height: 175vh;
     box-sizing: border-box;
     margin: 0;
-    padding-right: 10rem;
     border: 0;
     width: 100vw;
   }
@@ -24,7 +21,7 @@
     margin-left: 0px;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 80%;
     width: 100%;
   }
 
@@ -33,6 +30,7 @@
     opacity: 0.2;
     width: 50%;
     margin-left: 20px;
+    height: 80%;
   }
 
   #homePageBubble {
@@ -187,13 +185,10 @@
 @media (min-width: 1100px) and (max-width: 1300px) {
   .background-set {
     background-color: $black;
-    background-size: cover;
-    background-position: center bottom;
-    position: fixed;
-    height: 100vh;
+    position: relative;
+    height:175vh;
     box-sizing: border-box;
     margin: 0;
-    padding-right: 10rem;
     border: 0;
     width: 100%;
   }
@@ -204,7 +199,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 80%;
     width: 100%;
   }
 
@@ -214,6 +209,7 @@
     width: 40%;
     height: 100%;
     margin-left: 50px;
+
   }
 
   #homePageBubble {
@@ -221,6 +217,7 @@
     margin-top: 200px;
     width: 40%;
     opacity: 0.2;
+ 
     margin-left: 50px;
   }
 
@@ -228,6 +225,7 @@
     flex: 1 100px;
     justify-content: space-around;
     position: relative;
+    height: auto;
     top: 235px;
     margin-left: 100px;
     margin-right: 20px;
@@ -372,13 +370,10 @@
 @media (min-width: 900px) and (max-width: 1100px) {
   .background-set {
     background-color: $black;
-    background-size: cover;
-    background-position: center bottom;
-    position: fixed;
-    height: 100vh;
+    position: relative;
+    height:175vh;
     box-sizing: border-box;
     margin: 0;
-    padding-right: 10rem;
     border: 0;
     width: 100%;
   }
@@ -389,7 +384,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 70%;
     width: 100%;
   }
 
@@ -560,13 +555,10 @@
 @media (min-width: 768px) and (max-width: 900px) {
     .background-set {
       background-color: $black;
-      background-size: cover;
-      background-position: center bottom;
-      position: fixed;
-      height: 100vh;
+      position: relative;
+      height:175vh;
       box-sizing: border-box;
       margin: 0;
-      padding-right: 10rem;
       border: 0;
       width: 100%;
     }
@@ -577,7 +569,7 @@
       position: relative;
       display: flex;
       flex-direction: row;
-      height: 100%;
+      height: 50%;
       width: 100%;
     }
   
@@ -748,25 +740,24 @@
   @media (max-width:768px) {
     .background-set {
       background-color: $black;
-      background-size: cover;
-      background-position: center bottom;
-      position: fixed;
-      height: 100vh;
+      position: relative;
+      height:175vh;
       box-sizing: border-box;
       margin: 0;
-      padding-right: 10rem;
       border: 0;
+    
       width: 100%;
     }
   
     .whole-page-layout {
       margin-top: -200px;
-      margin-left: 0px;
+      margin-left: 0;
       position: relative;
       display: flex;
       flex-direction: row;
-      height: 100%;
+      height: 10%;
       width: 100%;
+ 
     }
   
     #light-background {
@@ -794,6 +785,7 @@
       margin-left: 30px;
       margin-right: 20px;
       margin-top: 50px;
+      height: 50%;
     }
   
     .text {
@@ -876,10 +868,11 @@
       display: grid;
       justify-content: center;
       align-content: center;
-      width: 50px;
-      height: 42px;
-      margin-right: 10px;
-      margin-left: 10px;
+      width: 60%;
+      height: 50%;
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top:15%;
     }
   
     .Text-Layout {
@@ -892,15 +885,15 @@
   
     #title {
       font-weight: bolder;
-      font-size:20px;
+      font-size:15px;
     }
     #tips {
-      font-size: medium;
+      font-size: 10px;
     }
   
     .HomeButton {
-      width: 25rem;
-      height: 6rem;
+      width: 90%;
+      height: 100%;
       display: inline-block;
       padding: 0;
       font-family: $primary-font;
