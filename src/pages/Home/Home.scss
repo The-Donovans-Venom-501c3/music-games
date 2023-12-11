@@ -1,73 +1,96 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
-.background-set{
-    background-color:#1C1A1A;
-    position: absolute;
-    height: 150vh;
-    width:100% ;
-}
+/*------------------------------------------------------------------------------------------------*/
 
-#light-background{
-    position: absolute;
-    opacity: 0.2;
-  
-}
+@media (min-width: 1300px) {
+  .background-set {
+    background-color: $black;
+    background-size: cover;
+    background-position: center bottom;
+    position: fixed;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 10rem;
+    border: 0;
+    width: 100vw;
+  }
 
-#homePageBubble{
-    position: absolute;
-    margin-top: 200px;
-    opacity: 0.2;
-}
-
-.homeContainer{
+  .whole-page-layout {
+    margin-top: -200px;
+    margin-left: 50px;
     position: relative;
-
-    margin-top:0;
-    padding: 0;
+    //   margin-top: 0;
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
-}
+    height: 100%;
+    width: 100%;
+  }
 
+  #light-background {
+    position: fixed;
+    opacity: 0.2;
+    width: 50%;
+    margin-left: 20px;
+  }
 
-.contentContainer{
-    flex:1 100px;
+  #homePageBubble {
+    position: fixed;
+    margin-top: 200px;
+    opacity: 0.2;
+  }
+
+  .contentContainer {
+    flex: 1 100px;
     justify-content: space-around;
     position: relative;
     top: 235px;
-    margin-left: 250px;
-    margin-right: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-top: 50px;
-}
+    width: 50px;
+  }
 
-#yellowGuy{
+  .text {
+    font-family: $tertiary-font;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  #white-tips {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: $tertiary-font;
+  }
+  #orange-tips {
+    color: #f6ad69;
+    font-family: $tertiary-font;
+  }
+
+  #orange {
+    color: #f6ad69;
+    font-size: 50px;
+    font-family: $tertiary-font;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+
+  .text-small {
+    margin-top: 50px;
+    font-family: Noto Sans;
+    font-size: xx-small;
+  }
+
+  #yellowGuy {
     width: 250px;
     height: 186px;
     margin-bottom: 50px;
-    margin-left:30px;
-    margin-right:30px;
-}
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 
-
-
-h1 {
-    font-family: Be Vietnam Pro;
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 68px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    display: inline;
-}
-
-.white {
-    color: #FFFFFF;
-}
-
-.orange {
-    color: #F6AD69;
-}
-
-p {
+  p {
     //styleName: Headline XXS/Regular;
     font-family: Noto Sans;
     font-size: 20px;
@@ -75,85 +98,833 @@ p {
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    color: #FFFFFF;
-}
+    color: #ffffff;
+    white-space: nowrap;
+  }
 
-.buttonContainer{
+  #home-page-tips {
+    font-weight: bold;
+  }
+
+  .buttonContainer {
     flex: 2 100px;
     position: relative;
     top: 235px;
     padding: 20px;
-}
+  }
 
-.Button-Position{
+  .Button-Position {
     display: grid;
     grid-template-rows: auto auto auto auto;
-    gap:15px;
-}
+    gap: 15px;
+  }
 
-.Button-Layout{
+  .Button-Layout {
     display: flex;
     overflow: hidden;
-    padding:0;
+    padding: 0;
     cursor: pointer;
     font-family: $primary-font;
-}
+  }
 
-
-
-#button-icon{
+  #button-icon {
     display: grid;
     justify-content: center;
     align-content: center;
     width: 80px;
     height: 68px;
     margin-right: 10px;
-}
+  }
 
-
-.Text-Layout{
+  .Text-Layout {
     grid-column: 2;
     display: grid;
     grid-template-rows: auto auto;
     text-align: left;
     place-items: left;
-}
+  }
 
-#title{
+  #title {
     font-weight: bolder;
-
-
-}
-#tips{
+  }
+  #tips {
     font-size: medium;
-}
+  }
 
-
-.HomeButton {
+  .HomeButton {
     width: 30rem;
     height: 8rem;
     display: inline-block;
     padding: 24px 25px;
-    font-family:$primary-font;
+    font-family: $primary-font;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #1C1A1A;
+    color: #1c1a1a;
     border-radius: 12px;
-    border: 3px solid #DDDADA;
-    background-color:#FFFFFF;
-    -webkit-box-shadow:2px 4px 1px #DDDADA;
-    -moz-box-shadow: 2px 4px 1px #DDDADA;
-    box-shadow: 2px 4px 1px #DDDADA;
+    border: 3px solid #dddada;
+    background-color: #ffffff;
+    -webkit-box-shadow: 2px 4px 1px #dddada;
+    -moz-box-shadow: 2px 4px 1px #dddada;
+    box-shadow: 2px 4px 1px #dddada;
   }
-  
-.HomeButton:hover {background-color:#DDDADA }
-  
-.HomeButton:active {
-    background-color: #DDDADA;
+
+  .HomeButton:hover {
+    background-color: #dddada;
+  }
+
+  .HomeButton:active {
+    background-color: #dddada;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+}
 
+/*------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .background-set {
+    background-color: $black;
+    background-size: cover;
+    background-position: center bottom;
+    position: fixed;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 10rem;
+    border: 0;
+    width: 100%;
+  }
+
+  .whole-page-layout {
+    margin-top: -200px;
+    margin-left: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  #light-background {
+    position: fixed;
+    opacity: 0.2;
+    width: 40%;
+    height: 100%;
+    margin-left: 50px;
+  }
+
+  #homePageBubble {
+    position: fixed;
+    margin-top: 200px;
+    width: 40%;
+    opacity: 0.2;
+    margin-left: 50px;
+  }
+
+  .contentContainer {
+    flex: 1 100px;
+    justify-content: space-around;
+    position: relative;
+    top: 235px;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+
+  .text {
+    font-family: $tertiary-font;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  #white-tips {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: $tertiary-font;
+  }
+  #orange-tips {
+    color: #f6ad69;
+    font-family: $tertiary-font;
+  }
+
+  #orange {
+    color: #f6ad69;
+    font-size: 50px;
+    font-family: $tertiary-font;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+
+  .text-small {
+    margin-top: 50px;
+    font-family: Noto Sans;
+    font-size: xx-small;
+  }
+
+  #yellowGuy {
+    width: 250px;
+    height: 186px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  p {
+    //styleName: Headline XXS/Regular;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  #home-page-tips {
+    font-weight: bold;
+  }
+
+  .buttonContainer {
+    flex: 2 100px;
+    position: relative;
+    top: 235px;
+    padding: 20px;
+  }
+
+  .Button-Position {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+  }
+
+  .Button-Layout {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    font-family: $primary-font;
+  }
+
+  #button-icon {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 70px;
+    height: 59px;
+    margin-right: 10px;
+    margin-left:10px;
+  }
+
+  .Text-Layout {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: left;
+    place-items: left;
+  }
+
+  #title {
+    font-weight: bolder;
+    font-size: 20px;
+
+  }
+  #tips {
+    font-size: 15px;
+  }
+
+  .HomeButton {
+    width: 25rem;
+    height: 6.6rem;
+    display: inline-block;
+    padding:10px;
+    font-family: $primary-font;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #1c1a1a;
+    border-radius: 12px;
+    border: 3px solid #dddada;
+    background-color: #ffffff;
+    -webkit-box-shadow: 2px 4px 1px #dddada;
+    -moz-box-shadow: 2px 4px 1px #dddada;
+    box-shadow: 2px 4px 1px #dddada;
+  }
+
+  .HomeButton:hover {
+    background-color: #dddada;
+  }
+
+  .HomeButton:active {
+    background-color: #dddada;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .background-set {
+    background-color: $black;
+    background-size: cover;
+    background-position: center bottom;
+    position: fixed;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 10rem;
+    border: 0;
+    width: 100%;
+  }
+
+  .whole-page-layout {
+    margin-top: -200px;
+    margin-left: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  #light-background {
+    position: fixed;
+    opacity: 0.2;
+    width: 40%;
+    height: 100%;
+    margin-top:-50px;
+    margin-left: 50px;
+  }
+
+  #homePageBubble {
+    position: fixed;
+    margin-top: 200px;
+    width: 40%;
+    opacity: 0.2;
+    margin-left: 50px;
+  }
+
+  .contentContainer {
+    flex: 1 100px;
+    justify-content: space-around;
+    position: relative;
+    top: 235px;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+
+  .text {
+    font-family: $tertiary-font;
+    font-size: 40px;
+    white-space: nowrap;
+  }
+
+  #white-tips {
+    color: #ffffff;
+    font-size: 40px;
+    font-family: $tertiary-font;
+  }
+  #orange-tips {
+    color: #f6ad69;
+    font-family: $tertiary-font;
+  }
+
+  #orange {
+    color: #f6ad69;
+    font-size: 40px;
+    font-family: $tertiary-font;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+
+
+
+  #yellowGuy {
+    width: 200px;
+    height: 153px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  p {
+    //styleName: Headline XXS/Regular;
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .text-small {
+    margin-top: 50px;
+    font-family: Noto Sans;
+
+
+  }
+
+  #home-page-tips {
+    font-weight: bold;
+  }
+
+  .buttonContainer {
+    flex: 2 100px;
+    position: relative;
+    top: 235px;
+    padding: 20px;
+  }
+
+  .Button-Position {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+  }
+
+  .Button-Layout {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    font-family: $primary-font;
+  }
+
+  #button-icon {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 70px;
+    height: 59px;
+    margin-right: 10px;
+    margin-left:10px;
+  }
+
+  .Text-Layout {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: left;
+    place-items: left;
+  }
+
+  #title {
+    font-weight: bolder;
+    font-size: 20px;
+
+  }
+  #tips {
+    font-size: 15px;
+  }
+
+  .HomeButton {
+    width: 25rem;
+    height: 6.6rem;
+    display: inline-block;
+    padding:10px;
+    font-family: $primary-font;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #1c1a1a;
+    border-radius: 12px;
+    border: 3px solid #dddada;
+    background-color: #ffffff;
+    -webkit-box-shadow: 2px 4px 1px #dddada;
+    -moz-box-shadow: 2px 4px 1px #dddada;
+    box-shadow: 2px 4px 1px #dddada;
+  }
+
+  .HomeButton:hover {
+    background-color: #dddada;
+  }
+
+  .HomeButton:active {
+    background-color: #dddada;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .background-set {
+      background-color: $black;
+      background-size: cover;
+      background-position: center bottom;
+      position: fixed;
+      height: 100vh;
+      box-sizing: border-box;
+      margin: 0;
+      padding-right: 10rem;
+      border: 0;
+      width: 100%;
+    }
+  
+    .whole-page-layout {
+      margin-top: -200px;
+      margin-left: 0px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+    }
+  
+    #light-background {
+      position: fixed;
+      opacity: 0.2;
+      width: 30%;
+      height: 100%;
+      margin-top:-150px;
+      margin-left: 20px;
+    }
+  
+    #homePageBubble {
+      position: fixed;
+      margin-top: 250px;
+      width: 30%;
+      opacity: 0.2;
+      margin-left: 20px;
+    }
+  
+    .contentContainer {
+      flex: 1 100px;
+      justify-content: space-around;
+      position: relative;
+      top: 235px;
+      margin-left: 30px;
+      margin-right: 20px;
+      margin-top: 50px;
+    }
+  
+    .text {
+      font-family: $tertiary-font;
+      font-size: 30px;
+      white-space: nowrap;
+    }
+  
+    #white-tips {
+      color: #ffffff;
+      font-size: 30px;
+      font-family: $tertiary-font;
+    }
+    #orange-tips {
+      color: #f6ad69;
+      font-family: $tertiary-font;
+    }
+  
+    #orange {
+      color: #f6ad69;
+      font-size: 30px;
+      font-family: $tertiary-font;
+      margin-top: -20px;
+      font-weight: bold;
+    }
+  
+  
+  
+    #yellowGuy {
+      width: 150px;
+      height: 115px;
+      margin-bottom: 50px;
+      margin-left: 0px;
+      margin-right: 30px;
+    }
+  
+    p {
+      //styleName: Headline XXS/Regular;
+      font-family: Noto Sans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+  
+    .text-small {
+      margin-top: 50px;
+      font-family: Noto Sans;
+    }
+  
+    #home-page-tips {
+      font-weight: bold;
+    }
+  
+    .buttonContainer {
+      flex: 2 100px;
+      position: relative;
+      top: 235px;
+      padding: 20px;
+    }
+  
+    .Button-Position {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: 15px;
+    }
+  
+    .Button-Layout {
+      display: flex;
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+      font-family: $primary-font;
+    }
+  
+    #button-icon {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      width: 50px;
+      height: 42px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .Text-Layout {
+      grid-column: 2;
+      display: grid;
+      grid-template-rows: auto auto;
+      text-align: left;
+      place-items: left;
+    }
+  
+    #title {
+      font-weight: bolder;
+      font-size:20px;
+    }
+    #tips {
+      font-size: medium;
+    }
+  
+    .HomeButton {
+      width: 25rem;
+      height: 6rem;
+      display: inline-block;
+      padding: 0;
+      font-family: $primary-font;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #1c1a1a;
+      border-radius: 12px;
+      border: 3px solid #dddada;
+      background-color: #ffffff;
+      -webkit-box-shadow: 2px 4px 1px #dddada;
+      -moz-box-shadow: 2px 4px 1px #dddada;
+      box-shadow: 2px 4px 1px #dddada;
+    }
+  
+    .HomeButton:hover {
+      background-color: #dddada;
+    }
+  
+    .HomeButton:active {
+      background-color: #dddada;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  }
+
+
+  /*------------------------------------------------------------------------------------------------*/
+
+
+  @media (max-width:768px) {
+    .background-set {
+      background-color: $black;
+      background-size: cover;
+      background-position: center bottom;
+      position: fixed;
+      height: 100vh;
+      box-sizing: border-box;
+      margin: 0;
+      padding-right: 10rem;
+      border: 0;
+      width: 100%;
+    }
+  
+    .whole-page-layout {
+      margin-top: -200px;
+      margin-left: 0px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+    }
+  
+    #light-background {
+      position: fixed;
+      opacity: 0.2;
+      width: 30%;
+      height: 100%;
+      margin-top:-150px;
+      margin-left: 20px;
+    }
+  
+    #homePageBubble {
+      position: fixed;
+      margin-top: 250px;
+      width: 30%;
+      opacity: 0.2;
+      margin-left: 20px;
+    }
+  
+    .contentContainer {
+      flex: 1 100px;
+      justify-content: space-around;
+      position: relative;
+      top: 235px;
+      margin-left: 30px;
+      margin-right: 20px;
+      margin-top: 50px;
+    }
+  
+    .text {
+      font-family: $tertiary-font;
+      font-size: 30px;
+      white-space: nowrap;
+    }
+  
+    #white-tips {
+      color: #ffffff;
+      font-size: 30px;
+      font-family: $tertiary-font;
+    }
+    #orange-tips {
+      color: #f6ad69;
+      font-family: $tertiary-font;
+    }
+  
+    #orange {
+      color: #f6ad69;
+      font-size: 30px;
+      font-family: $tertiary-font;
+      margin-top: -20px;
+      font-weight: bold;
+    }
+  
+  
+  
+    #yellowGuy {
+      width: 150px;
+      height: 115px;
+      margin-bottom: 50px;
+      margin-left: 0px;
+      margin-right: 30px;
+    }
+  
+    p {
+      //styleName: Headline XXS/Regular;
+      font-family: Noto Sans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+  
+    .text-small {
+      margin-top: 50px;
+      font-family: Noto Sans;
+    }
+  
+    #home-page-tips {
+      font-weight: bold;
+    }
+  
+    .buttonContainer {
+      flex: 2 100px;
+      position: relative;
+      top: 235px;
+      padding: 20px;
+    }
+  
+    .Button-Position {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: 15px;
+    }
+  
+    .Button-Layout {
+      display: flex;
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+      font-family: $primary-font;
+    }
+  
+    #button-icon {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      width: 50px;
+      height: 42px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .Text-Layout {
+      grid-column: 2;
+      display: grid;
+      grid-template-rows: auto auto;
+      text-align: left;
+      place-items: left;
+    }
+  
+    #title {
+      font-weight: bolder;
+      font-size:20px;
+    }
+    #tips {
+      font-size: medium;
+    }
+  
+    .HomeButton {
+      width: 25rem;
+      height: 6rem;
+      display: inline-block;
+      padding: 0;
+      font-family: $primary-font;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #1c1a1a;
+      border-radius: 12px;
+      border: 3px solid #dddada;
+      background-color: #ffffff;
+      -webkit-box-shadow: 2px 4px 1px #dddada;
+      -moz-box-shadow: 2px 4px 1px #dddada;
+      box-shadow: 2px 4px 1px #dddada;
+    }
+  
+    .HomeButton:hover {
+      background-color: #dddada;
+    }
+  
+    .HomeButton:active {
+      background-color: #dddada;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  }
