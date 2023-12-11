@@ -1,7 +1,6 @@
 import "./GameFeatures.scss";
-// import { MusicToggle } from "./Music/MusicToggle";
-import musicnote from '../../assets/svg/MusicNote.svg'
-import Switch from '@mui/material/Switch';
+import musicnote from '../../assets/svg/MusicNote.svg';
+import dot from '../../assets/svg/Dot.svg';
 import Slider from '@mui/material/Slider';
 import Timer from "./Timer/Timer";
 import { useRef } from "react";
@@ -19,9 +18,9 @@ const GameFeatures = () => {
 
   let src = level === 'easy' ? '/easy.mp3' : level === 'medium' ? '/medium.mp3' : 'hard.mp3';
 
-  const handleChangeSwitch = (event) => {
-    setMusicOn(event.target.checked);
-    if(musicOn){
+  const handleChangeSwitch = () => {
+    setMusicOn(!musicOn);
+    if (musicOn) {
       audioRef.current?.pause();
     } else {
       audioRef.current?.play();
@@ -54,68 +53,86 @@ const GameFeatures = () => {
           </span>
         </div>
       </div>
-            <div className='gameSetting'>
-                <div>
-                    <span>Music</span>
-                    <div id='music'>
-                        <Switch color='success'
-                        sx={{ 
-                            '& .MuiSwitch-thumb':{
-                                borderRadius:'5px',
-                                height:'5vh',
-                                backgroundColor:'$grey-100',
-                                border:'2px solid $grey-500',
-                                width:'3.5vw',
-                                transform: 'translateX(0px)',
-                                boxShadow:'0px 5px 0px 0px #BFBABB',
+      <div className='gameSetting'>
+        <div>
+          <span>Music</span>
+          <div id='music' className= {musicOn ? "on" : "" }>
+            <button onClick={handleChangeSwitch}
+            >
+              <img src={dot} width={72} height={50} alt="Music toogle"/>
+            </button>
+            <span>{musicOn ? 'ON' : 'OFF'}</span>
+            {/* <FormControlLabel
+              label={musicOn ? 'ON' : 'OFF'}
+              sx={{
+                '.MuiFormControlLabel-label': {
+                  color: '#817676',
+                  fontSize: '20px',
+                  lineHeight: '30px',
+                },
+              }}
+              control={
+                <Switch color='success'
+                  sx={{
+                    '& .MuiSwitch-thumb': { 
+                      borderRadius: '5px',
+                      height: '5vh',
+                      backgroundColor: '$grey-100',
+                      border: '2px solid $grey-500',
+                      width: '3.5vw',
+                      transform: 'translateX(0px)',
+                      boxShadow: '0px 5px 0px 0px #BFBABB',
 
-                            },
-                            '& .MuiSwitch-track':{
-                                borderRadius:'5px',
-                                width:'25vw'
-                            },
-                            '.css-1xvpzln-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked':{
-                                '-webkit-transform': 'translateX(3.5vw)',
-                                '-moz-transform': 'translateX(3.5vw)',
-                               ' -ms-transform': 'translateX(3.5vw)',
-                                transform: "translateX(3.5vw)",
-                                color:'#F0EEEE'
-                            },
-                            width:'8vw',
-                            height:'8.5vh',
-                            
-                        }}
-                        checked={musicOn}
-                        onChange={handleChangeSwitch}
-                        />
-                    </div>
-                </div>
-                <div>
-                    <span>Volume</span>
-                    <div id='volume'>
-                        <Slider
-                        defaultValue={30}
-                        onChange={(e) => handleChangeVolume(e)}                        
-                        valueLabelDisplay="auto"
-                        sx={{
-                            width: "5vw",
-                            '.css-eg0mwd-MuiSlider-thumb':{
-                                color:'#F0EEEE',
-                            },
-                            '& .css-2bajgq-MuiSlider-root':{
-                                color:'#F0EEEE',
-                            },
-                            '.css-1gv0vcd-MuiSlider-track':{
-                                color:'#BFBABB',
-                                height:'1vh',
-                            }
-                        }}
-                        />
-                    </div>
-                </div>
-            </div>
-            <audio ref={audioRef} loop src={src} />
+                    },
+                    '& .MuiSwitch-track': {
+                      borderRadius: '5px',
+                      width: '25vw'
+                    },
+                    '.css-1xvpzln-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked': {
+                      '-webkit-transform': 'translateX(3.5vw)',
+                      '-moz-transform': 'translateX(3.5vw)',
+                      ' -ms-transform': 'translateX(3.5vw)',
+                      transform: "translateX(3.5vw)",
+                      color: '#F0EEEE'
+                    },
+                    width: '7vw',
+                    height: '8.5vh',
+
+                  }}
+                  checked={musicOn}
+                  onChange={handleChangeSwitch}
+                />
+              }
+            /> */}
+
+          </div>
         </div>
+        <div>
+          <span>Volume</span>
+          <div id='volume'>
+            <Slider
+              defaultValue={30}
+              onChange={(e) => handleChangeVolume(e)}
+              valueLabelDisplay="auto"
+              sx={{
+                width: "7vw",
+                '.css-eg0mwd-MuiSlider-thumb': {
+                  color: '#F0EEEE',
+                },
+                '& .css-2bajgq-MuiSlider-root': {
+                  color: '#F0EEEE',
+                },
+                '.css-1gv0vcd-MuiSlider-track': {
+                  color: '#BFBABB',
+                  height: '1vh',
+                }
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      <audio ref={audioRef} loop src={src} />
+    </div>
   );
 };
 export default GameFeatures;
