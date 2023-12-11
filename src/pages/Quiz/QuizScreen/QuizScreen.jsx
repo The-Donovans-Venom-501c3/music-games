@@ -13,11 +13,13 @@ import { useEffect } from "react";
 import {
   overlayAtom,
   quizStateAtom,
-  timerOnAtom
+  timerOnAtom,
+  popupAtom
 } from "../../../store/atoms";
 
 const QuizScreen = () => {
   const [quizState, setQuizState] = useAtom(quizStateAtom);
+  const [popup, setPopup] = useAtom(popupAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
 
@@ -28,6 +30,7 @@ const QuizScreen = () => {
 
   const handlePause = () => {
     setTimerOn(!timerOn);
+    setPopup('pause');
     setQuizState("popup");
   };
 
