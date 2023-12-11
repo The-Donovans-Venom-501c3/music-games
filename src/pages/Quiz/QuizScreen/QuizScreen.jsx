@@ -11,14 +11,9 @@ import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
 import { useEffect } from "react";
 import {
-  appStateAtom,
   overlayAtom,
   quizStateAtom,
-  timerOnAtom,
-  livesAtom,
-  questionAtom,
-  resetTimerAtom,
-  scoreAtom,
+  timerOnAtom
 } from "../../../store/atoms";
 
 const QuizScreen = () => {
