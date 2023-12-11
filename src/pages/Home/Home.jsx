@@ -48,28 +48,31 @@ export default function Home() {
 
   return (
     <div className="background-set">
-      <img src={light} alt="homePageLight" id="light-background" />
-      <img src={bubbles} alt="HomePageBubble" id="homePageBubble" />
-      <div className="homeContainer">
+      <div className="whole-page-layout">
+        <img src={light} alt="homePageLight" id="light-background" />
+        <img src={bubbles} alt="HomePageBubble" id="homePageBubble" />
         <div className="contentContainer">
           <div>
             <img src={yellowGuy} alt="little yelow creature" id="yellowGuy" />
           </div>
           <div className="text">
-            <h1 className="white">Let's take </h1>
-            <h1 className="orange">a</h1>
+            <p id="white-tips">Let's take <span id="orange-tips"> a </span> </p>
             <br></br>
-            <h1 className="orange">game break!</h1>
+            <p id="orange">game break!</p>
+            </div>
+            {/* <h1 className="orange">game break!</h1> */}
+            <div className="text-small">
+              <p>Test your skills with engaging games that</p>
+              <p>challenge your memory and rhythm recognition</p>
+              <p>while having some musical fun.</p>
+                
+              </div>
             <p>
-              <br></br>
-              Test your skills with engaging games that
-              <br></br>challenge your memory and rhythm recognition
-              <br></br>while having some musical fun.
-              <br></br>
-              <br></br>Choose a game you want to play!
+              <br></br><a id="home-page-tips">Choose a game you want to play!</a>
             </p>
-          </div>
+          
         </div>
+       
         <div className="buttonContainer">
           <Button
             icon={VirtualPiano}
@@ -109,6 +112,8 @@ export default function Home() {
           />
         </div>
       </div>
-    </div>
+      </div>
+
+
   );
 }
