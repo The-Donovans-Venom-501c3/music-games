@@ -180,21 +180,7 @@ button:active {
         display: flex;
         align-items: center;
         justify-content: center;
-        #cat{
-            opacity: 0;
-            width: 6%;
-            height: 3%;
-            position: absolute;
-            left: 19%;
-            z-index: 4;
-            animation-name:cat, catMove;
-            animation-duration: 1s,1.5s;
-            animation-delay: 2s,2s;
-            animation-fill-mode: forwards, forwards;
-            animation-direction:normal,alternate-reverse;
-            animation-iteration-count: 1 ,infinite;
-            animation-timing-function: linear, ease-in-out;
-        }
+        
     }
     .musicStand{
         display: flex;
@@ -230,22 +216,39 @@ button:active {
         animation-direction: linear;
     }
 }
+.cat{
+    opacity: 0;
+    width: 37%;
+    height:25%;
+    position: absolute;
+    left: 14%;
+    top:55%;
+    z-index: 4;
+    animation-name:cat, catMove;
+    animation-duration: 1s,1.5s;
+    animation-delay: 1s,1s;
+    animation-fill-mode: forwards, forwards;
+    animation-direction:normal,alternate-reverse;
+    animation-iteration-count: 1 ,infinite;
+    animation-timing-function: linear, ease-in-out;
+
+}
 @media screen {
 @keyframes catMove {
     0% { 
-        transform: rotate(-5deg) scale(7);
+        transform: rotate(-5deg) scale(1);
         bottom: 20vw;  // lest up
     }
     25% { 
-        transform: rotate(-5deg) scale(7);
+        transform: rotate(-5deg) scale(1);
         bottom: 21vw; // left bottom down
     }
     50% { 
-        transform: rotate(10deg) scale(7);
+        transform: rotate(10deg) scale(1);
         bottom: 17.5vw;  // right bottom down
     }
     100% { 
-        transform: rotate(10deg) scale(7);
+        transform: rotate(10deg) scale(1);
         bottom: 20vw;  // right up
     }
 }
@@ -296,21 +299,27 @@ button:active {
 }
 }
 @media (min-width:1360px) and (max-width:1460px) and (min-height:1024px){
+    .cat{
+        top:68% !important;
+        left:16%;
+        width: 30%;
+        height:20%;
+    }
     @keyframes catMove {
         0% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 18vw;  // lest up
         }
         25% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 19vw; // left bottom down
         }
         50% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 15.5vw;  // right bottom down
         }
         100% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 18vw;  // right up
         }
     }
@@ -359,21 +368,28 @@ button:active {
     }  
 }
 @media (min-width:1180px) and (max-width:1360px) and (min-height:820px){
+
+    .cat{
+        top:68%;
+        width: 30%;
+        left:17%;
+        height:20%;
+    }
     @keyframes catMove {
         0% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 18vw;  // lest up
         }
         25% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 19vw; // left bottom down
         }
         50% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 15.5vw;  // right bottom down
         }
         100% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 18vw;  // right up
         }
     }
@@ -419,21 +435,28 @@ button:active {
     }  
 }
 @media (min-width:1024px) and (max-width: 1180px) and (min-height:768px){
+
+    .cat{
+        top:72%;
+        left:15%;
+        width: 30%;
+        height:20%;
+    }
     @keyframes catMove {
         0% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 18vw;  // lest up
         }
         25% { 
-            transform: rotate(-5deg) scale(5);
+            transform: rotate(-5deg) scale(1);
             bottom: 19vw; // left bottom down
         }
         50% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 15.5vw;  // right bottom down
         }
         100% { 
-            transform: rotate(10deg) scale(5);
+            transform: rotate(10deg) scale(1);
             bottom: 18vw;  // right up
         }
     }

@@ -65,7 +65,7 @@ const QuizScreen = () => {
       </div>
 
       <div className="catConatiner">
-        <img id="cat" src={cat} />
+        <img className="cat" src={cat} />
       </div>
 
       
