@@ -59,7 +59,8 @@ export default function Overlay() {
       setScoreAtom(0);
       setLivesAtom(3);
       setQuestion(1);
-      setResetTimer((prev) => !prev);  
+      setResetTimer((prev) => !prev);
+      setQuizState('quiz'); 
     }
   };
 
