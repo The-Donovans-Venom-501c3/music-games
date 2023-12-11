@@ -2,11 +2,14 @@
 
 //contain the loading element
 .loadingContainer {
-  position: fixed;
   display: flex;
-  height: calc(100vh - $nav-height);
-  width: 100vw;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  height: calc($page-height - $nav-height);
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .loading {
