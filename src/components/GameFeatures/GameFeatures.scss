@@ -1,13 +1,14 @@
 @import "../../assets/scss/variables";
 
-.gameFeatureContainer{
+.gameFeatureContainer {
     display: flex;
     flex-direction: column;
     gap: 5%;
     font-size: 22px;
     width: 65%;
     height: 65%;
-    .gameLives{
+
+    .gameLives {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -15,24 +16,29 @@
         background-image: url('../../assets/SVGs/Line.svg');
         background-repeat: no-repeat;
         background-position: center bottom;
-    
-        div{
+
+        div {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
 
-            span{
+            span {
                 width: 40%;
             }
-            #timer , #score , #lives{
+
+            #timer,
+            #score,
+            #lives {
                 text-align: center;
                 font-size: 32px;
                 font-weight: bold;
             }
-            #lives{
+
+            #lives {
                 display: flex;
-                img{
+
+                img {
                     width: 30%;
                     height: 30%;
                     margin-right: 5px;
@@ -54,7 +60,7 @@
     //         overflow:auto
     //         span ,div{
     //             width: 45%;
-                
+
     //         }
     //         >:nth-child(2){
     //             border: 2px solid $grey-500;
@@ -64,11 +70,11 @@
     //             justify-content: center;
     //             flex-direction: row;
     //         }
-              
+
     //         #volume{
     //             width: 45%;
     //         }
-            
+
     //         .slider {
     //             -webkit-appearance: none;
     //             width: 90%;
@@ -80,11 +86,11 @@
     //             -webkit-transition: 2s;
     //             transition: opacity 2s;
     //         }
-            
+
     //         .slider:hover {
     //             opacity: 1;
     //         }
-            
+
     //         .slider::-webkit-slider-thumb {
     //             -webkit-appearance: none;
     //             appearance: none;
@@ -94,7 +100,7 @@
     //             background: $grey-100;
     //             cursor: pointer;
     //         }
-            
+
     //         .slider::-moz-range-thumb {
     //             width: 25px;
     //             height: 25px;
@@ -105,21 +111,24 @@
     //     }
     // }
 
-    .gameSetting{
+    .gameSetting {
         display: flex;
         flex-direction: column;
         gap: 5px;
         padding-top: 5%;
-        div{
+
+        div {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            overflow:auto
-            span ,div{
+
+            overflow:auto span,
+            div {
                 width: 45%;
             }
-            >:nth-child(2){
+
+            >:nth-child(2) {
                 border: 2px solid $grey-500;
                 border-radius: 5px;
                 height: 52px;
@@ -127,6 +136,7 @@
                 justify-content: center;
                 flex-direction: row;
             }
+
             #music {
                 width: 7.5vw;
                 display: flex;
@@ -134,39 +144,46 @@
                 justify-content: center;
                 // padding: 2%;
                 font-size: 22px;
-                div{
+
+                div {
                     border: 2px solid $grey-500;
                     width: 100%;
                     height: 35px;
-                    color:$grey-500;
+                    color: $grey-500;
                 }
-                button{
+
+                button {
                     text-decoration: none;
                 }
-                span{
+
+                span {
                     border: none !important;
                     align-items: center;
                     color: #817676;
                     font-size: 20px;
                     line-height: 30px;
                     font-weight: 600;
-                    margin-left:10px;
-                  }
-              }
-              .on{
+                    margin-left: 10px;
+                }
+            }
+
+            .on {
                 background-color: $pale-green;
                 color: $white;
                 border-color: $green-500;
                 flex-direction: row-reverse !important;
+
                 span {
-                    
-                    padding-right:20px;
-                  }
-                
+
+                    padding-right: 20px;
                 }
-            #volume{
+
+            }
+
+            #volume {
                 width: 7.5vw;
             }
+
             .slider {
                 -webkit-appearance: none;
                 width: 90%;
@@ -178,9 +195,11 @@
                 -webkit-transition: 2s;
                 transition: opacity 2s;
             }
+
             .slider:hover {
                 opacity: 1;
             }
+
             .slider::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
@@ -190,6 +209,7 @@
                 background: $grey-100;
                 cursor: pointer;
             }
+
             .slider::-moz-range-thumb {
                 width: 25px;
                 height: 25px;
@@ -199,5 +219,43 @@
             }
         }
     }
-}
 
+    @media screen and (min-width: 1150px) and (max-width: 1650px) {
+
+        .gameSetting div {
+            #music {
+                width: 10vw;
+            }
+
+            #volume {
+                width: 10vw;
+            }
+        }
+    }
+
+    @media screen and (min-width: 850px) and (max-width: 1150px) {
+
+        .gameSetting div {
+            #music {
+                width: 14vw;
+            }
+
+            #volume {
+                width: 14vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+
+        .gameSetting div {
+            #music {
+                width: 17vw;
+            }
+
+            #volume {
+                width: 17vw;
+            }
+        }
+    }
+}
