@@ -56,7 +56,6 @@ export default function ScoreDialog() {
           >
             CONTINUE
           </button>
-          {timer}
         </div>
       </div>
     </div>
