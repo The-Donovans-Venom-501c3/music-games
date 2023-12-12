@@ -1,11 +1,12 @@
-import { useAtomValue } from "jotai";
+import { useAtomValue, useAtom } from "jotai";
 import { useState, useEffect } from "react";
-import { resetTimerAtom, timerOnAtom } from "../../../store/atoms";
+import { resetTimerAtom, timerOnAtom, seconds } from "../../../store/atoms";
 
 export default function Timer() {
   const timerOn = useAtomValue(timerOnAtom);
   const resetTimer = useAtomValue(resetTimerAtom);
-  const [seconds, setSeconds] = useState(0);
+  //const [seconds, setSeconds] = useState(0);
+  const [secondsTimer, setSeconds] = useAtom(seconds);
 
   useEffect(() => {
     let interval;
@@ -21,8 +22,8 @@ export default function Timer() {
 
   useEffect(() => {
     setSeconds(0);
-  }, [resetTimer])  
-  
+  }, [resetTimer]);
+
   // const resetTimer = () => {
   //   setSeconds(0);
   // };
@@ -35,5 +36,5 @@ export default function Timer() {
     }${remainingSeconds}`;
   };
 
-  return <span id="timer">{formatTime(seconds)}</span>;
+  return <span id="timer">{formatTime(secondsTimer)}</span>;
 }

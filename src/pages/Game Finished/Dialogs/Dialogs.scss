@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
 }
+
 //Content Dialog
 .content {
   width: 62em;
@@ -26,6 +27,7 @@
   z-index: 1;
   gap: 36px;
 }
+
 //Play Again Dialog
 .play-again {
   height: 54em;
@@ -37,32 +39,40 @@
     gap: 12px;
   }
 }
+
 //Score Dialog
 .score-dialog {
   height: 50em;
+
   p {
     font-size: 40px;
     gap: 12px;
+
     span {
       font-size: 32px;
     }
+
     strong {
       font-weight: 500;
     }
   }
+
   .score-section {
     width: 70%;
     gap: 12px;
+
     .score {
       font-size: 40px;
       font-weight: 500;
     }
+
     .score-message {
       text-align: center;
       font-size: 28px;
     }
   }
 }
+
 // // StreakDialog
 
 // .streak-dialog {
@@ -122,7 +132,7 @@
 //     width: 100%;
 //     }
 //   }
-  
+
 // }
 // .message {
 //   font-size: 32px;
@@ -133,6 +143,7 @@
 .button-container {
   gap: 16px;
 }
+
 .primary,
 .secondary {
   width: 30em;
@@ -140,89 +151,97 @@
   border-radius: 12px;
   font-size: 20px;
 }
+
 .primary {
   color: $white;
   background-color: $purple-800;
   border: 2px solid $purple-900;
   border-bottom: 8px solid $purple-900;
 }
+
 .secondary {
   border: 2px solid #dddada;
   border-bottom: 8px solid #dddada;
 }
 
-@media(min-width: 993px )  and (max-width: 1200px) {
-.content{
-    width:62em;
+@media (min-width: 993px) and (max-width: 1200px) {
+  .content {
+    width: 62em;
     height: 37em;
+  }
 
-    
-}
-.primary,.secondary{
-        height: 3.625em;
-}
-// .next-level{
-//    gap:28px;
-//    height: 39em;
-// }
-.play-again{
-    gap:28px;
-    .character{
-        width: 11.25em;
-        height: 10em;
+  .primary,
+  .secondary {
+    height: 3.625em;
+  }
+
+  // .next-level{
+  //    gap:28px;
+  //    height: 39em;
+  // }
+  .play-again {
+    gap: 28px;
+
+    .character {
+      width: 11.25em;
+      height: 10em;
     }
+
     .quote {
-        text-align: center;
-        font-size: 22px;
-        width: 90%;
-        gap: 4px;
-      }
-    
-}
-.score-dialog{
-    .cat{
-        width: 14em;
-        height: 9.4em;
+      text-align: center;
+      font-size: 22px;
+      width: 90%;
+      gap: 4px;
     }
+  }
+
+  .score-dialog {
+    .cat {
+      width: 14em;
+      height: 9.4em;
+    }
+
     p {
+      font-size: 32px;
+      gap: 12px;
+
+      span {
+        font-size: 20px;
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    .score-section {
+      width: 55%;
+      text-align: center;
+
+      .score {
         font-size: 32px;
-        gap: 12px;
-        span {
-          font-size: 20px;
-        }
-        strong {
-          font-weight: 500;
-        }
+        font-weight: 500;
       }
-      .score-section {
-        width: 55%;
-        text-align:center;
-        .score {
-          font-size: 32px;
-          font-weight: 500;
-        }
-        .score-message {
-          font-size: 20px;
-        }
-      }
-}
-// .streak-dialog{
-//     gap:28px;
-//     .streak-content{
-//         height: 13.25em;
-//         width: 46em;
-//         gap:16px;
-//         p{
-//             width: 100%;    
-//         }
-       
-//     }
-// }
 
+      .score-message {
+        font-size: 20px;
+      }
+    }
+  }
+
+  // .streak-dialog{
+  //     gap:28px;
+  //     .streak-content{
+  //         height: 13.25em;
+  //         width: 46em;
+  //         gap:16px;
+  //         p{
+  //             width: 100%;
+  //         }
+
+  //     }
+  // }
 }
 
-
-@media (min-width: 768px )  and (max-width: 992px) {
-
-
+@media (min-width: 768px) and (max-width: 992px) {
 }

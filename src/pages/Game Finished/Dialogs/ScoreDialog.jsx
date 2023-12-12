@@ -5,6 +5,7 @@ import {
   gameFinishedAtom,
   scoreAtom,
   totalQuestionsAtom,
+  seconds,
 } from "../../../store/atoms";
 
 const scoreState = {
@@ -26,20 +27,14 @@ const scoreState = {
 };
 
 export default function ScoreDialog() {
-
   const setGameFinished = useSetAtom(gameFinishedAtom);
   const score = useAtomValue(scoreAtom);
   const totalQuestions = useAtomValue(totalQuestionsAtom);
+  const timer = useAtomValue(seconds);
 
   const result = Math.floor((score / totalQuestions) * 100);
   const scoreData =
-    scoreState[
-      result == 100
-        ? "perfect"
-        : result > 80
-        ? "high"
-        : "low"
-    ];
+    scoreState[result == 100 ? "perfect" : result > 80 ? "high" : "low"];
 
   return (
     <div className="wrapper">
@@ -52,6 +47,7 @@ export default function ScoreDialog() {
         <section className="score-section centralized">
           <span className="score"> SCORE: {result}</span>
           <span className="score-message">{scoreData.msg2}</span>
+          <span className="score-message">TIME ELAPSED : {timer} SECONDS</span>
         </section>
         <div className="button-container centralized">
           <button
@@ -60,6 +56,7 @@ export default function ScoreDialog() {
           >
             CONTINUE
           </button>
+          {timer}
         </div>
       </div>
     </div>
