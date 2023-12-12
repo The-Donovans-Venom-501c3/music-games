@@ -1,117 +1,100 @@
 @import "../../../assets/scss/variables";
 
-@keyframes fallen {
-    from {
+@keyframes fallen{
+    from{
         bottom: $page-height;
         transform: scale(1);
     }
-    to {
+    to{
         bottom: 5rem;
         transform: scale(1);
     }
 }
-@keyframes zoomIn {
-    from {
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        bottom: 5rem;
+@keyframes fixedBackGround {
+    from{
+        opacity: 0;
     }
-    to {
-        -moz-transform: scale(3);
-        -webkit-transform: scale(3);
-        -o-transform: scale(3);
-        -ms-transform: scale(3);
-        -webkit-transform: scale(3);
-        transform: scale(6);
-        bottom: -65.5%;
+    to{
+        opacity: 1;
+    }
+}
+@keyframes cat {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes BG {
+    from{
+        background-size: 100% 100%;
+    }
+    to{
+        background-size: 225% 225%;
     }
 }
 @keyframes backgroundZoom {
-    from {
+    from{
         background-size: 100% 100%;
     }
     to {
         background-size: 225% 225%;
     }
 }
-@keyframes cat {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@keyframes catMove {
-    0% {
-        transform: rotate(-5deg) scale(7);
-        bottom: 28%; // lest up
-    }
-    25% {
-        transform: rotate(-5deg) scale(7);
-        bottom: 29%; // left bottom down
-    }
-    50% {
-        transform: rotate(10deg) scale(7);
-        bottom: 25.5%; // right bottom down
-    }
-    100% {
-        transform: rotate(10deg) scale(7);
-        bottom: 28%; // right up
-    }
-}
-@keyframes comedown {
-    from {
-        margin-bottom: 150%;
-    }
-    to {
-        margin-bottom: 4%;
-    }
-}
 button:active {
     background-color: $orange-500;
     box-shadow: 0px 1px 0px 0px $orange-600;
     transform: translateY(4px);
-}
-.QuizScreenContainer {
+  } 
+.QuizScreenContainer{
     display: flex;
     font-family: $primary-font;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    height: calc($page-height - $nav-height);
+    height:calc($page-height - $nav-height);
     z-index: 1;
     overflow: hidden;
-
-    .GameScreen {
+    overflow: hidden;
+    background-image: url(../../../../public/Background.svg);
+    background-repeat: no-repeat;
+    background-attachment:cover;
+    background-size: 100% 100%;
+    background-position: center;
+    animation-name:BG;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    .GameScreen{
         display: flex;
-        margin-bottom: 150%;
+        margin-top: -150%;
+        justify-content: center;
+        align-items: center;
         z-index: 2;
         flex-direction: column;
-        width: 75%;
-        height: 73%;
-        bottom: $page-height;
-        animation-name: comedown;
-        animation-duration: 1s;
-        animation-delay: 2.5s;
+        justify-content: center;
+        position: absolute;
+        width: 80vw;
+        height: 101vh;
+        animation-name:comedown;
+        animation-duration: 2s;
+        animation-delay: 5s;
         animation-fill-mode: forwards;
         animation-direction: linear;
-
-        .gameMain {
+        position: center;
+        .gameMain{
             display: flex;
             align-items: flex-end;
             flex-direction: row;
             flex-basis: 89.99%;
-            width: 100%;
-            height: 100%;
+            width: 78vw;
             background-color: white;
-
-            .left {
+            .left{
                 width: 100%;
                 height: 100%;
                 flex-basis: 33.33%;
@@ -119,16 +102,17 @@ button:active {
                 justify-content: center;
                 position: relative;
                 padding-top: 5%;
-                .line {
+                .line{
                     width: 1%;
                     height: 80%;
                     position: absolute;
                     right: 0px;
-                    background-image: url("../../../assets/SVGs/VirticalLine.svg");
+                    background-image: url('../../../assets/SVGs/VirticalLine.svg');
                     background-size: 100% 100%;
+                    
                 }
             }
-            .right {
+            .right{
                 width: 100%;
                 height: 100%;
                 flex-basis: 66.66%;
@@ -136,30 +120,17 @@ button:active {
             }
         }
 
-        .setting {
+        .setting{
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content:flex-end;
             gap: 5%;
             width: 40%;
             margin-left: auto;
             flex-basis: 11.11%;
             z-index: 3;
-
-            .btnIcon {
-                background-color: #ffff;
-                width: 4rem;
-                height: 4rem;
-                border-radius: 5rem;
-                box-shadow: 0px 3px 0px 0px #a4a4a4;
-            }
-
-            .icon-questionMark {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-
-            .btnSetting {
+            
+            .btnSetting{
                 background-color: $orange-500;
                 width: 30%;
                 height: 60%;
@@ -168,25 +139,25 @@ button:active {
                 border-radius: 10px;
                 box-shadow: 0px 5px 0px 0px $orange-600;
                 text-align: center;
-                font-size: 20px;
+                font-size: 1vw;
                 font-weight: 500;
                 word-wrap: break-word;
                 cursor: pointer;
             }
-            .btnPause,
-            .btnRestart {
+            .btnPause , .btnRestart {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-
-                img {
+                
+                img{
                     width: 20%;
-                    height: 75%;
+                    height:75%;
                     background-size: 100%;
                 }
+                
             }
-            .btnexit {
+            .btnexit{
                 background-color: $Cream-700;
                 width: 10%;
                 height: 60%;
@@ -196,45 +167,340 @@ button:active {
                 display: grid;
                 padding: 2.5%;
 
-                img {
+                img{
                     width: 100%;
                     height: 100%;
                 }
             }
+        
         }
+        
     }
-    .catConatiner {
+    .catConatiner{
         display: flex;
         align-items: center;
         justify-content: center;
-        #cat {
-            opacity: 0;
-            width: 6%;
-            height: 3%;
-            position: absolute;
-            left: 19%;
-            z-index: 4;
-            animation-name: cat, catMove;
-            animation-duration: 1s, 1.5s;
-            animation-delay: 2s, 2s;
-            animation-fill-mode: forwards, forwards;
-            animation-direction: normal, alternate-reverse;
-            animation-iteration-count: 1, infinite;
-            animation-timing-function: linear, ease-in-out;
-        }
+        
     }
-    .musicStand {
+    .musicStand{
         display: flex;
         position: absolute;
         align-items: center;
         justify-content: center;
-        animation-name: fallen, zoomIn;
-        animation-duration: 1s, 1s;
-        animation-delay: 0s, 1s;
-        width: 15%;
+        opacity: 1;
+        animation-name: fallen, zoomIn, fixedBackGround;
+        animation-duration: 1s, 1s,0.1s;
+        animation-delay: 0s, 1s,5s;
+        width: 15%; 
         margin: auto;
-        padding-bottom: 0.5rem;
-        animation-timing-function: ease, ease;
-        animation-fill-mode: forwards, forwards;
+        padding-bottom: 0.5rem; 
+        animation-timing-function: ease, ease, ease;
+        animation-fill-mode: forwards, forwards,forwards;
+        animation-direction: normal, normal, reverse;  
+    }
+    .quizScreenBGContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-position: center;
+        background-image: url(../../../assets/svg/MusicStandaBG.svg);
+        width: 120vw;
+        height: 110vh;
+        background-size: 100% 100%;
+        opacity: 0;
+        animation-name:fixedBackGround;
+        animation-duration: 0.1s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-direction: linear;
+    }
+}
+.cat{
+    opacity: 0;
+    width: 37%;
+    height:25%;
+    position: absolute;
+    left: 14%;
+    top:55%;
+    z-index: 4;
+    animation-name:cat, catMove;
+    animation-duration: 1s,1.5s;
+    animation-delay: 1s,1s;
+    animation-fill-mode: forwards, forwards;
+    animation-direction:normal,alternate-reverse;
+    animation-iteration-count: 1 ,infinite;
+    animation-timing-function: linear, ease-in-out;
+
+}
+@media screen {
+@keyframes catMove {
+    0% { 
+        transform: rotate(-5deg) scale(1);
+        bottom: 20vw;  // lest up
+    }
+    25% { 
+        transform: rotate(-5deg) scale(1);
+        bottom: 21vw; // left bottom down
+    }
+    50% { 
+        transform: rotate(10deg) scale(1);
+        bottom: 17.5vw;  // right bottom down
+    }
+    100% { 
+        transform: rotate(10deg) scale(1);
+        bottom: 20vw;  // right up
+    }
+}
+@keyframes BG {
+    from{
+        background-size: 100% 100%;
+    }
+    to{
+        background-size: 240% 225%;
+    }
+}
+@keyframes backgroundZoom {
+    from{
+        background-size: 100% 100%;
+    }
+    to {
+        background-size: 225% 225%;
+    } 
+}
+@keyframes comedown {   
+    from { 
+        margin-top:-150%;
+    }
+    to { 
+        margin-top: -8%;
+    }
+}
+@keyframes zoomIn {
+    from{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    bottom: 5rem;
+    position:absolute;
+  }
+    to{
+    -moz-transform: scale(3);
+    -webkit-transform: scale(3);
+    -o-transform: scale(3);
+    -ms-transform: scale(3);
+    -webkit-transform: scale(3);
+    transform: scale(6);
+    bottom: -64%;
+}
+}
+}
+@media (min-width:1360px) and (max-width:1460px) and (min-height:1024px){
+    .cat{
+        top:68% !important;
+        left:16%;
+        width: 30%;
+        height:20%;
+    }
+    @keyframes catMove {
+        0% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 18vw;  // lest up
+        }
+        25% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 19vw; // left bottom down
+        }
+        50% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 15.5vw;  // right bottom down
+        }
+        100% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 18vw;  // right up
+        }
+    }
+    @keyframes comedown {
+    
+        from { 
+            margin-top:-200%;
+        }
+        to { 
+            margin-top: -8.5%;
+        }
+    }
+    @keyframes zoomIn {
+        from{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        bottom: 5rem;
+        position:absolute;
+        
+        }
+        to{
+        -moz-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        -o-transform: scale(6.6);
+        -ms-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        transform: scale(6.6);
+        bottom: -45.5%;
+    }
+    }
+    .quizScreenBGContainer{
+        width: 100vw;
+        background-size: 120vw 110vh;
+        margin-top: 40vw;
+        .GameScreen{
+            width: 88vw;
+            height: 66vh;
+            .gameMain{
+                width: 85vw;
+            }
+        }
+    }  
+}
+@media (min-width:1180px) and (max-width:1360px) and (min-height:820px){
+
+    .cat{
+        top:68%;
+        width: 30%;
+        left:17%;
+        height:20%;
+    }
+    @keyframes catMove {
+        0% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 18vw;  // lest up
+        }
+        25% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 19vw; // left bottom down
+        }
+        50% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 15.5vw;  // right bottom down
+        }
+        100% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 18vw;  // right up
+        }
+    }
+    @keyframes comedown {
+        from { 
+            margin-top:-250%;
+        }
+        to { 
+            margin-top: -8.5%;
+        }
+    }
+    @keyframes zoomIn {
+        from{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        bottom: 5rem;
+        position:absolute;
+        }
+        to{
+        -moz-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        -o-transform: scale(6.6);
+        -ms-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        transform: scale(6.6);
+        bottom: -45.5%;
+    }
+    }
+    
+    .quizScreenBGContainer{
+        margin-top: 32vw;
+        .GameScreen{
+            width: 90vw; 
+            height: 71vh;  
+            .gameMain{
+                width: 85vw; 
+            }
+        }
+    }  
+}
+@media (min-width:1024px) and (max-width: 1180px) and (min-height:768px){
+
+    .cat{
+        top:72%;
+        left:15%;
+        width: 30%;
+        height:20%;
+    }
+    @keyframes catMove {
+        0% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 18vw;  // lest up
+        }
+        25% { 
+            transform: rotate(-5deg) scale(1);
+            bottom: 19vw; // left bottom down
+        }
+        50% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 15.5vw;  // right bottom down
+        }
+        100% { 
+            transform: rotate(10deg) scale(1);
+            bottom: 18vw;  // right up
+        }
+    }
+    @keyframes comedown {
+        from { 
+            margin-top:-250%;
+        }
+        to { 
+            margin-top: -8.5%;
+        }
+    }
+    @keyframes zoomIn {
+        from{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        bottom: 5rem;
+        position:absolute;
+        }
+        to{
+        -moz-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        -o-transform: scale(6.6);
+        -ms-transform: scale(6.6);
+        -webkit-transform: scale(6.6);
+        transform: scale(6.6);
+        bottom: -45.5%;
+    }
+    }
+    .QuizScreenContainer{
+        background-size: 300% 300%;
+    }
+    .quizScreenBGContainer{
+        margin-top: 40vw;
+        .GameScreen{
+            width: 90vw;
+            height: 66vh;
+            background-size: 100vw 110vh;
+            .gameMain{
+                width: 85vw;
+            }
+        }
     }
 }
