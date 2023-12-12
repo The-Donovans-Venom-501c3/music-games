@@ -3,8 +3,7 @@ import PlayAgainDialog from './Dialogs/PlayAgainDialog';
 import ScoreDialog from './Dialogs/ScoreDialog';
 import { useAtomValue } from 'jotai';
 import { gameFinishedAtom } from '../../store/atoms';
-// import NextLevel from './Dialogs/NextLevelDialog';
-// import SteakDialog from './Dialogs/StreakDialog';  
+
 
 export default function GameFinished() {
 
@@ -12,7 +11,7 @@ export default function GameFinished() {
 
   return (
     <div className='game-finished'>
-      {gameFinished === 'score' ? <ScoreDialog />  : <PlayAgainDialog />}      
+      {gameFinished === 'score' ? <ScoreDialog /> : <PlayAgainDialog />}
     </div>
   )
 }
