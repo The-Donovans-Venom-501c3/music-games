@@ -1,22 +1,66 @@
 @import "../../assets/scss/variables";
 
+@keyframes falldown {
+    from{
+      margin: -80em auto;
+    }
+    to {
+      margin: 6em auto;
+    }
+}
+@keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+@keyframes comesFromRight {
+  from {
+      margin-right: -60vw;
+      margin-left: 30vw;
+      opacity: 0;
+  }
+  to {
+      margin-right: 0vw;
+      margin-left: 0vw;
+      opacity: 1;
+  }
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4em auto;
+  margin: -20em auto;
   padding: 3em 6em;
   gap: 5em;
   width: 87vw;
   border-radius: 24px;
   background-color: $white;
+  animation-name: falldown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: linear;
+  overflow-x: hidden;
+
+  p {
+    white-space: wrap;
+  }
 
   h1 {
     font-family: $tertiary-font;
     font-size: 2.2rem;
     font-weight: 500;
     letter-spacing: -1px;
+    opacity: 0;
     color: $black;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: linear;
 
     span {
       color: $orange-500;
@@ -24,21 +68,33 @@
   }
 
   main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
     justify-items: center;
+    justify-content: center;
+    width: 100%;
 
     .intro {
       padding: 1em;
       padding-bottom: 0;
-
+      width: 50%;
       .bubble {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40vw;
         .chat {
           background-color: $orange-200;
           border-radius: 25px;
           padding: 1.5em 1.75em;
           max-width: 90%;
-
+          width: 40vw;
+          opacity: 0;
+          animation-name: appear;
+          animation-duration: 1s;
+          animation-delay: 3s;
+          animation-fill-mode: forwards;
+          animation-direction: linear;
           p {
             font-size: 1rem;
             font-style: normal;
@@ -54,24 +110,44 @@
         }
 
         img {
-          width: 3rem;
+          width: 5vw;
           margin-top: -1px;
           margin-left: 56%;
+          opacity: 0;
+          animation-name: appear;
+          animation-duration: 1s;
+          animation-delay: 3s;
+          animation-fill-mode: forwards;
+          animation-direction: linear;
         }
       }
 
       .cat {
-        width: 55%;
+        width: 20vw;
         margin-top: -3rem;
+        opacity: 0;
+        animation-name: appear;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        animation-direction: linear;
       }
     }
 
     .levels {
       display: flex;
+      margin-right: -60vw;
+      margin-left: 30vw;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      width: 50%;
+      opacity: 0;
+      animation-name: comesFromRight;
+      animation-duration: 1.5s;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;
+      animation-direction: linear;
 
       button {
         display: flex;
