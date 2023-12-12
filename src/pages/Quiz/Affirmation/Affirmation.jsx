@@ -101,12 +101,12 @@ export default function Affirmation() {
           <section className="tip-try-again">{sentence}</section>
         ) : affirmation === "success" ? (
           <section className="tip">{sentence}</section>
-        ) : (
+        ) : affirmation === "fail"?(
           <section className="tip">
             {sentence}
             <span>{correctOption}</span>
           </section>
-        )}
+        ):null}
 
         <button
           className="ButtonResponse"

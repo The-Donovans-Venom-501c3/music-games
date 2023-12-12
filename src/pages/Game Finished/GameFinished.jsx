@@ -12,7 +12,7 @@ export default function GameFinished() {
 
   return (
     <div className='game-finished'>
-      {gameFinished == 'score' ? <ScoreDialog />  : <PlayAgainDialog />}      
+      {gameFinished === 'score' ? <ScoreDialog />  : <PlayAgainDialog />}      
     </div>
   )
 }
