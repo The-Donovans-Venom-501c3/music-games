@@ -1,22 +1,32 @@
-import "./GameFeatures.scss";
+import './GameFeatures.scss';
 import musicnote from '../../assets/svg/MusicNote.svg';
 import dot from '../../assets/svg/Dot.svg';
 import Slider from '@mui/material/Slider';
-import Timer from "./Timer/Timer";
-import { useRef } from "react";
-import { useAtomValue, useAtom } from "jotai";
-import { livesAtom, scoreAtom, musicStateAtom, levelStateAtom } from "../../store/atoms";
+import Timer from './Timer/Timer';
+import { useEffect, useRef } from 'react';
+import { useAtomValue, useAtom } from 'jotai';
+import {
+  livesAtom,
+  scoreAtom,
+  musicStateAtom,
+  levelStateAtom,
+} from '../../store/atoms';
 
 const GameFeatures = () => {
   const score = useAtomValue(scoreAtom);
   const lives = useAtomValue(livesAtom);
   const level = useAtomValue(levelStateAtom);
-  const [musicOn, setMusicOn] = useAtom(musicStateAtom)
+  const [musicOn, setMusicOn] = useAtom(musicStateAtom);
   const MAX = 100;
 
   const audioRef = useRef(null);
 
-  let src = level === 'easy' ? '/easy.mp3' : level === 'medium' ? '/medium.mp3' : 'hard.mp3';
+  let src =
+    level === 'easy'
+      ? '/easy.mp3'
+      : level === 'medium'
+      ? '/medium.mp3'
+      : 'hard.mp3';
 
   const handleChangeSwitch = () => {
     setMusicOn(!musicOn);
@@ -33,20 +43,28 @@ const GameFeatures = () => {
     audioRef.current.volume = volume;
   };
 
+  useEffect(() => {
+    if (musicOn) {
+      audioRef.current?.play();
+    } else {
+      audioRef.current?.pause();
+    }
+  }, [musicOn]);
+
   return (
-    <div className="gameFeatureContainer">
-      <div className="gameLives">
+    <div className='gameFeatureContainer'>
+      <div className='gameLives'>
         <div>
           <span>Timer</span>
           <Timer />
         </div>
         <div>
           <span>Score</span>
-          <span id="score">{score}</span>
+          <span id='score'>{score}</span>
         </div>
         <div>
           <span>Lives</span>
-          <span id="lives">
+          <span id='lives'>
             {Array.from({ length: lives }, (_, index) => (
               <img key={index} src={musicnote} />
             ))}
@@ -56,10 +74,9 @@ const GameFeatures = () => {
       <div className='gameSetting'>
         <div>
           <span>Music</span>
-          <div id='music' className= {musicOn ? "on" : "" }>
-            <button onClick={handleChangeSwitch}
-            >
-              <img src={dot} width={72} height={50} alt="Music toogle"/>
+          <div id='music' className={musicOn ? 'on' : ''}>
+            <button onClick={handleChangeSwitch}>
+              <img src={dot} width={72} height={50} alt='Music toggle' />
             </button>
             <span>{musicOn ? 'ON' : 'OFF'}</span>
             {/* <FormControlLabel
@@ -104,7 +121,6 @@ const GameFeatures = () => {
                 />
               }
             /> */}
-
           </div>
         </div>
         <div>
@@ -113,9 +129,9 @@ const GameFeatures = () => {
             <Slider
               defaultValue={30}
               onChange={(e) => handleChangeVolume(e)}
-              valueLabelDisplay="auto"
+              valueLabelDisplay='auto'
               sx={{
-                width: "7vw",
+                width: '7vw',
                 '.css-eg0mwd-MuiSlider-thumb': {
                   color: '#F0EEEE',
                 },
@@ -125,7 +141,7 @@ const GameFeatures = () => {
                 '.css-1gv0vcd-MuiSlider-track': {
                   color: '#BFBABB',
                   height: '1vh',
-                }
+                },
               }}
             />
           </div>
