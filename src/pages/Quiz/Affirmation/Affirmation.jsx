@@ -89,33 +89,93 @@ export default function Affirmation() {
     }
   };
 
-  return (
-    <div className="container">
-      <div className="overlay"></div>
-      <img src={pic} className="beater" />
-      <div
-        className="background-rectangle"
-        style={{ backgroundColor: bgColor }}
-      >
-        {affirmation === "tryAgain" ? (
-          <section className="tip-try-again">{sentence}</section>
-        ) : affirmation === "success" ? (
-          <section className="tip">{sentence}</section>
-        ) : affirmation === "fail"?(
-          <section className="tip">
-            {sentence}
-            <span>{correctOption}</span>
-          </section>
-        ):null}
-
-        <button
-          className="ButtonResponse"
-          id="ButtonResponse"
-          onClick={handleResponseBtn}
+  return (<div>
+    {affirmation === "tryAgain" ?
+      <div className="container">
+        <div className="overlay"></div>
+        <img src={pic} className="beater" />
+        <div
+          className="background-rectangle"
+          style={{ backgroundColor: bgColor }}
         >
-          {buttonText}
-        </button>
+            <section className="tip-try-again">{sentence}</section>
+          <button
+            className="ButtonResponse"
+            id="ButtonResponse"
+            onClick={handleResponseBtn}
+          >
+            {buttonText}
+          </button>
+        </div>
       </div>
-    </div>
+      : affirmation === "success" ?
+        <div className="container">
+          <div className="overlay"></div>
+          <img src={pic} className="beater" />
+          <div
+            className="background-rectangle"
+            style={{ backgroundColor: bgColor }}
+          >
+              <section className="tip">{sentence}</section>
+            <button
+              className="ButtonResponse"
+              id="ButtonResponse"
+              onClick={handleResponseBtn}
+            >
+              {buttonText}
+            </button>
+          </div>
+        </div>
+        : affirmation === "fail" ?
+          <div className="container">
+            <div className="overlay"></div>
+            <img src={pic} className="beater" />
+            <div
+              className="background-rectangle"
+              style={{ backgroundColor: bgColor }}
+            >
+                <section className="tip">
+                  {sentence}
+                  <span>{correctOption}</span>
+                </section>
+              <button
+                className="ButtonResponse"
+                id="ButtonResponse"
+                onClick={handleResponseBtn}
+              >
+                {buttonText}
+              </button>
+            </div>
+          </div>
+          : null}
+  </div>
+
+    // <div className="container">
+    //   <div className="overlay"></div>
+    //   <img src={pic} className="beater" />
+    //   <div
+    //     className="background-rectangle"
+    //     style={{ backgroundColor: bgColor }}
+    //   >
+    //     {affirmation === "tryAgain" ? (
+    //       <section className="tip-try-again">{sentence}</section>
+    //     ) : affirmation === "success" ? (
+    //       <section className="tip">{sentence}</section>
+    //     ) : affirmation === "fail"?(
+    //       <section className="tip">
+    //         {sentence}
+    //         <span>{correctOption}</span>
+    //       </section>
+    //     ):null}
+
+    //     <button
+    //       className="ButtonResponse"
+    //       id="ButtonResponse"
+    //       onClick={handleResponseBtn}
+    //     >
+    //       {buttonText}
+    //     </button>
+    //   </div>
+    // </div>
   );
 }
