@@ -36,6 +36,14 @@ export default function ScoreDialog() {
   const scoreData =
     scoreState[result == 100 ? "perfect" : result > 80 ? "high" : "low"];
 
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const remainingSeconds = time % 60;
+    return `${minutes < 10 ? "0" : ""}${minutes}:${
+      remainingSeconds < 10 ? "0" : ""
+    }${remainingSeconds}`;
+  };
+
   return (
     <div className="wrapper">
       <div className="content score-dialog centralized">
@@ -47,7 +55,9 @@ export default function ScoreDialog() {
         <section className="score-section centralized">
           <span className="score"> SCORE: {result}</span>
           <span className="score-message">{scoreData.msg2}</span>
-          <span className="score-message">TIME ELAPSED : {timer} SECONDS</span>
+          <span className="score-message">
+            TIME ELAPSED : {formatTime(timer)}
+          </span>
         </section>
         <div className="button-container centralized">
           <button
