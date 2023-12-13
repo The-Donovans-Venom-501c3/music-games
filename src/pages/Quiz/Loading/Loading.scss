@@ -114,6 +114,7 @@
   justify-content: center;
 
   #character {
+    width: 190px;
     animation-name: character;
     animation-duration: 1s;
     animation-delay: 2s;
@@ -165,6 +166,10 @@
     font-weight: 400;
     color: #000;
   }
+
+  // .characterContainer #character {
+  //   width: 20vw;
+  // }
 }
 
 //small laptop
