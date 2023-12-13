@@ -96,7 +96,7 @@
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    color: #ffffff;
+    color: black;
     white-space: nowrap;
   }
 
@@ -186,7 +186,7 @@
   .background-set {
     background-color: $black;
     position: relative;
-    height:175vh;
+    height: 175vh;
     box-sizing: border-box;
     margin: 0;
     border: 0;
@@ -209,7 +209,6 @@
     width: 40%;
     height: 100%;
     margin-left: 50px;
-
   }
 
   #homePageBubble {
@@ -217,7 +216,7 @@
     margin-top: 200px;
     width: 40%;
     opacity: 0.2;
- 
+
     margin-left: 50px;
   }
 
@@ -278,7 +277,7 @@
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    color: #ffffff;
+    color: black;
     white-space: nowrap;
   }
 
@@ -314,7 +313,7 @@
     width: 70px;
     height: 59px;
     margin-right: 10px;
-    margin-left:10px;
+    margin-left: 10px;
   }
 
   .Text-Layout {
@@ -328,7 +327,6 @@
   #title {
     font-weight: bolder;
     font-size: 20px;
-
   }
   #tips {
     font-size: 15px;
@@ -338,7 +336,7 @@
     width: 25rem;
     height: 6.6rem;
     display: inline-block;
-    padding:10px;
+    padding: 10px;
     font-family: $primary-font;
     font-size: 24px;
     cursor: pointer;
@@ -371,7 +369,7 @@
   .background-set {
     background-color: $black;
     position: relative;
-    height:175vh;
+    height: 175vh;
     box-sizing: border-box;
     margin: 0;
     border: 0;
@@ -393,7 +391,7 @@
     opacity: 0.2;
     width: 40%;
     height: 100%;
-    margin-top:-50px;
+    margin-top: -50px;
     margin-left: 50px;
   }
 
@@ -439,8 +437,6 @@
     font-weight: bold;
   }
 
-
-
   #yellowGuy {
     width: 200px;
     height: 153px;
@@ -457,15 +453,13 @@
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    color: #ffffff;
+    color: black;
     white-space: nowrap;
   }
 
   .text-small {
     margin-top: 50px;
     font-family: Noto Sans;
-
-
   }
 
   #home-page-tips {
@@ -500,7 +494,7 @@
     width: 70px;
     height: 59px;
     margin-right: 10px;
-    margin-left:10px;
+    margin-left: 10px;
   }
 
   .Text-Layout {
@@ -514,7 +508,6 @@
   #title {
     font-weight: bolder;
     font-size: 20px;
-
   }
   #tips {
     font-size: 15px;
@@ -524,7 +517,7 @@
     width: 25rem;
     height: 6.6rem;
     display: inline-block;
-    padding:10px;
+    padding: 10px;
     font-family: $primary-font;
     font-size: 24px;
     cursor: pointer;
@@ -553,371 +546,364 @@
 /*------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 768px) and (max-width: 900px) {
-    .background-set {
-      background-color: $black;
-      position: relative;
-      height:175vh;
-      box-sizing: border-box;
-      margin: 0;
-      border: 0;
-      width: 100%;
-    }
-  
-    .whole-page-layout {
-      margin-top: -200px;
-      margin-left: 0px;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      height: 50%;
-      width: 100%;
-    }
-  
-    #light-background {
-      position: fixed;
-      opacity: 0.2;
-      width: 30%;
-      height: 100%;
-      margin-top:-150px;
-      margin-left: 20px;
-    }
-  
-    #homePageBubble {
-      position: fixed;
-      margin-top: 250px;
-      width: 30%;
-      opacity: 0.2;
-      margin-left: 20px;
-    }
-  
-    .contentContainer {
-      flex: 1 100px;
-      justify-content: space-around;
-      position: relative;
-      top: 235px;
-      margin-left: 30px;
-      margin-right: 20px;
-      margin-top: 50px;
-    }
-  
-    .text {
-      font-family: $tertiary-font;
-      font-size: 30px;
-      white-space: nowrap;
-    }
-  
-    #white-tips {
-      color: #ffffff;
-      font-size: 30px;
-      font-family: $tertiary-font;
-    }
-    #orange-tips {
-      color: #f6ad69;
-      font-family: $tertiary-font;
-    }
-  
-    #orange {
-      color: #f6ad69;
-      font-size: 30px;
-      font-family: $tertiary-font;
-      margin-top: -20px;
-      font-weight: bold;
-    }
-  
-  
-  
-    #yellowGuy {
-      width: 150px;
-      height: 115px;
-      margin-bottom: 50px;
-      margin-left: 0px;
-      margin-right: 30px;
-    }
-  
-    p {
-      //styleName: Headline XXS/Regular;
-      font-family: Noto Sans;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #ffffff;
-      white-space: nowrap;
-    }
-  
-    .text-small {
-      margin-top: 50px;
-      font-family: Noto Sans;
-    }
-  
-    #home-page-tips {
-      font-weight: bold;
-    }
-  
-    .buttonContainer {
-      flex: 2 100px;
-      position: relative;
-      top: 235px;
-      padding: 20px;
-    }
-  
-    .Button-Position {
-      display: grid;
-      grid-template-rows: auto auto auto auto;
-      gap: 15px;
-    }
-  
-    .Button-Layout {
-      display: flex;
-      overflow: hidden;
-      padding: 0;
-      cursor: pointer;
-      font-family: $primary-font;
-    }
-  
-    #button-icon {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      width: 50px;
-      height: 42px;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  
-    .Text-Layout {
-      grid-column: 2;
-      display: grid;
-      grid-template-rows: auto auto;
-      text-align: left;
-      place-items: left;
-    }
-  
-    #title {
-      font-weight: bolder;
-      font-size:20px;
-    }
-    #tips {
-      font-size: medium;
-    }
-  
-    .HomeButton {
-      width: 25rem;
-      height: 6rem;
-      display: inline-block;
-      padding: 0;
-      font-family: $primary-font;
-      font-size: 24px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #1c1a1a;
-      border-radius: 12px;
-      border: 3px solid #dddada;
-      background-color: #ffffff;
-      -webkit-box-shadow: 2px 4px 1px #dddada;
-      -moz-box-shadow: 2px 4px 1px #dddada;
-      box-shadow: 2px 4px 1px #dddada;
-    }
-  
-    .HomeButton:hover {
-      background-color: #dddada;
-    }
-  
-    .HomeButton:active {
-      background-color: #dddada;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-    }
+  .background-set {
+    background-color: $black;
+    position: relative;
+    height: 175vh;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    width: 100%;
   }
 
-
-  /*------------------------------------------------------------------------------------------------*/
-
-
-  @media (max-width:768px) {
-    .background-set {
-      background-color: $black;
-      position: relative;
-      height:175vh;
-      box-sizing: border-box;
-      margin: 0;
-      border: 0;
-    
-      width: 100%;
-    }
-  
-    .whole-page-layout {
-      margin-top: -200px;
-      margin-left: 0;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      height: 10%;
-      width: 100%;
- 
-    }
-  
-    #light-background {
-      position: fixed;
-      opacity: 0.2;
-      width: 30%;
-      height: 100%;
-      margin-top:-150px;
-      margin-left: 20px;
-    }
-  
-    #homePageBubble {
-      position: fixed;
-      margin-top: 250px;
-      width: 30%;
-      opacity: 0.2;
-      margin-left: 20px;
-    }
-  
-    .contentContainer {
-      flex: 1 100px;
-      justify-content: space-around;
-      position: relative;
-      top: 235px;
-      margin-left: 30px;
-      margin-right: 20px;
-      margin-top: 50px;
-      height: 50%;
-    }
-  
-    .text {
-      font-family: $tertiary-font;
-      font-size: 30px;
-      white-space: nowrap;
-    }
-  
-    #white-tips {
-      color: #ffffff;
-      font-size: 30px;
-      font-family: $tertiary-font;
-    }
-    #orange-tips {
-      color: #f6ad69;
-      font-family: $tertiary-font;
-    }
-  
-    #orange {
-      color: #f6ad69;
-      font-size: 30px;
-      font-family: $tertiary-font;
-      margin-top: -20px;
-      font-weight: bold;
-    }
-  
-  
-  
-    #yellowGuy {
-      width: 150px;
-      height: 115px;
-      margin-bottom: 50px;
-      margin-left: 0px;
-      margin-right: 30px;
-    }
-  
-    p {
-      //styleName: Headline XXS/Regular;
-      font-family: Noto Sans;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #ffffff;
-      white-space: nowrap;
-    }
-  
-    .text-small {
-      margin-top: 50px;
-      font-family: Noto Sans;
-    }
-  
-    #home-page-tips {
-      font-weight: bold;
-    }
-  
-    .buttonContainer {
-      flex: 2 100px;
-      position: relative;
-      top: 235px;
-      padding: 20px;
-    }
-  
-    .Button-Position {
-      display: grid;
-      grid-template-rows: auto auto auto auto;
-      gap: 15px;
-    }
-  
-    .Button-Layout {
-      display: flex;
-      overflow: hidden;
-      padding: 0;
-      cursor: pointer;
-      font-family: $primary-font;
-    }
-  
-    #button-icon {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      width: 60%;
-      height: 50%;
-      margin-right: 5%;
-      margin-left: 5%;
-      margin-top:15%;
-    }
-  
-    .Text-Layout {
-      grid-column: 2;
-      display: grid;
-      grid-template-rows: auto auto;
-      text-align: left;
-      place-items: left;
-    }
-  
-    #title {
-      font-weight: bolder;
-      font-size:15px;
-    }
-    #tips {
-      font-size: 10px;
-    }
-  
-    .HomeButton {
-      width: 90%;
-      height: 100%;
-      display: inline-block;
-      padding: 0;
-      font-family: $primary-font;
-      font-size: 24px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #1c1a1a;
-      border-radius: 12px;
-      border: 3px solid #dddada;
-      background-color: #ffffff;
-      -webkit-box-shadow: 2px 4px 1px #dddada;
-      -moz-box-shadow: 2px 4px 1px #dddada;
-      box-shadow: 2px 4px 1px #dddada;
-    }
-  
-    .HomeButton:hover {
-      background-color: #dddada;
-    }
-  
-    .HomeButton:active {
-      background-color: #dddada;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-    }
+  .whole-page-layout {
+    margin-top: -200px;
+    margin-left: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
   }
+
+  #light-background {
+    position: fixed;
+    opacity: 0.2;
+    width: 30%;
+    height: 100%;
+    margin-top: -150px;
+    margin-left: 20px;
+  }
+
+  #homePageBubble {
+    position: fixed;
+    margin-top: 250px;
+    width: 30%;
+    opacity: 0.2;
+    margin-left: 20px;
+  }
+
+  .contentContainer {
+    flex: 1 100px;
+    justify-content: space-around;
+    position: relative;
+    top: 235px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+
+  .text {
+    font-family: $tertiary-font;
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  #white-tips {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: $tertiary-font;
+  }
+  #orange-tips {
+    color: #f6ad69;
+    font-family: $tertiary-font;
+  }
+
+  #orange {
+    color: #f6ad69;
+    font-size: 30px;
+    font-family: $tertiary-font;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+
+  #yellowGuy {
+    width: 150px;
+    height: 115px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+
+  p {
+    //styleName: Headline XXS/Regular;
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    white-space: nowrap;
+  }
+
+  .text-small {
+    margin-top: 50px;
+    font-family: Noto Sans;
+  }
+
+  #home-page-tips {
+    font-weight: bold;
+  }
+
+  .buttonContainer {
+    flex: 2 100px;
+    position: relative;
+    top: 235px;
+    padding: 20px;
+  }
+
+  .Button-Position {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+  }
+
+  .Button-Layout {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    font-family: $primary-font;
+  }
+
+  #button-icon {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 42px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .Text-Layout {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: left;
+    place-items: left;
+  }
+
+  #title {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  #tips {
+    font-size: medium;
+  }
+
+  .HomeButton {
+    width: 25rem;
+    height: 6rem;
+    display: inline-block;
+    padding: 0;
+    font-family: $primary-font;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #1c1a1a;
+    border-radius: 12px;
+    border: 3px solid #dddada;
+    background-color: #ffffff;
+    -webkit-box-shadow: 2px 4px 1px #dddada;
+    -moz-box-shadow: 2px 4px 1px #dddada;
+    box-shadow: 2px 4px 1px #dddada;
+  }
+
+  .HomeButton:hover {
+    background-color: #dddada;
+  }
+
+  .HomeButton:active {
+    background-color: #dddada;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .background-set {
+    background-color: $black;
+    position: relative;
+    height: 175vh;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+
+    width: 100%;
+  }
+
+  .whole-page-layout {
+    margin-top: -200px;
+    margin-left: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+  }
+
+  #light-background {
+    position: fixed;
+    opacity: 0.2;
+    width: 30%;
+    height: 100%;
+    margin-top: -150px;
+    margin-left: 20px;
+  }
+
+  #homePageBubble {
+    position: fixed;
+    margin-top: 250px;
+    width: 30%;
+    opacity: 0.2;
+    margin-left: 20px;
+  }
+
+  .contentContainer {
+    flex: 1 100px;
+    justify-content: space-around;
+    position: relative;
+    top: 235px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 50px;
+    height: 50%;
+  }
+
+  .text {
+    font-family: $tertiary-font;
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  #white-tips {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: $tertiary-font;
+  }
+  #orange-tips {
+    color: #f6ad69;
+    font-family: $tertiary-font;
+  }
+
+  #orange {
+    color: #f6ad69;
+    font-size: 30px;
+    font-family: $tertiary-font;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+
+  #yellowGuy {
+    width: 150px;
+    height: 115px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+
+  p {
+    //styleName: Headline XXS/Regular;
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    white-space: nowrap;
+  }
+
+  .text-small {
+    margin-top: 50px;
+    font-family: Noto Sans;
+  }
+
+  #home-page-tips {
+    font-weight: bold;
+  }
+
+  .buttonContainer {
+    flex: 2 100px;
+    position: relative;
+    top: 235px;
+    padding: 20px;
+  }
+
+  .Button-Position {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+  }
+
+  .Button-Layout {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    font-family: $primary-font;
+  }
+
+  #button-icon {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    height: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 15%;
+  }
+
+  .Text-Layout {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: left;
+    place-items: left;
+  }
+
+  #title {
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  #tips {
+    font-size: 10px;
+  }
+
+  .HomeButton {
+    width: 90%;
+    height: 100%;
+    display: inline-block;
+    padding: 0;
+    font-family: $primary-font;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #1c1a1a;
+    border-radius: 12px;
+    border: 3px solid #dddada;
+    background-color: #ffffff;
+    -webkit-box-shadow: 2px 4px 1px #dddada;
+    -moz-box-shadow: 2px 4px 1px #dddada;
+    box-shadow: 2px 4px 1px #dddada;
+  }
+
+  .HomeButton:hover {
+    background-color: #dddada;
+  }
+
+  .HomeButton:active {
+    background-color: #dddada;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+}
