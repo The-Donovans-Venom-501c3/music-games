@@ -1,24 +1,30 @@
 import React, { useEffect } from 'react'
 import './Loading.scss'
-import character from '../../../assets/svg/Loading_Character.svg'
+import character from '../../../assets/svg/Character_Loading.svg'
+import baseCharacter from '../../../assets/svg/Character_Ellipse.svg'
+
 import { useSetAtom } from 'jotai'
 import { loadingStateAtom, quizStateAtom } from '../../../store/atoms'
 export default function Loading() {
 
   const setLoadingState = useSetAtom(loadingStateAtom);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoadingState('quiz'); 
-    }, 5800);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setLoadingState('quiz'); 
+  //   }, 5800);
 
-    return () => clearTimeout(timeout);
-  }, [])
+  //   return () => clearTimeout(timeout);
+  // }, [])
 
   return (
     <div className='loadingContainer'>
     <div className='loading'>
-      <img src={character} />
+      <div className='characterContainer'>
+        <img id="character" src={character} />
+        <img id="baseCharacter" src={baseCharacter} />
+      </div>
+
       <section>
         <h1>Get Ready for Awesomeness!</h1>
         <p>For each mission, you will be shown a music note.</p>
