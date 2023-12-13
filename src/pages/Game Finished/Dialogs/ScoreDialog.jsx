@@ -38,11 +38,11 @@ export default function ScoreDialog() {
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
-    const remainingSeconds = time % 60;
-    return `${minutes < 10 ? "0" : ""}${minutes}:${
-      remainingSeconds < 10 ? "0" : ""
-    }${remainingSeconds}`;
-  };
+    const seconds = time % 60;
+    // const formattedMinutes = String(minutes).padStart(2, '0');
+    // const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+    return `${minutes} min ${seconds} sec`;
+    };
 
   return (
     <div className="wrapper">
