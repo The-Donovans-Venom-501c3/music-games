@@ -46,7 +46,7 @@ const QuizSection = () => {
           setQuestionNum(questionNum + 1);
         }
       }
-    } else if (lives > 1) {
+    } else if (option && lives > 1) {
       setAffirmation('tryAgain');
       setQuizState('affirmation');
     } else {
