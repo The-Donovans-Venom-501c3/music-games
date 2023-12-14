@@ -8,13 +8,13 @@ import { loadingStateAtom, quizStateAtom } from '../../../store/atoms';
 export default function Loading() {
   const setLoadingState = useSetAtom(loadingStateAtom);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setLoadingState('quiz');
-  //   }, 5800);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoadingState('quiz');
+    }, 5800);
 
-  //   return () => clearTimeout(timeout);
-  // }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className='loadingContainer'>
