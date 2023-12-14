@@ -1,4 +1,4 @@
-@import "../../../assets/scss/variables";
+@import '../../../assets/scss/variables';
 
 @keyframes character {
   from {
@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: calc($page-height - $nav-height);
+  height: 85vh;
   z-index: 1;
   overflow: hidden;
   width: 100vw;
@@ -146,10 +146,8 @@
   }
 }
 
-
 //tablet
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
   .loading h1 {
     font-size: 27px;
     font-weight: 500;
@@ -178,7 +176,6 @@
 
 //small laptop
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
   .loading h1 {
     font-size: 27px;
     font-weight: 500;
