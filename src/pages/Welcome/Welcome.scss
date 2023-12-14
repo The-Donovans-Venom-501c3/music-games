@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  width: 80rem;
+  width: 80%;
   border-radius: 2rem;
   background-color: $white;
   animation-name: falldown;
@@ -82,6 +82,7 @@
         justify-content: center;
         width: 35rem;
         margin-left: 1rem;
+
         .chat {
           background-color: $orange-200;
           border-radius: 2rem;
@@ -92,12 +93,14 @@
           animation-delay: 3s;
           animation-fill-mode: forwards;
           animation-direction: linear;
+          width: 100%;
+
           p {
-            text-wrap: wrap;
             font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             color: $black;
+            white-space: normal;
           }
 
           p + p {
@@ -206,7 +209,6 @@
 // Small Laptop Screen
 @media only screen and (max-width: 1200px) {
   .welcome {
-    width: 80%;
     h1 {
       font-size: 2rem;
     }
