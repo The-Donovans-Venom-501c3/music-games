@@ -1,31 +1,31 @@
-@import "../../assets/scss/variables";
+@import '../../assets/scss/variables';
 
 @keyframes falldown {
-    from{
-      margin: -80em auto;
-    }
-    to {
-      margin: 6em auto;
-    }
+  from {
+    margin: -80rem auto;
+  }
+  to {
+    margin: 3rem auto;
+  }
 }
 @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes comesFromRight {
   from {
-      margin-right: -60vw;
-      margin-left: 30vw;
-      opacity: 0;
+    margin-right: -60vw;
+    margin-left: 30vw;
+    opacity: 0;
   }
   to {
-      margin-right: 0vw;
-      margin-left: 0vw;
-      opacity: 1;
+    margin-right: 0vw;
+    margin-left: 0vw;
+    opacity: 1;
   }
 }
 
@@ -33,17 +33,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -20em auto;
-  padding: 3em 6em;
-  gap: 5em;
-  width: 87vw;
-  border-radius: 24px;
+  padding: 2rem;
+  width: 80rem;
+  border-radius: 2rem;
   background-color: $white;
   animation-name: falldown;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-direction: linear;
-  overflow-x: hidden;
 
   p {
     white-space: wrap;
@@ -56,6 +53,7 @@
     letter-spacing: -1px;
     opacity: 0;
     color: $black;
+    margin-bottom: 2rem;
     animation-name: appear;
     animation-duration: 1s;
     animation-delay: 1s;
@@ -73,22 +71,21 @@
     justify-items: center;
     justify-content: center;
     width: 100%;
+    gap: 0.5rem;
 
     .intro {
-      padding: 1em;
+      padding: 1rem;
       padding-bottom: 0;
-      width: 50%;
       .bubble {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 40vw;
+        width: 35rem;
+        margin-left: 1rem;
         .chat {
           background-color: $orange-200;
-          border-radius: 25px;
-          padding: 1.5em 1.75em;
-          max-width: 90%;
-          width: 40vw;
+          border-radius: 2rem;
+          padding: 1.5rem 1.75rem;
           opacity: 0;
           animation-name: appear;
           animation-duration: 1s;
@@ -96,11 +93,11 @@
           animation-fill-mode: forwards;
           animation-direction: linear;
           p {
+            text-wrap: wrap;
             font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             color: $black;
-            
           }
 
           p + p {
@@ -123,8 +120,10 @@
       }
 
       .cat {
-        width: 20vw;
-        margin-top: -3rem;
+        margin-top: -2rem;
+        margin-left: 2rem;
+        width: 16rem;
+        height: 16rem;
         opacity: 0;
         animation-name: appear;
         animation-duration: 1s;
@@ -154,16 +153,15 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        padding: 0 2.25em;
+        padding: 0 2.25rem;
         height: 30%;
-        border-radius: 16px;
-        
+        border-radius: 1rem;
 
         p {
-          font-size: 2em;
+          font-size: 2rem;
           font-style: normal;
           font-weight: 700;
-          line-height: 36px;
+          line-height: 2rem;
           color: $grey-700;
         }
 
@@ -172,33 +170,90 @@
         }
       }
 
-      .easy{
+      .easy {
         background-color: $green-100;
         border: 2px solid $green-300;
         border-bottom: 8px solid $green-300;
 
-        &:hover{
+        &:hover {
           background-color: $green-100-hover;
         }
       }
 
-      .medium{
+      .medium {
         background-color: $yellow-100;
         border: 2px solid $yellow-300;
         border-bottom: 8px solid $yellow-300;
 
-        &:hover{
+        &:hover {
           background-color: $yellow-100-hover;
         }
-      } 
+      }
 
-      .hard{
+      .hard {
         background-color: $grey-100;
         border: 2px solid $grey-300;
         border-bottom: 8px solid $grey-300;
 
-        &:hover{
+        &:hover {
           background-color: $grey-100-hover;
+        }
+      }
+    }
+  }
+}
+
+// Small Laptop Screen
+@media only screen and (max-width: 1200px) {
+  .welcome {
+    width: 80%;
+    h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      .intro {
+        .bubble {
+          margin-left: 0;
+          width: 25rem;
+        }
+
+        .cat {
+          margin-top: -2rem;
+          margin-left: 1rem;
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media only screen and (max-width: 1024px) {
+  .welcome {
+    width: 85%;
+    padding: 2rem 1rem;
+    main {
+      .intro {
+        .bubble {
+          width: 23rem;
+        }
+        .cat {
+          width: 11rem;
+          height: 11rem;
+        }
+      }
+
+      .levels {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+          height: 30%;
         }
       }
     }
