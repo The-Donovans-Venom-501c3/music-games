@@ -61,11 +61,10 @@ const QuizScreen = () => {
         <img id='music' src={music} width='100%' height='100%' />
       </div>
 
-      <div className='catConatiner'>
-        <img id='cat' src={cat} />
-      </div>
-
       <div className='GameScreen'>
+        <div className='catConatiner'>
+          <img id='cat' src={cat} />
+        </div>
         <div className='setting'>
           <button className='btnIcon' onClick={handleRuleModal}>
             <img className='icon-questionMark' src={questionMark} />
@@ -79,8 +78,12 @@ const QuizScreen = () => {
             <img src={timerOn ? pause : play} />
             <span>{timerOn ? 'PAUSE' : 'PLAY'}</span>
           </button>
-          <button className='btnSetting btnexit' onClick={handleExit}>
-            <img src={x} alt='x' />
+          <button
+            className='btbnSetting 
+          btnExit'
+            onClick={handleExit}
+          >
+            <img className='icon-x' src={x} alt='x' />
           </button>
         </div>
         <div className='gameMain'>
