@@ -16,6 +16,7 @@ body {
   background-attachment: cover;
   background-size: 100% 100%; // when we will animate it we have to make it 225% 225%
   background-position: center;
+  overflow: hidden;
 }
 
 h1,
