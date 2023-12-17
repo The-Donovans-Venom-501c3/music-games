@@ -1,6 +1,6 @@
 import { atom } from 'jotai';
 
-export const appStateAtom = atom('game-finished');
+export const appStateAtom = atom('home');
 /*
 Possible App states:
 1) home : Home Page

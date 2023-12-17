@@ -1,31 +1,49 @@
-@import "../../../assets/scss/variables";
+@import '../../../assets/scss/variables';
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .centralized {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+
+  .heading {
+    font-family: Noto Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    margin: 1rem 0;
+  }
+
+  .message {
+    font-family: Noto Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.64px;
+  }
 }
 
 //Content Dialog
 .content {
-  width: 62em;
-  height: 40em;
+  width: 62rem;
   background-color: $white;
   opacity: 1;
   border-radius: 48px;
-  padding: 48px 0;
+  padding: 2rem;
   z-index: 1;
-  gap: 36px;
+  gap: 20px;
+
+  .cat {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 //Play Again Dialog
@@ -42,8 +60,6 @@
 
 //Score Dialog
 .score-dialog {
-  height: 50em;
-
   p {
     font-size: 40px;
     gap: 12px;
@@ -68,7 +84,7 @@
 
     .score-message {
       text-align: center;
-      font-size: 28px;
+      font-size: 1.5rem;
     }
   }
 }
@@ -164,84 +180,67 @@
   border-bottom: 8px solid #dddada;
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-  .content {
-    width: 62em;
-    height: 37em;
-  }
+// @media only screen and (max-width: 1280px) {
+//   .wrapper {
+//     .content {
+//       width: 55rem;
+//     }
 
-  .primary,
-  .secondary {
-    height: 3.625em;
-  }
+//     .score-dialog {
+//       .centralized {
+//         .heading {
+//           font-size: 1.7rem;
+//         }
 
-  // .next-level{
-  //    gap:28px;
-  //    height: 39em;
-  // }
-  .play-again {
-    gap: 28px;
+//         .message {
+//           font-size: 1.4rem;
+//         }
+//       }
 
-    .character {
-      width: 11.25em;
-      height: 10em;
-    }
+//       .score-section {
+//         .score {
+//           font-size: 1.5rem;
+//         }
 
-    .quote {
-      text-align: center;
-      font-size: 22px;
-      width: 90%;
-      gap: 4px;
-    }
-  }
+//         .score-message {
+//           font-size: 1.3rem;
+//         }
+//       }
+//     }
+//   }
+// }
 
-  .score-dialog {
-    .cat {
-      width: 14em;
-      height: 9.4em;
-    }
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    .content {
+      width: 50rem;
 
-    p {
-      font-size: 32px;
-      gap: 12px;
-
-      span {
-        font-size: 20px;
-      }
-
-      strong {
-        font-weight: 500;
+      .cat {
+        width: 8rem;
+        height: 8rem;
       }
     }
 
-    .score-section {
-      width: 55%;
-      text-align: center;
+    .score-dialog {
+      .centralized {
+        .heading {
+          font-size: 1.5rem;
+        }
 
-      .score {
-        font-size: 32px;
-        font-weight: 500;
+        .message {
+          font-size: 1.3rem;
+        }
       }
 
-      .score-message {
-        font-size: 20px;
+      .score-section {
+        .score {
+          font-size: 1.4rem;
+        }
+
+        .score-message {
+          font-size: 1.2rem;
+        }
       }
     }
   }
-
-  // .streak-dialog{
-  //     gap:28px;
-  //     .streak-content{
-  //         height: 13.25em;
-  //         width: 46em;
-  //         gap:16px;
-  //         p{
-  //             width: 100%;
-  //         }
-
-  //     }
-  // }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
 }

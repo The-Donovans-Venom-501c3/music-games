@@ -1,28 +1,28 @@
-import "./Dialogs.scss";
-import character from "../../../assets/svg/Score_Character.svg";
-import { useAtomValue, useSetAtom } from "jotai";
+import './Dialogs.scss';
+import character from '../../../assets/svg/Score_Character.svg';
+import { useAtomValue, useSetAtom } from 'jotai';
 import {
   gameFinishedAtom,
   scoreAtom,
   totalQuestionsAtom,
   seconds,
-} from "../../../store/atoms";
+} from '../../../store/atoms';
 
 const scoreState = {
   perfect: {
-    heading: "Amazing!",
-    msg1: "You have successfully finished this game.",
-    msg2: "Keep it up, SuperStar!",
+    heading: 'Amazing!',
+    msg1: 'You have successfully finished this game.',
+    msg2: 'Keep it up, SuperStar!',
   },
   high: {
-    heading: "Amazing!",
-    msg1: "You have successfully finished this game.",
-    msg2: "Keep practicing to get the highest score!",
+    heading: 'Amazing!',
+    msg1: 'You have successfully finished this game.',
+    msg2: 'Keep practicing to get the highest score!',
   },
   low: {
-    heading: "Thank you for finishing this game.",
-    msg1: "Let’s keep practicing!",
-    msg2: "You might want to review the lessons, then try again next time. Let’s get minimum 80 to pass!",
+    heading: 'Thank you for finishing this game.',
+    msg1: 'Let’s keep practicing!',
+    msg2: 'You might want to review the lessons, then try again next time. Let’s get minimum 80 to pass!',
   },
 };
 
@@ -34,7 +34,7 @@ export default function ScoreDialog() {
 
   const result = Math.floor((score / totalQuestions) * 100);
   const scoreData =
-    scoreState[result == 100 ? "perfect" : result > 80 ? "high" : "low"];
+    scoreState[result == 100 ? 'perfect' : result > 80 ? 'high' : 'low'];
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -42,27 +42,27 @@ export default function ScoreDialog() {
     // const formattedMinutes = String(minutes).padStart(2, '0');
     // const formattedSeconds = String(remainingSeconds).padStart(2, '0');
     return `${minutes} min ${seconds} sec`;
-    };
+  };
 
   return (
-    <div className="wrapper">
-      <div className="content score-dialog centralized">
-        <img src={character} alt="cat" className="cat" />
-        <p className="centralized">
-          <strong>{scoreData.heading}</strong>
-          <span className="message">{scoreData.msg1}</span>
-        </p>
-        <section className="score-section centralized">
-          <span className="score"> SCORE: {result}</span>
-          <span className="score-message">{scoreData.msg2}</span>
-          <span className="score-message">
+    <div className='wrapper'>
+      <div className='content score-dialog centralized'>
+        <img src={character} alt='cat' className='cat' />
+        <div className='centralized'>
+          <h1 className='heading'>{scoreData.heading}</h1>
+          <p className='message'>{scoreData.msg1}</p>
+        </div>
+        <section className='score-section centralized'>
+          <span className='score'> SCORE: {result}</span>
+          <span className='score-message'>{scoreData.msg2}</span>
+          <span className='score-message'>
             TIME ELAPSED : {formatTime(timer)}
           </span>
         </section>
-        <div className="button-container centralized">
+        <div className='button-container centralized'>
           <button
-            className="primary"
-            onClick={() => setGameFinished("end-game")}
+            className='primary'
+            onClick={() => setGameFinished('end-game')}
           >
             CONTINUE
           </button>
