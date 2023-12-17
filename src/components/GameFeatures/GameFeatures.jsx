@@ -55,30 +55,36 @@ const GameFeatures = () => {
     <div className='gameFeatureContainer'>
       <div className='gameLives'>
         <div>
-          <span>Timer</span>
-          <Timer />
+          <span className='gameFeatureName'>Timer</span>
+          <div className='gameFeatureValue'>
+            <Timer />
+          </div>
         </div>
         <div>
-          <span>Score</span>
-          <span id='score'>{score}</span>
+          <span className='gameFeatureName'>Score</span>
+          <div className='gameFeatureValue'>
+            <span id='score'>{score}</span>
+          </div>
         </div>
         <div>
-          <span>Lives</span>
-          <span id='lives'>
-            {Array.from({ length: lives }, (_, index) => (
-              <img key={index} src={musicnote} />
-            ))}
-          </span>
+          <span className='gameFeatureName'>Lives</span>
+          <div className='gameFeatureValue'>
+            <span id='lives'>
+              {Array.from({ length: lives }, (_, index) => (
+                <img key={index} src={musicnote} />
+              ))}
+            </span>
+          </div>
         </div>
       </div>
       <div className='gameSetting'>
         <div>
-          <span>Music</span>
+          <span className='gameFeatureName'>Music</span>
           <div id='music' className={musicOn ? 'on' : ''}>
             <button onClick={handleChangeSwitch}>
-              <img src={dot} width={72} height={50} alt='Music toggle' />
+              <img src={dot} alt='Music toggle' />
             </button>
-            <span>{musicOn ? 'ON' : 'OFF'}</span>
+            <span className='gameFeatureValue'>{musicOn ? 'ON' : 'OFF'}</span>
             {/* <FormControlLabel
               label={musicOn ? 'ON' : 'OFF'}
               sx={{
@@ -124,7 +130,7 @@ const GameFeatures = () => {
           </div>
         </div>
         <div>
-          <span>Volume</span>
+          <span className='gameFeatureName'>Volume</span>
           <div id='volume'>
             <Slider
               defaultValue={30}
