@@ -1,6 +1,6 @@
-import { atom } from "jotai";
+import { atom } from 'jotai';
 
-export const appStateAtom = atom("home");
+export const appStateAtom = atom('game-finished');
 /*
 Possible App states:
 1) home : Home Page
@@ -9,7 +9,7 @@ Possible App states:
 4) game-finished : Game Finished State
 */
 
-export const gameStateAtom = atom("");
+export const gameStateAtom = atom('');
 /*
 Possible Game states:
 1) Initial State: none
@@ -19,7 +19,7 @@ Possible Game states:
 5) scale : Scale Identification Game
 */
 
-export const levelStateAtom = atom("");
+export const levelStateAtom = atom('');
 /*
 Possible Level states:
 1) Initial State: none
@@ -28,14 +28,14 @@ Possible Level states:
 4) hard : Hard Level
 */
 
-export const loadingStateAtom = atom("loading");
+export const loadingStateAtom = atom('loading');
 /*
 Possible Loading states:
 1) loading
 2) quiz
 */
 
-export const quizStateAtom = atom("quiz");
+export const quizStateAtom = atom('quiz');
 /*
 Possible Quiz states:
 1) quiz
@@ -44,7 +44,7 @@ Possible Quiz states:
 4) popup
 */
 
-export const affirmationAtom = atom("");
+export const affirmationAtom = atom('');
 /*
 Possible Affirmation states:
 1) success
@@ -52,16 +52,16 @@ Possible Affirmation states:
 3) tryAgain
 */
 
-export const correctOptionAtom = atom(""); // contains correct option for a question
+export const correctOptionAtom = atom(''); // contains correct option for a question
 
-export const overlayAtom = atom("");
+export const overlayAtom = atom('');
 /*
 Possible Overlay states:
 1) lives : Lives Over overlay
 2) exit : Exit Game overlay
 2) restart: Restart Game overlay
 */
-export const popupAtom = atom("");
+export const popupAtom = atom('');
 /*
 possible popup
 1) play: for start playing popup
@@ -83,7 +83,7 @@ export const scoreAtom = atom(0); // min = 0, max = no. of questions
 
 export const musicStateAtom = atom(false); // true when music is playing, false when not
 
-export const gameFinishedAtom = atom("score");
+export const gameFinishedAtom = atom('score');
 /*
 Possible Game Finished states:
 1) score : Score Dialog
