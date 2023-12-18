@@ -6,7 +6,6 @@
   width: 100%;
   height: calc($page-height - $nav-height);
   background-color: rgba(#000000, 0.3);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,14 +18,13 @@
     border-radius: 20px;
     padding: 2.3%;
     gap: 2vw;
-    width: 40rem;
-
+    width: 45vw;
     .cat {
       display: flex;
       justify-content: center;
       img {
-        width: 15rem;
-        height: 10rem;
+        width: 50vw;
+        height: 35vh;
       }
     }
     .textDialog {
@@ -51,7 +49,6 @@
       line-height: 24px;
       word-wrap: break-word;
       justify-content: space-between;
-      height: 30%;
       gap: 10px;
       margin: auto;
     }

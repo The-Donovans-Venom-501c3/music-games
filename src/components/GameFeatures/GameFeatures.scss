@@ -41,78 +41,13 @@
         display: flex;
 
         img {
-          width: 30%;
-          height: 30%;
+          width: 2.5vw;
+          height: 5vh;
           margin-right: 5px;
         }
       }
     }
   }
-
-  // .gameSetting{
-  //     display: flex;
-  //     flex-direction: column;
-  //     gap: 5px;
-  //     padding-top: 5%;
-  //     div{
-  //         display: flex;
-  //         flex-direction: row;
-  //         justify-content: space-between;
-  //         align-items: center;
-  //         overflow:auto
-  //         span ,div{
-  //             width: 45%;
-
-  //         }
-  //         >:nth-child(2){
-  //             border: 2px solid $grey-500;
-  //             border-radius: 5px;
-  //             height: 40px;
-  //             display: flex;
-  //             justify-content: center;
-  //             flex-direction: row;
-  //         }
-
-  //         #volume{
-  //             width: 45%;
-  //         }
-
-  //         .slider {
-  //             -webkit-appearance: none;
-  //             width: 90%;
-  //             height: 8px;
-  //             border-radius: 5px;
-  //             background: $grey-300;
-  //             outline: none;
-  //             opacity: 0.7;
-  //             -webkit-transition: 2s;
-  //             transition: opacity 2s;
-  //         }
-
-  //         .slider:hover {
-  //             opacity: 1;
-  //         }
-
-  //         .slider::-webkit-slider-thumb {
-  //             -webkit-appearance: none;
-  //             appearance: none;
-  //             width: 25px;
-  //             height: 25px;
-  //             border-radius: 50%;
-  //             background: $grey-100;
-  //             cursor: pointer;
-  //         }
-
-  //         .slider::-moz-range-thumb {
-  //             width: 25px;
-  //             height: 25px;
-  //             border-radius: 50%;
-  //             background: $grey-100;
-  //             cursor: pointer;
-  //         }
-  //     }
-  // }
-
   .gameSetting {
     display: flex;
     flex-direction: column;
