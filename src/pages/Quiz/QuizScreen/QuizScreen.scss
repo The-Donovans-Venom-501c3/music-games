@@ -219,22 +219,21 @@ button:active {
         align-items: center;
         justify-content: center;
         gap: 5%;
-
         img {
-          width: 20%;
-          height: 75%;
+          width: 2vw;
+          height: 4vh;
           background-size: 100%;
         }
       }
       .btnExit {
         background-color: $Cream-700;
-        padding: 1rem;
+        padding: 0.7vw;
         border-radius: 50%;
         box-shadow: 0px 5px 0px 0px $Cream-800;
 
         .icon-x {
-          width: 1rem;
-          height: 1rem;
+          width: 2vw;
+          height: 4vh;
         }
       }
     }
