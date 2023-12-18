@@ -68,7 +68,7 @@ export default function Home() {
                 
               </div>
             <p>
-              <br></br><a id="home-page-tips">Choose a game you want to play!</a>
+              <br></br><a id="home-page-tips">Please switch to Fullscreen mode!</a>
             </p>
           
         </div>
