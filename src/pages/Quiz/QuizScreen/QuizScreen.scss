@@ -27,7 +27,7 @@
     -ms-transform: scale(3);
     -webkit-transform: scale(3);
     transform: scale(5.5);
-    bottom: -35rem;
+    bottom: -30rem;
   }
 }
 @keyframes backgroundZoom {
@@ -86,7 +86,7 @@
     margin-bottom: 150%;
   }
   to {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 button:active {
@@ -256,6 +256,37 @@ button:active {
       animation-direction: normal, alternate-reverse;
       animation-iteration-count: 1, infinite;
       animation-timing-function: linear, ease-in-out;
+    }
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  @keyframes zoomIn {
+    from {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      bottom: 5rem;
+    }
+    to {
+      -moz-transform: scale(3);
+      -webkit-transform: scale(3);
+      -o-transform: scale(3);
+      -ms-transform: scale(3);
+      -webkit-transform: scale(3);
+      transform: scale(5.5);
+      bottom: -35rem;
+    }
+  }
+  @keyframes comedown {
+    from {
+      margin-bottom: 150%;
+    }
+    to {
+      margin-bottom: 2rem;
     }
   }
 }
