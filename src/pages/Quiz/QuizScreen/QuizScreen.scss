@@ -27,7 +27,7 @@
     -ms-transform: scale(3);
     -webkit-transform: scale(3);
     transform: scale(5.5);
-    bottom: -35rem;
+    bottom: -30rem;
   }
 }
 @keyframes backgroundZoom {
@@ -86,7 +86,7 @@
     margin-bottom: 150%;
   }
   to {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 button:active {
@@ -101,7 +101,6 @@ button:active {
   align-items: center;
   position: relative;
   width: 100%;
-  // height: calc($page-height - $nav-height);
   height: calc($page-height - $nav-height);
   z-index: 1;
   overflow: hidden;
@@ -114,7 +113,7 @@ button:active {
     animation-name: fallen, zoomIn;
     animation-duration: 1s, 1s;
     animation-delay: 0s, 1s;
-    width: 13rem;
+    width: 12rem;
     margin: auto;
     animation-timing-function: ease, ease;
     animation-fill-mode: forwards, forwards;
@@ -126,7 +125,7 @@ button:active {
     margin-bottom: 150%;
     z-index: 2;
     flex-direction: column;
-    width: 65rem;
+    width: 60rem;
     height: 40rem;
     gap: 2rem;
     position: relative;
@@ -256,6 +255,43 @@ button:active {
       animation-direction: normal, alternate-reverse;
       animation-iteration-count: 1, infinite;
       animation-timing-function: linear, ease-in-out;
+    }
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  @keyframes zoomIn {
+    from {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      bottom: 5rem;
+    }
+    to {
+      -moz-transform: scale(3);
+      -webkit-transform: scale(3);
+      -o-transform: scale(3);
+      -ms-transform: scale(3);
+      -webkit-transform: scale(3);
+      transform: scale(5.5);
+      bottom: -35rem;
+    }
+  }
+  @keyframes comedown {
+    from {
+      margin-bottom: 150%;
+    }
+    to {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .QuizScreenContainer {
+    .musicStand {
+      width: 13rem;
     }
   }
 }
