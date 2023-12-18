@@ -79,7 +79,7 @@ const QuizScreen = () => {
             <span>{timerOn ? 'PAUSE' : 'PLAY'}</span>
           </button>
           <button
-            className='btbnSetting 
+            className=' 
           btnExit'
             onClick={handleExit}
           >
