@@ -101,7 +101,6 @@ button:active {
   align-items: center;
   position: relative;
   width: 100%;
-  // height: calc($page-height - $nav-height);
   height: calc($page-height - $nav-height);
   z-index: 1;
   overflow: hidden;
@@ -114,7 +113,7 @@ button:active {
     animation-name: fallen, zoomIn;
     animation-duration: 1s, 1s;
     animation-delay: 0s, 1s;
-    width: 13rem;
+    width: 12rem;
     margin: auto;
     animation-timing-function: ease, ease;
     animation-fill-mode: forwards, forwards;
@@ -126,7 +125,7 @@ button:active {
     margin-bottom: 150%;
     z-index: 2;
     flex-direction: column;
-    width: 65rem;
+    width: 60rem;
     height: 40rem;
     gap: 2rem;
     position: relative;
@@ -287,6 +286,12 @@ button:active {
     }
     to {
       margin-bottom: 2rem;
+    }
+  }
+
+  .QuizScreenContainer {
+    .musicStand {
+      width: 13rem;
     }
   }
 }
