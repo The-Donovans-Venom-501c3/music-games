@@ -2,6 +2,7 @@ import "./GameFeatures.scss";
 import musicnote from '../../assets/svg/MusicNote.svg';
 import dot from '../../assets/svg/Dot.svg';
 import Slider from '@mui/material/Slider';
+import LiveAnimated from "./LivesAnimation/lives";
 import Timer from "./Timer/Timer";
 import { useRef } from "react";
 import { useAtomValue, useAtom } from "jotai";
@@ -48,7 +49,7 @@ const GameFeatures = () => {
           <span>Lives</span>
           <span id="lives">
             {Array.from({ length: lives }, (_, index) => (
-              <img key={index} src={musicnote} />
+              <LiveAnimated key={index} src={musicnote} />
             ))}
           </span>
         </div>
