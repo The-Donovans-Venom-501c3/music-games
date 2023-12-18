@@ -14,7 +14,7 @@ import {
   overlayAtom,
   quizStateAtom,
   timerOnAtom,
-  popupAtom,
+  popupAtom
 } from "../../../store/atoms";
 
 const QuizScreen = () => {
@@ -30,7 +30,7 @@ const QuizScreen = () => {
 
   const handlePause = () => {
     setTimerOn(!timerOn);
-    setPopup("pause");
+    setPopup('pause');
     setQuizState("popup");
   };
 
@@ -59,7 +59,7 @@ const QuizScreen = () => {
       </div>
 
       <div className="catConatiner">
-        <img className="cat" src={cat} />
+        <img id="cat" src={cat} />
       </div>
 
       <div className="GameScreen">
