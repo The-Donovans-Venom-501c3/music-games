@@ -1,16 +1,26 @@
 import data from '../data/data.json';
-
 const gameIdx = { 'note': 0, 'key': 1, 'major-minor': 2, 'scale': 3 };
 const levelIdx = { 'easy': 0, 'medium': 1, 'hard': 2 };
 
-function getRandomQuestions(questions, number) {
+function getRandomQuestions(questions, number, game) {
   let ques = []; 
-  for (let i = number; i > 0; i--) {
-    const j = Math.floor((Math.random()*questions.length));
-    console.log(`the random number is ${j}`);
-    ques.push(questions[j]);
-  }
-  return ques;
+  let listOfQuestions = questions;
+    if(game == 'key'){
+      for (let i = number; i > 0; i--) {
+           let randomNumber = Math.floor((Math.random()*questions.length));
+           ques.push(questions[randomNumber]);
+         }
+         return ques;
+    }else{
+      for (let i = number; i > 0; i--) {
+        let question = listOfQuestions.splice(Math.floor((Math.random()*listOfQuestions.length)), 1);
+        let result = Object.assign({},...question);
+        
+        ques.push(result);
+      }
+      return ques;
+    }
+
 }
 
 export function getQuestions(game, level) {
@@ -19,10 +29,10 @@ export function getQuestions(game, level) {
   const questions = [];
 
   for (const [level, numQuestions] of Object.entries(numOfQuestionsPerLevel)) {
-    questions.push(...getRandomQuestions(gameData[levelIdx[level]].questions, numQuestions));
+    questions.push(...getRandomQuestions(gameData[levelIdx[level]].questions, numQuestions, game));
   }
 
-  return getRandomQuestions(questions , questions.length);
+  return questions;
 }
 
 

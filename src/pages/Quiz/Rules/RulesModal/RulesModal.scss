@@ -1,4 +1,4 @@
-@import "../../../../assets/scss/variables";
+@import '../../../../assets/scss/variables';
 
 .rules-overlay {
   position: fixed;
@@ -47,6 +47,7 @@
   font-size: 16px;
   color: $black;
   margin-bottom: 1rem;
+  white-space: normal;
 }
 
 .btn-exit {
