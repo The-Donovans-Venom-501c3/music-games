@@ -13,7 +13,7 @@ body {
   font-family: $primary-font;
   background-image: url('/Background.svg');
   background-repeat: no-repeat;
-  background-attachment: cover;
+  // background-attachment: cover;
   background-size: cover; // when we will animate it we have to make it 225% 225%
   background-position: center;
   // overflow: hidden;

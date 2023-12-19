@@ -30,7 +30,8 @@ export default function Loading() {
           <p>Choose one correct answer from options given.</p>
         </section>
         <section>
-          <span>Directing you to the game in a minute...</span>
+          {/* <span>Directing you to the game in a minute...</span> */}
+          <span>Switch to Fullscreen mode for the best experience...</span>
           <div className='loader'>
             <div className='circle'>
               <div className='shine'></div>
