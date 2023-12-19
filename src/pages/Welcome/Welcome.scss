@@ -214,10 +214,10 @@
   }
 }
 
-// Small Laptop Screen
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1536px) {
   .welcome-container {
     .welcome {
+      width: 70%;
       h1 {
         font-size: 2rem;
       }
@@ -236,6 +236,43 @@
             height: 12rem;
           }
         }
+        .levels {
+          button {
+            padding: 0 2rem;
+            height: 30%;
+
+            p {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small Laptop Screen
+@media only screen and (max-width: 1280px) {
+  .welcome-container {
+    .welcome {
+      h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        .intro {
+          .bubble {
+            margin-left: 0;
+            width: 25rem;
+          }
+
+          .cat {
+            margin-top: -2rem;
+            margin-left: 1rem;
+            width: 10rem;
+            height: 10rem;
+          }
+        }
       }
     }
   }
@@ -245,26 +282,16 @@
 @media only screen and (max-width: 1024px) {
   .welcome-container {
     .welcome {
-      width: 85%;
+      width: 80%;
       padding: 2rem 1rem;
       main {
         .intro {
           .bubble {
-            width: 23rem;
-          }
-          .cat {
-            width: 11rem;
-            height: 11rem;
+            width: 25rem;
           }
         }
 
         .levels {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-
           button {
             height: 30%;
           }
