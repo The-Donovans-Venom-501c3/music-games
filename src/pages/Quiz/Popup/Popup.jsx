@@ -36,7 +36,7 @@ export default function Popup() {
     popupState('play');
     setTimeout(() => {
       setQuizState('quiz');
-      setMusicOn(true);
+      // setMusicOn(true);
     }, 1500);
   };
   useEffect(() => {
