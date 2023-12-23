@@ -1,6 +1,6 @@
-import { atom } from 'jotai'
+import { atom } from 'jotai';
 
-export const appStateAtom = atom("home");
+export const appStateAtom = atom('home');
 /*
 Possible App states:
 1) home : Home Page
@@ -28,14 +28,14 @@ Possible Level states:
 4) hard : Hard Level
 */
 
-export const loadingStateAtom = atom("loading");
+export const loadingStateAtom = atom('loading');
 /*
 Possible Loading states:
 1) loading
 2) quiz
 */
 
-export const quizStateAtom = atom("quiz");
+export const quizStateAtom = atom('quiz');
 /*
 Possible Quiz states:
 1) quiz
@@ -67,7 +67,7 @@ possible popup
 1) play: for start playing popup
 2) pause : for pausing the game
 */
-export const timerOnAtom = atom(true);  // true when time is running, false when not
+export const timerOnAtom = atom(true); // true when time is running, false when not
 
 export const resetTimerAtom = atom(true);
 
@@ -77,7 +77,7 @@ export const questionAtom = atom(1); // goes till the last question
 
 export const totalQuestionsAtom = atom(0); // total number of questions
 
-export const countDownOnAtom = atom(true) // true when countdown is running, false when not
+export const countDownOnAtom = atom(true); // true when countdown is running, false when not
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
 
@@ -89,3 +89,5 @@ Possible Game Finished states:
 1) score : Score Dialog
 2) end-game : Play Again Dialog
 */
+
+export const seconds = atom(0);

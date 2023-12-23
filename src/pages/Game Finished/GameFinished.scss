@@ -1,4 +1,8 @@
-.game-finished{
-    width: 100vw;
-    height: 61.063em;
+@import '../../assets/scss/variables';
+
+.game-finished {
+  height: calc($page-height - $nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

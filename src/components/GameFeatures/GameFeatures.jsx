@@ -1,23 +1,33 @@
 import "./GameFeatures.scss";
-import musicnote from '../../assets/svg/MusicNote.svg';
-import dot from '../../assets/svg/Dot.svg';
-import Slider from '@mui/material/Slider';
+import musicnote from "../../assets/svg/MusicNote.svg";
+import dot from "../../assets/svg/Dot.svg";
+import Slider from "@mui/material/Slider";
 import LiveAnimated from "./LivesAnimation/lives";
 import Timer from "./Timer/Timer";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useAtomValue, useAtom } from "jotai";
-import { livesAtom, scoreAtom, musicStateAtom, levelStateAtom } from "../../store/atoms";
+import {
+  livesAtom,
+  scoreAtom,
+  musicStateAtom,
+  levelStateAtom,
+} from "../../store/atoms";
 
 const GameFeatures = () => {
   const score = useAtomValue(scoreAtom);
   const lives = useAtomValue(livesAtom);
   const level = useAtomValue(levelStateAtom);
-  const [musicOn, setMusicOn] = useAtom(musicStateAtom)
+  const [musicOn, setMusicOn] = useAtom(musicStateAtom);
   const MAX = 100;
 
   const audioRef = useRef(null);
 
-  let src = level === 'easy' ? '/easy.mp3' : level === 'medium' ? '/medium.mp3' : 'hard.mp3';
+  let src =
+    level === "easy"
+      ? "/easy.mp3"
+      : level === "medium"
+      ? "/medium.mp3"
+      : "hard.mp3";
 
   const handleChangeSwitch = () => {
     setMusicOn(!musicOn);
@@ -34,35 +44,48 @@ const GameFeatures = () => {
     audioRef.current.volume = volume;
   };
 
+  useEffect(() => {
+    if (musicOn) {
+      audioRef.current?.play();
+    } else {
+      audioRef.current?.pause();
+    }
+  }, [musicOn]);
+
   return (
     <div className="gameFeatureContainer">
       <div className="gameLives">
         <div>
-          <span>Timer</span>
-          <Timer />
+          <span className="gameFeatureName">Timer</span>
+          <div className="gameFeatureValue">
+            <Timer />
+          </div>
         </div>
         <div>
-          <span>Score</span>
-          <span id="score">{score}</span>
+          <span className="gameFeatureName">Score</span>
+          <div className="gameFeatureValue">
+            <span id="score">{score}</span>
+          </div>
         </div>
         <div>
-          <span>Lives</span>
-          <span id="lives">
-            {Array.from({ length: lives }, (_, index) => (
-              <LiveAnimated key={index} src={musicnote} />
-            ))}
-          </span>
+          <span className="gameFeatureName">Lives</span>
+          <div className="gameFeatureValue">
+            <span id="lives">
+              {Array.from({ length: lives }, (_, index) => (
+                <LiveAnimated key={index} src={musicnote} />
+              ))}
+            </span>
+          </div>
         </div>
       </div>
-      <div className='gameSetting'>
+      <div className="gameSetting">
         <div>
-          <span>Music</span>
-          <div id='music' className= {musicOn ? "on" : "" }>
-            <button onClick={handleChangeSwitch}
-            >
-              <img src={dot} width={72} height={50} alt="Music toogle"/>
+          <span className="gameFeatureName">Music</span>
+          <div id="music" className={musicOn ? "on" : ""}>
+            <button onClick={handleChangeSwitch}>
+              <img src={dot} alt="Music toggle" />
             </button>
-            <span>{musicOn ? 'ON' : 'OFF'}</span>
+            <span className="gameFeatureValue">{musicOn ? "ON" : "OFF"}</span>
             {/* <FormControlLabel
               label={musicOn ? 'ON' : 'OFF'}
               sx={{
@@ -105,28 +128,27 @@ const GameFeatures = () => {
                 />
               }
             /> */}
-
           </div>
         </div>
         <div>
-          <span>Volume</span>
-          <div id='volume'>
+          <span className="gameFeatureName">Volume</span>
+          <div id="volume">
             <Slider
               defaultValue={30}
               onChange={(e) => handleChangeVolume(e)}
               valueLabelDisplay="auto"
               sx={{
                 width: "7vw",
-                '.css-eg0mwd-MuiSlider-thumb': {
-                  color: '#F0EEEE',
+                ".css-eg0mwd-MuiSlider-thumb": {
+                  color: "#F0EEEE",
                 },
-                '& .css-2bajgq-MuiSlider-root': {
-                  color: '#F0EEEE',
+                "& .css-2bajgq-MuiSlider-root": {
+                  color: "#F0EEEE",
                 },
-                '.css-1gv0vcd-MuiSlider-track': {
-                  color: '#BFBABB',
-                  height: '1vh',
-                }
+                ".css-1gv0vcd-MuiSlider-track": {
+                  color: "#BFBABB",
+                  height: "1vh",
+                },
               }}
             />
           </div>

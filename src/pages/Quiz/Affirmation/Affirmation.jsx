@@ -52,26 +52,7 @@ export default function Affirmation() {
   const correctOption = useAtomValue(correctOptionAtom);
 
   const handleResponseBtn = () => {
-    // if(affirmation == 'success' || affirmation == 'fail'){
-    //   if (affirmation === 'success') {
-    //     setScore((prev) => prev + 1);
-    //   } else {
-    //     setLives(lives - 1);
-    //     if(lives == 1){
-    //       setOverlay('lives');
-    //       setQuizState('overlay');
-    //       return;
-    //     }
-    //   }
-    //   if(questionNum === totalQuestions){
-    //     setAppState('game-finished');
-    //   } else {
-    //     setQuestionNum(questionNum + 1);
-    //     setQuizState('quiz');
-    //   }
-    // } else{
-    //     setQuizState('quiz');
-    // }
+
     if (affirmation == "success") {
       setScore((prev) => prev + 1);
       if (questionNum === totalQuestions) {
@@ -89,33 +70,67 @@ export default function Affirmation() {
     }
   };
 
-  return (
-    <div className="container">
-      <div className="overlay"></div>
-      <img src={pic} className="beater" />
-      <div
-        className="background-rectangle"
-        style={{ backgroundColor: bgColor }}
-      >
-        {affirmation === "tryAgain" ? (
-          <section className="tip-try-again">{sentence}</section>
-        ) : affirmation === "success" ? (
-          <section className="tip">{sentence}</section>
-        ) : (
-          <section className="tip">
-            {sentence}
-            <span>{correctOption}</span>
-          </section>
-        )}
-
-        <button
-          className="ButtonResponse"
-          id="ButtonResponse"
-          onClick={handleResponseBtn}
+  return (<div>
+    {affirmation === "tryAgain" ?
+      <div className="container">
+        <div className="overlay"></div>
+        <img src={pic} className="beater" />
+        <div
+          className="background-rectangle"
+          style={{ backgroundColor: bgColor }}
         >
-          {buttonText}
-        </button>
+          <section className="tip-try-again">{sentence}</section>
+          <button
+            className="ButtonResponse"
+            id="ButtonResponse"
+            onClick={handleResponseBtn}
+          >
+            {buttonText}
+          </button>
+        </div>
       </div>
-    </div>
+      : affirmation === "success" ?
+        <div className="container">
+          <div className="overlay"></div>
+          <img src={pic} className="beater" />
+          <div
+            className="background-rectangle"
+            style={{ backgroundColor: bgColor }}
+          >
+            <section className="tip">{sentence}</section>
+            <button
+              className="ButtonResponse"
+              id="ButtonResponse"
+              onClick={handleResponseBtn}
+            >
+              {buttonText}
+            </button>
+          </div>
+        </div>
+        : affirmation === "fail" ?
+          <div className="container">
+            <div className="overlay"></div>
+            <img src={pic} className="beater" />
+            <div
+              className="background-rectangle"
+              style={{ backgroundColor: bgColor }}
+            >
+              <section className="tip">
+                {sentence}
+                <span>{correctOption}</span>
+              </section>
+              <button
+                className="ButtonResponse"
+                id="ButtonResponse"
+                onClick={handleResponseBtn}
+              >
+                {buttonText}
+              </button>
+            </div>
+          </div>
+          : null}
+  </div>
+
+
   );
 }
