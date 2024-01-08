@@ -23,7 +23,7 @@ const QuizSection = () => {
   const [questionNum, setQuestionNum] = useAtom(questionAtom);
 
   const questions = useMemo(() => getQuestions(game, level), []);
-  // const questions = getQuestions(game, level);
+
   const currQuestion = questions[questionNum - 1];
 
   const setTotalQuestions = useSetAtom(totalQuestionsAtom);
@@ -76,7 +76,6 @@ const QuizSection = () => {
 
   const displayText = displayTextArr[displayTextIdx[game]];
 
-  console.log('current question: ', currQuestion);
   return (
     <div className='quizSection'>
       <div className='quizNumber'>

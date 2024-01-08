@@ -37,7 +37,5 @@ export function getQuestions(game, level) {
     );
   }
 
-  console.log('questions: ', questions);
-
   return questions;
 }
