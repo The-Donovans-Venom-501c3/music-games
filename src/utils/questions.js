@@ -13,7 +13,7 @@ function getRandomQuestions(questions, number, game) {
     return ques;
   } else {
     for (let i = number; i > 0; i--) {
-      let questionIndex = Math.floor(Math.random() * listOfQuestions.length);
+      let questionIndex = Math.floor(Math.random() * listOfQuestions.length-1);
       let question = listOfQuestions[questionIndex];
       ques.push({ ...question }); // Create a copy of the question object
       listOfQuestions.splice(questionIndex, 1); // Remove the selected question
