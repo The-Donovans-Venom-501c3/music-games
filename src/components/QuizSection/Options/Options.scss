@@ -1,4 +1,4 @@
-@import "../../../assets/scss/variables";
+@import '../../../assets/scss/variables';
 
 .option-btn {
   border: 1px solid $grey-200;
@@ -44,14 +44,14 @@
   }
 }
 
-.large-btn-wrapper{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;  
+.large-btn-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
 
-    .large-btn{
-        border-radius: 12px;
-        height: 55px;    
-    }
+  .large-btn {
+    border-radius: 12px;
+    height: 3rem;
+  }
 }
