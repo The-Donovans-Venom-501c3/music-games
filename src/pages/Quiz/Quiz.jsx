@@ -15,8 +15,6 @@ export default function Quiz() {
     if (loadingState === 'loading') {
         return <Loading />;
     }
-
-    console.log('quiz state:', quizState);
     return (
         <>
             {quizState === 'affirmation' && <Affirmation />}
