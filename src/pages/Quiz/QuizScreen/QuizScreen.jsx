@@ -70,10 +70,10 @@ const QuizScreen = () => {
             <img className='icon-questionMark' src={questionMark} />
           </button>
 
-          <button className='btnSetting btnRestart' onClick={handleRestart}>
+          {/* <button className='btnSetting btnRestart' onClick={handleRestart}>
             <img src={restart} />
             <span>RESTART</span>
-          </button>
+          </button> */}
           <button className='btnSetting btnPause' onClick={handlePause}>
             <img src={timerOn ? pause : play} />
             <span>{timerOn ? 'PAUSE' : 'PLAY'}</span>
