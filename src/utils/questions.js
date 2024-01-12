@@ -12,22 +12,15 @@ function getRandomQuestions(questions, number, game) {
     }
     return ques;
   } else {
-    return randomlist(questions, number);
+    for (let i = number; i > 0; i--) {
+      let questionIndex = Math.floor(Math.random() * listOfQuestions.length);
+      let question = listOfQuestions[questionIndex];
+      ques.push({ ...question }); // Create a copy of the question object
+      listOfQuestions.splice(questionIndex, 1); // Remove the selected question
+    }
+    console.log('questions: ', ques);
+    return ques;
   }
-}
-
-function randomlist(list, number) {
-  let newList = [];
-  let num = number;
-  if(number === undefined){
-    num = list.length;
-  }
-  for(let i = num; i > 0 ; i--){
-    let item = list.splice(Math.floor((Math.random()*list.length-1)), 1);
-    let result = Object.assign({},...item);
-    newList.push(result);
-  }
-  return newList;
 }
 
 export function getQuestions(game, level) {
@@ -45,5 +38,5 @@ export function getQuestions(game, level) {
     );
   }
 
-  return randomlist(questions);
+  return questions;
 }
