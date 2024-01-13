@@ -37,10 +37,10 @@ const QuizScreen = () => {
     setMusicOn(false);
   };
 
-  const handleRestart = () => {
-    setOverlay('restart');
-    setQuizState('overlay');
-  };
+  // const handleRestart = () => {
+  //   setOverlay('restart');
+  //   setQuizState('overlay');
+  // };
 
   const handleRuleModal = () => {
     setTimerOn(false);
