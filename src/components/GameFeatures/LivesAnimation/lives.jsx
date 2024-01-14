@@ -1,8 +1,8 @@
-import liveStage1 from '../../../assets/svg/liveStage1.svg';
-import liveStage2 from '../../../assets/svg/liveStage2.svg';
-import liveStage3 from '../../../assets/svg/liveStage3.svg';
-import liveStage4 from '../../../assets/svg/liveStage4.svg';
-import liveStage5 from '../../../assets/svg/liveStage5.svg';
+import liveStage1 from '../../../assets/svg/LiveStage1.svg';
+import liveStage2 from '../../../assets/svg/LiveStage2.svg';
+import liveStage3 from '../../../assets/svg/LiveStage3.svg';
+import liveStage4 from '../../../assets/svg/LiveStage4.svg';
+import liveStage5 from '../../../assets/svg/LiveStage5.svg';
 import './lives.scss';
 
 export default function LiveAnimated() {
