@@ -35,7 +35,6 @@
   justify-content: center;
   width: 100%;
   height: calc($page-height - $nav-height);
-  margin: 20px 0;
 
   .welcome {
     display: flex;
@@ -253,7 +252,7 @@
 }
 
 // Small Laptop Screen
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1366px) {
   .welcome-container {
     .welcome {
       h1 {
