@@ -49,29 +49,29 @@ export default function Home() {
   return (
     <div className='background-set'>
       <div className='whole-page-layout'>
-        <img src={light} alt='homePageLight' id='light-background' />
-        <img src={bubbles} alt='HomePageBubble' id='homePageBubble' />
         <div className='contentContainer'>
-          <div>
+          <img src={light} alt='homePageLight' id='light-background' />
+          <img src={bubbles} alt='HomePageBubble' id='homePageBubble' />
+          <div className='contentContainer_center'>
             <img src={yellowGuy} alt='little yelow creature' id='yellowGuy' />
-          </div>
-          <div className='text'>
-            <p id='white-tips'>
-              Let's take <span id='orange-tips'> a </span>{' '}
+
+            <div className='text'>
+              <p id='white-tips'>
+                Let's take <span id='orange-tips'> a </span>{' '}
+              </p>
+              <br></br>
+              <p id='orange'>game break!</p>
+            </div>
+            {/* <h1 className="orange">game break!</h1> */}
+            <div className='text-small'>
+              <p>Test your skills with engaging games that</p>
+              <p>challenge your memory and rhythm recognition</p>
+              <p>while having some musical fun.</p>
+            </div>
+            <p id='home-page-tips'>
+              Please switch to Fullscreen mode for best user experience!
             </p>
-            <br></br>
-            <p id='orange'>game break!</p>
           </div>
-          {/* <h1 className="orange">game break!</h1> */}
-          <div className='text-small'>
-            <p>Test your skills with engaging games that</p>
-            <p>challenge your memory and rhythm recognition</p>
-            <p>while having some musical fun.</p>
-          </div>
-          <p>
-            <br></br>
-            <a id='home-page-tips'>Please switch to Fullscreen mode!</a>
-          </p>
         </div>
 
         <div className='buttonContainer'>

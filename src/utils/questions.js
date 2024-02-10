@@ -18,6 +18,7 @@ function getRandomQuestions(questions, number, game) {
       ques.push({ ...question }); // Create a copy of the question object
       listOfQuestions.splice(questionIndex, 1); // Remove the selected question
     }
+    // console.log('questions: ', ques);
     return ques;
   }
 }

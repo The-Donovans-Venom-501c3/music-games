@@ -86,7 +86,7 @@
     margin-bottom: 150%;
   }
   to {
-    margin-bottom: 4rem;
+    margin-bottom: -1rem;
   }
 }
 button:active {
@@ -138,7 +138,6 @@ button:active {
 
     .gameMain {
       display: flex;
-      align-items: flex-end;
       flex-direction: row;
       flex-basis: 89.99%;
       width: 100%;
@@ -166,7 +165,7 @@ button:active {
       }
       .right {
         width: 100%;
-        height: 100%;
+        // height: 100%;
         flex-basis: 66.66%;
       }
     }
@@ -241,6 +240,7 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
+
     #cat {
       opacity: 0;
       width: 22rem;
@@ -296,6 +296,49 @@ button:active {
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  @keyframes zoomIn {
+    from {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      bottom: 3rem;
+    }
+    to {
+      -moz-transform: scale(5);
+      -webkit-transform: scale(5);
+      -o-transform: scale(5);
+      -ms-transform: scale(5);
+      -webkit-transform: scale(5);
+      transform: scale(5);
+      bottom: -35rem;
+    }
+  }
+
+  @keyframes comedown {
+    from {
+      margin-bottom: 130%;
+    }
+    to {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .QuizScreenContainer {
+    .musicStand {
+      width: 13.5rem;
+    }
+
+    .GameScreen {
+      width: 58rem;
+      height: 40rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   @keyframes zoomIn {
     from {
@@ -341,9 +384,19 @@ button:active {
 
 @media only screen and (max-width: 1024px) {
   .QuizScreenContainer {
+    .musicStand {
+      width: 12.5rem;
+    }
     .GameScreen {
       width: 55rem;
       height: 38rem;
+
+      .catConatiner {
+        #cat {
+          width: 18rem;
+          height: 15rem;
+        }
+      }
     }
   }
 }
