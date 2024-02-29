@@ -64,7 +64,6 @@ const QuizSection = () => {
     } else {
       setAffirmation("fail");
       setQuizState("affirmation");
-      setQuestionNum(1);
     }
   };
 
