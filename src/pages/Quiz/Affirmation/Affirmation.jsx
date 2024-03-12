@@ -46,7 +46,7 @@ export default function Affirmation() {
   const setQuizState = useSetAtom(quizStateAtom);
   const totalQuestions = useAtomValue(totalQuestionsAtom);
   const setAppState = useSetAtom(appStateAtom);
-  const setScore = useSetAtom(scoreAtom);
+  const [score, setScore] = useAtom(scoreAtom);
   const [lives, setLives] = useAtom(livesAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const correctOption = useAtomValue(currentCorrectOtionAtom);
@@ -65,6 +65,7 @@ export default function Affirmation() {
       setQuizState('overlay');
     } else {
       setLives(lives - 1);
+      setScore(score - 1);
       setQuizState('quiz');
     }
   };
