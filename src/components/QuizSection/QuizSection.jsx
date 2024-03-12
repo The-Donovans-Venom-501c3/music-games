@@ -14,9 +14,10 @@ import {
   totalQuestionsAtom,
   scoreAtom,
   appStateAtom,
+  currentCorrectOtionAtom,
   resetTimerAtom,
-} from "../../store/atoms";
-import { getQuestions } from "../../utils/questions";
+} from '../../store/atoms';
+import { getQuestions } from '../../utils/questions';
 
 const QuizSection = () => {
   const game = useAtomValue(gameStateAtom);
@@ -37,6 +38,8 @@ const QuizSection = () => {
   const setCorrectOption = useSetAtom(correctOptionAtom);
   setCorrectOption(currQuestion.correctOption);
 
+  const setcurrentCorrectOption = useSetAtom(currentCorrectOtionAtom);
+
   const setQuizState = useSetAtom(quizStateAtom);
   const setAffirmation = useSetAtom(affirmationAtom);
   const setScore = useSetAtom(scoreAtom);
@@ -45,6 +48,7 @@ const QuizSection = () => {
   const lives = useAtomValue(livesAtom);
 
   const handleOptionClick = (option) => {
+    setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
       if (level !== "hard") {
         setAffirmation("success");
