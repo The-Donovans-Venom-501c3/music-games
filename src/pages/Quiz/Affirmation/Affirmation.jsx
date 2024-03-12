@@ -3,13 +3,13 @@ import { useAtomValue, useSetAtom, useAtom } from 'jotai';
 import {
   affirmationAtom,
   appStateAtom,
-  correctOptionAtom,
   livesAtom,
   overlayAtom,
   questionAtom,
   quizStateAtom,
   scoreAtom,
   totalQuestionsAtom,
+  currentCorrectOtionAtom
 } from '../../../store/atoms';
 import successCharacter from '../../../assets/svg/Affirmation_Success_Character.svg';
 import failCharacter from '../../../assets/svg/Affirmation_Fail_Character.svg';
@@ -49,7 +49,7 @@ export default function Affirmation() {
   const setScore = useSetAtom(scoreAtom);
   const [lives, setLives] = useAtom(livesAtom);
   const setOverlay = useSetAtom(overlayAtom);
-  const correctOption = useAtomValue(correctOptionAtom);
+  const correctOption = useAtomValue(currentCorrectOtionAtom);
 
   const handleResponseBtn = () => {
     if (affirmation == 'success') {
