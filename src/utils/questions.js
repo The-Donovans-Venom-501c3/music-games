@@ -38,5 +38,6 @@ export function getQuestions(game, level) {
     );
   }
 
+  // console.log(questions);
   return questions;
 }
