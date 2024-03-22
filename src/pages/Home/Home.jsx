@@ -51,7 +51,22 @@ export default function Home() {
       <div className='whole-page-layout'>
         <div className='contentContainer'>
           <img src={light} alt='homePageLight' id='light-background' />
-          <img src={bubbles} alt='HomePageBubble' id='homePageBubble' />
+          {/* <img src={bubbles} alt='HomePageBubble' id='homePageBubble' /> */}
+
+          {/* Bubbles animation */}
+          <div className='bubble1'></div>
+          <div className='bubble2'></div>
+          <div className='bubble3'></div>
+          <div className='bubble4'></div>
+          <div className='bubble5'></div>
+          <div className='bubble6'></div>
+          <div className='bubble7'></div>
+          <div className='bubble8'></div>
+          <div className='bubble9'></div>
+          <div className='bubble10'></div>
+          <div className='bubble11'></div>
+          <div className='bubble12'></div>
+
           <div className='contentContainer_center'>
             <img src={yellowGuy} alt='little yelow creature' id='yellowGuy' />
 
