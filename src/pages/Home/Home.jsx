@@ -66,7 +66,8 @@ export default function Home() {
           <div className='bubble10'></div>
           <div className='bubble11'></div>
           <div className='bubble12'></div>
-
+          <div className='bubble13'></div>
+          <div className='bubble14'></div>
           <div className='contentContainer_center'>
             <img src={yellowGuy} alt='little yelow creature' id='yellowGuy' />
 
