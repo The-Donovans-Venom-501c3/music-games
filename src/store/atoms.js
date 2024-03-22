@@ -54,6 +54,8 @@ Possible Affirmation states:
 
 export const correctOptionAtom = atom(''); // contains correct option for a question
 
+export const currentCorrectOtionAtom =  atom(''); // contains correct options for a privous question
+
 export const overlayAtom = atom('');
 /*
 Possible Overlay states:
