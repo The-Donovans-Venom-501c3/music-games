@@ -1,6 +1,6 @@
 const chords = ["Major", "Natural", "Harmonic", "Melodic"];
 
-export default function ChordOptions({handleOptionClick}) {
+export default function MajorMinorOptions({handleOptionClick}) {
   return (
     <div className="large-btn-wrapper" style={{marginTop:30}}>
       {chords.map((chord, index) => (
