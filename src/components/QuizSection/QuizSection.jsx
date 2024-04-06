@@ -16,8 +16,8 @@ import {
   appStateAtom,
   currentCorrectOtionAtom,
   resetTimerAtom,
-} from '../../store/atoms';
-import { getQuestions } from '../../utils/questions';
+} from "../../store/atoms";
+import { getQuestions } from "../../utils/questions";
 
 const QuizSection = () => {
   const game = useAtomValue(gameStateAtom);
@@ -71,12 +71,19 @@ const QuizSection = () => {
     }
   };
 
-  const displayTextIdx = { note: 0, key: 1, "major-minor": 2, scale: 3 };
+  const displayTextIdx = {
+    note: 0,
+    key: 1,
+    "major-minor": 2,
+    scale: 3,
+    interval: 4,
+  };
   const displayTextArr = [
     "What note is shown?",
     "What key signature is shown?",
     "What  major/minor is shown?",
     "What scale is shown?",
+    "what interval is shown?",
   ];
 
   const displayText = displayTextArr[displayTextIdx[game]];
