@@ -54,7 +54,7 @@ export default function Home() {
           {/* <img src={bubbles} alt='HomePageBubble' id='homePageBubble' /> */}
 
           {/* Bubbles animation */}
-          <div className='bubble1'></div>
+          {/* <div className='bubble1'></div>
           <div className='bubble2'></div>
           <div className='bubble3'></div>
           <div className='bubble4'></div>
@@ -67,7 +67,7 @@ export default function Home() {
           <div className='bubble11'></div>
           <div className='bubble12'></div>
           <div className='bubble13'></div>
-          <div className='bubble14'></div>
+          <div className='bubble14'></div> */}
           <div className='contentContainer_center'>
             <img src={yellowGuy} alt='little yelow creature' id='yellowGuy' />
 
@@ -118,6 +118,26 @@ export default function Home() {
             hoverBorderColor='#E9BB18'
             onClick={() => handleClick('major-minor')}
           />
+          <Button
+            icon={ScaleIdentification}
+            hoverIcon={HoverScaleIdentification}
+            title='Scale identification'
+            tips='Identify the Scale on the staff'
+            hoverColor='#D8BCFD'
+            hoverBorderColor='#C986FA'
+            onClick={() => handleClick('scale')}
+          />
+
+          <Button
+            icon={ScaleIdentification}
+            hoverIcon={HoverScaleIdentification}
+            title='Scale identification'
+            tips='Identify the Scale on the staff'
+            hoverColor='#D8BCFD'
+            hoverBorderColor='#C986FA'
+            onClick={() => handleClick('scale')}
+          />
+
           <Button
             icon={ScaleIdentification}
             hoverIcon={HoverScaleIdentification}
