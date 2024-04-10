@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './Home.scss';
+import React, { useState } from "react";
+import "./Home.scss";
 
 const Button = (props) => {
   const [icon, setIcon] = useState(props.icon);
-  const [bgColor, setbgColor] = useState('#FFFFFF');
-  const [borderColor, setBorderColor] = useState('#DDDADA');
+  const [bgColor, setbgColor] = useState("#FFFFFF");
+  const [borderColor, setBorderColor] = useState("#DDDADA");
   return (
     <button
-      className='HomeButton'
+      className="HomeButton"
       onClick={props.onClick}
       onMouseOver={() => {
         setIcon(props.hoverIcon);
@@ -16,8 +16,8 @@ const Button = (props) => {
       }}
       onMouseOut={() => {
         setIcon(props.icon);
-        setbgColor('#FFFFFF');
-        setBorderColor('#DDDADA');
+        setbgColor("#FFFFFF");
+        setBorderColor("#DDDADA");
       }}
       style={{
         backgroundColor: bgColor,
@@ -27,15 +27,15 @@ const Button = (props) => {
         boxShadow: `2px 4px 1px ${borderColor}`,
       }}
     >
-      <div className='Button-Layout'>
-        <div className='Img-Layout'>
-          <img src={icon} id='button-icon' />
+      <div className="Button-Layout">
+        <div className="Img-Layout">
+          <img src={icon} id="button-icon" />
         </div>
 
-        <div className='Text-Layout'>
-          <span id='title'>{props.title}</span>
+        <div className="Text-Layout">
+          <span id="title">{props.title}</span>
 
-          <span id='tips'>{props.tips}</span>
+          <span id="tips">{props.tips}</span>
         </div>
 
         {/* {props.children} */}

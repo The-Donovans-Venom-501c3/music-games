@@ -1,4 +1,4 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
 /*------------------------------------------------------------------------------------------------*/
 
@@ -327,7 +327,8 @@ p {
 .Button-Layout {
   display: flex;
   overflow: hidden;
-  padding: 0;
+  align-items: center;
+  padding-bottom: 0;
   cursor: pointer;
   font-family: $primary-font;
 }
@@ -336,8 +337,8 @@ p {
   display: grid;
   justify-content: center;
   align-content: center;
-  width: 80px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
 }
 
@@ -347,22 +348,23 @@ p {
   grid-template-rows: auto auto;
   text-align: left;
   place-items: left;
+  gap: 0.5em;
 }
 
 #title {
   font-weight: bolder;
 }
 #tips {
-  font-size: medium;
+  font-size: 11px;
 }
 
 .HomeButton {
-  width: 30rem;
-  height: 8rem;
+  width: 21rem;
+  height: 5.5rem;
   display: inline-block;
-  padding: 24px 25px;
+  padding: 0px 25px;
   font-family: $primary-font;
-  font-size: 24px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
