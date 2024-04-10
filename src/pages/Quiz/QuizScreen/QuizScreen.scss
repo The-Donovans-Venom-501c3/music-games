@@ -258,6 +258,13 @@ button:active {
     }
   }
 }
+@media only screen and (min-width: 1537px) {
+  .QuizScreenContainer .catConatiner #cat{
+    width: 16rem;
+    height: 22rem;
+    left:2.5%;
+  }
+}
 
 @media only screen and (max-width: 1536px) {
   @keyframes zoomIn {

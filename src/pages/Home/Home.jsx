@@ -136,6 +136,26 @@ export default function Home() {
             hoverBorderColor="#E98427"
             onClick={() => handleClick("interval")}
           />
+
+          <Button
+            icon={ScaleIdentification}
+            hoverIcon={HoverScaleIdentification}
+            title='Scale identification'
+            tips='Identify the Scale on the staff'
+            hoverColor='#D8BCFD'
+            hoverBorderColor='#C986FA'
+            onClick={() => handleClick('scale')}
+          />
+
+          <Button
+            icon={ScaleIdentification}
+            hoverIcon={HoverScaleIdentification}
+            title='Scale identification'
+            tips='Identify the Scale on the staff'
+            hoverColor='#D8BCFD'
+            hoverBorderColor='#C986FA'
+            onClick={() => handleClick('scale')}
+          />
         </div>
       </div>
     </div>
