@@ -6,6 +6,7 @@ import NoteOptions from "./NoteOptions/NoteOptions";
 import ScaleOptions from "./ScaleOptions/ScaleOptions";
 import { gameStateAtom, levelStateAtom } from "../../../store/atoms";
 import IntervalOptions from "./IntervalOptions/IntervalOptions";
+import ChordOptions from "./ChordOptions/ChordOptions";
 
 export default function Options({ handleOptionClick }) {
   const game = useAtomValue(gameStateAtom);
@@ -21,6 +22,8 @@ export default function Options({ handleOptionClick }) {
         <NoteOptions handleOptionClick={handleOptionClick} level={level} />
       ) : game == "scale" ? (
         <ScaleOptions handleOptionClick={handleOptionClick} level={level} />
+      ) : game == "chord" ? (
+        <ChordOptions handleOptionClick={handleOptionClick} level={level} />
       ) : (
         <IntervalOptions handleOptionClick={handleOptionClick} level={level} />
       )}

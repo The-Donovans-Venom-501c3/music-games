@@ -1,8 +1,8 @@
-import './QuizSection.scss';
-import questionmark from '../../assets/svg/QuestionMark.svg';
-import Options from './Options/Options';
-import { useMemo, useState } from 'react';
-import { useAtomValue, useSetAtom, useAtom } from 'jotai';
+import "./QuizSection.scss";
+import questionmark from "../../assets/svg/QuestionMark.svg";
+import Options from "./Options/Options";
+import { useMemo, useState } from "react";
+import { useAtomValue, useSetAtom, useAtom } from "jotai";
 import {
   affirmationAtom,
   correctOptionAtom,
@@ -49,24 +49,24 @@ const QuizSection = () => {
   const handleOptionClick = (option) => {
     setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
-      if (level !== 'hard') {
-        setAffirmation('success');
-        setQuizState('affirmation');
+      if (level !== "hard") {
+        setAffirmation("success");
+        setQuizState("affirmation");
       } else {
         // setScore((prev) => prev + calculatedScore);
         if (questionNum === totalQuestions) {
-          setAppState('game-finished');
+          setAppState("game-finished");
           setQuestionNum(1);
         } else {
           setQuestionNum(questionNum + 1);
         }
       }
     } else if (option && lives > 1) {
-      setAffirmation('tryAgain');
-      setQuizState('affirmation');
+      setAffirmation("tryAgain");
+      setQuizState("affirmation");
     } else {
-      setAffirmation('fail');
-      setQuizState('affirmation');
+      setAffirmation("fail");
+      setQuizState("affirmation");
     }
   };
 
@@ -83,22 +83,23 @@ const QuizSection = () => {
     "What  major/minor is shown?",
     "What scale is shown?",
     "what interval is shown?",
- ];
+    "What chord is shown?",
+  ];
 
   const displayText = displayTextArr[displayTextIdx[game]];
 
   return (
-    <div className='quizSection'>
-      <div className='quizNumber'>
+    <div className="quizSection">
+      <div className="quizNumber">
         <img src={questionmark} />
         <span>{questionNum}</span>
         <span>of</span>
         <span>{totalQuestions}</span>
       </div>
-      <div className='noteQuestionnGraph'>
+      <div className="noteQuestionnGraph">
         <img src={currQuestion.questionImage} />
       </div>
-      <div className='questionText'>
+      <div className="questionText">
         <p>{displayText}</p>
         <Options handleOptionClick={handleOptionClick} />
       </div>

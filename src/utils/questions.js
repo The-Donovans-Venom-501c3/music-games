@@ -1,5 +1,12 @@
 import data from "../data/data.json";
-const gameIdx = { note: 0, key: 1, "major-minor": 2, scale: 3, interval: 4 };
+const gameIdx = {
+  note: 0,
+  key: 1,
+  "major-minor": 2,
+  scale: 3,
+  interval: 4,
+  chord: 5,
+};
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
 function getRandomQuestions(questions, number, game) {
