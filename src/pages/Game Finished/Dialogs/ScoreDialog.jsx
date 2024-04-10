@@ -32,7 +32,7 @@ export default function ScoreDialog() {
   const totalQuestions = useAtomValue(totalQuestionsAtom);
   const timer = useAtomValue(seconds);
 
-  const result = Math.floor((score / totalQuestions) * 100);
+  const result = score;
   const scoreData =
     scoreState[result == 100 ? 'perfect' : result > 80 ? 'high' : 'low'];
 

@@ -238,12 +238,12 @@
 // Bubbles Animation
 @keyframes fall {
   0% {
-    transform: translatey(-50px);
+    transform: translateY(-50px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(700px);
+    transform: translateY(500px);
     opacity: 1;
   }
 }
@@ -315,11 +315,13 @@ p {
 
 .buttonContainer {
   flex-basis: 50%;
+  height: 38rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
+  overflow-y: scroll;
+  margin: 2rem 0;
 }
 
 .Button-Layout {
@@ -387,8 +389,18 @@ p {
 /*------------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1920px) {
-  .bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6,
-  .bubble7, .bubble8, .bubble9, .bubble10, .bubble11, .bubble12 {
+  .bubble1,
+  .bubble2,
+  .bubble3,
+  .bubble4,
+  .bubble5,
+  .bubble6,
+  .bubble7,
+  .bubble8,
+  .bubble9,
+  .bubble10,
+  .bubble11,
+  .bubble12 {
     width: 1.2rem;
     height: 1.2rem;
   }
