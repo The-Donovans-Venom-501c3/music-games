@@ -76,6 +76,8 @@ const QuizSection = () => {
     "major-minor": 2,
     scale: 3,
     interval: 4,
+    chord: 5,
+    ledger: 7,
   };
   const displayTextArr = [
     "What note is shown?",
@@ -84,6 +86,8 @@ const QuizSection = () => {
     "What scale is shown?",
     "what interval is shown?",
     "What chord is shown?",
+    '',
+    "What ledger line is shown?",
   ];
 
   const displayText = displayTextArr[displayTextIdx[game]];
