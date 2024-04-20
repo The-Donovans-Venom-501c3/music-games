@@ -238,12 +238,12 @@
 // Bubbles Animation
 @keyframes fall {
   0% {
-    transform: translatey(-50px);
+    transform: translateY(-50px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(700px);
+    transform: translateY(500px);
     opacity: 1;
   }
 }
@@ -315,17 +315,22 @@ p {
 
 .buttonContainer {
   flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  height: 90%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 2rem 0;
+  padding: 0 8rem;
 }
 
 .Button-Layout {
   display: flex;
   overflow: hidden;
-  padding: 0;
+  align-items: center;
+  padding-bottom: 0;
   cursor: pointer;
   font-family: $primary-font;
 }
@@ -334,8 +339,8 @@ p {
   display: grid;
   justify-content: center;
   align-content: center;
-  width: 80px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
 }
 
@@ -345,22 +350,24 @@ p {
   grid-template-rows: auto auto;
   text-align: left;
   place-items: left;
+  gap: 0.5em;
 }
 
 #title {
   font-weight: bolder;
 }
 #tips {
-  font-size: medium;
+  font-size: 11px;
 }
 
 .HomeButton {
-  width: 30rem;
-  height: 8rem;
+  width: 21rem;
+  height: 6rem;
+  margin-bottom: 1rem;
   display: inline-block;
-  padding: 24px 25px;
+  padding: 0px 25px;
   font-family: $primary-font;
-  font-size: 24px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -387,8 +394,18 @@ p {
 /*------------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1920px) {
-  .bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6,
-  .bubble7, .bubble8, .bubble9, .bubble10, .bubble11, .bubble12 {
+  .bubble1,
+  .bubble2,
+  .bubble3,
+  .bubble4,
+  .bubble5,
+  .bubble6,
+  .bubble7,
+  .bubble8,
+  .bubble9,
+  .bubble10,
+  .bubble11,
+  .bubble12 {
     width: 1.2rem;
     height: 1.2rem;
   }

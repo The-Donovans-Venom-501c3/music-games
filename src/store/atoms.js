@@ -17,6 +17,9 @@ Possible Game states:
 3) key : Key Signature Identification Game
 4) major-minor : Major-Minor Identification Game
 5) scale : Scale Identification Game
+6) interval : Interval Identification Game
+7) chord : Chord Identification Game
+8) ledger : Ledger Line Addition Game
 */
 
 export const levelStateAtom = atom('');

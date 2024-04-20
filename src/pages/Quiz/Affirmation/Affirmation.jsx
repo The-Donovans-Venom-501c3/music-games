@@ -9,7 +9,7 @@ import {
   quizStateAtom,
   scoreAtom,
   totalQuestionsAtom,
-  currentCorrectOtionAtom
+  currentCorrectOtionAtom,
 } from '../../../store/atoms';
 import successCharacter from '../../../assets/svg/Affirmation_Success_Character.svg';
 import failCharacter from '../../../assets/svg/Affirmation_Fail_Character.svg';
@@ -37,6 +37,8 @@ const affirmationData = {
   },
 };
 
+// Calculate how many points the user get per corrected question
+
 export default function Affirmation() {
   const affirmation = useAtomValue(affirmationAtom);
   const { sentence, buttonText, bgColor, pic } =
@@ -51,9 +53,11 @@ export default function Affirmation() {
   const setOverlay = useSetAtom(overlayAtom);
   const correctOption = useAtomValue(currentCorrectOtionAtom);
 
+  const calculatedScore = Math.round(100 / totalQuestions);
+
   const handleResponseBtn = () => {
     if (affirmation == 'success') {
-      setScore((prev) => prev + 1);
+      setScore((prev) => prev + calculatedScore);
       if (questionNum === totalQuestions) {
         setAppState('game-finished');
       } else {
@@ -65,7 +69,6 @@ export default function Affirmation() {
       setQuizState('overlay');
     } else {
       setLives(lives - 1);
-      setScore(score - 1);
       setQuizState('quiz');
     }
   };

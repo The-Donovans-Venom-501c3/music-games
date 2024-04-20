@@ -16,15 +16,14 @@ import {
   appStateAtom,
   currentCorrectOtionAtom,
   resetTimerAtom,
-} from '../../store/atoms';
-import { getQuestions } from '../../utils/questions';
+} from "../../store/atoms";
+import { getQuestions } from "../../utils/questions";
 
 const QuizSection = () => {
   const game = useAtomValue(gameStateAtom);
   const level = useAtomValue(levelStateAtom);
   const resetTimer = useAtomValue(resetTimerAtom);
   const [questionNum, setQuestionNum] = useAtom(questionAtom);
-
   const questions = useMemo(() => getQuestions(game, level), [resetTimer]);
 
   const currQuestion = questions[questionNum - 1];
@@ -54,7 +53,7 @@ const QuizSection = () => {
         setAffirmation("success");
         setQuizState("affirmation");
       } else {
-        setScore((prev) => prev + 1);
+        // setScore((prev) => prev + calculatedScore);
         if (questionNum === totalQuestions) {
           setAppState("game-finished");
           setQuestionNum(1);
@@ -71,12 +70,24 @@ const QuizSection = () => {
     }
   };
 
-  const displayTextIdx = { note: 0, key: 1, "major-minor": 2, scale: 3 };
+  const displayTextIdx = {
+    note: 0,
+    key: 1,
+    "major-minor": 2,
+    scale: 3,
+    interval: 4,
+    chord: 5,
+    ledger: 7,
+  };
   const displayTextArr = [
     "What note is shown?",
     "What key signature is shown?",
     "What  major/minor is shown?",
     "What scale is shown?",
+    "what interval is shown?",
+    "What chord is shown?",
+    '',
+    "What ledger line is shown?",
   ];
 
   const displayText = displayTextArr[displayTextIdx[game]];
@@ -99,4 +110,5 @@ const QuizSection = () => {
     </div>
   );
 };
+
 export default QuizSection;

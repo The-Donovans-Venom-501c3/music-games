@@ -9,7 +9,7 @@ import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   overlayAtom,
   quizStateAtom,
@@ -18,12 +18,30 @@ import {
   musicStateAtom,
 } from "../../../store/atoms";
 
+const cheerup_dialogs = [
+  "Practice makes Perfect!",
+  "Keep Going",
+  "You've got this!",
+];
+
 const QuizScreen = () => {
   const [quizState, setQuizState] = useAtom(quizStateAtom);
   const [popup, setPopup] = useAtom(popupAtom);
   const setOverlay = useSetAtom(overlayAtom);
   const [timerOn, setTimerOn] = useAtom(timerOnAtom);
   const [musicOn, setMusicOn] = useAtom(musicStateAtom);
+  const [currentDialogIndex, setCurrentDialogIndex] = useState(null);
+  const [showBubble, setShowBubble] = useState(false);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newIndex = Math.floor(Math.random() * cheerup_dialogs.length);
+      setCurrentDialogIndex(newIndex);
+      setShowBubble(true);
+      setTimeout(() => setShowBubble(false), 1000);
+    }, 2000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -63,6 +81,13 @@ const QuizScreen = () => {
 
       <div className="GameScreen">
         <div className="catConatiner">
+          {showBubble && (
+            <div id="chat_bubble" className="fade-in">
+              <h4 id="chat_bubble_text">
+                {cheerup_dialogs[currentDialogIndex]}
+              </h4>
+            </div>
+          )}
           <img id="cat" src={cat} />
         </div>
         <div className="setting">

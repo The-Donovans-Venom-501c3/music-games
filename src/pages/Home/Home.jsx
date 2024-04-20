@@ -90,6 +90,7 @@ export default function Home() {
           </div>
         </div>
 
+        <div></div>
         <div className='buttonContainer'>
           <Button
             icon={VirtualPiano}
@@ -126,6 +127,33 @@ export default function Home() {
             hoverColor='#D8BCFD'
             hoverBorderColor='#C986FA'
             onClick={() => handleClick('scale')}
+          />
+          <Button
+            icon={IntervalIdentification}
+            hoverIcon={HoverIntervalIdentification}
+            title='Interval identification'
+            tips='Identify the interval on the staff'
+            hoverColor='#F6AD69'
+            hoverBorderColor='#E98427'
+            onClick={() => handleClick('interval')}
+          />
+          <Button
+            icon={ScaleIdentification}
+            hoverIcon={HoverScaleIdentification}
+            title='Chord identification'
+            tips='Identify the Scale on the staff'
+            hoverColor='#D8BCFD'
+            hoverBorderColor='#C986FA'
+            onClick={() => handleClick('chord')}
+          />
+          <Button
+            icon={VirtualPiano}
+            hoverIcon={HoverVirtualPiano}
+            title='Ledger Line Addition'
+            tips='Identify the ledger line on the staff'
+            hoverColor='#75C973'
+            hoverBorderColor='#519750'
+            onClick={() => handleClick('ledger')}
           />
         </div>
       </div>

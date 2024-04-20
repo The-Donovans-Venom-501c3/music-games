@@ -1,11 +1,19 @@
-import data from '../data/data.json';
-const gameIdx = { note: 0, key: 1, 'major-minor': 2, scale: 3 };
+import data from "../data/data.json";
+const gameIdx = {
+  note: 0,
+  key: 1,
+  "major-minor": 2,
+  scale: 3,
+  interval: 4,
+  chord: 5,
+  ledger: 7,
+};
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
 function getRandomQuestions(questions, number, game) {
   let ques = [];
   let listOfQuestions = [...questions];
-  if (game == 'key') {
+  if (game == "key") {
     for (let i = number; i > 0; i--) {
       let randomNumber = Math.floor(Math.random() * questions.length);
       ques.push(questions[randomNumber]);
