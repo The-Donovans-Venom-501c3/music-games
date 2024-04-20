@@ -145,6 +145,15 @@ export default function Home() {
             hoverBorderColor="#C986FA"
             onClick={() => handleClick("chord")}
           />
+          <Button
+            icon={VirtualPiano}
+            hoverIcon={HoverVirtualPiano}
+            title="Ledger Line Addition"
+            tips="Identify the ledger line on the staff"
+            hoverColor="#75C973"
+            hoverBorderColor="#519750"
+            onClick={() => handleClick("ledger")}
+          />
         </div>
       </div>
     </div>

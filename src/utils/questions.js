@@ -6,6 +6,7 @@ const gameIdx = {
   scale: 3,
   interval: 4,
   chord: 5,
+  ledger: 7,
 };
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
