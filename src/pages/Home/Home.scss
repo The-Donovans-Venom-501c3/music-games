@@ -315,14 +315,15 @@ p {
 
 .buttonContainer {
   flex-basis: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  // overflow-y: scroll;
-  // margin: 2rem 0;
+  height: 90%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 2rem 0;
+  padding: 0 8rem;
 }
 
 .Button-Layout {
@@ -361,7 +362,8 @@ p {
 
 .HomeButton {
   width: 21rem;
-  height: 5.5rem;
+  height: 6rem;
+  margin-bottom: 1rem;
   display: inline-block;
   padding: 0px 25px;
   font-family: $primary-font;
