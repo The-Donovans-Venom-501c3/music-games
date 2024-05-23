@@ -243,7 +243,7 @@
   }
 
   100% {
-    transform: translateY(500px);
+    transform: translateY(100vh);
     opacity: 1;
   }
 }
@@ -418,7 +418,7 @@ p {
     }
 
     100% {
-      transform: translateY(1100px);
+      transform: translateY(100vh);
       opacity: 1;
     }
   }
