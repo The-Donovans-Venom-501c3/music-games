@@ -9,13 +9,14 @@ import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
 import { useAtom, useSetAtom } from "jotai";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   overlayAtom,
   quizStateAtom,
   timerOnAtom,
   popupAtom,
   musicStateAtom,
+  questionAtom,
 } from "../../../store/atoms";
 
 const cheerup_dialogs = [
@@ -32,16 +33,24 @@ const QuizScreen = () => {
   const [musicOn, setMusicOn] = useAtom(musicStateAtom);
   const [currentDialogIndex, setCurrentDialogIndex] = useState(null);
   const [showBubble, setShowBubble] = useState(false);
-
+  const [questionNum, setQuestionNum] = useAtom(questionAtom)
+  const intervalRef = useRef(null)
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      const newIndex = Math.floor(Math.random() * cheerup_dialogs.length);
-      setCurrentDialogIndex(newIndex);
-      setShowBubble(true);
-      setTimeout(() => setShowBubble(false), 1000);
-    }, 2000);
-    return () => clearInterval(intervalId);
-  }, []);
+    if((questionNum % 5) === 0){
+
+      const intervalId = setInterval(() => {
+        const newIndex = Math.floor(Math.random() * cheerup_dialogs.length);
+        setCurrentDialogIndex(newIndex);
+        setShowBubble(true);
+        setTimeout(() => setShowBubble(false), 1000);
+      }, 2000);
+      intervalRef.current = intervalId
+      return () => clearInterval(intervalId);
+    } else {
+      if (!!intervalRef.current){
+        clearInterval(intervalRef.current)}
+      }
+  }, [questionNum]);
 
   const handleExit = () => {
     setOverlay("exit");

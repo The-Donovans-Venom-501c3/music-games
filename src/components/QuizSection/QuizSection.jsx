@@ -1,5 +1,4 @@
 import "./QuizSection.scss";
-import questionmark from "../../assets/svg/QuestionMark.svg";
 import Options from "./Options/Options";
 import { useMemo, useState } from "react";
 import { useAtomValue, useSetAtom, useAtom } from "jotai";
@@ -95,7 +94,6 @@ const QuizSection = () => {
   return (
     <div className="quizSection">
       <div className="quizNumber">
-        <img src={questionmark} />
         <span>{questionNum}</span>
         <span>of</span>
         <span>{totalQuestions}</span>

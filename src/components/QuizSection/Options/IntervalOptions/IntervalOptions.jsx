@@ -1,4 +1,4 @@
-const notes = ["M2", "M3", "M4", "M5", "M6", "M7"];
+const notes = ["M2", "M3", "P4", "P5", "M6", "M7"];
 
 const notes2 = ["m2", "m3", "m4", "m5", "m6", "m7"];
 
