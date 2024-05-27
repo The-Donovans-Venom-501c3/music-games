@@ -98,7 +98,7 @@ button:active {
   display: flex;
   font-family: $primary-font;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   position: relative;
   width: 100%;
   height: calc($page-height - $nav-height);
@@ -142,7 +142,7 @@ button:active {
       flex-basis: 89.99%;
       width: 100%;
       height: 100%;
-      margin: 0 auto;
+      margin: 0 auto 5vh;
       padding: 2rem;
       background-color: white;
 
@@ -288,6 +288,24 @@ button:active {
     width: 16rem;
     height: 22rem;
     left: 2.5%;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+
+  .GameScreen {
+    position: fixed;
+    bottom: 6vh;
+  }
+  #chat_bubble{
+    top: 50vh;
+  }
+}
+
+
+@media only screen and (min-width: 2000px){
+  #chat_bubble{
+    top: 44vh;
   }
 }
 
