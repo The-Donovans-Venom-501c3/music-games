@@ -45,9 +45,12 @@ const QuizSection = () => {
 
   const lives = useAtomValue(livesAtom);
 
+  const calculatedScore = Math.round(100 / totalQuestions);
+  
   const handleOptionClick = (option) => {
     setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
+      setScore((prev) => prev + calculatedScore);
       if (level !== "hard") {
         setAffirmation("success");
         setQuizState("affirmation");
