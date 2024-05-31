@@ -53,11 +53,8 @@ export default function Affirmation() {
   const setOverlay = useSetAtom(overlayAtom);
   const correctOption = useAtomValue(currentCorrectOtionAtom);
 
-  const calculatedScore = Math.round(100 / totalQuestions);
-
   const handleResponseBtn = () => {
     if (affirmation == 'success') {
-      setScore((prev) => prev + calculatedScore);
       if (questionNum === totalQuestions) {
         setAppState('game-finished');
       } else {

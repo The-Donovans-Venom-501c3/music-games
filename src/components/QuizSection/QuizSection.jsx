@@ -48,6 +48,7 @@ const QuizSection = () => {
   const handleOptionClick = (option) => {
     setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
+      setScore(Math.floor(( questionNum / totalQuestions) * 100));
       if (level !== "hard") {
         setAffirmation("success");
         setQuizState("affirmation");
