@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 import "./ScaleOptions.scss";
 import sharp from "../../../../assets/svg/SharpSymbol.svg";
 import bimol from "../../../../assets/svg/BimolSymbol.svg";
@@ -17,7 +18,6 @@ export default function ScaleOptions({ handleOptionClick, level }) {
     const handleChordClick = (chord) => {
         if (selectedNote) {
             handleOptionClick(selectedNote + " " + chord);
-
             setSelectedNote("");
         }
     };
@@ -38,7 +38,7 @@ export default function ScaleOptions({ handleOptionClick, level }) {
                     </button>
                 ))}
                 {notes2.map((note, index) =>
-                    level == "easy" ? (
+                    level === "easy" ? (
                         <div
                             className="option-blank"
                             key={index}
@@ -54,26 +54,32 @@ export default function ScaleOptions({ handleOptionClick, level }) {
                             style={{ height: 45 }}
                         >
                             {note[0]}
-                            {note[1] == "#" ? (
-                                <img src={sharp}></img>
+                            {note[1] === "#" ? (
+                                <img src={sharp} alt="Sharp"></img>
                             ) : (
-                                <img src={bimol}></img>
+                                <img src={bimol} alt="Flat"></img>
                             )}
                         </button>
                     )
                 )}
             </div>
-            <div className="large-btn-wrapper" style={{ marginTop: 20 }}>
+            <div className="large-btn-wrapper" style={{ marginBottom: 20 , marginTop:10}}>
                 {chords.map((chord, index) => (
                     <button
                         className="option-btn large-btn"
                         key={index}
                         onClick={() => handleChordClick(chord)}
                     >
-                        {chord == "Major" ? chord : chord + " Minor"}
+                        {chord === "Major" ? chord : chord + " Minor"}
                     </button>
                 ))}
             </div>
         </>
     );
 }
+
+// PropTypes validation
+ScaleOptions.propTypes = {
+    handleOptionClick: PropTypes.func.isRequired,
+    level: PropTypes.string.isRequired
+};
