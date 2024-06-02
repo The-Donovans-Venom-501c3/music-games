@@ -38,6 +38,184 @@
     background-size: 225% 225%;
   }
 }
+
+.lights-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.lights {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+}
+
+.light {
+  position: absolute;
+  z-index: 1000;
+  background-color: yellow; // Set the bubble color to yellow
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  animation: bubbleMovement1 2s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px yellow; // Add a yellow glow effect
+}
+@keyframes bubbleMovement1 {
+  0% {
+    top: 200px;
+    right: 100px;
+  }
+  100% {
+    top: 240px;
+    right: 120px;
+  }
+}
+
+@keyframes bubbleMovement2 {
+  0% {
+    top: 200px;
+    right: 100px;
+  }
+  100% {
+    top: 230px;
+    right: 120px;
+  }
+}
+
+@keyframes bubbleMovement3 {
+  0% {
+    top: 300px;
+    right: 100px;
+  }
+  100% {
+    top: 340px;
+    right: 120px;
+  }
+}
+@keyframes bubbleMovement4 {
+  0% {
+    top: 300px;
+    right: 100px;
+  }
+  100% {
+    top: 330px;
+    right: 120px;
+  }
+}
+
+@keyframes bubbleMovement5 {
+  0% {
+    top: 400px;
+    right: 120px;
+  }
+  100% {
+    top: 430px;
+    right: 140px;
+  }
+}
+@keyframes bubbleMovement6 {
+  0% {
+    top: 500px;
+    right: 200px;
+  }
+  100% {
+    top: 500px;
+    right: 150px;
+  }
+}
+@keyframes bubbleMovement7 {
+  0% {
+    top: 400px;
+    right: 120px;
+  }
+  100% {
+    top: 430px;
+    right: 140px;
+  }
+}
+@keyframes bubbleMovement8 {
+  0% {
+    top: 200px;
+    left: 100px;
+  }
+  100% {
+    top: 240px;
+    left: 120px;
+  }
+}
+@keyframes bubbleMovement9 {
+  0% {
+    top: 200px;
+    left: 100px;
+  }
+  100% {
+    top: 230px;
+    left: 120px;
+  }
+}
+
+@keyframes bubbleMovement10 {
+  0% {
+    top: 300px;
+    left: 100px;
+  }
+  100% {
+    top: 340px;
+    left: 120px;
+  }
+}
+
+@keyframes bubbleMovement11 {
+  0% {
+    top: 300px;
+    left: 100px;
+  }
+  100% {
+    top: 330px;
+    left: 120px;
+  }
+}
+
+@keyframes bubbleMovement12 {
+  0% {
+    top: 400px;
+    left: 120px;
+  }
+  100% {
+    top: 430px;
+    left: 140px;
+  }
+}
+
+@keyframes bubbleMovement13 {
+  0% {
+    top: 500px;
+    left: 200px;
+  }
+  100% {
+    top: 500px;
+    left: 150px;
+  }
+}
+
+@keyframes bubbleMovement14 {
+  0% {
+    top: 400px;
+    left: 120px;
+  }
+  100% {
+    top: 430px;
+    left: 140px;
+  }
+}
+
 @keyframes cat {
   from {
     opacity: 0;

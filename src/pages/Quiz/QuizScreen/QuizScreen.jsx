@@ -84,6 +84,95 @@ const QuizScreen = () => {
 
   return (
     <div className="QuizScreenContainer">
+      <div className="lights-backdrop">
+        <div className="lights">
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement1 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement2 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement3 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement4 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement5 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement6 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement7 2s ease-in-out infinite alternate",
+            }}
+          ></div>
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement8 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement9 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement10 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement11 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement12 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement13 2s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="light"
+            style={{
+              animation: "bubbleMovement14 2s ease-in-out infinite alternate",
+            }}
+          />
+        </div>
+      </div>
+
       <div className="musicStand">
         <img id="music" src={music} width="100%" height="100%" />
       </div>
