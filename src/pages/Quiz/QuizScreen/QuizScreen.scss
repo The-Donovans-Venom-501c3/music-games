@@ -243,11 +243,11 @@ button:active {
     justify-content: center;
 
     #chat_bubble {
-      width: 220px;
+      width: 200px;
       height: 40px;
       position: absolute;
-      left: 14%;
-      bottom: 21%;
+      left: 15%;
+      bottom: 18%;
       background-color: #ff6f00e1;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -272,6 +272,7 @@ button:active {
       width: 22rem;
       height: 22rem;
       position: absolute;
+      top: 100;
       left: -3%;
       z-index: 0;
       animation-name: cat, catMove;
@@ -429,25 +430,6 @@ button:active {
     .GameScreen {
       width: 55rem;
       height: 40rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .QuizScreenContainer {
-    .musicStand {
-      width: 12.5rem;
-    }
-    .GameScreen {
-      width: 55rem;
-      height: 38rem;
-
-      .catConatiner {
-        #cat {
-          width: 18rem;
-          height: 15rem;
-        }
-      }
     }
   }
 }
