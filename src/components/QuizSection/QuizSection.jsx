@@ -1,5 +1,4 @@
 import "./QuizSection.scss";
-import questionmark from "../../assets/svg/QuestionMark.svg";
 import Options from "./Options/Options";
 import { useMemo, useState } from "react";
 import { useAtomValue, useSetAtom, useAtom } from "jotai";
@@ -49,6 +48,7 @@ const QuizSection = () => {
   const handleOptionClick = (option) => {
     setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
+      setScore(Math.floor(( questionNum / totalQuestions) * 100));
       if (level !== "hard") {
         setAffirmation("success");
         setQuizState("affirmation");
@@ -76,6 +76,8 @@ const QuizSection = () => {
     "major-minor": 2,
     scale: 3,
     interval: 4,
+    chord: 5,
+    ledger: 7,
   };
   const displayTextArr = [
     "What note is shown?",
@@ -84,6 +86,8 @@ const QuizSection = () => {
     "What scale is shown?",
     "what interval is shown?",
     "What chord is shown?",
+    '',
+    "What ledger line is shown?",
   ];
 
   const displayText = displayTextArr[displayTextIdx[game]];
@@ -91,7 +95,6 @@ const QuizSection = () => {
   return (
     <div className="quizSection">
       <div className="quizNumber">
-        <img src={questionmark} />
         <span>{questionNum}</span>
         <span>of</span>
         <span>{totalQuestions}</span>

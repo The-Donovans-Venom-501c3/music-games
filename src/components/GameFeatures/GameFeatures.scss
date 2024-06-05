@@ -1,9 +1,8 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
 .gameFeatureContainer {
   display: flex;
   flex-direction: column;
-  gap: 5%;
   font-size: 22px;
 
   .gameLives {
@@ -11,7 +10,7 @@
     flex-direction: column;
     gap: 5px;
     padding-bottom: 2rem;
-    background-image: url('../../assets/SVGs/Line.svg');
+    background-image: url("../../assets/SVGs/Line.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     div {
@@ -52,7 +51,6 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding-top: 5%;
 
     div {
       display: flex;

@@ -243,7 +243,7 @@
   }
 
   100% {
-    transform: translateY(500px);
+    transform: translateY(100vh);
     opacity: 1;
   }
 }
@@ -315,14 +315,15 @@ p {
 
 .buttonContainer {
   flex-basis: 50%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  // overflow-y: scroll;
-  // margin: 2rem 0;
+  // align-items: center;
+  // justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 2rem 0;
+  padding: 0 8rem;
 }
 
 .Button-Layout {
@@ -361,7 +362,8 @@ p {
 
 .HomeButton {
   width: 21rem;
-  height: 5.5rem;
+  height: 6rem;
+  margin-bottom: 1rem;
   display: inline-block;
   padding: 0px 25px;
   font-family: $primary-font;
@@ -391,6 +393,81 @@ p {
 
 /*------------------------------------------------------------------------------------------------*/
 
+@media only screen and (min-width: 1920px) {
+  .bubble1 {
+    animation: infinite fall 17s;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+  }
+  .bubble2{
+    animation: infinite fall 25s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  .bubble3 {
+    animation: infinite fall 17s;
+    animation-delay: 3.5s;
+    animation-timing-function: ease-out;
+  }
+  .bubble4 {
+    animation: infinite fall 17s;
+    animation-delay: .0s;
+    animation-timing-function: ease-out;
+  }
+  .bubble5{
+
+    animation: infinite fall 18s;
+    animation-delay: 2.9s;
+    animation-timing-function: ease-out;
+  }
+  .bubble6 {  
+    animation: infinite fall 20s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+  }
+
+  .bubble7 {  
+    animation: infinite fall 25s;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+  }
+  .bubble8 {  
+    animation: infinite fall 23s;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+  }
+  .bubble9{
+    animation: infinite fall 17s;
+    animation-delay: 4s;
+    animation-timing-function: ease-out;
+  }
+  .bubble10{
+    animation: infinite fall 20s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+  }
+  .bubble11{
+    animation: infinite fall 19s;
+    animation-timing-function: ease-out;
+    animation-delay: 6s;
+  }
+  .bubble12{
+    animation: infinite fall 20s;
+    animation-timing-function: ease-out;
+    animation-delay: .3s;
+  }
+  .bubble13{
+    animation: infinite fall 20s;
+    animation-timing-function: ease-out;
+    animation-delay: 4s;
+  }
+  .bubble14{
+
+    animation: infinite fall 20s;
+    animation-timing-function: ease-out;
+    animation-delay: 5s;
+  }
+}
 @media only screen and (max-width: 1920px) {
   .bubble1,
   .bubble2,
@@ -416,7 +493,7 @@ p {
     }
 
     100% {
-      transform: translateY(1100px);
+      transform: translateY(100vh);
       opacity: 1;
     }
   }
