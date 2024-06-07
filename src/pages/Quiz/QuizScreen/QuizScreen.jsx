@@ -84,6 +84,23 @@ const QuizScreen = () => {
 
   return (
     <div className="QuizScreenContainer">
+          
+          {/* Bubbles animation */}
+          <div className='bubble1'></div>
+          <div className='bubble2'></div>
+          <div className='bubble3'></div>
+          <div className='bubble4'></div>
+          <div className='bubble5'></div>
+          <div className='bubble6'></div>
+          <div className='bubble7'></div>
+          <div className='bubble8'></div>
+          <div className='bubble9'></div>
+          <div className='bubble10'></div>
+          <div className='bubble11'></div>
+          <div className='bubble12'></div>
+          <div className='bubble13'></div>
+          <div className='bubble14'></div>
+       
       <div className="musicStand">
         <img id="music" src={music} width="100%" height="100%" />
       </div>
