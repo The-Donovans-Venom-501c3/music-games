@@ -47,7 +47,6 @@
   }
 }
 @keyframes catMove {
-
   0% {
     transform: rotate(-5deg) scale(1);
     bottom: -8%; // left up
@@ -224,11 +223,11 @@ button:active {
   .GameScreenScale {
     display: flex;
     padding: 2rem;
-    margin-bottom: 150%;
+    margin-bottom: 140%;
     z-index: 2;
     flex-direction: column;
     width: 60rem;
-    height: 40rem;
+    height: 45rem;
     gap: 2rem;
     position: relative;
     // bottom: $page-height;
@@ -510,32 +509,72 @@ button:active {
     width: 16rem;
     height: 22rem;
     left: 2.5%;
+    .musicStand {
+      width: 13rem;
+    }
   }
 }
 
-@media only screen and (min-width: 1700px){
-
-  .GameScreen {
-    position: fixed;
-    bottom: 6vh;
-  }
-  .GameScreenChord{
-    position: fixed;
-    bottom: 6vh;
-  }
-  .GameScreenScale{
-    position: fixed;
-    bottom: 6vh;
-  }
-  #chat_bubble{
+@media only screen and (min-width: 1700px) {
+  #chat_bubble {
     top: 50vh;
   }
 }
 
-
-@media only screen and (min-width: 2000px){
-  #chat_bubble{
+@media only screen and (min-width: 2000px) {
+  #chat_bubble {
     top: 44vh;
+  }
+}
+
+@media only screen and (max-width: 1699px) {
+  @keyframes zoomIn {
+    from {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      bottom: 5rem;
+    }
+    to {
+      -moz-transform: scale(3);
+      -webkit-transform: scale(3);
+      -o-transform: scale(3);
+      -ms-transform: scale(3);
+      -webkit-transform: scale(3);
+      transform: scale(5.5);
+      bottom: -35rem;
+    }
+  }
+
+  @keyframes comedown {
+    from {
+      margin-bottom: 150%;
+    }
+    to {
+      margin-bottom: 2rem;
+    }
+  }
+  .QuizScreenContainer {
+    .musicStand {
+      width: 13rem;
+    }
+    .GameScreen {
+      width: 55rem;
+      height: 40rem;
+    }
+    .GameScreenChord {
+      width: 55rem;
+      height: 43rem;
+    }
+    .GameScreenScale {
+      .gameMain {
+        width: 55rem;
+        height: 43rem;
+      }
+    }
   }
 }
 
@@ -568,10 +607,23 @@ button:active {
       margin-bottom: 2rem;
     }
   }
-
   .QuizScreenContainer {
     .musicStand {
       width: 13rem;
+    }
+    .GameScreen {
+      width: 55rem;
+      height: 40rem;
+    }
+    .GameScreenChord {
+      width: 55rem;
+      height: 43rem;
+    }
+    .GameScreenScale {
+      .gameMain {
+        width: 55rem;
+        height: 43rem;
+      }
     }
   }
 }
@@ -611,21 +663,25 @@ button:active {
     .musicStand {
       width: 13.5rem;
     }
-
     .GameScreen {
       width: 58rem;
       height: 40rem;
     }
-    .GameScreenChord{
-     margin-top: auto;
+    .GameScreenChord {
+      margin-top: auto;
       width: 58rem;
       height: 45rem;
     }
-    .GameScreenScale{
-      margin-top: auto;
-       width: 59rem;
-       height: 44rem;
-     }
+    .GameScreenScale {
+      margin:auto;
+      padding: 2rem;
+      width: 58rem;
+      height: 45rem;
+      .gameMain{
+        margin-top: 5%;
+        margin-bottom: 10%;
+      }
+    }
   }
 }
 
@@ -662,24 +718,27 @@ button:active {
 
   .QuizScreenContainer {
     .musicStand {
-      width: 13rem;
+      width: 13.5rem;
     }
-
     .GameScreen {
       width: 55rem;
       height: 40rem;
     }
     .GameScreenChord {
-      width: 55rem;
-      height: 43rem;
-    }
-    .GameScreenScale{
       margin-top: auto;
-       width: 59rem;
-       height: 44rem;
-     }
-   
-      
+      width: 58rem;
+      height: 45rem;
+    }
+    .GameScreenScale {
+      margin: auto;
+      height: 45rem;
+      width: 58rem;
+      .gameMain {
+        margin-top: 1%;
+        margin-bottom: 10%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -691,24 +750,22 @@ button:active {
       width: 55rem;
       height: 38rem;
 
-    .GameScreenChord{
-      width: 55rem;
-      height: 38rem;
+      .GameScreenChord {
+        width: 55rem;
+        height: 38rem;
+      }
+      .GameScreenScale {
+        margin-top: auto;
+        width: 59rem;
+        height: 44rem;
+      }
     }
-    .GameScreenScale{
-      margin-top: auto;
-       width: 59rem;
-       height: 44rem;
-     }
-   
 
-      .catConatiner {
-        #cat {
-          width: 18rem;
-          height: 15rem;
-        }
+    .catConatiner {
+      #cat {
+        width: 18rem;
+        height: 15rem;
       }
     }
   }
-}
 }
