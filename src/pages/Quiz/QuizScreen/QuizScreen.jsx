@@ -8,9 +8,10 @@ import restart from "../../../assets/svg/Restart.svg";
 import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useRef, useState } from "react";
 import {
+  gameStateAtom,
   overlayAtom,
   quizStateAtom,
   timerOnAtom,
@@ -26,6 +27,7 @@ const cheerup_dialogs = [
 ];
 
 const QuizScreen = () => {
+  const game = useAtomValue(gameStateAtom);
   const [quizState, setQuizState] = useAtom(quizStateAtom);
   const [popup, setPopup] = useAtom(popupAtom);
   const setOverlay = useSetAtom(overlayAtom);
@@ -88,7 +90,7 @@ const QuizScreen = () => {
         <img id="music" src={music} width="100%" height="100%" />
       </div>
 
-      <div className="GameScreen">
+      <div className={game === "scale" ? "GameScreenScale" : game === "chord" ? "GameScreenChord" : "GameScreen"}>
         <div className="catConatiner">
           {showBubble && (
             <div id="chat_bubble" className="fade-in">
