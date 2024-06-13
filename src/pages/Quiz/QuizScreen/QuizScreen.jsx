@@ -98,9 +98,8 @@ const QuizScreen = () => {
         : windowWidth < 1536
         ? "5rem"
         : windowWidth > 1700
-        ? "8.5rem"
+        ? "9rem"
         : {};
-    gameScreenStyle.paddingBottom = gameState === "chord" ? "20px": null
   }
 
   const gameFeatures = {}
