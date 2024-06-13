@@ -90,33 +90,24 @@ const QuizScreen = () => {
   const gameScreenStyle = {};
 
   if (gameState === "chord" || gameState === "scale") {
-    gameScreenStyle.height =
-      windowWidth < 1024
-        ? "40rem"
-        : windowWidth < 1280
-        ? "42rem"
-        : windowWidth < 1366
-        ? "43rem"
-        : windowWidth < 1536
-        ? "46rem"
-        : windowWidth < 1700
-        ? "48rem"
-        : {};
-    gameScreenStyle.paddingBottom =
-      windowWidth < 1366
+    gameScreenStyle.bottom = 
+        windowWidth < 1280
         ? "1rem"
+        : windowWidth < 1380
+        ? "3rem"
         : windowWidth < 1536
-        ? "3rem"
-        : windowWidth < 1700
-        ? "3rem"
+        ? "5rem"
+        : windowWidth > 1700
+        ? "8.5rem"
         : {};
+    gameScreenStyle.paddingBottom = gameState === "chord" ? "20px": null
   }
 
-  const settingStyle = {
-    paddingBottom:
-      gameState === "chord" || gameState === "scale" ? "15px" : null,
-  };
-
+  const gameFeatures = {}
+  if(gameState === "chord"){
+    gameFeatures.paddingBottom = gameState === "chord" ? "45px": null
+    
+  }
   useEffect(() => {
     if (quizState !== "quiz") {
       setTimerOn(false);
@@ -157,7 +148,7 @@ const QuizScreen = () => {
           )}
           <img id="cat" src={cat} />
         </div>
-        <div className="setting" style={settingStyle}>
+        <div className="setting">
           <button className="btnIcon" onClick={handleRuleModal}>
             <img className="icon-questionMark" src={questionMark} />
           </button>
@@ -178,7 +169,7 @@ const QuizScreen = () => {
             <img className="icon-x" src={x} alt="x" />
           </button>
         </div>
-        <div className="gameMain">
+        <div className="gameMain" style={gameFeatures}>
           <div className="left">
             <GameFeatures />
             <div className="line"></div>
