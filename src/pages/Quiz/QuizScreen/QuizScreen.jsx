@@ -8,7 +8,7 @@ import restart from "../../../assets/svg/Restart.svg";
 import questionMark from "../../../assets/svg/QuestionMark.svg";
 import GameFeatures from "../../../components/GameFeatures/GameFeatures";
 import QuizSection from "../../../components/QuizSection/QuizSection";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom, useSetAtom, useAtomValue } from "jotai";
 import { useEffect, useRef, useState } from "react";
 import {
   overlayAtom,
@@ -17,6 +17,7 @@ import {
   popupAtom,
   musicStateAtom,
   questionAtom,
+  gameStateAtom,
 } from "../../../store/atoms";
 
 const cheerup_dialogs = [
@@ -33,24 +34,36 @@ const QuizScreen = () => {
   const [musicOn, setMusicOn] = useAtom(musicStateAtom);
   const [currentDialogIndex, setCurrentDialogIndex] = useState(null);
   const [showBubble, setShowBubble] = useState(false);
-  const [questionNum, setQuestionNum] = useAtom(questionAtom)
-  const intervalRef = useRef(null)
-  useEffect(() => {
-    if((questionNum % 5) === 0){
+  const [questionNum, setQuestionNum] = useAtom(questionAtom);
+  const gameState = useAtomValue(gameStateAtom);
+  const intervalRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    if (questionNum % 5 === 0) {
       const intervalId = setInterval(() => {
         const newIndex = Math.floor(Math.random() * cheerup_dialogs.length);
         setCurrentDialogIndex(newIndex);
         setShowBubble(true);
         setTimeout(() => setShowBubble(false), 1000);
       }, 2000);
-      intervalRef.current = intervalId
+      intervalRef.current = intervalId;
       return () => clearInterval(intervalId);
     } else {
-      if (!!intervalRef.current){
-        clearInterval(intervalRef.current)}
+      if (!!intervalRef.current) {
+        clearInterval(intervalRef.current);
       }
+    }
   }, [questionNum]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleExit = () => {
     setOverlay("exit");
@@ -74,6 +87,26 @@ const QuizScreen = () => {
     setQuizState("rules");
   };
 
+  const gameScreenStyle = {};
+
+  if (gameState === "chord" || gameState === "scale") {
+    gameScreenStyle.bottom = 
+        windowWidth < 1280
+        ? "1rem"
+        : windowWidth < 1380
+        ? "3rem"
+        : windowWidth < 1536
+        ? "5rem"
+        : windowWidth > 1700
+        ? "9rem"
+        : {};
+  }
+
+  const gameFeatures = {}
+  if(gameState === "chord"){
+    gameFeatures.paddingBottom = gameState === "chord" ? "45px": null
+    
+  }
   useEffect(() => {
     if (quizState !== "quiz") {
       setTimerOn(false);
@@ -84,28 +117,26 @@ const QuizScreen = () => {
 
   return (
     <div className="QuizScreenContainer">
-          
-          {/* Bubbles animation */}
-          <div className='bubble1'></div>
-          <div className='bubble2'></div>
-          <div className='bubble3'></div>
-          <div className='bubble4'></div>
-          <div className='bubble5'></div>
-          <div className='bubble6'></div>
-          <div className='bubble7'></div>
-          <div className='bubble8'></div>
-          <div className='bubble9'></div>
-          <div className='bubble10'></div>
-          <div className='bubble11'></div>
-          <div className='bubble12'></div>
-          <div className='bubble13'></div>
-          <div className='bubble14'></div>
-       
+      {/* Bubbles animation */}
+      <div className="bubble1"></div>
+      <div className="bubble2"></div>
+      <div className="bubble3"></div>
+      <div className="bubble4"></div>
+      <div className="bubble5"></div>
+      <div className="bubble6"></div>
+      <div className="bubble7"></div>
+      <div className="bubble8"></div>
+      <div className="bubble9"></div>
+      <div className="bubble10"></div>
+      <div className="bubble11"></div>
+      <div className="bubble12"></div>
+      <div className="bubble13"></div>
+      <div className="bubble14"></div>
       <div className="musicStand">
         <img id="music" src={music} width="100%" height="100%" />
       </div>
 
-      <div className="GameScreen">
+      <div className="GameScreen" style={gameScreenStyle}>
         <div className="catConatiner">
           {showBubble && (
             <div id="chat_bubble" className="fade-in">
@@ -137,7 +168,7 @@ const QuizScreen = () => {
             <img className="icon-x" src={x} alt="x" />
           </button>
         </div>
-        <div className="gameMain">
+        <div className="gameMain" style={gameFeatures}>
           <div className="left">
             <GameFeatures />
             <div className="line"></div>
