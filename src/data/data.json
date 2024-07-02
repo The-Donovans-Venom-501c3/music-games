@@ -937,7 +937,7 @@
       "levels": [
         {
           "level": "Easy",
-          "numberOfQuestions": { "easy": 7 },
+          "numberOfQuestions": { "easy": 10 },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-1.svg",
@@ -971,7 +971,7 @@
         },
         {
           "level": "Medium",
-          "numberOfQuestions": { "easy": 3, "medium": 7 },
+          "numberOfQuestions": { "easy": 10, "medium": 10 },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-1.svg",
@@ -1017,7 +1017,7 @@
         },
         {
           "level": "Hard",
-          "numberOfQuestions": { "hard": 7 },
+          "numberOfQuestions": {"easy": 10, "medium": 10, "hard": 10 },
           "questions": [
             {
               "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-1.svg",
