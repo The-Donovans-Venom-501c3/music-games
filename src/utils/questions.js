@@ -1,3 +1,6 @@
+// // from each game 
+// // make a map indicating the number of question added to the question bank for the game
+// // select random question make sure it should not be in sequence make sure no duplicate selection
 import data from "../data/data.json";
 const gameIdx = {
   note: 0,
@@ -10,18 +13,18 @@ const gameIdx = {
 };
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
-function getRandomQuestions(questions, number, game) {
-  let ques = [];
+function getRandomQuestions(questions, number, level) {
+  let selectedQues = [];
   let listOfQuestions = [...questions];
 
-  if (game === "key") {
-    for (let i = number; i > 0; i--) {
-      let randomNumber = Math.floor(Math.random() * questions.length);
-      ques.push(questions[randomNumber]);
-    }
-    return ques;
-  } else {
-    while (ques.length < number) {
+  // if (game === "key") {
+  //   for (let i = number; i > 0; i--) {
+  //     let randomNumber = Math.floor(Math.random() * questions.length);
+  //     selectedQues.push(questions[randomNumber]);
+  //   }
+  //   return selectedQues;
+  // } else {
+    while (selectedQues.length < number) {
       if (listOfQuestions.length === 0) {
 
         listOfQuestions = [...questions];
@@ -30,13 +33,24 @@ function getRandomQuestions(questions, number, game) {
 
       let questionIndex = Math.floor(Math.random() * listOfQuestions.length);
       let question = listOfQuestions[questionIndex];
-      ques.push({ ...question })
+      selectedQues.push({ ...question, "level": level })
       listOfQuestions.splice(questionIndex, 1); 
     }
-    return ques;
+    return selectedQues;
   }
-}
+// }
 
+
+function shuffleQuestions(questionsList) {
+  const shuffledQuestions = [...questionsList];
+
+  for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
+  }
+
+  return shuffledQuestions;
+}
 export function getQuestions(game, level) {
   const gameData = data.musicGames[gameIdx[game]].levels;
   const numOfQuestionsPerLevel = gameData[levelIdx[level]].numberOfQuestions;
@@ -47,11 +61,11 @@ export function getQuestions(game, level) {
       ...getRandomQuestions(
         gameData[levelIdx[level]].questions,
         numQuestions,
-        game
+        level
       )
     );
   }
 
   // console.log(questions);
-  return questions;
+  return shuffleQuestions(questions);
 }
