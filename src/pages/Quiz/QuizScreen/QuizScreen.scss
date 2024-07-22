@@ -461,7 +461,8 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 34s;
+  animation-delay: 12s;
   animation-timing-function: ease-in-out;
 }
 
@@ -473,9 +474,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 8s;
+  animation: infinite fall 50s;
+  animation-delay: 6s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2s;
+
 }
 
 .bubble3 {
@@ -486,9 +488,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 7s;
+  animation: infinite fall 34s;
+  animation-delay: 14s;
   animation-timing-function: ease-in-out;
-  animation-delay: 0.5s;
+
 }
 
 .bubble4 {
@@ -499,9 +502,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 34s;
+  animation-delay: 0s;
   animation-timing-function: ease-in-out;
-  animation-delay: 0.8s;
+  
 }
 
 .bubble5 {
@@ -512,9 +516,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 36s;
+  animation-delay: 11.6s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1s;
+
 }
 
 .bubble6 {
@@ -525,9 +530,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 8s;
+  animation: infinite fall 40s;
   animation-timing-function: ease-in-out;
-  animation-delay: 0.4s;
+  animation-delay: 0s;
 }
 
 .bubble7 {
@@ -538,9 +543,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 7s;
+  animation: infinite fall 50s;
+  animation-delay: 12s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2.6s;
+
 }
 
 .bubble8 {
@@ -551,9 +557,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 46s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1.7s;
+  animation-delay: 2s;
 }
 
 .bubble9 {
@@ -564,9 +570,10 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 7s;
+  animation: infinite fall 34s;
+  animation-delay: 16s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1.9s;
+
 }
 
 .bubble10 {
@@ -577,9 +584,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 40s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1.4s;
+  animation-delay: 4s;
 }
 
 .bubble11 {
@@ -590,9 +597,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 8s;
+  animation: infinite fall 38s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1.9s;
+  animation-delay: 24s;
 }
 
 .bubble12 {
@@ -603,9 +610,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 6s;
+  animation: infinite fall 40s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2.5s;
+  animation-delay: 1.2s;
 }
 
 .bubble13 {
@@ -616,9 +623,9 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 7s;
+  animation: infinite fall 40s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1s;
+  animation-delay: 16s;
 }
 
 .bubble14 {
@@ -629,10 +636,15 @@ button:active {
   height: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  animation: infinite fall 8s;
+  animation: infinite fall 40s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 20s;
 }
+
+
+
+
+
 
 // Bubbles Animation
 @keyframes fall {
@@ -648,81 +660,91 @@ button:active {
 }
 
 
+
+
+
+
+
+
 @media only screen and (min-width: 1920px) {
   .bubble1 {
-    animation: infinite fall 17s;
-    animation-delay: 3s;
+    animation: infinite fall 34s;
+    animation-delay: 12s; 
     animation-timing-function: ease-out;
   }
-  .bubble2{
-    animation: infinite fall 25s;
-    animation-delay: 1.5s;
+  .bubble2 {
+    animation: infinite fall 50s;
+    animation-delay: 6s; 
     animation-timing-function: ease-out;
   }
   .bubble3 {
-    animation: infinite fall 17s;
-    animation-delay: 3.5s;
+    animation: infinite fall 34s;
+    animation-delay: 14s; 
     animation-timing-function: ease-out;
   }
   .bubble4 {
-    animation: infinite fall 17s;
-    animation-delay: .0s;
-    animation-timing-function: ease-out;
-  }
-  .bubble5{
-
-    animation: infinite fall 18s;
-    animation-delay: 2.9s;
-    animation-timing-function: ease-out;
-  }
-  .bubble6 {  
-    animation: infinite fall 20s;
+    animation: infinite fall 34s;
     animation-delay: 0s;
     animation-timing-function: ease-out;
   }
-
-  .bubble7 {  
-    animation: infinite fall 25s;
-    animation-delay: 3s;
+  .bubble5 {
+    animation: infinite fall 36s;
+    animation-delay: 11.6s; 
     animation-timing-function: ease-out;
   }
-  .bubble8 {  
-    animation: infinite fall 23s;
-    animation-delay: .5s;
+  .bubble6 {
+    animation: infinite fall 40s;
+    animation-delay: 0s;
     animation-timing-function: ease-out;
   }
-  .bubble9{
-    animation: infinite fall 17s;
-    animation-delay: 4s;
+  .bubble7 {
+    animation: infinite fall 50s;
+    animation-delay: 12s; 
     animation-timing-function: ease-out;
   }
-  .bubble10{
-    animation: infinite fall 20s;
-    animation-delay: 1s;
+  .bubble8 {
+    animation: infinite fall 46s;
+    animation-delay: 2s; 
     animation-timing-function: ease-out;
   }
-  .bubble11{
-    animation: infinite fall 19s;
+  .bubble9 {
+    animation: infinite fall 34s;
+    animation-delay: 16s; 
     animation-timing-function: ease-out;
-    animation-delay: 6s;
   }
-  .bubble12{
-    animation: infinite fall 20s;
+  .bubble10 {
+    animation: infinite fall 40s;
+    animation-delay: 4s; 
     animation-timing-function: ease-out;
-    animation-delay: .3s;
   }
-  .bubble13{
-    animation: infinite fall 20s;
+  .bubble11 {
+    animation: infinite fall 38s;
     animation-timing-function: ease-out;
-    animation-delay: 4s;
+    animation-delay: 24s; 
   }
-  .bubble14{
-
-    animation: infinite fall 20s;
+  .bubble12 {
+    animation: infinite fall 40s;
     animation-timing-function: ease-out;
-    animation-delay: 5s;
+    animation-delay: 1.2s; 
+  }
+  .bubble13 {
+    animation: infinite fall 40s;
+    animation-timing-function: ease-out;
+    animation-delay: 16s; 
+  }
+  .bubble14 {
+    animation: infinite fall 40s;
+    animation-timing-function: ease-out;
+    animation-delay: 20s; 
   }
 }
+
+
+
+
+
+
+
 @media only screen and (max-width: 1920px) {
   .bubble1,
   .bubble2,
@@ -735,7 +757,9 @@ button:active {
   .bubble9,
   .bubble10,
   .bubble11,
-  .bubble12 {
+  .bubble12,
+  .bubble13,
+  .bubble14 {
     width: 1.2rem;
     height: 1.2rem;
   }
