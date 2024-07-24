@@ -11,7 +11,6 @@ import Welcome from "./pages/Welcome/Welcome";
 
 function App() {
   const appState = useAtomValue(appStateAtom);
-
   return (
     <>
       <Navbar />

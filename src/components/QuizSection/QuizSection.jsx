@@ -15,6 +15,7 @@ import {
   appStateAtom,
   currentCorrectOtionAtom,
   resetTimerAtom,
+  hasAnsweredWrongAtom,
 } from "../../store/atoms";
 import { getQuestions } from "../../utils/questions";
 
@@ -42,13 +43,17 @@ const QuizSection = () => {
   const setAffirmation = useSetAtom(affirmationAtom);
   const setScore = useSetAtom(scoreAtom);
   const setAppState = useSetAtom(appStateAtom);
+  const [hasAnsweredWrong, setHasAnsweredWrong] = useAtom(hasAnsweredWrongAtom);
 
   const lives = useAtomValue(livesAtom);
 
   const handleOptionClick = (option) => {
     setcurrentCorrectOption(currQuestion.correctOption);
     if (option === currQuestion.correctOption) {
-      setScore(Math.floor(( questionNum / totalQuestions) * 100));
+      if (!hasAnsweredWrong) {
+        setScore(prevScore => prevScore + Math.floor((1 / totalQuestions) * 100));
+      }
+      setHasAnsweredWrong(false);
       if (level !== "hard") {
         setAffirmation("success");
         setQuizState("affirmation");
@@ -64,6 +69,7 @@ const QuizSection = () => {
     } else if (option && lives > 1) {
       setAffirmation("tryAgain");
       setQuizState("affirmation");
+      setHasAnsweredWrong(true);
     } else {
       setAffirmation("fail");
       setQuizState("affirmation");
