@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+
             "name": "Key Signature Identification",
             "levels": [
               {
@@ -86,8 +85,5 @@
                   }
                 ]
               }
-            ]
-          }
-      
-    ]
+            ]          
 }

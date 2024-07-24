@@ -1,6 +1,4 @@
 {
-    "musicGames": [
-        {
             "name": "Interval Identification",
             "levels": [
               {
@@ -278,6 +276,4 @@
                 ]
               }
             ]
-          }
-    ]
 }

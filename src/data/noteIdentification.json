@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+  
             "name": "Note Identification",
             "levels": [
               {
@@ -178,7 +177,4 @@
                 ]
               }
             ]
-          }
-      
-    ]
 }

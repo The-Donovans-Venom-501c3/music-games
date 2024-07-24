@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+
             "name": "Major-Minor Identification",
             "levels": [
               {
@@ -194,7 +193,4 @@
                 ]
               }
             ]
-          }
-      
-    ]
 }

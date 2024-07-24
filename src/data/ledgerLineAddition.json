@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+
             "name": "Ledger Line Addition",
             "levels": [
               {
@@ -206,7 +205,4 @@
                 ]
               }
             ]
-          }
-      
-    ]
 }

@@ -1,45 +1,10 @@
-// // from each game 
-// // make a map indicating the number of question added to the question bank for the game
-// // select random question make sure it should not be in sequence make sure no duplicate selection
-import data from "../data/data.json";
-const gameIdx = {
-  note: 0,
-  key: 1,
-  "major-minor": 2,
-  scale: 3,
-  interval: 4,
-  chord: 5,
-  ledger: 7,
-};
-const levelIdx = { easy: 0, medium: 1, hard: 2 };
-
-// function getRandomQuestions(questions, number, level) {
-//   let selectedQues = [];
-//   let listOfQuestions = [...questions];
-
-//   // if (game === "key") {
-//   //   for (let i = number; i > 0; i--) {
-//   //     let randomNumber = Math.floor(Math.random() * questions.length);
-//   //     selectedQues.push(questions[randomNumber]);
-//   //   }
-//   //   return selectedQues;
-//   // } else {
-//     while (selectedQues.length < number) {
-//       if (listOfQuestions.length === 0) {
-
-//         listOfQuestions = [...questions];
-//         listOfQuestions.sort(() => Math.random() - 0.5);
-//       }
-
-//       let questionIndex = Math.floor(Math.random() * listOfQuestions.length);
-//       let question = listOfQuestions[questionIndex];
-//       selectedQues.push({ ...question, "level": level })
-//       listOfQuestions.splice(questionIndex, 1); 
-//     }
-//     return selectedQues;
-//   }
-// // }
-
+import chord from '../data/chord.json'
+import interval from '../data/intervalIdentification.json'
+import note from "../data/noteIdentification.json"
+import key from "../data/keySignatureIdentification.json"
+import major_minor from '../data/majorMinorIdentification.json'
+import scale from '../data/scaleIdentification.json'
+import ledger from '../data/ledgerLineAddition.json'
 
 function shuffleQuestions(questionsList) {
   const shuffledQuestions = [...questionsList];
@@ -51,25 +16,6 @@ function shuffleQuestions(questionsList) {
 
   return shuffledQuestions;
 }
-// export function getQuestions(game, level) {
-//   const gameData = data.musicGames[gameIdx[game]].levels;
-//   const numOfQuestionsPerLevel = gameData[levelIdx[level]].numberOfQuestions;
-//   const questions = [];
-
-//   for (const [level, numQuestions] of Object.entries(numOfQuestionsPerLevel)) {
-//     questions.push(
-//       ...getRandomQuestions(
-//         gameData[levelIdx[level]].questions,
-//         numQuestions,
-//         level
-//       )
-//     );
-//   }
-
-//   // console.log(questions);
-//   return shuffleQuestions(questions);
-// }
-
 
 const getDuplicateQues = (questions, level, numberOfQuestions) =>{
   let selectedQuestions = []
@@ -108,10 +54,20 @@ const getRandomQuestions = (level, numberofQuestions, questions) =>{
 
 }
 
+const gameObjects = {
+  'note': note,
+  'key': key,
+  "major-minor": major_minor,
+  'scale': scale,
+  'interval': interval,
+  'chord': chord,
+  'ledger': ledger,
+};
+const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
 export function getQuestions(game, level){
 
-  const gamelevels = data.musicGames[gameIdx[game]].levels
+  const gamelevels = gameObjects[game].levels
   const numOfQuestionsPerLevel = gamelevels[levelIdx[level]].numberOfQuestions
   const selectedQues = []
   const duplicates = []

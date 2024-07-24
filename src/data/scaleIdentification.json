@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+  
             "name": "Scale Identification",
             "levels": [
               {
@@ -190,7 +189,4 @@
                 ]
               }
             ]
-          }
-      
-    ]
 }

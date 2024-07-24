@@ -1,6 +1,5 @@
 {
-    "musicGames": [
-        {
+
             "name": "Chord",
             "levels": [
               {
@@ -118,6 +117,4 @@
                 ]
               }
             ]
-          }
-    ]
 }
