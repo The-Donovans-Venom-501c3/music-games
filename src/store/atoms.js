@@ -86,6 +86,8 @@ export const countDownOnAtom = atom(true); // true when countdown is running, fa
 
 export const scoreAtom = atom(0); // min = 0, max = no. of questions
 
+export const hasAnsweredWrongAtom = atom(false);
+
 export const musicStateAtom = atom(false); // true when music is playing, false when not
 
 export const gameFinishedAtom = atom('score');

@@ -1,57 +1,82 @@
-import data from "../data/data.json";
-const gameIdx = {
-  note: 0,
-  key: 1,
-  "major-minor": 2,
-  scale: 3,
-  interval: 4,
-  chord: 5,
-  ledger: 7,
+import chord from '../data/chord.json'
+import interval from '../data/intervalIdentification.json'
+import note from "../data/noteIdentification.json"
+import key from "../data/keySignatureIdentification.json"
+import major_minor from '../data/majorMinorIdentification.json'
+import scale from '../data/scaleIdentification.json'
+import ledger from '../data/ledgerLineAddition.json'
+
+function shuffleQuestions(questionsList) {
+  const shuffledQuestions = [...questionsList];
+
+  for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
+  }
+
+  return shuffledQuestions;
+}
+
+const getDuplicateQues = (questions, level, numberOfQuestions) =>{
+  let selectedQuestions = []
+  let questionBank = [...questions] 
+  while(numberOfQuestions > 0){
+    if(questionBank.length <= 0){
+      questionBank = [...questions]
+    }
+    let questionIndex = Math.floor(Math.random() * questionBank.length);
+    let question = questionBank[questionIndex]
+    selectedQuestions.push({ ...question, "level": level })
+    questionBank.splice(questionIndex, 1); 
+    numberOfQuestions -=1
+
+  }
+  return selectedQuestions
+
+}
+
+const getRandomQuestions = (level, numberofQuestions, questions) =>{
+  let selectedQuestions = []
+  let duplicates = []
+  let questionBank = [...questions] 
+  while(questionBank.length > 0 && numberofQuestions >  0){
+    let questionIndex = Math.floor(Math.random() * questionBank.length);
+    let question = questionBank[questionIndex]
+    selectedQuestions.push({ ...question, "level": level })
+    numberofQuestions -= 1 
+    questionBank.splice(questionIndex, 1); 
+  }
+  if(numberofQuestions > 0){
+    duplicates = [...getDuplicateQues(questions, level, numberofQuestions)]
+
+  }
+  return {'selected': selectedQuestions, 'duplicate': duplicates}
+
+}
+
+const gameObjects = {
+  'note': note,
+  'key': key,
+  "major-minor": major_minor,
+  'scale': scale,
+  'interval': interval,
+  'chord': chord,
+  'ledger': ledger,
 };
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
-function getRandomQuestions(questions, number, game) {
-  let ques = [];
-  let listOfQuestions = [...questions];
+export function getQuestions(game, level){
 
-  if (game === "key") {
-    for (let i = number; i > 0; i--) {
-      let randomNumber = Math.floor(Math.random() * questions.length);
-      ques.push(questions[randomNumber]);
-    }
-    return ques;
-  } else {
-    while (ques.length < number) {
-      if (listOfQuestions.length === 0) {
-
-        listOfQuestions = [...questions];
-        listOfQuestions.sort(() => Math.random() - 0.5);
-      }
-
-      let questionIndex = Math.floor(Math.random() * listOfQuestions.length);
-      let question = listOfQuestions[questionIndex];
-      ques.push({ ...question })
-      listOfQuestions.splice(questionIndex, 1); 
-    }
-    return ques;
+  const gamelevels = gameObjects[game].levels
+  const numOfQuestionsPerLevel = gamelevels[levelIdx[level]].numberOfQuestions
+  const selectedQues = []
+  const duplicates = []
+  for (const [level, numberOfQuestions] of Object.entries(numOfQuestionsPerLevel)){
+    let {selected,  duplicate} = getRandomQuestions(level, numberOfQuestions, gamelevels[levelIdx[level]].questions)
+    selectedQues.push(...selected)
+    duplicates.push(...duplicate)
   }
-}
+  console.log([...shuffleQuestions(selectedQues), ...shuffleQuestions(duplicates)])
+  return [...shuffleQuestions(selectedQues), ...shuffleQuestions(duplicates)]
 
-export function getQuestions(game, level) {
-  const gameData = data.musicGames[gameIdx[game]].levels;
-  const numOfQuestionsPerLevel = gameData[levelIdx[level]].numberOfQuestions;
-  const questions = [];
-
-  for (const [level, numQuestions] of Object.entries(numOfQuestionsPerLevel)) {
-    questions.push(
-      ...getRandomQuestions(
-        gameData[levelIdx[level]].questions,
-        numQuestions,
-        game
-      )
-    );
-  }
-
-  // console.log(questions);
-  return questions;
 }
