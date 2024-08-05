@@ -3,7 +3,7 @@
   "levels": [
       {
         "level": "Easy",
-        "numberOfQuestions": { "easy": 5 },
+        "numberOfQuestions": { "easy": 10 },
         "questions": [
           {
             "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Ledger/Easy/Ledger-Question-Easy-1.svg",
@@ -49,7 +49,7 @@
       },
       {
         "level": "Medium",
-        "numberOfQuestions": { "easy": 3, "medium": 10 },
+        "numberOfQuestions": { "easy": 10, "medium": 10 },
         "questions": [
           {
             "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Ledger/Medium/Ledger-Question-Medium-1.svg",
@@ -135,7 +135,7 @@
       },
       {
         "level": "Hard",
-        "numberOfQuestions": { "easy": 3, "medium": 3, "hard": 10 },
+        "numberOfQuestions": { "easy": 10, "medium": 10, "hard": 10 },
         "questions": [
           {
             "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Ledger/Hard/Ledger-Question-Hard-1.svg",
