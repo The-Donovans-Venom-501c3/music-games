@@ -33,7 +33,36 @@
                   {
                     "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-7.svg",
                     "correctOption": "G Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-8.svg",
+                    "correctOption": "C Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-9.svg",
+                    "correctOption": "B Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-10.svg",
+                    "correctOption": "E Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-11.svg",
+                    "correctOption": "F Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-12.svg",
+                    "correctOption": "G Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-13.svg",
+                    "correctOption": "A Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Easy/Chord-Question-Easy-14.svg",
+                    "correctOption": "B Major"
                   }
+                  
                 ]
               },
               {
@@ -79,6 +108,46 @@
                   {
                     "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-10.svg",
                     "correctOption": "G# Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-11.svg",
+                    "correctOption": "A♭ Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-12.svg",
+                    "correctOption": "A# Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-13.svg",
+                    "correctOption": "B♭ Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-14.svg",
+                    "correctOption": "C# Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-15.svg",
+                    "correctOption": "F Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-16.svg",
+                    "correctOption": "D# Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-17.svg",
+                    "correctOption": "E♭ Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-18.svg",
+                    "correctOption": "F# Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-19.svg",
+                    "correctOption": "G♭ Major"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Medium/Chord-Question-Medium-20.svg",
+                    "correctOption": "B Major"
                   }
                 ]
               },
@@ -112,6 +181,34 @@
                   },
                   {
                     "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-7.svg",
+                    "correctOption": "G Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-8.svg",
+                    "correctOption": "A Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-9.svg",
+                    "correctOption": "C Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-10.svg",
+                    "correctOption": "E Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-11.svg",
+                    "correctOption": "D Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-12.svg",
+                    "correctOption": "E Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-13.svg",
+                    "correctOption": "F Minor"
+                  },
+                  {
+                    "questionImage": "https://github.com/The-Donovans-Venom-501c3/svg-image-server/raw/main/Chord%20Identification/Hard/Chord-Question-Hard-14.svg",
                     "correctOption": "G Minor"
                   }
                 ]
