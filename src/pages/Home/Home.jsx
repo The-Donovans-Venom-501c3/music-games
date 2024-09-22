@@ -160,8 +160,8 @@ export default function Home() {
             hoverIcon={HoverVirtualPiano}
             title='Music is Reading'
             tips='Identify the missing letters on the staff'
-            hoverColor='#75C973'
-            hoverBorderColor='#519750'
+            hoverColor='#F6AD69'
+            hoverBorderColor='#E98427'
             onClick={() => handleClick('reading')}
           />
         </div>
