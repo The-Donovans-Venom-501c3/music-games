@@ -20,6 +20,7 @@ Possible Game states:
 6) interval : Interval Identification Game
 7) chord : Chord Identification Game
 8) ledger : Ledger Line Addition Game
+9) reading : Music is Reading Game
 */
 
 export const levelStateAtom = atom('');
@@ -57,7 +58,7 @@ Possible Affirmation states:
 
 export const correctOptionAtom = atom(''); // contains correct option for a question
 
-export const currentCorrectOtionAtom =  atom(''); // contains correct options for a privous question
+export const currentCorrectOptionAtom =  atom(''); // contains correct options for a privous question
 
 export const overlayAtom = atom('');
 /*

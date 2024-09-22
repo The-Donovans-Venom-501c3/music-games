@@ -5,6 +5,7 @@ import key from "../data/keySignatureIdentification.json"
 import major_minor from '../data/majorMinorIdentification.json'
 import scale from '../data/scaleIdentification.json'
 import ledger from '../data/ledgerLineAddition.json'
+import reading from '../data/musicIsReading.json'
 
 function shuffleQuestions(questionsList) {
   const shuffledQuestions = [...questionsList];
@@ -62,6 +63,7 @@ const gameObjects = {
   'interval': interval,
   'chord': chord,
   'ledger': ledger,
+  'reading': reading,
 };
 const levelIdx = { easy: 0, medium: 1, hard: 2 };
 
@@ -76,7 +78,7 @@ export function getQuestions(game, level){
     selectedQues.push(...selected)
     duplicates.push(...duplicate)
   }
-  console.log([...shuffleQuestions(selectedQues), ...shuffleQuestions(duplicates)])
+  // console.log([...shuffleQuestions(selectedQues), ...shuffleQuestions(duplicates)])
   return [...shuffleQuestions(selectedQues), ...shuffleQuestions(duplicates)]
 
 }
