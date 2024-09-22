@@ -155,6 +155,15 @@ export default function Home() {
             hoverBorderColor='#519750'
             onClick={() => handleClick('ledger')}
           />
+          <Button
+            icon={VirtualPiano}
+            hoverIcon={HoverVirtualPiano}
+            title='Music is Reading'
+            tips='Identify the missing letters on the staff'
+            hoverColor='#75C973'
+            hoverBorderColor='#519750'
+            onClick={() => handleClick('reading')}
+          />
         </div>
       </div>
     </div>
