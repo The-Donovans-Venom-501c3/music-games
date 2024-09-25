@@ -8,8 +8,9 @@ import { gameStateAtom, levelStateAtom } from "../../../store/atoms";
 import IntervalOptions from "./IntervalOptions/IntervalOptions";
 import ChordOptions from "./ChordOptions/ChordOptions";
 import LedgerOptions from "./LedgerOptions/LedgerOptions";
+import ReadingOptions from "./ReadingOptions/ReadingOptions";
 
-export default function Options({ handleOptionClick }) {
+export default function Options({ handleOptionClick, displayText="", currQuestion=null }) {
   const game = useAtomValue(gameStateAtom);
   const level = useAtomValue(levelStateAtom);
 
@@ -27,8 +28,10 @@ export default function Options({ handleOptionClick }) {
         <ChordOptions handleOptionClick={handleOptionClick} level={level} />
       ) : game == "ledger" ? (
         <LedgerOptions handleOptionClick={handleOptionClick} level={level} />
-      ) : (
+      ) : game == "interval" ? (
         <IntervalOptions handleOptionClick={handleOptionClick} level={level} />
+      ) : (
+        <ReadingOptions displayText={displayText} currQuestion={currQuestion} />
       )}
     </>
   );

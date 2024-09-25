@@ -9,7 +9,7 @@ import {
   quizStateAtom,
   scoreAtom,
   totalQuestionsAtom,
-  currentCorrectOtionAtom,
+  currentCorrectOptionAtom,
 } from '../../../store/atoms';
 import successCharacter from '../../../assets/svg/Affirmation_Success_Character.svg';
 import failCharacter from '../../../assets/svg/Affirmation_Fail_Character.svg';
@@ -51,7 +51,7 @@ export default function Affirmation() {
   const [score, setScore] = useAtom(scoreAtom);
   const [lives, setLives] = useAtom(livesAtom);
   const setOverlay = useSetAtom(overlayAtom);
-  const correctOption = useAtomValue(currentCorrectOtionAtom);
+  const correctOption = useAtomValue(currentCorrectOptionAtom);
 
   const handleResponseBtn = () => {
     if (affirmation == 'success') {
